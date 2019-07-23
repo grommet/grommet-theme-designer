@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Box, Grid, Grommet, Keyboard, grommet } from 'grommet';
 import { Apps, Code, Share } from 'grommet-icons';
 import { apiUrl, starter, upgradeTheme } from './theme';
@@ -7,6 +7,7 @@ import Card from './Card';
 import Primary from './Primary';
 import Themes from './Themes';
 import Raw from './Raw';
+import Sharer from './Share';
 
 const getParams = () => {
   const { location } = window;
@@ -16,6 +17,18 @@ const getParams = () => {
     params[k] = decodeURIComponent(v);
   });
   return params;
+}
+
+const Actioner = ({ Icon, Modal, theme, onChange }) => {
+  const [show, setShow] = React.useState();
+  return (
+    <Fragment>
+      <ActionButton icon={<Icon />} hoverIndicator onClick={() => setShow(true)} />
+      {show && (
+        <Modal theme={theme} onChange={onChange} onClose={() => setShow(false)} />
+      )}
+    </Fragment>
+  );
 }
 
 class App extends Component {
@@ -87,7 +100,7 @@ class App extends Component {
   }
 
   render() {
-    const { manage, raw, preview, theme } = this.state;
+    const { preview, theme } = this.state;
     return (
       <Grommet full theme={grommet}>
         <Keyboard target="document" onKeyDown={this.onKey}>
@@ -107,31 +120,24 @@ class App extends Component {
                   gap="small"
                   margin={{ bottom: 'small' }}
                 >
-                  <ActionButton
-                    icon={<Apps />}
-                    hoverIndicator
-                    onClick={() => this.setState({ manage: true })}
+                  <Actioner
+                    Icon={Apps}
+                    Modal={Themes}
+                    theme={theme}
+                    onChange={this.onChange}
                   />
-                  {manage && (
-                    <Themes
-                      theme={theme}
-                      onChange={this.onChange}
-                      onClose={() => this.setState({ manage: undefined })}
-                    />
-                  )}
-                  <ActionButton
-                    icon={<Code />}
-                    hoverIndicator
-                    onClick={() => this.setState({ raw: true })}
+                  <Actioner
+                    Icon={Code}
+                    Modal={Raw}
+                    theme={theme}
+                    onChange={this.onChange}
                   />
-                  {raw && (
-                    <Raw
-                      theme={theme}
-                      onChange={this.onChange}
-                      onClose={() => this.setState({ raw: undefined })}
-                    />
-                  )}
-                  <ActionButton icon={<Share />} hoverIndicator />
+                  <Actioner
+                    Icon={Share}
+                    Modal={Sharer}
+                    theme={theme}
+                    onChange={this.onChange}
+                  />
                 </Box>
                 <Primary theme={theme} onChange={this.onChange} />
               </Box>
