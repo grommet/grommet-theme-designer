@@ -12,6 +12,7 @@ export default ({ theme, onChange }) => (
     >
       <Box pad={{ right: 'medium' }}>
         <TextArea
+          id="family"
           name="family"
           plain
           style={{ textAlign: 'right' }}
@@ -39,5 +40,26 @@ export default ({ theme, onChange }) => (
         />
       </Box>
     </Field>
+    {theme.global.font.family && theme.global.font.family.match(/'/) && (
+      <Field label="face" htmlFor="face" align="start">
+        <Box pad={{ right: 'medium' }}>
+          <TextArea
+            id="face"
+            name="face"
+            plain
+            style={{ textAlign: 'right' }}
+            cols={20}
+            rows={10}
+            value={theme.global.font.face || ''}
+            onChange={(event) => {
+              const face = event.target.value;
+              const nextTheme = JSON.parse(JSON.stringify(theme));
+              nextTheme.global.font.face = face;
+              onChange({ theme: nextTheme });
+            }}
+          />
+        </Box>
+      </Field>
+    )}
   </Fragment>
 )

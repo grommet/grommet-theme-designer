@@ -19,7 +19,7 @@ const ColorField = ({ theme, color, onChange }) => (
         style={{ textAlign: 'right' }}
         mask={[
           { fixed: '#' },
-          { length: 6, placeholder: 'rrggbb', regexp: /^[0-9a-z]+$/ },
+          { length: 6, placeholder: 'rrggbb', regexp: /^[0-9a-zA-Z]+$/ },
         ]}
         value={getColor(theme, color)}
         onChange={(event) => {
