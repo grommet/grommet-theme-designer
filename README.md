@@ -6,6 +6,10 @@ Live at: [theme-designer.grommet.io](https://theme-designer.grommet.io)
 
 ## Reference
 
+### Command shortcuts
+
+* **command-e** or **windows-E**: toggles preview vs. edit modes
+
 ### Saving
 
 Your latest theme edits are saved in your browser's local storage. So,
@@ -18,14 +22,10 @@ or import a theme file you've exported.
 
 ### Sharing
 
-The Share control near the upper left provides two methods of sharing.
-
-1. Publish your theme. This will generate a unique URL you can send
+The Share control near the upper left allows you to publish your theme.
+This will generate a unique URL you can send
 to someone. When they open that URL, they will see your work. They will not be
-able to modify it.
-1. Download the theme as a JSON file. You can save or send this
-however you like. You can upload one of these files using the Folder control
-dialog, via the Upload control at the bottom.
+able to modify your version. But, they can create their own riff on yours.
 
 ## Local development
 
