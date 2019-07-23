@@ -49,7 +49,7 @@ export default ({ theme, onChange }) => (
             plain
             style={{ textAlign: 'right' }}
             cols={20}
-            rows={10}
+            rows={3}
             value={theme.global.font.face || ''}
             onChange={(event) => {
               const face = event.target.value;
