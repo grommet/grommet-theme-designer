@@ -32,7 +32,7 @@ const Actioner = ({ Icon, Modal, theme, onChange }) => {
 }
 
 class App extends Component {
-  state = { theme: starter, themes: [] };
+  state = { themes: [] };
 
   componentDidMount() {
     const params = getParams();
@@ -104,7 +104,13 @@ class App extends Component {
     return (
       <Grommet full theme={grommet}>
         <Keyboard target="document" onKeyDown={this.onKey}>
-          {preview ? <Card theme={theme} /> : (
+          {!theme ? (
+            <Box fill justify="center" align="center">
+              <Box pad="xlarge" background="dark-2" round animation="pulse" />
+            </Box>
+          )
+          :
+          (preview ? <Card theme={theme} /> : (
             <Grid fill columns={[['small', 'medium'], 'flex']} rows='full'>
               <Box
                 fill="vertical"
@@ -143,7 +149,7 @@ class App extends Component {
               </Box>
               <Card theme={theme} />
             </Grid>
-          )}
+          ))}
         </Keyboard>
       </Grommet>
     );
