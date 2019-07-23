@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Box, Grid, Grommet, Keyboard, grommet } from 'grommet';
+import { Box, Grid, Grommet, ResponsiveContext, Keyboard, grommet } from 'grommet';
 import { Apps, Code, Share } from 'grommet-icons';
 import { apiUrl, starter, upgradeTheme } from './theme';
 import ActionButton from './components/ActionButton';
@@ -47,13 +47,15 @@ class App extends Component {
     } else {
       let stored = localStorage.getItem('activeTheme');
       if (stored) {
-        stored = localStorage.getItem(stored) || localStorage.getItem('theme');
+        stored = localStorage.getItem(stored);
       }
       if (stored) {
         const theme = JSON.parse(stored);
         upgradeTheme(theme);
         document.title = theme.name;
         this.setState({ theme });
+      } else {
+        this.setState({ theme: starter });
       }
     }
     const stored = localStorage.getItem('themes');
@@ -103,54 +105,63 @@ class App extends Component {
     const { preview, theme } = this.state;
     return (
       <Grommet full theme={grommet}>
-        <Keyboard target="document" onKeyDown={this.onKey}>
-          {!theme ? (
-            <Box fill justify="center" align="center">
-              <Box pad="xlarge" background="dark-2" round animation="pulse" />
-            </Box>
-          )
-          :
-          (preview ? <Card theme={theme} /> : (
-            <Grid fill columns={[['small', 'medium'], 'flex']} rows='full'>
-              <Box
-                fill="vertical"
-                overflow="auto"
-                background="dark-1"
-                pad={{ horizontal: 'small', vertical: 'small' }}
-                border="right"
-              >
-                <Box
-                  flex={false}
-                  direction="row"
-                  justify="between"
-                  gap="small"
-                  margin={{ bottom: 'small' }}
-                >
-                  <Actioner
-                    Icon={Apps}
-                    Modal={Themes}
-                    theme={theme}
-                    onChange={this.onChange}
-                  />
-                  <Actioner
-                    Icon={Code}
-                    Modal={Raw}
-                    theme={theme}
-                    onChange={this.onChange}
-                  />
-                  <Actioner
-                    Icon={Share}
-                    Modal={Sharer}
-                    theme={theme}
-                    onChange={this.onChange}
-                  />
+        <ResponsiveContext.Consumer>
+          {(responsive) => (
+            <Keyboard target="document" onKeyDown={this.onKey}>
+              {!theme ? (
+                <Box fill justify="center" align="center">
+                  <Box pad="xlarge" background="dark-2" round animation="pulse" />
                 </Box>
-                <Primary theme={theme} onChange={this.onChange} />
-              </Box>
-              <Card theme={theme} />
-            </Grid>
-          ))}
-        </Keyboard>
+              ) : (
+                <Grid
+                  fill
+                  columns={(responsive === 'small' || preview)
+                    ? 'flex' : [['small', 'medium'], 'flex']}
+                  rows='full'
+                >
+                  {responsive !== 'small' && !preview && (
+                    <Box
+                      fill="vertical"
+                      overflow="auto"
+                      background="dark-1"
+                      pad={{ horizontal: 'small', vertical: 'small' }}
+                      border="right"
+                    >
+                      <Box
+                        flex={false}
+                        direction="row"
+                        justify="between"
+                        gap="small"
+                        margin={{ bottom: 'small' }}
+                      >
+                        <Actioner
+                          Icon={Apps}
+                          Modal={Themes}
+                          theme={theme}
+                          onChange={this.onChange}
+                        />
+                        <Actioner
+                          Icon={Code}
+                          Modal={Raw}
+                          theme={theme}
+                          onChange={this.onChange}
+                        />
+                        <Actioner
+                          Icon={Share}
+                          Modal={Sharer}
+                          theme={theme}
+                          onChange={this.onChange}
+                        />
+                      </Box>
+                      <Primary theme={theme} onChange={this.onChange} />
+                    </Box>
+                  )}
+                  <Card theme={theme} />
+                </Grid>
+              )}
+            </Keyboard>
+          )}
+        </ResponsiveContext.Consumer>
       </Grommet>
     );
   }

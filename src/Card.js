@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Anchor, Box, Button, CheckBox, Form, FormField, Grid, Grommet, Heading, Paragraph,
-  RadioButtonGroup, Select, Text, TextInput,
+  RadioButtonGroup, ResponsiveContext, Select, Text, TextInput,
 } from 'grommet';
 import { Search, Trash } from 'grommet-icons';
 
@@ -68,60 +68,68 @@ export default ({ theme }) => {
         </Box>
 
         <Box flex={false}>
-          <Grid columns="medium" gap="large" margin={{ top: 'medium' }}>
+          <ResponsiveContext.Consumer>
+            {(responsive) => (
+              <Grid
+                columns={responsive === 'small' ? 'flex' : 'medium'}
+                gap="large"
+                margin={{ top: 'medium' }}
+              >
 
-            <Box>
-              <Heading level={2}>Heading</Heading>
-              <Paragraph>
-                Paragraph - Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. <Anchor>Anchor</Anchor> within.
-              </Paragraph>
-              <Text>Text</Text>
-              <Anchor>Anchor</Anchor>
-            </Box>
-
-            <Box>
-              <Heading level={2}>List</Heading>
-              <Box direction="row" margin={{ bottom: 'medium' }}>
-                <TextInput placeholder="Search" />
-                <Button icon={<Search />} hoverIndicator />
-              </Box>
-              {people.map((item, index) => (
-                <Box
-                  key={item.name}
-                  pad={{ left: "small", vertical: 'xsmall' }}
-                  direction="row"
-                  align="center"
-                  justify="between"
-                  border={index ? 'bottom' : 'horizontal'}
-                >
-                  <Text weight="bold">{item.name}</Text>
-                  <Button
-                    icon={<Trash />}
-                    hoverIndicator
-                    onClick={() => setPeople(people.filter(p => p.name !== item.name))}
-                  />
+                <Box>
+                  <Heading level={2}>Heading</Heading>
+                  <Paragraph>
+                    Paragraph - Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. <Anchor>Anchor</Anchor> within.
+                  </Paragraph>
+                  <Text>Text</Text>
+                  <Anchor>Anchor</Anchor>
                 </Box>
-              ))}
-            </Box>
 
-            <Form
-              value={{ name: '', local: true, size: 'medium' }}
-              onSubmit={({ value }) => setPeople([...people, value])}
-            >
-              <Heading level={2}>Form</Heading>
-              <FormField name="name" label="Name" required />
-              <FormField name="local" pad component={CheckBox} label="Local" reverse />
-              <FormField name="size" label="Size" pad component={RadioButtonGroup} options={['small', 'medium', 'large']} />
-              <FormField name="month" label="Month" component={Select} options={['January', 'February', 'March']} />
-              <Box direction="row" gap="small" margin={{ top: 'medium' }}>
-                <Button primary label="Submit" type="submit" />
-                <Button label="Cancel" />
-              </Box>
-            </Form>
+                <Box>
+                  <Heading level={2}>List</Heading>
+                  <Box direction="row" margin={{ bottom: 'medium' }}>
+                    <TextInput placeholder="Search" />
+                    <Button icon={<Search />} hoverIndicator />
+                  </Box>
+                  {people.map((item, index) => (
+                    <Box
+                      key={item.name}
+                      pad={{ left: "small" }}
+                      direction="row"
+                      align="center"
+                      justify="between"
+                      border={index ? 'bottom' : 'horizontal'}
+                    >
+                      <Text weight="bold">{item.name}</Text>
+                      <Button
+                        icon={<Trash />}
+                        hoverIndicator
+                        onClick={() => setPeople(people.filter(p => p.name !== item.name))}
+                      />
+                    </Box>
+                  ))}
+                </Box>
 
-          </Grid>
+                <Form
+                  value={{ name: '', local: true, size: 'medium' }}
+                  onSubmit={({ value }) => setPeople([...people, value])}
+                >
+                  <Heading level={2}>Form</Heading>
+                  <FormField name="name" label="Name" required />
+                  <FormField name="local" pad component={CheckBox} label="Local" reverse />
+                  <FormField name="size" label="Size" pad component={RadioButtonGroup} options={['small', 'medium', 'large']} />
+                  <FormField name="month" label="Month" component={Select} options={['January', 'February', 'March']} />
+                  <Box direction="row" gap="small" margin={{ top: 'medium' }}>
+                    <Button primary label="Submit" type="submit" />
+                    <Button label="Cancel" />
+                  </Box>
+                </Form>
+
+              </Grid>
+            )}
+          </ResponsiveContext.Consumer>
         </Box>
       </Box>
     </Grommet>
