@@ -1,9 +1,12 @@
 import React from 'react';
 import {
-  Anchor, Box, Button, CheckBox, Form, FormField, Grid, Grommet, Heading, Paragraph,
-  RadioButtonGroup, ResponsiveContext, Select, Text, TextInput,
+  Anchor, Box, Button, Calendar, Chart, CheckBox, DropButton,
+  Form, FormField, Grid,
+  Grommet, Heading,
+  Menu, Paragraph, RadioButtonGroup, ResponsiveContext,
+  Select, Stack, Text, TextInput,
 } from 'grommet';
-import { Search, Trash } from 'grommet-icons';
+import { FormDown, Search, Trash } from 'grommet-icons';
 
 export default ({ theme }) => {
   const [people, setPeople] = React.useState([
@@ -29,6 +32,40 @@ export default ({ theme }) => {
       {colors.map(color => <Swatch key={color} color={color} />)}
     </Box>
   )
+
+  const DatePicker = ({ name, value, onChange }) => {
+    const [open, setOpen] = React.useState();
+    return (
+      <DropButton
+        name={name}
+        open={open}
+        onClose={() => setOpen(false)}
+        onOpen={() => setOpen(true)}
+        dropContent={(
+          <Calendar
+            date={value}
+            onSelect={(date) => {
+              onChange({ value: date })
+              setOpen(false)
+            }}
+          />
+        )}
+      >
+        <Box
+          pad="small"
+          direction="row"
+          justify="between"
+          align="center"
+          gap="medium"
+        >
+          <Text>
+            {value ? new Date(value).toLocaleDateString() : "Select date"}
+          </Text>
+          <FormDown color="brand" />
+        </Box>
+      </DropButton>
+    )
+  }
 
   return (
     <Grommet theme={theme}>
@@ -85,10 +122,28 @@ export default ({ theme }) => {
                   </Paragraph>
                   <Text>Text</Text>
                   <Anchor>Anchor</Anchor>
+                  <Box>
+                    <Heading level={3} size="small">Chart</Heading>
+                    <Stack guidingChild="last">
+                      <Box fill>
+                        <Box flex border="horizontal" />
+                        <Box flex border="bottom" />
+                      </Box>
+                      <Chart
+                        type="line"
+                        round
+                        bounds={[[0, 4], [0, 100]]}
+                        values={[10, 20, 75, 40, 80]}
+                      />
+                    </Stack>
+                  </Box>
                 </Box>
 
                 <Box>
-                  <Heading level={2}>List</Heading>
+                  <Box direction="row" justify="between" align="center">
+                    <Heading level={2}>List</Heading>
+                    <Menu label="actions" items={[{ label: 'Share' }, { label: 'Save' }]} />
+                  </Box>
                   <Box direction="row" margin={{ bottom: 'medium' }}>
                     <TextInput placeholder="Search" />
                     <Button icon={<Search />} hoverIndicator />
@@ -118,9 +173,31 @@ export default ({ theme }) => {
                 >
                   <Heading level={2}>Form</Heading>
                   <FormField name="name" label="Name" required />
-                  <FormField name="local" pad component={CheckBox} label="Local" reverse />
-                  <FormField name="size" label="Size" pad component={RadioButtonGroup} options={['small', 'medium', 'large']} />
-                  <FormField name="month" label="Month" component={Select} options={['January', 'February', 'March']} />
+                  <FormField
+                    name="local"
+                    pad
+                    component={CheckBox}
+                    label="Local"
+                    reverse
+                  />
+                  <FormField
+                    name="size"
+                    label="Size"
+                    pad
+                    component={RadioButtonGroup}
+                    options={['small', 'medium', 'large']}
+                  />
+                  <FormField
+                    name="month"
+                    label="Month"
+                    component={Select}
+                    options={['January', 'February', 'March']}
+                  />
+                  <FormField
+                    name="date"
+                    label="Date"
+                    component={DatePicker}
+                  />
                   <Box direction="row" gap="small" margin={{ top: 'medium' }}>
                     <Button primary label="Submit" type="submit" />
                     <Button label="Cancel" />
