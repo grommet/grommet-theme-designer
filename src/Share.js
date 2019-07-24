@@ -59,6 +59,7 @@ const Publish = ({ theme, onChange }) => {
           .then(id => {
             const nextUploadUrl = [
               window.location.protocol,
+              '//',
               window.location.host,
               window.location.pathname,
               `?id=${encodeURIComponent(id)}`,
