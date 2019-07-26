@@ -3,7 +3,6 @@ import { Box, Heading, Text, TextArea, TextInput } from 'grommet';
 import Field from './components/Field';
 
 export default ({ theme, onChange }) => {
-  const [headingFont, setHeadingFont] = React.useState(false)
   return (
     <Fragment>
       <Heading level={2} size="small">Font</Heading>

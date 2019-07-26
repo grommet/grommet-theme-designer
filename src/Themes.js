@@ -15,7 +15,6 @@ const nameToBackground = (name) => {
 
 const Themes = ({ theme, onClose, onChange }) => {
   const [themes, setThemes] = React.useState([]);
-  const [error, setError] = React.useState();
   const [confirmDelete, setConfirmDelete] = React.useState();
 
   React.useEffect(() => {
