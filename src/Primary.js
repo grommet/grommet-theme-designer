@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, TextInput } from 'grommet';
+import { Box, Heading, TextInput } from 'grommet';
 import Field from './components/Field';
 import Colors from './Colors';
 import Font from './Font';
@@ -25,6 +25,7 @@ export default ({ theme, onChange }) => {
         </Box>
       </Field>
       <Font theme={theme} onChange={onChange} />
+      <Heading level={2} size="small">Sizing</Heading>
       <Rounding theme={theme} onChange={onChange} />
       <Spacing theme={theme} onChange={onChange} />
       <Colors theme={theme} onChange={onChange} />

@@ -1,14 +1,11 @@
 import React, { Fragment } from 'react';
-import {
-  Box, Button, Heading, MaskedInput, Text, base, grommet,
-} from 'grommet';
-import { FormDown, FormUp } from 'grommet-icons';
+import { Box, Heading, MaskedInput, Text, base, grommet } from 'grommet';
 import Field from './components/Field';
+import Expander from './components/Expander';
 
 const getColor = (theme, name) => (
-  theme.global.colors[name]
-  || grommet.global.colors[name]
-  || base.global.colors[name])
+  theme.global.colors[name] !== undefined ? theme.global.colors[name]
+  : (grommet.global.colors[name] || base.global.colors[name]))
 
 const ColorField = ({ theme, color, onChange }) => (
   <Field htmlFor={color} label={color}>
@@ -47,7 +44,7 @@ const ContextColor = ({ color, context, theme, onChange }) => (
       style={{ textAlign: 'right' }}
       mask={[
         { fixed: '#' },
-        { length: 6, placeholder: 'rrggbb', regexp: /^[0-9a-z]+$/ },
+        { length: 6, placeholder: 'rrggbb', regexp: /^[0-9a-zA-Z]+$/ },
       ]}
       value={getColor(theme, color)[context]}
       onChange={(event) => {
@@ -70,31 +67,13 @@ const ObjectColorField = ({ theme, color, onChange }) => (
   </Field>
 )
 
-const Expander = ({ label, expanded, change }) => (
-  <Button plain onClick={() => change(!expanded)}>
-    {({ hover }) => (
-      <Box
-        pad={{ top: 'medium', bottom: 'small' }}
-        direction="row"
-        justify="between"
-        align="center"
-        border={expanded ? undefined : 'bottom'}
-      >
-        <Text weight="bold">{label}</Text>
-        {expanded
-          ? <FormUp color={hover ? 'accent-1' : undefined} />
-          : <FormDown color={hover ? 'accent-1' : undefined} />}
-      </Box>
-    )}
-  </Button>
-)
-
 export default ({ theme, onChange }) => {
   const [editColors, setEditColors] = React.useState(false)
   const [editMoreColors, setEditMoreColors] = React.useState(false)
 
   return (
     <Fragment>
+      <Heading level={2} size="small">Color</Heading>
       <ColorField theme={theme} color='brand' onChange={onChange} />
       <Expander label="Colors" expanded={editColors} change={setEditColors} />
       {editColors && (
