@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import {
-  Box, Button, Form, FormField, Grid, Heading, MaskedInput, Paragraph,
+  Anchor, Box, Button, Form, FormField, Grid, Heading, MaskedInput, Paragraph,
   Text, TextInput
 } from 'grommet';
 import { CloudUpload, Copy } from 'grommet-icons';
@@ -11,7 +11,9 @@ const Summary = ({ Icon, label, guidance }) => (
   <Box align="center" gap="small">
     <Icon size="large" />
     <Heading level={3} margin="none">{label}</Heading>
-    <Paragraph textAlign="center">{guidance}</Paragraph>
+    {typeof guidance === 'string' ? (
+      <Paragraph textAlign="center">{guidance}</Paragraph>
+    ) : guidance}
   </Box>
 );
 
@@ -83,12 +85,27 @@ const Publish = ({ theme, onChange }) => {
 
   return (
     <Box>
-      <Summary Icon={CloudUpload} label="Publish" guidance={`
-        Publishing your theme will generate a URL
-        that you can send to others so they can see it.
-        We use your email and PIN # so nobody else can modify your copy.
-        They will be able to create their own theme based on it.
-      `} />
+      <Summary
+        Icon={CloudUpload}
+        label="Publish"
+        guidance={(
+          <Box>
+            <Paragraph textAlign="center">
+              Publishing your theme will generate a URL
+              that you can send to others so they can see it.
+              We use your email and PIN # so nobody else can modify your copy.
+              They will be able to create their own theme based on it.
+            </Paragraph>
+            <Paragraph textAlign="center">
+              You can also supply the published URL
+              into <Anchor href="https://designer.grommet.io">
+                grommet designer
+              </Anchor> as a "published" theme. Any changes you re-publish
+              will automatically be picked up by designs referencing it.
+            </Paragraph>
+          </Box>
+        )}
+      />
       <Form value={publication} onSubmit={onPublish}>
         <FormField
           name="email"
