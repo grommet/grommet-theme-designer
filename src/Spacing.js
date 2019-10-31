@@ -223,14 +223,14 @@ const setSpacing = (theme, spacing, scale = 6) => {
   };
 }
 
-export default ({ theme, onChange }) => {
+export default ({ theme, setTheme }) => {
 
-  const localOnChange = (event) => {
+  const onChange = (event) => {
     const nextTheme = JSON.parse(JSON.stringify(theme));
     const spacing = parseInt(event.target.value, 10);
     nextTheme.spacing = spacing;
     setSpacing(nextTheme, spacing);
-    onChange({ theme: nextTheme });
+    setTheme(nextTheme);
   }
 
   return (
@@ -243,7 +243,7 @@ export default ({ theme, onChange }) => {
           min={12}
           step={4}
           value={theme.spacing !== undefined ? theme.spacing : 24}
-          onChange={localOnChange}
+          onChange={onChange}
           style={{ textAlign: 'end' }}
         />
         <Box
@@ -257,7 +257,7 @@ export default ({ theme, onChange }) => {
             mask={[{ length: [1,2], regexp: /^[0-9]+$/ }]}
             style={{ textAlign: 'right', width: '48px' }}
             value={theme.spacing}
-            onChange={localOnChange}
+            onChange={onChange}
           />
           <Text>px</Text>
         </Box>

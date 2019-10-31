@@ -13,7 +13,7 @@ const nameToBackground = (name) => {
   return `accent-${(num % 4) + 1}`;
 };
 
-const Themes = ({ theme, onClose, onChange }) => {
+const Themes = ({ theme, onClose, setTheme }) => {
   const [themes, setThemes] = React.useState([]);
   const [confirmDelete, setConfirmDelete] = React.useState();
 
@@ -39,7 +39,7 @@ const Themes = ({ theme, onClose, onChange }) => {
     if (item) {
       const nextTheme = JSON.parse(item);
       upgradeTheme(nextTheme);
-      onChange({ theme: nextTheme });
+      setTheme(nextTheme);
       onClose();
     }
   }
@@ -47,7 +47,7 @@ const Themes = ({ theme, onClose, onChange }) => {
   const onReset = () => {
     localStorage.removeItem('selected');
     localStorage.removeItem('activeTheme');
-    onChange({ theme: starter });
+    setTheme(starter);
     onClose();
   }
 
@@ -59,7 +59,7 @@ const Themes = ({ theme, onClose, onChange }) => {
     setThemes(nextThemes);
     if (theme.name === name) {
       localStorage.removeItem('activeTheme');
-      onChange({ theme: starter });
+      setTheme(starter);
     }
   }
 

@@ -2,9 +2,9 @@ import React from 'react';
 import { Box, MaskedInput, RangeInput, Text } from 'grommet';
 import Field from './components/Field';
 
-export default ({ theme, onChange }) => {
+export default ({ theme, setTheme }) => {
 
-  const localOnChange = (event) => {
+  const onChange = (event) => {
     const nextTheme = JSON.parse(JSON.stringify(theme));
     const rounding = parseInt(event.target.value, 10);
     nextTheme.rounding = rounding
@@ -22,7 +22,7 @@ export default ({ theme, onChange }) => {
     nextTheme.radioButton = {
       check: { radius: radius },
     };
-    onChange({ theme: nextTheme });
+    setTheme(nextTheme);
   }
 
   return (
@@ -35,7 +35,7 @@ export default ({ theme, onChange }) => {
           min={0}
           step={2}
           value={theme.rounding !== undefined ? theme.rounding : 4}
-          onChange={localOnChange}
+          onChange={onChange}
           style={{ textAlign: 'end' }}
         />
         <Box
@@ -49,7 +49,7 @@ export default ({ theme, onChange }) => {
             mask={[{ length: [1,2], regexp: /^[0-9]+$/ }]}
             style={{ textAlign: 'right', width: '48px' }}
             value={theme.rounding}
-            onChange={localOnChange}
+            onChange={onChange}
           />
           <Text>px</Text>
         </Box>

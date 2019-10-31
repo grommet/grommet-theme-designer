@@ -6,7 +6,7 @@ import Font from './Font';
 import Rounding from './Rounding';
 import Spacing from './Spacing';
 
-export default ({ theme, onChange }) => {
+export default ({ theme, setTheme }) => {
   return (
     <Box>
       <Field htmlFor="name" label="name">
@@ -18,17 +18,17 @@ export default ({ theme, onChange }) => {
           onChange={(event) => {
             const nextTheme = JSON.parse(JSON.stringify(theme));
             nextTheme.name = event.target.value;
-            onChange({ theme: nextTheme });
+            setTheme(nextTheme);
           }}
         />
       </Field>
-      <Font theme={theme} onChange={onChange} />
+      <Font theme={theme} setTheme={setTheme} />
       <Box pad={{ horizontal: 'medium' }}>
         <Heading level={2} size="small">Sizing</Heading>
       </Box>
-      <Rounding theme={theme} onChange={onChange} />
-      <Spacing theme={theme} onChange={onChange} />
-      <Colors theme={theme} onChange={onChange} />
+      <Rounding theme={theme} setTheme={setTheme} />
+      <Spacing theme={theme} setTheme={setTheme} />
+      <Colors theme={theme} setTheme={setTheme} />
     </Box>
   )
 }

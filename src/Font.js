@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Box, Heading, Text, TextArea, TextInput } from 'grommet';
 import Field from './components/Field';
 
-export default ({ theme, onChange }) => {
+export default ({ theme, setTheme }) => {
   return (
     <Fragment>
       <Box pad={{ horizontal: 'medium' }}>
@@ -27,7 +27,7 @@ export default ({ theme, onChange }) => {
               const family = event.target.value;
               const nextTheme = JSON.parse(JSON.stringify(theme));
               nextTheme.global.font.family = family;
-              onChange({ theme: nextTheme });
+              setTheme(nextTheme);
               // see if we need a face for any of the fonts
               const names = family.split(',').map(f => f.trim());
               names.forEach(name => {
@@ -38,7 +38,7 @@ export default ({ theme, onChange }) => {
                   .then(face => {
                     const nextTheme2 = JSON.parse(JSON.stringify(nextTheme));
                     nextTheme2.global.font.face = face;
-                    onChange({ theme: nextTheme2 });
+                    setTheme(nextTheme2);
                   })
                 }
               })
@@ -61,7 +61,7 @@ export default ({ theme, onChange }) => {
                 const face = event.target.value;
                 const nextTheme = JSON.parse(JSON.stringify(theme));
                 nextTheme.global.font.face = face;
-                onChange({ theme: nextTheme });
+                setTheme(nextTheme);
               }}
             />
           </Box>
@@ -86,7 +86,7 @@ export default ({ theme, onChange }) => {
               if (!nextTheme.heading) nextTheme.heading = {};
               if (!nextTheme.heading.font) nextTheme.heading.font = {};
               nextTheme.heading.font.family = family;
-              onChange({ theme: nextTheme });
+              setTheme(nextTheme);
               // see if we need a face for any of the fonts
               const names = family.split(',').map(f => f.trim());
               names.forEach(name => {
@@ -98,7 +98,7 @@ export default ({ theme, onChange }) => {
                     const nextTheme2 = JSON.parse(JSON.stringify(nextTheme));
                     nextTheme2.global.font.face =
                     (nextTheme.global.font.face || '') + '\n' + face;
-                    onChange({ theme: nextTheme2 });
+                    setTheme(nextTheme2);
                   })
                 }
               })
@@ -123,7 +123,7 @@ export default ({ theme, onChange }) => {
                 const nextTheme = JSON.parse(JSON.stringify(theme));
                 nextTheme.global.font.face =
                   (nextTheme.global.font.face || '') + face;
-                onChange({ theme: nextTheme });
+                  setTheme(nextTheme);
               }}
             />
           </Box>

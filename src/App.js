@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment, useCallback, useContext, useEffect, useState } from 'react';
 import { Box, Grid, Grommet, ResponsiveContext, Keyboard, grommet } from 'grommet';
 import { Apps, Code, Share } from 'grommet-icons';
 import { apiUrl, starter, upgradeTheme } from './theme';
@@ -19,8 +19,8 @@ const getParams = () => {
   return params;
 }
 
-const Actioner = ({ Icon, Modal, theme, title, onChange }) => {
-  const [show, setShow] = React.useState();
+const Actioner = ({ Icon, Modal, theme, title, setTheme }) => {
+  const [show, setShow] = useState();
   return (
     <Fragment>
       <ActionButton
@@ -30,24 +30,28 @@ const Actioner = ({ Icon, Modal, theme, title, onChange }) => {
         onClick={() => setShow(true)}
       />
       {show && (
-        <Modal theme={theme} onChange={onChange} onClose={() => setShow(false)} />
+        <Modal theme={theme} setTheme={setTheme} onClose={() => setShow(false)} />
       )}
     </Fragment>
   );
 }
 
-class App extends Component {
-  state = { themes: [] };
+const App = () => {
+  const [theme, setTheme] = useState();
+  const [themes, setThemes] = useState([]);
+  const [preview, setPreview] = useState(true);
+  const responsive = useContext(ResponsiveContext);
 
-  componentDidMount() {
+  // load initial
+  useEffect(() => {
     const params = getParams();
     if (params.id) {
       fetch(`${apiUrl}/${params.id}`)
       .then(response => response.json())
-      .then((theme) => {
-        upgradeTheme(theme);
-        document.title = theme.name;
-        this.setState({ theme });
+      .then((nextTheme) => {
+        upgradeTheme(nextTheme);
+        document.title = nextTheme.name;
+        setTheme(nextTheme);
       });
     } else {
       let stored = localStorage.getItem('activeTheme');
@@ -55,125 +59,109 @@ class App extends Component {
         stored = localStorage.getItem(stored);
       }
       if (stored) {
-        const theme = JSON.parse(stored);
-        upgradeTheme(theme);
-        document.title = theme.name;
-        this.setState({ theme });
+        const nextTheme = JSON.parse(stored);
+        upgradeTheme(nextTheme);
+        document.title = nextTheme.name;
+        setTheme(nextTheme);
       } else {
-        this.setState({ theme: starter });
+        setTheme(starter);
       }
+      setPreview(false);
     }
     const stored = localStorage.getItem('themes');
-    this.setState({ themes: stored ? JSON.parse(stored) : [] });
-  }
-
-  onChange = (nextState) => {
-    const { themes: previousThemes } = this.state;
-    this.setState(nextState);
-
-    if (nextState.theme) {
-      if (!this.debouncing) {
-        this.debouncing = true;
-      }
-      const { theme } = nextState;
-      // delay storing it locally so we don't bog down typing
-      clearTimeout(this.storeTimer);
-      this.storeTimer = setTimeout(() => {
-        document.title = theme.name;
-        localStorage.setItem(theme.name, JSON.stringify(theme));
-        localStorage.setItem('activeTheme', theme.name);
-        if (document.location.search) {
-          // clear current URL, in case we've started editing a published design locally
-          window.history.replaceState({}, theme.name, '/');
-        }
-        if (!previousThemes.includes(theme.name)) {
-          const themes = [theme.name, ...previousThemes];
-          localStorage.setItem('themes', JSON.stringify(themes));
-          this.setState({ themes });
-        }
-        this.debouncing = false;
-      }, 500);
+    if (stored) {
+      setThemes(JSON.parse(stored));
     }
-  }
+  }, []);
 
-  onKey = (event) => {
-    const { preview } = this.state;
+  // store theme
+  useEffect(() => {
+    // do this stuff lazily, so we don't bog down the UI
+    const timer = setTimeout(() => {
+      document.title = theme.name;
+
+      localStorage.setItem(theme.name, JSON.stringify(theme));
+      localStorage.setItem('activeTheme', theme.name);
+
+      if (!themes.includes(theme.name)) {
+        const nextThemes = [theme.name, ...themes];
+        localStorage.setItem('themes', JSON.stringify(nextThemes));
+        setThemes(nextThemes);
+      }
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [theme, themes]);
+
+  const onKey = useCallback((event) => {
     if (event.metaKey) {
-      if (event.key === 'e') {
+      if (event.key === 'e' || event.key === 'E') {
         event.preventDefault();
-        this.setState({ preview: !preview });
+        setPreview(!preview);
       }
     }
-  }
+  }, [preview]);
 
-  render() {
-    const { preview, theme } = this.state;
-    return (
-      <Grommet full theme={grommet}>
-        <ResponsiveContext.Consumer>
-          {(responsive) => (
-            <Keyboard target="document" onKeyDown={this.onKey}>
-              {!theme ? (
-                <Box fill justify="center" align="center">
-                  <Box pad="xlarge" background="dark-2" round animation="pulse" />
+  return (
+    <Grommet full theme={grommet}>
+      <Keyboard target="document" onKeyDown={onKey}>
+        {!theme ? (
+          <Box fill justify="center" align="center">
+            <Box pad="xlarge" background="dark-2" round animation="pulse" />
+          </Box>
+        ) : (
+          <Grid
+            fill
+            columns={(responsive === 'small' || preview)
+              ? 'flex' : [['small', 'medium'], 'flex']}
+            rows='full'
+          >
+            {responsive !== 'small' && !preview && (
+              <Box
+                fill="vertical"
+                overflow="auto"
+                background="dark-1"
+                border="right"
+              >
+                <Box flex={false}>
+                  <Box
+                    flex={false}
+                    direction="row"
+                    justify="between"
+                    gap="small"
+                    border="bottom"
+                  >
+                    <Actioner
+                      title="choose another theme"
+                      Icon={Apps}
+                      Modal={Themes}
+                      theme={theme}
+                      setTheme={setTheme}
+                    />
+                    <Actioner
+                      title="see JSON"
+                      Icon={Code}
+                      Modal={Raw}
+                      theme={theme}
+                      setTheme={setTheme}
+                    />
+                    <Actioner
+                      title="share"
+                      Icon={Share}
+                      Modal={Sharer}
+                      theme={theme}
+                      setTheme={setTheme}
+                    />
+                  </Box>
+                  <Primary theme={theme} setTheme={setTheme} />
                 </Box>
-              ) : (
-                <Grid
-                  fill
-                  columns={(responsive === 'small' || preview)
-                    ? 'flex' : [['small', 'medium'], 'flex']}
-                  rows='full'
-                >
-                  {responsive !== 'small' && !preview && (
-                    <Box
-                      fill="vertical"
-                      overflow="auto"
-                      background="dark-1"
-                      border="right"
-                    >
-                      <Box flex={false}>
-                        <Box
-                          flex={false}
-                          direction="row"
-                          justify="between"
-                          gap="small"
-                          border="bottom"
-                        >
-                          <Actioner
-                            title="choose another theme"
-                            Icon={Apps}
-                            Modal={Themes}
-                            theme={theme}
-                            onChange={this.onChange}
-                          />
-                          <Actioner
-                            title="see JSON"
-                            Icon={Code}
-                            Modal={Raw}
-                            theme={theme}
-                            onChange={this.onChange}
-                          />
-                          <Actioner
-                            title="share"
-                            Icon={Share}
-                            Modal={Sharer}
-                            theme={theme}
-                            onChange={this.onChange}
-                          />
-                        </Box>
-                        <Primary theme={theme} onChange={this.onChange} />
-                      </Box>
-                    </Box>
-                  )}
-                  <Card theme={theme} />
-                </Grid>
-              )}
-            </Keyboard>
-          )}
-        </ResponsiveContext.Consumer>
-      </Grommet>
-    );
-  }
+              </Box>
+            )}
+            <Card theme={theme} />
+          </Grid>
+        )}
+      </Keyboard>
+    </Grommet>
+  );
 }
 
 export default App;

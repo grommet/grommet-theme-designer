@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import {
   Anchor, Box, Button, Form, FormField, Grid, Heading, MaskedInput, Paragraph,
   Text, TextInput
@@ -17,7 +17,7 @@ const Summary = ({ Icon, label, guidance }) => (
   </Box>
 );
 
-const Publish = ({ theme, onChange }) => {
+const Publish = ({ theme, setTheme }) => {
   const [publication, setPublication] = React.useState();
   const [uploadUrl, setUploadUrl] = React.useState();
   const [message, setMessage] = React.useState();
@@ -74,7 +74,7 @@ const Publish = ({ theme, onChange }) => {
     })
     .catch(e => setError(e.message));
 
-    onChange({ theme: nextTheme });
+    setTheme(nextTheme);
   }
 
   const onCopy = () => {
@@ -153,19 +153,14 @@ const Publish = ({ theme, onChange }) => {
   );
 };
 
-export default class Share extends Component {
-  render() {
-    const { theme, onChange, onClose } = this.props;
-    return (
-      <Action
-        label="share"
-        animation="fadeIn"
-        onClose={onClose}
-      >
-        <Grid columns={{ count: 'fit', size: "small" }} gap="large">
-          <Publish theme={theme} onChange={onChange} />
-        </Grid>
-      </Action>
-    );
-  }
-}
+export default ({ theme, setTheme, onClose }) => (
+  <Action
+    label="share"
+    animation="fadeIn"
+    onClose={onClose}
+  >
+    <Grid columns={{ count: 'fit', size: "small" }} gap="large">
+      <Publish theme={theme} setTheme={setTheme} />
+    </Grid>
+  </Action>
+);

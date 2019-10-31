@@ -2,14 +2,14 @@ import React from 'react';
 import { Box, Button, Form, FormField, TextArea } from 'grommet';
 import Action from './components/Action';
 
-const Raw = ({ theme, onClose, onChange }) => {
+const Raw = ({ theme, onClose, setTheme }) => {
   return (
     <Action label="raw" onClose={onClose} modal>
       <Form
         value={{ json: JSON.stringify(theme, null, 2) }}
         onSubmit={({ value: { json } }) => {
           const nextTheme = JSON.parse(json);
-          onChange({ theme: nextTheme });
+          setTheme(nextTheme);
           onClose();
         }}
       >

@@ -7,7 +7,7 @@ const getColor = (theme, name) => (
   theme.global.colors[name] !== undefined ? theme.global.colors[name]
   : (grommet.global.colors[name] || base.global.colors[name]))
 
-const ColorField = ({ theme, color, onChange }) => (
+const ColorField = ({ theme, color, setTheme }) => (
   <Field htmlFor={color} label={color}>
     <Box direction="row" align="center">
       <MaskedInput
@@ -22,7 +22,7 @@ const ColorField = ({ theme, color, onChange }) => (
         onChange={(event) => {
           const nextTheme = JSON.parse(JSON.stringify(theme));
           nextTheme.global.colors[color] = event.target.value;
-          onChange({ theme: nextTheme });
+          setTheme(nextTheme);
         }}
       />
       <Box pad="small" background={getColor(theme, color)} />
@@ -30,7 +30,7 @@ const ColorField = ({ theme, color, onChange }) => (
   </Field>
 )
 
-const ContextColor = ({ color, context, theme, onChange }) => (
+const ContextColor = ({ color, context, theme, setTheme }) => (
   <Box
     direction="row"
     align="center"
@@ -53,21 +53,21 @@ const ContextColor = ({ color, context, theme, onChange }) => (
           nextTheme.global.colors[color] = {};
         }
         nextTheme.global.colors[color][context] = event.target.value;
-        onChange({ theme: nextTheme });
+        setTheme(nextTheme);
       }}
     />
     <Box pad="small" background={{ color, dark: (context !== 'light') }} />
   </Box>
 )
 
-const ObjectColorField = ({ theme, color, onChange }) => (
+const ObjectColorField = ({ theme, color, setTheme }) => (
   <Field direction="column" align="stretch" htmlFor={color} label={color}>
-    <ContextColor context="light" color={color} theme={theme} onChange={onChange} />
-    <ContextColor context="dark" color={color} theme={theme} onChange={onChange} />
+    <ContextColor context="light" color={color} theme={theme} setTheme={setTheme} />
+    <ContextColor context="dark" color={color} theme={theme} setTheme={setTheme} />
   </Field>
 )
 
-export default ({ theme, onChange }) => {
+export default ({ theme, setTheme }) => {
   const [editColors, setEditColors] = React.useState(false)
   const [editMoreColors, setEditMoreColors] = React.useState(false)
 
@@ -76,7 +76,7 @@ export default ({ theme, onChange }) => {
       <Box pad={{ horizontal: 'medium' }}>
         <Heading level={2} size="small">Color</Heading>
       </Box>
-      <ColorField theme={theme} color='brand' onChange={onChange} />
+      <ColorField theme={theme} color='brand' setTheme={setTheme} />
       <Expander label="Colors" expanded={editColors} change={setEditColors} />
       {editColors && (
         <Fragment>
@@ -84,14 +84,14 @@ export default ({ theme, onChange }) => {
             <Heading level={3}>Accent</Heading>
           </Box>
           {['accent-1', 'accent-2', 'accent-3', 'accent-4'].map(color => (
-            <ColorField key={color} theme={theme} color={color} onChange={onChange} />
+            <ColorField key={color} theme={theme} color={color} setTheme={setTheme} />
           ))}
           <Box pad={{ horizontal: 'medium' }}>
             <Heading level={3}>Neutral</Heading>
           </Box>
           {['neutral-1', 'neutral-2', 'neutral-3', 'neutral-4',
           ].map(color => (
-            <ColorField key={color} theme={theme} color={color} onChange={onChange} />
+            <ColorField key={color} theme={theme} color={color} setTheme={setTheme} />
           ))}
           <Expander label="More Colors" expanded={editMoreColors} change={setEditMoreColors} />
           {editMoreColors && (
@@ -102,23 +102,23 @@ export default ({ theme, onChange }) => {
               {['dark-1', 'dark-2', 'dark-3', 'dark-4',
                 'light-1', 'light-2', 'light-3', 'light-4',
               ].map(color => (
-                <ColorField key={color} theme={theme} color={color} onChange={onChange} />
+                <ColorField key={color} theme={theme} color={color} setTheme={setTheme} />
               ))}
               <Box pad={{ horizontal: 'medium' }}>
                 <Heading level={3}>Status</Heading>
               </Box>
               {['status-critical', 'status-warning', 'status-ok', 'status-unknown',
               ].map(color => (
-                <ColorField key={color} theme={theme} color={color} onChange={onChange} />
+                <ColorField key={color} theme={theme} color={color} setTheme={setTheme} />
               ))}
               <Box pad={{ horizontal: 'medium' }}>
                 <Heading level={3}>Chrome</Heading>
               </Box>
               {['border', 'control', 'text'].map(color => (
-                <ObjectColorField key={color} theme={theme} color={color} onChange={onChange} />
+                <ObjectColorField key={color} theme={theme} color={color} setTheme={setTheme} />
               ))}
               {['background', 'focus'].map(color => (
-                <ColorField key={color} theme={theme} color={color} onChange={onChange} />
+                <ColorField key={color} theme={theme} color={color} setTheme={setTheme} />
               ))}
             </Fragment>
           )}
