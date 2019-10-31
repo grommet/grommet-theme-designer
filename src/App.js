@@ -1,4 +1,5 @@
 import React, { Fragment, useCallback, useContext, useEffect, useState } from 'react';
+import ReactGA from 'react-ga';
 import { Box, Grid, Grommet, ResponsiveContext, Keyboard, grommet } from 'grommet';
 import { Apps, Code, Share } from 'grommet-icons';
 import { apiUrl, starter, upgradeTheme } from './theme';
@@ -42,6 +43,17 @@ const App = () => {
   const [preview, setPreview] = useState(true);
   const responsive = useContext(ResponsiveContext);
 
+  // initialize analytics
+  React.useEffect(() => {
+    const {
+      location: { pathname },
+    } = window;
+    if (document.domain) {
+      ReactGA.initialize('UA-99690204-5');
+      ReactGA.pageview(pathname);
+    }
+  }, []);
+
   // load initial
   useEffect(() => {
     const params = getParams();
@@ -52,6 +64,10 @@ const App = () => {
         upgradeTheme(nextTheme);
         document.title = nextTheme.name;
         setTheme(nextTheme);
+        ReactGA.event({
+          category: 'switch',
+          action: 'published theme',
+        });
       });
     } else {
       let stored = localStorage.getItem('activeTheme');
@@ -63,8 +79,16 @@ const App = () => {
         upgradeTheme(nextTheme);
         document.title = nextTheme.name;
         setTheme(nextTheme);
+        ReactGA.event({
+          category: 'switch',
+          action: 'previous theme',
+        });
       } else {
         setTheme(starter);
+        ReactGA.event({
+          category: 'switch',
+          action: 'new theme',
+        });
       }
       setPreview(false);
     }

@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import ReactGA from 'react-ga';
 import {
   Anchor, Box, Button, Form, FormField, Grid, Heading, MaskedInput, Paragraph,
   Text, TextInput
@@ -68,6 +69,11 @@ const Publish = ({ theme, setTheme }) => {
               window.location.hash,
             ].join('');
             setUploadUrl(nextUploadUrl);
+
+            ReactGA.event({
+              category: 'share',
+              action: 'publish theme',
+            });
           });
       }
       return response.text().then(setError);
