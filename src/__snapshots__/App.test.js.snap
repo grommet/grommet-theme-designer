@@ -8,108 +8,108 @@ exports[`App empty 1`] = `
     class="StyledGrid-sc-1wofa1l-0 bEbBoV"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 gObZlc"
+      class="StyledBox-sc-13pk1d4-0 fdAdll"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 eBamYc"
+        class="StyledBox-sc-13pk1d4-0 hqGUhX"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 hAOjQK"
-        >
-          <button
-            class="StyledButton-sc-323bzc-0 esrnCr"
-            title="choose another theme"
-            type="button"
-          >
-            <svg
-              aria-label="Apps"
-              class="StyledIcon-ofa7kd-0 jAaLrm"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,5 L21,5 L21,3 L19,3 L19,5 Z M11,5 L13,5 L13,3 L11,3 L11,5 Z M3,5 L5,5 L5,3 L3,3 L3,5 Z M19,13 L21,13 L21,11 L19,11 L19,13 Z M11,13 L13,13 L13,11 L11,11 L11,13 Z M3,13 L5,13 L5,11 L3,11 L3,13 Z M19,21 L21,21 L21,19 L19,19 L19,21 Z M11,21 L13,21 L13,19 L11,19 L11,21 Z M3,21 L5,21 L5,19 L3,19 L3,21 Z"
-                fill="none"
-                stroke="#000"
-                stroke-width="2"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iChEkS"
-        />
-        <div
-          class="StyledBox-sc-13pk1d4-0 hAOjQK"
-        >
-          <button
-            class="StyledButton-sc-323bzc-0 esrnCr"
-            title="see JSON"
-            type="button"
-          >
-            <svg
-              aria-label="Code"
-              class="StyledIcon-ofa7kd-0 jAaLrm"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M9,22 L15,2 M17,17 L22,12 L17,7 M7,17 L2,12 L7,7"
-                fill="none"
-                stroke="#000"
-                stroke-width="2"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iChEkS"
-        />
-        <div
-          class="StyledBox-sc-13pk1d4-0 hAOjQK"
-        >
-          <button
-            class="StyledButton-sc-323bzc-0 esrnCr"
-            title="share"
-            type="button"
-          >
-            <svg
-              aria-label="Share"
-              class="StyledIcon-ofa7kd-0 jAaLrm"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,13 L19,23 L1,23 L1,5 L1,5 L11,5 M14,1 L23,1 L23,10 M10,14 L22.9999998,1 L10,14 Z"
-                fill="none"
-                stroke="#000"
-                stroke-width="2"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div
-        class="StyledBox-sc-13pk1d4-0 kvSQMd"
-      >
-        <div
-          class="StyledBox-sc-13pk1d4-0 Uiard"
+          class="StyledBox-sc-13pk1d4-0 gbuKLi"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 hfsUvK"
+            class="StyledBox-sc-13pk1d4-0 hqGUhX"
+          >
+            <button
+              class="StyledButton-sc-323bzc-0 esrnCr"
+              title="choose another theme"
+              type="button"
+            >
+              <svg
+                aria-label="Apps"
+                class="StyledIcon-ofa7kd-0 jAaLrm"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,5 L21,5 L21,3 L19,3 L19,5 Z M11,5 L13,5 L13,3 L11,3 L11,5 Z M3,5 L5,5 L5,3 L3,3 L3,5 Z M19,13 L21,13 L21,11 L19,11 L19,13 Z M11,13 L13,13 L13,11 L11,11 L11,13 Z M3,13 L5,13 L5,11 L3,11 L3,13 Z M19,21 L21,21 L21,19 L19,19 L19,21 Z M11,21 L13,21 L13,19 L11,19 L11,21 Z M3,21 L5,21 L5,19 L3,19 L3,21 Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iChEkS"
+          />
+          <div
+            class="StyledBox-sc-13pk1d4-0 hqGUhX"
+          >
+            <button
+              class="StyledButton-sc-323bzc-0 esrnCr"
+              title="see JSON"
+              type="button"
+            >
+              <svg
+                aria-label="Code"
+                class="StyledIcon-ofa7kd-0 jAaLrm"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M9,22 L15,2 M17,17 L22,12 L17,7 M7,17 L2,12 L7,7"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iChEkS"
+          />
+          <div
+            class="StyledBox-sc-13pk1d4-0 hqGUhX"
+          >
+            <button
+              class="StyledButton-sc-323bzc-0 esrnCr"
+              title="share"
+              type="button"
+            >
+              <svg
+                aria-label="Share"
+                class="StyledIcon-ofa7kd-0 jAaLrm"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,13 L19,23 L1,23 L1,5 L1,5 L11,5 M14,1 L23,1 L23,10 M10,14 L22.9999998,1 L10,14 Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="StyledBox-sc-13pk1d4-0 fWrrBh"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 Uiard"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 dUkghO"
-            >
-              <label
-                class="StyledText-sc-1sadyjn-0 fWSbXS"
-                for="name"
-              >
-                name
-              </label>
-            </div>
-            <div
-              class="StyledBox-sc-13pk1d4-0 iLNTNM"
+              class="StyledBox-sc-13pk1d4-0 kIOAwt"
             >
               <div
-                class="StyledBox-sc-13pk1d4-0 dMmorK"
+                class="StyledBox-sc-13pk1d4-0 dUkghO"
+              >
+                <label
+                  class="StyledText-sc-1sadyjn-0 fWSbXS"
+                  for="name"
+                >
+                  name
+                </label>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 iLNTNM"
               >
                 <div
                   class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 kYQCpm"
@@ -125,284 +125,300 @@ exports[`App empty 1`] = `
               </div>
             </div>
           </div>
-        </div>
-        <h2
-          class="StyledHeading-sc-1rdh4aw-0 bFZgUK"
-        >
-          Font
-        </h2>
-        <span
-          class="StyledText-sc-1sadyjn-0 bjNjKg"
-        >
-          Double quotes use Google fonts. Single quotes prompt for face.
-        </span>
-        <div
-          class="StyledBox-sc-13pk1d4-0 Uiard"
-        >
           <div
-            class="StyledBox-sc-13pk1d4-0 dtNVsj"
+            class="StyledBox-sc-13pk1d4-0 cqODYy"
           >
-            <div
-              class="StyledBox-sc-13pk1d4-0 dUkghO"
+            <h2
+              class="StyledHeading-sc-1rdh4aw-0 bFZgUK"
             >
-              <label
-                class="StyledText-sc-1sadyjn-0 fWSbXS"
-                for="family"
-              >
-                font family
-              </label>
-            </div>
-            <div
-              class="StyledBox-sc-13pk1d4-0 iLNTNM"
-            >
-              <div
-                class="StyledBox-sc-13pk1d4-0 dMmorK"
-              >
-                <div
-                  class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 kYQCpm"
-                >
-                  <input
-                    autocomplete="off"
-                    class="StyledTextInput-sc-1x30a0s-0 ebFsnl"
-                    id="family"
-                    name="family"
-                    style="text-align: right;"
-                    value="Helvetica"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 Uiard"
-        >
-          <div
-            class="StyledBox-sc-13pk1d4-0 dtNVsj"
-          >
-            <div
-              class="StyledBox-sc-13pk1d4-0 dUkghO"
-            >
-              <label
-                class="StyledText-sc-1sadyjn-0 fWSbXS"
-                for="headingFamily"
-              >
-                heading font family
-              </label>
-            </div>
-            <div
-              class="StyledBox-sc-13pk1d4-0 iLNTNM"
-            >
-              <div
-                class="StyledBox-sc-13pk1d4-0 dMmorK"
-              >
-                <div
-                  class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 kYQCpm"
-                >
-                  <input
-                    autocomplete="off"
-                    class="StyledTextInput-sc-1x30a0s-0 ebFsnl"
-                    id="headingFamily"
-                    name="headingFamily"
-                    style="text-align: right;"
-                    value=""
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <h2
-          class="StyledHeading-sc-1rdh4aw-0 bFZgUK"
-        >
-          Sizing
-        </h2>
-        <div
-          class="StyledBox-sc-13pk1d4-0 Uiard"
-        >
-          <div
-            class="StyledBox-sc-13pk1d4-0 hfsUvK"
-          >
-            <div
-              class="StyledBox-sc-13pk1d4-0 dUkghO"
-            >
-              <label
-                class="StyledText-sc-1sadyjn-0 fWSbXS"
-                for="rounding"
-              >
-                rounding
-              </label>
-            </div>
-            <div
-              class="StyledBox-sc-13pk1d4-0 iLNTNM"
-            >
-              <div
-                class="StyledBox-sc-13pk1d4-0 hfsUvK"
-              >
-                <input
-                  class="StyledRangeInput-sc-15st9ck-0 ghNbEw"
-                  id="rounding"
-                  max="24"
-                  min="0"
-                  name="rounding"
-                  step="2"
-                  style="text-align: end;"
-                  type="range"
-                  value="4"
-                />
-                <div
-                  class="StyledBox-sc-13pk1d4-0 gSnkbP"
-                >
-                  <div
-                    class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 kyyRCm"
-                  >
-                    <input
-                      autocomplete="off"
-                      class="StyledMaskedInput-sc-99vkfa-0 hwaIhw"
-                      placeholder=""
-                      style="text-align: right; width: 48px;"
-                      value="4"
-                    />
-                  </div>
-                  <span
-                    class="StyledText-sc-1sadyjn-0 fWSbXS"
-                  >
-                    px
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 Uiard"
-        >
-          <div
-            class="StyledBox-sc-13pk1d4-0 hfsUvK"
-          >
-            <div
-              class="StyledBox-sc-13pk1d4-0 dUkghO"
-            >
-              <label
-                class="StyledText-sc-1sadyjn-0 fWSbXS"
-                for="spacing"
-              >
-                spacing
-              </label>
-            </div>
-            <div
-              class="StyledBox-sc-13pk1d4-0 iLNTNM"
-            >
-              <div
-                class="StyledBox-sc-13pk1d4-0 hfsUvK"
-              >
-                <input
-                  class="StyledRangeInput-sc-15st9ck-0 ghNbEw"
-                  id="spacing"
-                  max="36"
-                  min="12"
-                  name="spacing"
-                  step="4"
-                  style="text-align: end;"
-                  type="range"
-                  value="24"
-                />
-                <div
-                  class="StyledBox-sc-13pk1d4-0 gSnkbP"
-                >
-                  <div
-                    class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 kyyRCm"
-                  >
-                    <input
-                      autocomplete="off"
-                      class="StyledMaskedInput-sc-99vkfa-0 hwaIhw"
-                      placeholder=""
-                      style="text-align: right; width: 48px;"
-                      value="24"
-                    />
-                  </div>
-                  <span
-                    class="StyledText-sc-1sadyjn-0 fWSbXS"
-                  >
-                    px
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <h2
-          class="StyledHeading-sc-1rdh4aw-0 bFZgUK"
-        >
-          Color
-        </h2>
-        <div
-          class="StyledBox-sc-13pk1d4-0 Uiard"
-        >
-          <div
-            class="StyledBox-sc-13pk1d4-0 hfsUvK"
-          >
-            <div
-              class="StyledBox-sc-13pk1d4-0 dUkghO"
-            >
-              <label
-                class="StyledText-sc-1sadyjn-0 fWSbXS"
-                for="brand"
-              >
-                brand
-              </label>
-            </div>
-            <div
-              class="StyledBox-sc-13pk1d4-0 iLNTNM"
-            >
-              <div
-                class="StyledBox-sc-13pk1d4-0 hfsUvK"
-              >
-                <div
-                  class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 kyyRCm"
-                >
-                  <input
-                    autocomplete="off"
-                    class="StyledMaskedInput-sc-99vkfa-0 hwaIhw"
-                    name="brand"
-                    placeholder="#rrggbb"
-                    style="text-align: right;"
-                    value="#7D4CDB"
-                  />
-                </div>
-                <div
-                  class="StyledBox-sc-13pk1d4-0 cIWXfC"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <button
-          class="StyledButton-sc-323bzc-0 jfbKsv"
-          type="button"
-        >
-          <div
-            class="StyledBox-sc-13pk1d4-0 kNhvKp"
-          >
+              Font
+            </h2>
             <span
-              class="StyledText-sc-1sadyjn-0 bnqisW"
+              class="StyledText-sc-1sadyjn-0 bjNjKg"
             >
-              Colors
+              Double quotes use Google fonts. Single quotes prompt for face.
             </span>
-            <svg
-              aria-label="FormDown"
-              class="StyledIcon-ofa7kd-0 jAaLrm"
-              viewBox="0 0 24 24"
-            >
-              <polyline
-                fill="none"
-                points="18 9 12 15 6 9"
-                stroke="#000"
-                stroke-width="2"
-              />
-            </svg>
           </div>
-        </button>
+          <div
+            class="StyledBox-sc-13pk1d4-0 Uiard"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 gTzdaX"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dUkghO"
+              >
+                <label
+                  class="StyledText-sc-1sadyjn-0 fWSbXS"
+                  for="family"
+                >
+                  font family
+                </label>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 iLNTNM"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 dMmorK"
+                >
+                  <div
+                    class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 kYQCpm"
+                  >
+                    <input
+                      autocomplete="off"
+                      class="StyledTextInput-sc-1x30a0s-0 ebFsnl"
+                      id="family"
+                      name="family"
+                      style="text-align: right;"
+                      value="Helvetica"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="StyledBox-sc-13pk1d4-0 Uiard"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 gTzdaX"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dUkghO"
+              >
+                <label
+                  class="StyledText-sc-1sadyjn-0 fWSbXS"
+                  for="headingFamily"
+                >
+                  heading font family
+                </label>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 iLNTNM"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 dMmorK"
+                >
+                  <div
+                    class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 kYQCpm"
+                  >
+                    <input
+                      autocomplete="off"
+                      class="StyledTextInput-sc-1x30a0s-0 ebFsnl"
+                      id="headingFamily"
+                      name="headingFamily"
+                      style="text-align: right;"
+                      value=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="StyledBox-sc-13pk1d4-0 cqODYy"
+          >
+            <h2
+              class="StyledHeading-sc-1rdh4aw-0 bFZgUK"
+            >
+              Sizing
+            </h2>
+          </div>
+          <div
+            class="StyledBox-sc-13pk1d4-0 Uiard"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 kIOAwt"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dUkghO"
+              >
+                <label
+                  class="StyledText-sc-1sadyjn-0 fWSbXS"
+                  for="rounding"
+                >
+                  rounding
+                </label>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 iLNTNM"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 hfsUvK"
+                >
+                  <input
+                    class="StyledRangeInput-sc-15st9ck-0 ghNbEw"
+                    id="rounding"
+                    max="24"
+                    min="0"
+                    name="rounding"
+                    step="2"
+                    style="text-align: end;"
+                    type="range"
+                    value="4"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 gSnkbP"
+                  >
+                    <div
+                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 kyyRCm"
+                    >
+                      <input
+                        autocomplete="off"
+                        class="StyledMaskedInput-sc-99vkfa-0 hwaIhw"
+                        placeholder=""
+                        style="text-align: right; width: 48px;"
+                        value="4"
+                      />
+                    </div>
+                    <span
+                      class="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      px
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="StyledBox-sc-13pk1d4-0 Uiard"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 kIOAwt"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dUkghO"
+              >
+                <label
+                  class="StyledText-sc-1sadyjn-0 fWSbXS"
+                  for="spacing"
+                >
+                  spacing
+                </label>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 iLNTNM"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 hfsUvK"
+                >
+                  <input
+                    class="StyledRangeInput-sc-15st9ck-0 ghNbEw"
+                    id="spacing"
+                    max="36"
+                    min="12"
+                    name="spacing"
+                    step="4"
+                    style="text-align: end;"
+                    type="range"
+                    value="24"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 gSnkbP"
+                  >
+                    <div
+                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 kyyRCm"
+                    >
+                      <input
+                        autocomplete="off"
+                        class="StyledMaskedInput-sc-99vkfa-0 hwaIhw"
+                        placeholder=""
+                        style="text-align: right; width: 48px;"
+                        value="24"
+                      />
+                    </div>
+                    <span
+                      class="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      px
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="StyledBox-sc-13pk1d4-0 cqODYy"
+          >
+            <h2
+              class="StyledHeading-sc-1rdh4aw-0 bFZgUK"
+            >
+              Color
+            </h2>
+          </div>
+          <div
+            class="StyledBox-sc-13pk1d4-0 Uiard"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 kIOAwt"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dUkghO"
+              >
+                <label
+                  class="StyledText-sc-1sadyjn-0 fWSbXS"
+                  for="brand"
+                >
+                  brand
+                </label>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 iLNTNM"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 hfsUvK"
+                >
+                  <div
+                    class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 kyyRCm"
+                  >
+                    <input
+                      autocomplete="off"
+                      class="StyledMaskedInput-sc-99vkfa-0 hwaIhw"
+                      name="brand"
+                      placeholder="#rrggbb"
+                      style="text-align: right;"
+                      value="#7D4CDB"
+                    />
+                  </div>
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 cIWXfC"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="StyledBox-sc-13pk1d4-0 cqODYy"
+          >
+            <button
+              class="StyledButton-sc-323bzc-0 jfbKsv"
+              type="button"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 kNhvKp"
+              >
+                <span
+                  class="StyledText-sc-1sadyjn-0 bnqisW"
+                >
+                  Colors
+                </span>
+                <svg
+                  aria-label="FormDown"
+                  class="StyledIcon-ofa7kd-0 jAaLrm"
+                  viewBox="0 0 24 24"
+                >
+                  <polyline
+                    fill="none"
+                    points="18 9 12 15 6 9"
+                    stroke="#000"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
     <div
@@ -1075,108 +1091,108 @@ exports[`App empty 2`] = `
     class="StyledGrid-sc-1wofa1l-0 bEbBoV"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 gObZlc"
+      class="StyledBox-sc-13pk1d4-0 fdAdll"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 eBamYc"
+        class="StyledBox-sc-13pk1d4-0 hqGUhX"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 hAOjQK"
-        >
-          <button
-            class="StyledButton-sc-323bzc-0 esrnCr"
-            title="choose another theme"
-            type="button"
-          >
-            <svg
-              aria-label="Apps"
-              class="StyledIcon-ofa7kd-0 jAaLrm"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,5 L21,5 L21,3 L19,3 L19,5 Z M11,5 L13,5 L13,3 L11,3 L11,5 Z M3,5 L5,5 L5,3 L3,3 L3,5 Z M19,13 L21,13 L21,11 L19,11 L19,13 Z M11,13 L13,13 L13,11 L11,11 L11,13 Z M3,13 L5,13 L5,11 L3,11 L3,13 Z M19,21 L21,21 L21,19 L19,19 L19,21 Z M11,21 L13,21 L13,19 L11,19 L11,21 Z M3,21 L5,21 L5,19 L3,19 L3,21 Z"
-                fill="none"
-                stroke="#000"
-                stroke-width="2"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iChEkS"
-        />
-        <div
-          class="StyledBox-sc-13pk1d4-0 hAOjQK"
-        >
-          <button
-            class="StyledButton-sc-323bzc-0 esrnCr"
-            title="see JSON"
-            type="button"
-          >
-            <svg
-              aria-label="Code"
-              class="StyledIcon-ofa7kd-0 jAaLrm"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M9,22 L15,2 M17,17 L22,12 L17,7 M7,17 L2,12 L7,7"
-                fill="none"
-                stroke="#000"
-                stroke-width="2"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iChEkS"
-        />
-        <div
-          class="StyledBox-sc-13pk1d4-0 hAOjQK"
-        >
-          <button
-            class="StyledButton-sc-323bzc-0 esrnCr"
-            title="share"
-            type="button"
-          >
-            <svg
-              aria-label="Share"
-              class="StyledIcon-ofa7kd-0 jAaLrm"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,13 L19,23 L1,23 L1,5 L1,5 L11,5 M14,1 L23,1 L23,10 M10,14 L22.9999998,1 L10,14 Z"
-                fill="none"
-                stroke="#000"
-                stroke-width="2"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div
-        class="StyledBox-sc-13pk1d4-0 kvSQMd"
-      >
-        <div
-          class="StyledBox-sc-13pk1d4-0 Uiard"
+          class="StyledBox-sc-13pk1d4-0 gbuKLi"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 hfsUvK"
+            class="StyledBox-sc-13pk1d4-0 hqGUhX"
+          >
+            <button
+              class="StyledButton-sc-323bzc-0 esrnCr"
+              title="choose another theme"
+              type="button"
+            >
+              <svg
+                aria-label="Apps"
+                class="StyledIcon-ofa7kd-0 jAaLrm"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,5 L21,5 L21,3 L19,3 L19,5 Z M11,5 L13,5 L13,3 L11,3 L11,5 Z M3,5 L5,5 L5,3 L3,3 L3,5 Z M19,13 L21,13 L21,11 L19,11 L19,13 Z M11,13 L13,13 L13,11 L11,11 L11,13 Z M3,13 L5,13 L5,11 L3,11 L3,13 Z M19,21 L21,21 L21,19 L19,19 L19,21 Z M11,21 L13,21 L13,19 L11,19 L11,21 Z M3,21 L5,21 L5,19 L3,19 L3,21 Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iChEkS"
+          />
+          <div
+            class="StyledBox-sc-13pk1d4-0 hqGUhX"
+          >
+            <button
+              class="StyledButton-sc-323bzc-0 esrnCr"
+              title="see JSON"
+              type="button"
+            >
+              <svg
+                aria-label="Code"
+                class="StyledIcon-ofa7kd-0 jAaLrm"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M9,22 L15,2 M17,17 L22,12 L17,7 M7,17 L2,12 L7,7"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iChEkS"
+          />
+          <div
+            class="StyledBox-sc-13pk1d4-0 hqGUhX"
+          >
+            <button
+              class="StyledButton-sc-323bzc-0 esrnCr"
+              title="share"
+              type="button"
+            >
+              <svg
+                aria-label="Share"
+                class="StyledIcon-ofa7kd-0 jAaLrm"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,13 L19,23 L1,23 L1,5 L1,5 L11,5 M14,1 L23,1 L23,10 M10,14 L22.9999998,1 L10,14 Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="StyledBox-sc-13pk1d4-0 fWrrBh"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 Uiard"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 dUkghO"
-            >
-              <label
-                class="StyledText-sc-1sadyjn-0 fWSbXS"
-                for="name"
-              >
-                name
-              </label>
-            </div>
-            <div
-              class="StyledBox-sc-13pk1d4-0 iLNTNM"
+              class="StyledBox-sc-13pk1d4-0 kIOAwt"
             >
               <div
-                class="StyledBox-sc-13pk1d4-0 dMmorK"
+                class="StyledBox-sc-13pk1d4-0 dUkghO"
+              >
+                <label
+                  class="StyledText-sc-1sadyjn-0 fWSbXS"
+                  for="name"
+                >
+                  name
+                </label>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 iLNTNM"
               >
                 <div
                   class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 kYQCpm"
@@ -1192,284 +1208,300 @@ exports[`App empty 2`] = `
               </div>
             </div>
           </div>
-        </div>
-        <h2
-          class="StyledHeading-sc-1rdh4aw-0 bFZgUK"
-        >
-          Font
-        </h2>
-        <span
-          class="StyledText-sc-1sadyjn-0 bjNjKg"
-        >
-          Double quotes use Google fonts. Single quotes prompt for face.
-        </span>
-        <div
-          class="StyledBox-sc-13pk1d4-0 Uiard"
-        >
           <div
-            class="StyledBox-sc-13pk1d4-0 dtNVsj"
+            class="StyledBox-sc-13pk1d4-0 cqODYy"
           >
-            <div
-              class="StyledBox-sc-13pk1d4-0 dUkghO"
+            <h2
+              class="StyledHeading-sc-1rdh4aw-0 bFZgUK"
             >
-              <label
-                class="StyledText-sc-1sadyjn-0 fWSbXS"
-                for="family"
-              >
-                font family
-              </label>
-            </div>
-            <div
-              class="StyledBox-sc-13pk1d4-0 iLNTNM"
-            >
-              <div
-                class="StyledBox-sc-13pk1d4-0 dMmorK"
-              >
-                <div
-                  class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 kYQCpm"
-                >
-                  <input
-                    autocomplete="off"
-                    class="StyledTextInput-sc-1x30a0s-0 ebFsnl"
-                    id="family"
-                    name="family"
-                    style="text-align: right;"
-                    value="Helvetica"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 Uiard"
-        >
-          <div
-            class="StyledBox-sc-13pk1d4-0 dtNVsj"
-          >
-            <div
-              class="StyledBox-sc-13pk1d4-0 dUkghO"
-            >
-              <label
-                class="StyledText-sc-1sadyjn-0 fWSbXS"
-                for="headingFamily"
-              >
-                heading font family
-              </label>
-            </div>
-            <div
-              class="StyledBox-sc-13pk1d4-0 iLNTNM"
-            >
-              <div
-                class="StyledBox-sc-13pk1d4-0 dMmorK"
-              >
-                <div
-                  class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 kYQCpm"
-                >
-                  <input
-                    autocomplete="off"
-                    class="StyledTextInput-sc-1x30a0s-0 ebFsnl"
-                    id="headingFamily"
-                    name="headingFamily"
-                    style="text-align: right;"
-                    value=""
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <h2
-          class="StyledHeading-sc-1rdh4aw-0 bFZgUK"
-        >
-          Sizing
-        </h2>
-        <div
-          class="StyledBox-sc-13pk1d4-0 Uiard"
-        >
-          <div
-            class="StyledBox-sc-13pk1d4-0 hfsUvK"
-          >
-            <div
-              class="StyledBox-sc-13pk1d4-0 dUkghO"
-            >
-              <label
-                class="StyledText-sc-1sadyjn-0 fWSbXS"
-                for="rounding"
-              >
-                rounding
-              </label>
-            </div>
-            <div
-              class="StyledBox-sc-13pk1d4-0 iLNTNM"
-            >
-              <div
-                class="StyledBox-sc-13pk1d4-0 hfsUvK"
-              >
-                <input
-                  class="StyledRangeInput-sc-15st9ck-0 ghNbEw"
-                  id="rounding"
-                  max="24"
-                  min="0"
-                  name="rounding"
-                  step="2"
-                  style="text-align: end;"
-                  type="range"
-                  value="4"
-                />
-                <div
-                  class="StyledBox-sc-13pk1d4-0 gSnkbP"
-                >
-                  <div
-                    class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 kyyRCm"
-                  >
-                    <input
-                      autocomplete="off"
-                      class="StyledMaskedInput-sc-99vkfa-0 hwaIhw"
-                      placeholder=""
-                      style="text-align: right; width: 48px;"
-                      value="4"
-                    />
-                  </div>
-                  <span
-                    class="StyledText-sc-1sadyjn-0 fWSbXS"
-                  >
-                    px
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 Uiard"
-        >
-          <div
-            class="StyledBox-sc-13pk1d4-0 hfsUvK"
-          >
-            <div
-              class="StyledBox-sc-13pk1d4-0 dUkghO"
-            >
-              <label
-                class="StyledText-sc-1sadyjn-0 fWSbXS"
-                for="spacing"
-              >
-                spacing
-              </label>
-            </div>
-            <div
-              class="StyledBox-sc-13pk1d4-0 iLNTNM"
-            >
-              <div
-                class="StyledBox-sc-13pk1d4-0 hfsUvK"
-              >
-                <input
-                  class="StyledRangeInput-sc-15st9ck-0 ghNbEw"
-                  id="spacing"
-                  max="36"
-                  min="12"
-                  name="spacing"
-                  step="4"
-                  style="text-align: end;"
-                  type="range"
-                  value="24"
-                />
-                <div
-                  class="StyledBox-sc-13pk1d4-0 gSnkbP"
-                >
-                  <div
-                    class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 kyyRCm"
-                  >
-                    <input
-                      autocomplete="off"
-                      class="StyledMaskedInput-sc-99vkfa-0 hwaIhw"
-                      placeholder=""
-                      style="text-align: right; width: 48px;"
-                      value="24"
-                    />
-                  </div>
-                  <span
-                    class="StyledText-sc-1sadyjn-0 fWSbXS"
-                  >
-                    px
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <h2
-          class="StyledHeading-sc-1rdh4aw-0 bFZgUK"
-        >
-          Color
-        </h2>
-        <div
-          class="StyledBox-sc-13pk1d4-0 Uiard"
-        >
-          <div
-            class="StyledBox-sc-13pk1d4-0 hfsUvK"
-          >
-            <div
-              class="StyledBox-sc-13pk1d4-0 dUkghO"
-            >
-              <label
-                class="StyledText-sc-1sadyjn-0 fWSbXS"
-                for="brand"
-              >
-                brand
-              </label>
-            </div>
-            <div
-              class="StyledBox-sc-13pk1d4-0 iLNTNM"
-            >
-              <div
-                class="StyledBox-sc-13pk1d4-0 hfsUvK"
-              >
-                <div
-                  class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 kyyRCm"
-                >
-                  <input
-                    autocomplete="off"
-                    class="StyledMaskedInput-sc-99vkfa-0 hwaIhw"
-                    name="brand"
-                    placeholder="#rrggbb"
-                    style="text-align: right;"
-                    value="#7D4CDB"
-                  />
-                </div>
-                <div
-                  class="StyledBox-sc-13pk1d4-0 cIWXfC"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <button
-          class="StyledButton-sc-323bzc-0 jfbKsv"
-          type="button"
-        >
-          <div
-            class="StyledBox-sc-13pk1d4-0 kNhvKp"
-          >
+              Font
+            </h2>
             <span
-              class="StyledText-sc-1sadyjn-0 bnqisW"
+              class="StyledText-sc-1sadyjn-0 bjNjKg"
             >
-              Colors
+              Double quotes use Google fonts. Single quotes prompt for face.
             </span>
-            <svg
-              aria-label="FormDown"
-              class="StyledIcon-ofa7kd-0 jAaLrm"
-              viewBox="0 0 24 24"
-            >
-              <polyline
-                fill="none"
-                points="18 9 12 15 6 9"
-                stroke="#000"
-                stroke-width="2"
-              />
-            </svg>
           </div>
-        </button>
+          <div
+            class="StyledBox-sc-13pk1d4-0 Uiard"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 gTzdaX"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dUkghO"
+              >
+                <label
+                  class="StyledText-sc-1sadyjn-0 fWSbXS"
+                  for="family"
+                >
+                  font family
+                </label>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 iLNTNM"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 dMmorK"
+                >
+                  <div
+                    class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 kYQCpm"
+                  >
+                    <input
+                      autocomplete="off"
+                      class="StyledTextInput-sc-1x30a0s-0 ebFsnl"
+                      id="family"
+                      name="family"
+                      style="text-align: right;"
+                      value="Helvetica"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="StyledBox-sc-13pk1d4-0 Uiard"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 gTzdaX"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dUkghO"
+              >
+                <label
+                  class="StyledText-sc-1sadyjn-0 fWSbXS"
+                  for="headingFamily"
+                >
+                  heading font family
+                </label>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 iLNTNM"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 dMmorK"
+                >
+                  <div
+                    class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 kYQCpm"
+                  >
+                    <input
+                      autocomplete="off"
+                      class="StyledTextInput-sc-1x30a0s-0 ebFsnl"
+                      id="headingFamily"
+                      name="headingFamily"
+                      style="text-align: right;"
+                      value=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="StyledBox-sc-13pk1d4-0 cqODYy"
+          >
+            <h2
+              class="StyledHeading-sc-1rdh4aw-0 bFZgUK"
+            >
+              Sizing
+            </h2>
+          </div>
+          <div
+            class="StyledBox-sc-13pk1d4-0 Uiard"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 kIOAwt"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dUkghO"
+              >
+                <label
+                  class="StyledText-sc-1sadyjn-0 fWSbXS"
+                  for="rounding"
+                >
+                  rounding
+                </label>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 iLNTNM"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 hfsUvK"
+                >
+                  <input
+                    class="StyledRangeInput-sc-15st9ck-0 ghNbEw"
+                    id="rounding"
+                    max="24"
+                    min="0"
+                    name="rounding"
+                    step="2"
+                    style="text-align: end;"
+                    type="range"
+                    value="4"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 gSnkbP"
+                  >
+                    <div
+                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 kyyRCm"
+                    >
+                      <input
+                        autocomplete="off"
+                        class="StyledMaskedInput-sc-99vkfa-0 hwaIhw"
+                        placeholder=""
+                        style="text-align: right; width: 48px;"
+                        value="4"
+                      />
+                    </div>
+                    <span
+                      class="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      px
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="StyledBox-sc-13pk1d4-0 Uiard"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 kIOAwt"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dUkghO"
+              >
+                <label
+                  class="StyledText-sc-1sadyjn-0 fWSbXS"
+                  for="spacing"
+                >
+                  spacing
+                </label>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 iLNTNM"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 hfsUvK"
+                >
+                  <input
+                    class="StyledRangeInput-sc-15st9ck-0 ghNbEw"
+                    id="spacing"
+                    max="36"
+                    min="12"
+                    name="spacing"
+                    step="4"
+                    style="text-align: end;"
+                    type="range"
+                    value="24"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 gSnkbP"
+                  >
+                    <div
+                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 kyyRCm"
+                    >
+                      <input
+                        autocomplete="off"
+                        class="StyledMaskedInput-sc-99vkfa-0 hwaIhw"
+                        placeholder=""
+                        style="text-align: right; width: 48px;"
+                        value="24"
+                      />
+                    </div>
+                    <span
+                      class="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      px
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="StyledBox-sc-13pk1d4-0 cqODYy"
+          >
+            <h2
+              class="StyledHeading-sc-1rdh4aw-0 bFZgUK"
+            >
+              Color
+            </h2>
+          </div>
+          <div
+            class="StyledBox-sc-13pk1d4-0 Uiard"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 kIOAwt"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dUkghO"
+              >
+                <label
+                  class="StyledText-sc-1sadyjn-0 fWSbXS"
+                  for="brand"
+                >
+                  brand
+                </label>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 iLNTNM"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 hfsUvK"
+                >
+                  <div
+                    class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 kyyRCm"
+                  >
+                    <input
+                      autocomplete="off"
+                      class="StyledMaskedInput-sc-99vkfa-0 hwaIhw"
+                      name="brand"
+                      placeholder="#rrggbb"
+                      style="text-align: right;"
+                      value="#7D4CDB"
+                    />
+                  </div>
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 cIWXfC"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="StyledBox-sc-13pk1d4-0 cqODYy"
+          >
+            <button
+              class="StyledButton-sc-323bzc-0 jfbKsv"
+              type="button"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 kNhvKp"
+              >
+                <span
+                  class="StyledText-sc-1sadyjn-0 bnqisW"
+                >
+                  Colors
+                </span>
+                <svg
+                  aria-label="FormDown"
+                  class="StyledIcon-ofa7kd-0 jAaLrm"
+                  viewBox="0 0 24 24"
+                >
+                  <polyline
+                    fill="none"
+                    points="18 9 12 15 6 9"
+                    stroke="#000"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
     <div

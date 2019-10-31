@@ -5,10 +5,12 @@ import Field from './components/Field';
 export default ({ theme, onChange }) => {
   return (
     <Fragment>
-      <Heading level={2} size="small">Font</Heading>
-      <Text color="dark-4">
-        Double quotes use Google fonts. Single quotes prompt for face.
-      </Text>
+      <Box pad={{ horizontal: 'medium' }}>
+        <Heading level={2} size="small">Font</Heading>
+        <Text color="dark-4">
+          Double quotes use Google fonts. Single quotes prompt for face.
+        </Text>
+      </Box>
       <Field
         htmlFor="family"
         label="font family"

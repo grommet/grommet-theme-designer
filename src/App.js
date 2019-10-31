@@ -129,39 +129,40 @@ class App extends Component {
                       fill="vertical"
                       overflow="auto"
                       background="dark-1"
-                      pad={{ horizontal: 'small', vertical: 'small' }}
                       border="right"
                     >
-                      <Box
-                        flex={false}
-                        direction="row"
-                        justify="between"
-                        gap="small"
-                        margin={{ bottom: 'small' }}
-                      >
-                        <Actioner
-                          title="choose another theme"
-                          Icon={Apps}
-                          Modal={Themes}
-                          theme={theme}
-                          onChange={this.onChange}
-                        />
-                        <Actioner
-                          title="see JSON"
-                          Icon={Code}
-                          Modal={Raw}
-                          theme={theme}
-                          onChange={this.onChange}
-                        />
-                        <Actioner
-                          title="share"
-                          Icon={Share}
-                          Modal={Sharer}
-                          theme={theme}
-                          onChange={this.onChange}
-                        />
+                      <Box flex={false}>
+                        <Box
+                          flex={false}
+                          direction="row"
+                          justify="between"
+                          gap="small"
+                          border="bottom"
+                        >
+                          <Actioner
+                            title="choose another theme"
+                            Icon={Apps}
+                            Modal={Themes}
+                            theme={theme}
+                            onChange={this.onChange}
+                          />
+                          <Actioner
+                            title="see JSON"
+                            Icon={Code}
+                            Modal={Raw}
+                            theme={theme}
+                            onChange={this.onChange}
+                          />
+                          <Actioner
+                            title="share"
+                            Icon={Share}
+                            Modal={Sharer}
+                            theme={theme}
+                            onChange={this.onChange}
+                          />
+                        </Box>
+                        <Primary theme={theme} onChange={this.onChange} />
                       </Box>
-                      <Primary theme={theme} onChange={this.onChange} />
                     </Box>
                   )}
                   <Card theme={theme} />

@@ -7,12 +7,12 @@ const Action = ({ children, label, onClose, ...rest }) => (
   <Layer
     position="top"
     margin="medium"
-    plain
+    modal
     {...rest}
     onEsc={onClose}
     onClickOutside={onClose}
   >
-    <Box flex background="dark-1" pad="small" round="small" overflow="hidden" elevation="medium">
+    <Box flex background="dark-1" elevation="medium">
       <Box flex={false} direction="row" align="center" justify="between">
         <ActionButton
           title='close'
@@ -24,13 +24,18 @@ const Action = ({ children, label, onClose, ...rest }) => (
           <Heading
             level={2}
             size="small"
-            margin={{ vertical: 'none', horizontal: 'small' }}
+            margin={{ vertical: 'none', horizontal: 'large' }}
           >
             {label}
           </Heading>
         )}
       </Box>
-      <Box flex pad="medium" align="start" overflow="auto">
+      <Box
+        flex
+        pad={{ horizontal: 'large', bottom: 'large' }}
+        align="start"
+        overflow="auto"
+      >
         {children}
       </Box>
     </Box>

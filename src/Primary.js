@@ -8,24 +8,24 @@ import Spacing from './Spacing';
 
 export default ({ theme, onChange }) => {
   return (
-    <Box flex="grow" overflow="auto" pad={{ horizontal: 'small' }}>
+    <Box>
       <Field htmlFor="name" label="name">
-        <Box pad={{ right: 'medium' }}>
-          <TextInput
-            name="name"
-            plain
-            style={{ textAlign: 'right' }}
-            value={theme.name}
-            onChange={(event) => {
-              const nextTheme = JSON.parse(JSON.stringify(theme));
-              nextTheme.name = event.target.value;
-              onChange({ theme: nextTheme });
-            }}
-          />
-        </Box>
+        <TextInput
+          name="name"
+          plain
+          style={{ textAlign: 'right' }}
+          value={theme.name}
+          onChange={(event) => {
+            const nextTheme = JSON.parse(JSON.stringify(theme));
+            nextTheme.name = event.target.value;
+            onChange({ theme: nextTheme });
+          }}
+        />
       </Field>
       <Font theme={theme} onChange={onChange} />
-      <Heading level={2} size="small">Sizing</Heading>
+      <Box pad={{ horizontal: 'medium' }}>
+        <Heading level={2} size="small">Sizing</Heading>
+      </Box>
       <Rounding theme={theme} onChange={onChange} />
       <Spacing theme={theme} onChange={onChange} />
       <Colors theme={theme} onChange={onChange} />

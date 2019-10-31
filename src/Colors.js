@@ -73,16 +73,22 @@ export default ({ theme, onChange }) => {
 
   return (
     <Fragment>
-      <Heading level={2} size="small">Color</Heading>
+      <Box pad={{ horizontal: 'medium' }}>
+        <Heading level={2} size="small">Color</Heading>
+      </Box>
       <ColorField theme={theme} color='brand' onChange={onChange} />
       <Expander label="Colors" expanded={editColors} change={setEditColors} />
       {editColors && (
         <Fragment>
-          <Heading level={3}>Accent</Heading>
+          <Box pad={{ horizontal: 'medium' }}>
+            <Heading level={3}>Accent</Heading>
+          </Box>
           {['accent-1', 'accent-2', 'accent-3', 'accent-4'].map(color => (
             <ColorField key={color} theme={theme} color={color} onChange={onChange} />
           ))}
-          <Heading level={3}>Neutral</Heading>
+          <Box pad={{ horizontal: 'medium' }}>
+            <Heading level={3}>Neutral</Heading>
+          </Box>
           {['neutral-1', 'neutral-2', 'neutral-3', 'neutral-4',
           ].map(color => (
             <ColorField key={color} theme={theme} color={color} onChange={onChange} />
@@ -90,18 +96,24 @@ export default ({ theme, onChange }) => {
           <Expander label="More Colors" expanded={editMoreColors} change={setEditMoreColors} />
           {editMoreColors && (
             <Fragment>
-              <Heading level={3}>Shades</Heading>
+              <Box pad={{ horizontal: 'medium' }}>
+                <Heading level={3}>Shades</Heading>
+              </Box>
               {['dark-1', 'dark-2', 'dark-3', 'dark-4',
                 'light-1', 'light-2', 'light-3', 'light-4',
               ].map(color => (
                 <ColorField key={color} theme={theme} color={color} onChange={onChange} />
               ))}
-              <Heading level={3}>Status</Heading>
+              <Box pad={{ horizontal: 'medium' }}>
+                <Heading level={3}>Status</Heading>
+              </Box>
               {['status-critical', 'status-warning', 'status-ok', 'status-unknown',
               ].map(color => (
                 <ColorField key={color} theme={theme} color={color} onChange={onChange} />
               ))}
-              <Heading level={3}>Chrome</Heading>
+              <Box pad={{ horizontal: 'medium' }}>
+                <Heading level={3}>Chrome</Heading>
+              </Box>
               {['border', 'control', 'text'].map(color => (
                 <ObjectColorField key={color} theme={theme} color={color} onChange={onChange} />
               ))}
