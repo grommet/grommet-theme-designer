@@ -19,11 +19,16 @@ const getParams = () => {
   return params;
 }
 
-const Actioner = ({ Icon, Modal, theme, onChange }) => {
+const Actioner = ({ Icon, Modal, theme, title, onChange }) => {
   const [show, setShow] = React.useState();
   return (
     <Fragment>
-      <ActionButton icon={<Icon />} hoverIndicator onClick={() => setShow(true)} />
+      <ActionButton
+        title={title}
+        icon={<Icon />}
+        hoverIndicator
+        onClick={() => setShow(true)}
+      />
       {show && (
         <Modal theme={theme} onChange={onChange} onClose={() => setShow(false)} />
       )}
@@ -135,18 +140,21 @@ class App extends Component {
                         margin={{ bottom: 'small' }}
                       >
                         <Actioner
+                          title="choose another theme"
                           Icon={Apps}
                           Modal={Themes}
                           theme={theme}
                           onChange={this.onChange}
                         />
                         <Actioner
+                          title="see JSON"
                           Icon={Code}
                           Modal={Raw}
                           theme={theme}
                           onChange={this.onChange}
                         />
                         <Actioner
+                          title="share"
                           Icon={Share}
                           Modal={Sharer}
                           theme={theme}
