@@ -5,7 +5,17 @@ import Expander from './components/Expander';
 
 const getColor = (theme, name) => (
   theme.global.colors[name] !== undefined ? theme.global.colors[name]
-  : (grommet.global.colors[name] || base.global.colors[name]))
+    : (grommet.global.colors[name] || base.global.colors[name]))
+
+
+const ColorInput = ({ value, onChangeColor})=> (
+  <input
+    type="color"
+    value={value}
+    onChange={(event)=>{onChangeColor(event.target.value)}}
+  >
+  </input>
+)
 
 const ColorField = ({ theme, color, setTheme }) => (
   <Field htmlFor={color} label={color}>
@@ -25,7 +35,14 @@ const ColorField = ({ theme, color, setTheme }) => (
           setTheme(nextTheme);
         }}
       />
-      <Box pad="small" background={getColor(theme, color)} />
+      <ColorInput
+        value={getColor(theme, color)}
+        onChangeColor={(colorVal)=>{
+          const nextTheme = JSON.parse(JSON.stringify(theme));
+          nextTheme.global.colors[color] = colorVal;
+          onChange({ theme: nextTheme });
+        }}
+      ></ColorInput>
     </Box>
   </Field>
 )
