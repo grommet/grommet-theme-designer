@@ -425,7 +425,7 @@ const Header = ({ name, help }) => (
 );
 
 export default ({ theme, setTheme }) => {
-  const [editColors, setEditColors] = React.useState(true);
+  const [editColors, setEditColors] = React.useState();
   const [newName, setNewName] = React.useState('');
   const paletteColors = React.useMemo(() =>
     Object.keys(theme.global.colors)
