@@ -5,7 +5,7 @@ import {
   Text, TextInput
 } from 'grommet';
 import { CloudUpload, Copy } from 'grommet-icons';
-import { apiUrl } from './theme';
+import { apiUrl, normalizeTheme } from './theme';
 import Action from './components/Action';
 
 const Summary = ({ Icon, label, guidance }) => (
@@ -41,6 +41,7 @@ const Publish = ({ theme, setTheme }) => {
 
     // add some metadata to the theme
     const nextTheme = JSON.parse(JSON.stringify(theme));
+    normalizeTheme(nextTheme);
     nextTheme.email = email;
     const date = new Date();
     date.setMilliseconds(pin);

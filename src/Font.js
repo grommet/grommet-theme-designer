@@ -1,12 +1,11 @@
 import React, { Fragment } from 'react';
-import { Box, Heading, Text, TextArea, TextInput } from 'grommet';
+import { Box, Text, TextArea, TextInput } from 'grommet';
 import Field from './components/Field';
 
 export default ({ theme, setTheme }) => {
   return (
     <Fragment>
-      <Box pad={{ horizontal: 'medium' }}>
-        <Heading level={2} size="small">Font</Heading>
+      <Box pad={{ horizontal: 'medium', top: 'small' }}>
         <Text color="dark-4">
           Double quotes use Google fonts. Single quotes prompt for face.
         </Text>

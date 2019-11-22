@@ -69,6 +69,13 @@ const App = () => {
           action: 'published theme',
         });
       });
+    } else if (params.new) {
+      setTheme(starter);
+      ReactGA.event({
+        category: 'switch',
+        action: 'new theme',
+      });
+      setPreview(false);
     } else {
       let stored = localStorage.getItem('activeTheme');
       if (stored) {
@@ -92,11 +99,22 @@ const App = () => {
       }
       setPreview(false);
     }
-    const stored = localStorage.getItem('themes');
-    if (stored) {
-      setThemes(JSON.parse(stored));
-    }
   }, []);
+
+  useEffect(() => {
+    const stored = localStorage.getItem('themes');
+    if (stored) setThemes(JSON.parse(stored));
+  }, []);
+
+  useEffect(() => {
+    const stored = localStorage.getItem('preview');
+    if (stored) setPreview(JSON.parse(stored));
+  }, []);
+
+  useEffect(() =>
+    localStorage.setItem('preview', JSON.stringify(preview)),
+    [preview],
+  );
 
   // store theme
   useEffect(() => {
@@ -180,7 +198,7 @@ const App = () => {
                 </Box>
               </Box>
             )}
-            <Card theme={theme} />
+            <Card theme={theme} onTogglePreview={() => setPreview(!preview)} />
           </Grid>
         )}
       </Keyboard>
