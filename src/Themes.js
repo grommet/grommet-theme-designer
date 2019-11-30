@@ -5,14 +5,6 @@ import { starter, upgradeTheme } from './theme';
 import Action from './components/Action';
 import ActionButton from './components/ActionButton';
 
-const nameToBackground = (name) => {
-  let num = 0;
-  for (let i = 0; i < name.length; i++) {
-    num += name.charCodeAt(i);
-  }
-  return `accent-${(num % 4) + 1}`;
-};
-
 const Themes = ({ theme, onClose, setTheme }) => {
   const [themes, setThemes] = React.useState([]);
   const [confirmDelete, setConfirmDelete] = React.useState();
@@ -71,9 +63,6 @@ const Themes = ({ theme, onClose, setTheme }) => {
         </Box>
         {themes.map(theme => {
           const name = theme.name;
-          const background = (theme.global
-            ? theme.global.colors.brand
-            : nameToBackground(name))
           return (
             <Stack key={name} fill anchor="bottom-right">
               <Grommet theme={theme} style={{ height: '100%' }}>
@@ -83,7 +72,7 @@ const Themes = ({ theme, onClose, setTheme }) => {
                       <Box
                         fill
                         pad="medium"
-                        background={hover ? 'light-1' : background}
+                        background={hover ? 'light-1' : 'brand'}
                         align="center"
                         justify="center"
                       >

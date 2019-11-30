@@ -70,15 +70,21 @@ export const starter = {
 
 // prepares theme for publishing
 export const normalizeTheme = (theme) => {
-  theme.global.active = {
-    background: 'active-background', color: 'active-text',
-  }
-  theme.global.hover = {
-    background: 'active-background', color: 'active-text',
-  }
-  theme.global.selected = {
-    background: 'selected-background', color: 'selected-text',
-  }
+  if (!theme.global.active)
+    theme.global.active = {
+      background: 'active-background', color: 'active-text',
+    }
+  if (!theme.global.hover)
+    theme.global.hover = {
+      background: 'active-background', color: 'active-text',
+    }
+  if (!theme.global.selected)
+    theme.global.selected = {
+      background: 'selected-background', color: 'selected-text',
+    }
+  if (!theme.layer) theme.layer = {};
+  if (!theme.layer.background)
+    theme.layer.background = { ...theme.global.colors.background }
 }
 
 export const upgradeTheme = (theme) => {
