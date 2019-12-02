@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, TextInput } from 'grommet';
 import Field from './components/Field';
-import Colors from './Colors';
+import Colors from './colors/Colors';
 import Font from './Font';
 import Rounding from './Rounding';
 import Spacing from './Spacing';
