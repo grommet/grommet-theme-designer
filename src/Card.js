@@ -96,7 +96,7 @@ export default ({ theme, onTogglePreview }) => {
       background={color}
       title={color}
       onClick={(event) => 
-        setBackground(event.shiftKey ? undefined : color)
+        setBackground(background === color ? undefined : color)
       }
       {...rest} />
   )
