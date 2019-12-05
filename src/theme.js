@@ -64,8 +64,11 @@ export const starter = {
         dark: ['brand'],
         light: ['brand'],
       },
-    }
-  }
+    },
+  },
+  chart: { color: '' },
+  diagram: { line: { color: '' } },
+  meter: { color: '' },
 }
 
 // prepares theme for publishing
@@ -85,6 +88,10 @@ export const normalizeTheme = (theme) => {
   if (!theme.layer) theme.layer = {};
   if (!theme.layer.background)
     theme.layer.background = { ...theme.global.colors.background }
+  // remove base compatible fields
+  theme.chart = { color: undefined };
+  theme.meter = { color: undefined };
+  theme.diagram = { line: { color: undefined } };
 }
 
 export const upgradeTheme = (theme) => {
