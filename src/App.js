@@ -1,6 +1,19 @@
-import React, { Fragment, useCallback, useContext, useEffect, useState } from 'react';
+import React, {
+  Fragment,
+  useCallback,
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
 import ReactGA from 'react-ga';
-import { Box, Grid, Grommet, ResponsiveContext, Keyboard, grommet } from 'grommet';
+import {
+  Box,
+  Grid,
+  Grommet,
+  ResponsiveContext,
+  Keyboard,
+  grommet,
+} from 'grommet';
 import { Apps, Code, Share } from 'grommet-icons';
 import { apiUrl, starter, upgradeTheme } from './theme';
 import ActionButton from './components/ActionButton';
@@ -13,12 +26,15 @@ import Sharer from './Share';
 const getParams = () => {
   const { location } = window;
   const params = {};
-  location.search.slice(1).split('&').forEach(p => {
-    const [k, v] = p.split('=');
-    params[k] = decodeURIComponent(v);
-  });
+  location.search
+    .slice(1)
+    .split('&')
+    .forEach(p => {
+      const [k, v] = p.split('=');
+      params[k] = decodeURIComponent(v);
+    });
   return params;
-}
+};
 
 const Actioner = ({ Icon, Modal, theme, title, setTheme }) => {
   const [show, setShow] = useState();
@@ -31,11 +47,15 @@ const Actioner = ({ Icon, Modal, theme, title, setTheme }) => {
         onClick={() => setShow(true)}
       />
       {show && (
-        <Modal theme={theme} setTheme={setTheme} onClose={() => setShow(false)} />
+        <Modal
+          theme={theme}
+          setTheme={setTheme}
+          onClose={() => setShow(false)}
+        />
       )}
     </Fragment>
   );
-}
+};
 
 const App = () => {
   const [theme, setTheme] = useState();
@@ -45,12 +65,14 @@ const App = () => {
 
   // initialize analytics
   React.useEffect(() => {
-    const {
-      location: { pathname },
-    } = window;
-    if (document.domain) {
-      ReactGA.initialize('UA-99690204-5');
-      ReactGA.pageview(pathname);
+    if (window.location.host !== 'localhost') {
+      const {
+        location: { pathname },
+      } = window;
+      if (document.domain) {
+        ReactGA.initialize('UA-99690204-5');
+        ReactGA.pageview(pathname);
+      }
     }
   }, []);
 
@@ -59,16 +81,16 @@ const App = () => {
     const params = getParams();
     if (params.id) {
       fetch(`${apiUrl}/${params.id}`)
-      .then(response => response.json())
-      .then((nextTheme) => {
-        upgradeTheme(nextTheme);
-        document.title = nextTheme.name;
-        setTheme(nextTheme);
-        ReactGA.event({
-          category: 'switch',
-          action: 'published theme',
+        .then(response => response.json())
+        .then(nextTheme => {
+          upgradeTheme(nextTheme);
+          document.title = nextTheme.name;
+          setTheme(nextTheme);
+          ReactGA.event({
+            category: 'switch',
+            action: 'published theme',
+          });
         });
-      });
     } else if (params.new) {
       setTheme(starter);
       ReactGA.event({
@@ -111,10 +133,9 @@ const App = () => {
     if (stored) setPreview(JSON.parse(stored));
   }, []);
 
-  useEffect(() =>
-    localStorage.setItem('preview', JSON.stringify(preview)),
-    [preview],
-  );
+  useEffect(() => localStorage.setItem('preview', JSON.stringify(preview)), [
+    preview,
+  ]);
 
   // store theme
   useEffect(() => {
@@ -134,14 +155,17 @@ const App = () => {
     return () => clearTimeout(timer);
   }, [theme, themes]);
 
-  const onKey = useCallback((event) => {
-    if (event.metaKey) {
-      if (event.key === 'e' || event.key === 'E') {
-        event.preventDefault();
-        setPreview(!preview);
+  const onKey = useCallback(
+    event => {
+      if (event.metaKey) {
+        if (event.key === 'e' || event.key === 'E') {
+          event.preventDefault();
+          setPreview(!preview);
+        }
       }
-    }
-  }, [preview]);
+    },
+    [preview],
+  );
 
   return (
     <Grommet full theme={grommet}>
@@ -153,9 +177,12 @@ const App = () => {
         ) : (
           <Grid
             fill
-            columns={(responsive === 'small' || preview)
-              ? 'flex' : [['small', 'medium'], 'flex']}
-            rows='full'
+            columns={
+              responsive === 'small' || preview
+                ? 'flex'
+                : [['small', 'medium'], 'flex']
+            }
+            rows="full"
           >
             {responsive !== 'small' && !preview && (
               <Box
@@ -204,6 +231,6 @@ const App = () => {
       </Keyboard>
     </Grommet>
   );
-}
+};
 
 export default App;
