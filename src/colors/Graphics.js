@@ -4,7 +4,7 @@ import Header from './Header';
 
 const Example = () => (
   <Meter
-    type="circle"
+    type="bar"
     round
     values={[
       { value: 20 },
@@ -92,7 +92,8 @@ export default ({ theme, setTheme }) => (
               background={{ color: 'background', dark: false }}
               pad="small"
               gap="medium"
-              justify="end"
+              align="end"
+              justify="center"
             >
               <Example />
             </Box>
@@ -101,6 +102,8 @@ export default ({ theme, setTheme }) => (
               background={{ color: 'background', dark: true }}
               pad="small"
               gap="medium"
+              align="start"
+              justify="center"
             >
               <Example />
             </Box>
