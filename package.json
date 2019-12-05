@@ -20,10 +20,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:nowatch": "react-scripts test --watchAll=false",
     "prettier": "pretty-quick --staged"
   },
   "pre-commit": [
-    "prettier"
+    "prettier",
+    "test:nowatch"
   ],
   "eslintConfig": {
     "extends": "react-app"
@@ -42,6 +44,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "^9.3.1",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.18.2",
     "pretty-quick": "^2.0.0"
   }
