@@ -6,7 +6,6 @@ import {
   Grommet,
   Heading,
   Text,
-  TextArea,
   TextInput,
 } from 'grommet';
 import { Add, Checkmark, Close, Trash } from 'grommet-icons';
@@ -23,11 +22,20 @@ const NameBox = props => (
   />
 );
 
-const NameHeading = props => <Heading level={3} margin="none" {...props} />;
+const NameHeading = ({ prefix, name }) => (
+  <Text color="text-xweak">
+    {prefix}
+    {prefix && '-'}
+    <Text weight="bold" color="text-strong">
+      {name}
+    </Text>
+  </Text>
+);
 
 const ColorBox = ({
   dark,
   placeholder,
+  theme,
   suggestions,
   value,
   onChange,
@@ -43,16 +51,20 @@ const ColorBox = ({
   >
     <Box direction="row" border={!!onChange} round="xsmall" overflow="hidden">
       {onChange && (
-        <TextInput
-          plain
-          placeholder={placeholder}
-          value={value}
-          suggestions={suggestions}
-          onChange={event => onChange(event.target.value)}
-          onSelect={event => onChange(event.suggestion)}
-        />
+        <>
+          <TextInput
+            plain
+            placeholder={placeholder}
+            value={value}
+            suggestions={suggestions}
+            onChange={event => onChange(event.target.value)}
+            onSelect={event => onChange(event.suggestion)}
+          />
+          <Grommet theme={theme} themeMode={dark ? 'dark' : 'light'}>
+            <Box fill="vertical" pad="small" background={value} />
+          </Grommet>
+        </>
       )}
-      <Box pad="small" background={value} />
     </Box>
   </Box>
 );
@@ -97,18 +109,6 @@ const Color = ({ prefix, theme, setTheme }) => {
       dropAlign={{ right: 'left' }}
       dropContent={
         <Box>
-          {colors.length > 1 && (
-            <ColorRow>
-              <NameBox>
-                <Heading level={2} size="small" margin={{ top: 'none' }}>
-                  {prefix}
-                </Heading>
-              </NameBox>
-              <ColorBox />
-              <ColorBox dark />
-            </ColorRow>
-          )}
-
           {colors.map(color => {
             const colorValue = theme.global.colors[color];
             let lightValue;
@@ -123,16 +123,21 @@ const Color = ({ prefix, theme, setTheme }) => {
             return (
               <ColorRow key={color}>
                 <NameBox>
-                  {color !== prefix && <NameHeading>{colorSuffix}</NameHeading>}
-                  {colors.length === 1 && <NameHeading>{color}</NameHeading>}
+                  {color !== prefix ? (
+                    <NameHeading prefix={prefix} name={colorSuffix} />
+                  ) : (
+                    <NameHeading name={color} />
+                  )}
                 </NameBox>
                 <ColorBox
+                  theme={theme}
                   value={lightValue}
                   suggestions={suggestions}
                   onChange={value => setValue(color, 'light', value)}
                 />
                 <ColorBox
                   dark
+                  theme={theme}
                   value={darkValue}
                   suggestions={suggestions}
                   onChange={value => setValue(color, 'dark', value)}
@@ -144,8 +149,8 @@ const Color = ({ prefix, theme, setTheme }) => {
           {colors.length > 1 && (
             <ColorRow>
               <NameBox />
-              <ColorBox />
-              <ColorBox dark />
+              <ColorBox theme={theme} />
+              <ColorBox dark theme={theme} />
             </ColorRow>
           )}
         </Box>
@@ -196,10 +201,11 @@ const Palette = ({ color, theme, setTheme }) => {
                 setTheme(nextTheme);
               }}
             />
-            <NameHeading>{color}</NameHeading>
+            <NameHeading name={color} />
           </NameBox>
           <ColorBox
             placeholder="primary"
+            theme={theme}
             value={fierce}
             onChange={value => {
               const nextTheme = JSON.parse(JSON.stringify(theme));
@@ -209,6 +215,7 @@ const Palette = ({ color, theme, setTheme }) => {
           />
           <ColorBox
             placeholder="light"
+            theme={theme}
             value={light}
             onChange={value => {
               const nextTheme = JSON.parse(JSON.stringify(theme));
@@ -219,6 +226,7 @@ const Palette = ({ color, theme, setTheme }) => {
           <ColorBox
             dark
             placeholder="dark"
+            theme={theme}
             value={dark}
             onChange={value => {
               const nextTheme = JSON.parse(JSON.stringify(theme));
@@ -239,7 +247,9 @@ const Palette = ({ color, theme, setTheme }) => {
       >
         <Text>{color}</Text>
         <Box direction="row">
-          <Box key={color} pad="small" background={`${color}!`} />
+          <Grommet theme={theme} themeMode="light">
+            <Box key={color} pad="small" background={`${color}!`} />
+          </Grommet>
           <Grommet theme={theme} themeMode="light">
             <Box key={color} pad="small" background={color} />
           </Grommet>
@@ -254,8 +264,9 @@ const Palette = ({ color, theme, setTheme }) => {
 
 const Graph = ({ theme, setTheme }) => {
   const colors = (theme.global.graph || {}).colors || { light: [], dark: [] };
-  const [light, setLight] = useState(colors.light.join('\n'));
-  const [dark, setDark] = useState(colors.dark.join('\n'));
+  const maxCount = Math.max(colors.light.length, colors.dark.length);
+  const indices = [...Array(maxCount).keys()];
+  const suggestions = Object.keys(theme.global.colors).sort();
 
   return (
     <DropButton
@@ -263,43 +274,70 @@ const Graph = ({ theme, setTheme }) => {
       hoverIndicator
       dropAlign={{ right: 'left', bottom: 'bottom' }}
       dropContent={
-        <ColorRow>
-          <NameBox margin={{ right: 'medium' }}>
-            <NameHeading>graph</NameHeading>
-          </NameBox>
-          <Box pad="small" background="background">
-            <TextArea
-              rows={6}
-              value={light}
-              onChange={event => {
-                const value = event.target.value;
-                setLight(value);
-                const nextTheme = JSON.parse(JSON.stringify(theme));
-                if (!nextTheme.global.graph) nextTheme.global.graph = {};
-                if (!nextTheme.global.graph.colors)
-                  nextTheme.global.graph.colors = { light: [], dark: [] };
-                nextTheme.global.graph.colors.light = value.match(/\S+/g) || [];
-                setTheme(nextTheme);
-              }}
-            />
-          </Box>
-          <Box pad="small" background={{ color: 'background', dark: true }}>
-            <TextArea
-              rows={6}
-              value={dark}
-              onChange={event => {
-                const value = event.target.value;
-                setDark(value);
-                const nextTheme = JSON.parse(JSON.stringify(theme));
-                if (!nextTheme.global.graph) nextTheme.global.graph = {};
-                if (!nextTheme.global.graph.colors)
-                  nextTheme.global.graph.colors = { light: [], dark: [] };
-                nextTheme.global.graph.colors.dark = value.match(/\S+/g) || [];
-                setTheme(nextTheme);
-              }}
-            />
-          </Box>
-        </ColorRow>
+        <Box>
+          {indices.map(index => (
+            <ColorRow key={index}>
+              <NameBox justify="between" pad={undefined}>
+                <Button
+                  icon={<Trash />}
+                  hoverIndicator
+                  onClick={() => {
+                    const nextTheme = JSON.parse(JSON.stringify(theme));
+                    nextTheme.global.graph.colors.light.splice(index, 1);
+                    nextTheme.global.graph.colors.dark.splice(index, 1);
+                    setTheme(nextTheme);
+                  }}
+                />
+                <NameHeading name={index} />
+              </NameBox>
+              <ColorBox
+                placeholder="light"
+                theme={theme}
+                value={colors.light[index] || ''}
+                suggestions={suggestions}
+                onChange={value => {
+                  const nextTheme = JSON.parse(JSON.stringify(theme));
+                  if (!nextTheme.global.graph) nextTheme.global.graph = {};
+                  if (!nextTheme.global.graph.colors)
+                    nextTheme.global.graph.colors = { light: [], dark: [] };
+                  nextTheme.global.graph.colors.light[index] = value;
+                  setTheme(nextTheme);
+                }}
+              />
+              <ColorBox
+                dark
+                placeholder="dark"
+                theme={theme}
+                value={colors.dark[index] || ''}
+                suggestions={suggestions}
+                onChange={value => {
+                  const nextTheme = JSON.parse(JSON.stringify(theme));
+                  if (!nextTheme.global.graph) nextTheme.global.graph = {};
+                  if (!nextTheme.global.graph.colors)
+                    nextTheme.global.graph.colors = { light: [], dark: [] };
+                  nextTheme.global.graph.colors.dark[index] = value;
+                  setTheme(nextTheme);
+                }}
+              />
+            </ColorRow>
+          ))}
+          <ColorRow>
+            <NameBox justify="between" pad={undefined}>
+              <Button
+                icon={<Add />}
+                hoverIndicator
+                onClick={() => {
+                  const nextTheme = JSON.parse(JSON.stringify(theme));
+                  nextTheme.global.graph.colors.light.push('');
+                  nextTheme.global.graph.colors.dark.push('');
+                  setTheme(nextTheme);
+                }}
+              />
+            </NameBox>
+            <ColorBox theme={theme} />
+            <ColorBox dark theme={theme} />
+          </ColorRow>
+        </Box>
       }
     >
       <Box
