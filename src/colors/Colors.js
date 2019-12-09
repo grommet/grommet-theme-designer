@@ -253,7 +253,7 @@ const Palette = ({ color, theme, setTheme }) => {
 };
 
 const Graph = ({ theme, setTheme }) => {
-  const colors = theme.global.graph.colors;
+  const colors = theme.global.graph.colors || { light: [], dark: [] };
   const [light, setLight] = useState(colors.light.join('\n'));
   const [dark, setDark] = useState(colors.dark.join('\n'));
   return (
