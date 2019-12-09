@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import { Box, Button, Text } from 'grommet';
+import { Box, Text } from 'grommet';
 import { Edit, Info } from 'grommet-icons';
+import ActionButton from './components/ActionButton';
 import Accessibility from './examples/Accessibility';
 import Form from './examples/Form';
 import Dashboard from './examples/Dashboard';
@@ -31,7 +32,12 @@ export default ({
         pad={{ left: 'small' }}
       >
         <Text weight="bold">{theme.name}</Text>
-        <Button icon={<Info />} hoverIndicator onClick={toggleThemeMode} />
+        <ActionButton
+          title="toggle dark/light mode"
+          icon={<Info />}
+          hoverIndicator
+          onClick={toggleThemeMode}
+        />
       </Box>
       <Box flex="grow">
         {examples.map(({ name, Design }) => (
@@ -47,7 +53,12 @@ export default ({
         ))}
       </Box>
       <Box flex={false} direction="row" justify="end">
-        <Button icon={<Edit />} hoverIndicator onClick={toggleEditing} />
+        <ActionButton
+          title="edit theme"
+          icon={<Edit />}
+          hoverIndicator
+          onClick={toggleEditing}
+        />
       </Box>
     </Box>
   );

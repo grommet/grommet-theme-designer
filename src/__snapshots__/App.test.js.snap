@@ -20,6 +20,7 @@ exports[`App empty 1`] = `
         </span>
         <button
           class="StyledButton-sc-323bzc-0 gWpUxR"
+          title="toggle dark/light mode"
           type="button"
         >
           <svg
@@ -69,6 +70,7 @@ exports[`App empty 1`] = `
       >
         <button
           class="StyledButton-sc-323bzc-0 gWpUxR"
+          title="edit theme"
           type="button"
         >
           <svg
@@ -661,78 +663,66 @@ exports[`App empty 1`] = `
         <div
           class="StyledBox-sc-13pk1d4-0 eSuxVG"
         >
-          <div
-            class="StyledBox-sc-13pk1d4-0 eCBRSq"
+          <button
+            class="StyledButton-sc-323bzc-0 gWpUxR"
+            title="choose another theme"
+            type="button"
           >
-            <button
-              class="StyledButton-sc-323bzc-0 gWpUxR"
-              title="choose another theme"
-              type="button"
+            <svg
+              aria-label="Apps"
+              class="StyledIcon-ofa7kd-0 jAaLrm"
+              viewBox="0 0 24 24"
             >
-              <svg
-                aria-label="Apps"
-                class="StyledIcon-ofa7kd-0 jAaLrm"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19,5 L21,5 L21,3 L19,3 L19,5 Z M11,5 L13,5 L13,3 L11,3 L11,5 Z M3,5 L5,5 L5,3 L3,3 L3,5 Z M19,13 L21,13 L21,11 L19,11 L19,13 Z M11,13 L13,13 L13,11 L11,11 L11,13 Z M3,13 L5,13 L5,11 L3,11 L3,13 Z M19,21 L21,21 L21,19 L19,19 L19,21 Z M11,21 L13,21 L13,19 L11,19 L11,21 Z M3,21 L5,21 L5,19 L3,19 L3,21 Z"
-                  fill="none"
-                  stroke="#000"
-                  stroke-width="2"
-                />
-              </svg>
-            </button>
-          </div>
+              <path
+                d="M19,5 L21,5 L21,3 L19,3 L19,5 Z M11,5 L13,5 L13,3 L11,3 L11,5 Z M3,5 L5,5 L5,3 L3,3 L3,5 Z M19,13 L21,13 L21,11 L19,11 L19,13 Z M11,13 L13,13 L13,11 L11,11 L11,13 Z M3,13 L5,13 L5,11 L3,11 L3,13 Z M19,21 L21,21 L21,19 L19,19 L19,21 Z M11,21 L13,21 L13,19 L11,19 L11,21 Z M3,21 L5,21 L5,19 L3,19 L3,21 Z"
+                fill="none"
+                stroke="#000"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
           <div
             class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iChEkS"
           />
-          <div
-            class="StyledBox-sc-13pk1d4-0 eCBRSq"
+          <button
+            class="StyledButton-sc-323bzc-0 gWpUxR"
+            title="see JSON"
+            type="button"
           >
-            <button
-              class="StyledButton-sc-323bzc-0 gWpUxR"
-              title="see JSON"
-              type="button"
+            <svg
+              aria-label="Code"
+              class="StyledIcon-ofa7kd-0 jAaLrm"
+              viewBox="0 0 24 24"
             >
-              <svg
-                aria-label="Code"
-                class="StyledIcon-ofa7kd-0 jAaLrm"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M9,22 L15,2 M17,17 L22,12 L17,7 M7,17 L2,12 L7,7"
-                  fill="none"
-                  stroke="#000"
-                  stroke-width="2"
-                />
-              </svg>
-            </button>
-          </div>
+              <path
+                d="M9,22 L15,2 M17,17 L22,12 L17,7 M7,17 L2,12 L7,7"
+                fill="none"
+                stroke="#000"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
           <div
             class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iChEkS"
           />
-          <div
-            class="StyledBox-sc-13pk1d4-0 eCBRSq"
+          <button
+            class="StyledButton-sc-323bzc-0 gWpUxR"
+            title="share"
+            type="button"
           >
-            <button
-              class="StyledButton-sc-323bzc-0 gWpUxR"
-              title="share"
-              type="button"
+            <svg
+              aria-label="Share"
+              class="StyledIcon-ofa7kd-0 jAaLrm"
+              viewBox="0 0 24 24"
             >
-              <svg
-                aria-label="Share"
-                class="StyledIcon-ofa7kd-0 jAaLrm"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19,13 L19,23 L1,23 L1,5 L1,5 L11,5 M14,1 L23,1 L23,10 M10,14 L22.9999998,1 L10,14 Z"
-                  fill="none"
-                  stroke="#000"
-                  stroke-width="2"
-                />
-              </svg>
-            </button>
-          </div>
+              <path
+                d="M19,13 L19,23 L1,23 L1,5 L1,5 L11,5 M14,1 L23,1 L23,10 M10,14 L22.9999998,1 L10,14 Z"
+                fill="none"
+                stroke="#000"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
         </div>
         <div
           class="StyledBox-sc-13pk1d4-0 eRLSix"
@@ -1235,6 +1225,7 @@ exports[`App empty 2`] = `
         </span>
         <button
           class="StyledButton-sc-323bzc-0 gWpUxR"
+          title="toggle dark/light mode"
           type="button"
         >
           <svg
@@ -1284,6 +1275,7 @@ exports[`App empty 2`] = `
       >
         <button
           class="StyledButton-sc-323bzc-0 gWpUxR"
+          title="edit theme"
           type="button"
         >
           <svg
@@ -1876,78 +1868,66 @@ exports[`App empty 2`] = `
         <div
           class="StyledBox-sc-13pk1d4-0 eSuxVG"
         >
-          <div
-            class="StyledBox-sc-13pk1d4-0 eCBRSq"
+          <button
+            class="StyledButton-sc-323bzc-0 gWpUxR"
+            title="choose another theme"
+            type="button"
           >
-            <button
-              class="StyledButton-sc-323bzc-0 gWpUxR"
-              title="choose another theme"
-              type="button"
+            <svg
+              aria-label="Apps"
+              class="StyledIcon-ofa7kd-0 jAaLrm"
+              viewBox="0 0 24 24"
             >
-              <svg
-                aria-label="Apps"
-                class="StyledIcon-ofa7kd-0 jAaLrm"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19,5 L21,5 L21,3 L19,3 L19,5 Z M11,5 L13,5 L13,3 L11,3 L11,5 Z M3,5 L5,5 L5,3 L3,3 L3,5 Z M19,13 L21,13 L21,11 L19,11 L19,13 Z M11,13 L13,13 L13,11 L11,11 L11,13 Z M3,13 L5,13 L5,11 L3,11 L3,13 Z M19,21 L21,21 L21,19 L19,19 L19,21 Z M11,21 L13,21 L13,19 L11,19 L11,21 Z M3,21 L5,21 L5,19 L3,19 L3,21 Z"
-                  fill="none"
-                  stroke="#000"
-                  stroke-width="2"
-                />
-              </svg>
-            </button>
-          </div>
+              <path
+                d="M19,5 L21,5 L21,3 L19,3 L19,5 Z M11,5 L13,5 L13,3 L11,3 L11,5 Z M3,5 L5,5 L5,3 L3,3 L3,5 Z M19,13 L21,13 L21,11 L19,11 L19,13 Z M11,13 L13,13 L13,11 L11,11 L11,13 Z M3,13 L5,13 L5,11 L3,11 L3,13 Z M19,21 L21,21 L21,19 L19,19 L19,21 Z M11,21 L13,21 L13,19 L11,19 L11,21 Z M3,21 L5,21 L5,19 L3,19 L3,21 Z"
+                fill="none"
+                stroke="#000"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
           <div
             class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iChEkS"
           />
-          <div
-            class="StyledBox-sc-13pk1d4-0 eCBRSq"
+          <button
+            class="StyledButton-sc-323bzc-0 gWpUxR"
+            title="see JSON"
+            type="button"
           >
-            <button
-              class="StyledButton-sc-323bzc-0 gWpUxR"
-              title="see JSON"
-              type="button"
+            <svg
+              aria-label="Code"
+              class="StyledIcon-ofa7kd-0 jAaLrm"
+              viewBox="0 0 24 24"
             >
-              <svg
-                aria-label="Code"
-                class="StyledIcon-ofa7kd-0 jAaLrm"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M9,22 L15,2 M17,17 L22,12 L17,7 M7,17 L2,12 L7,7"
-                  fill="none"
-                  stroke="#000"
-                  stroke-width="2"
-                />
-              </svg>
-            </button>
-          </div>
+              <path
+                d="M9,22 L15,2 M17,17 L22,12 L17,7 M7,17 L2,12 L7,7"
+                fill="none"
+                stroke="#000"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
           <div
             class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iChEkS"
           />
-          <div
-            class="StyledBox-sc-13pk1d4-0 eCBRSq"
+          <button
+            class="StyledButton-sc-323bzc-0 gWpUxR"
+            title="share"
+            type="button"
           >
-            <button
-              class="StyledButton-sc-323bzc-0 gWpUxR"
-              title="share"
-              type="button"
+            <svg
+              aria-label="Share"
+              class="StyledIcon-ofa7kd-0 jAaLrm"
+              viewBox="0 0 24 24"
             >
-              <svg
-                aria-label="Share"
-                class="StyledIcon-ofa7kd-0 jAaLrm"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19,13 L19,23 L1,23 L1,5 L1,5 L11,5 M14,1 L23,1 L23,10 M10,14 L22.9999998,1 L10,14 Z"
-                  fill="none"
-                  stroke="#000"
-                  stroke-width="2"
-                />
-              </svg>
-            </button>
-          </div>
+              <path
+                d="M19,13 L19,23 L1,23 L1,5 L1,5 L11,5 M14,1 L23,1 L23,10 M10,14 L22.9999998,1 L10,14 Z"
+                fill="none"
+                stroke="#000"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
         </div>
         <div
           class="StyledBox-sc-13pk1d4-0 eRLSix"
