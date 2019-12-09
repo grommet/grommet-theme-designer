@@ -1,10 +1,4 @@
-import React, {
-  Fragment,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
-} from 'react';
+import React, { useCallback, useContext, useEffect, useState } from 'react';
 import ReactGA from 'react-ga';
 import {
   Box,
@@ -14,14 +8,9 @@ import {
   Keyboard,
   grommet,
 } from 'grommet';
-import { Apps, Code, Share } from 'grommet-icons';
 import { apiUrl, starter, upgradeTheme } from './theme';
-import ActionButton from './components/ActionButton';
-import Card from './Card';
-import Primary from './Primary';
-import Themes from './Themes';
-import Raw from './Raw';
-import Sharer from './Share';
+import EditTheme from './EditTheme';
+import Designs from './Designs';
 
 const getParams = () => {
   const { location } = window;
@@ -36,31 +25,12 @@ const getParams = () => {
   return params;
 };
 
-const Actioner = ({ Icon, Modal, theme, title, setTheme }) => {
-  const [show, setShow] = useState();
-  return (
-    <Fragment>
-      <ActionButton
-        title={title}
-        icon={<Icon />}
-        hoverIndicator
-        onClick={() => setShow(true)}
-      />
-      {show && (
-        <Modal
-          theme={theme}
-          setTheme={setTheme}
-          onClose={() => setShow(false)}
-        />
-      )}
-    </Fragment>
-  );
-};
-
 const App = () => {
   const [theme, setTheme] = useState();
   const [themes, setThemes] = useState([]);
-  const [preview, setPreview] = useState(true);
+  const [themeMode, setThemeMode] = React.useState('light');
+  const [Design, setDesign] = useState();
+  const [editing, setEditing] = useState(true);
   const responsive = useContext(ResponsiveContext);
 
   // initialize analytics
@@ -76,7 +46,7 @@ const App = () => {
     }
   }, []);
 
-  // load initial
+  // load initial theme
   useEffect(() => {
     const params = getParams();
     if (params.id) {
@@ -86,6 +56,7 @@ const App = () => {
           upgradeTheme(nextTheme);
           document.title = nextTheme.name;
           setTheme(nextTheme);
+          if (nextTheme.defaultMode) setThemeMode(nextTheme.defaultMode);
           ReactGA.event({
             category: 'switch',
             action: 'published theme',
@@ -97,7 +68,7 @@ const App = () => {
         category: 'switch',
         action: 'new theme',
       });
-      setPreview(false);
+      setEditing(true);
     } else {
       let stored = localStorage.getItem('activeTheme');
       if (stored) {
@@ -108,51 +79,58 @@ const App = () => {
         upgradeTheme(nextTheme);
         document.title = nextTheme.name;
         setTheme(nextTheme);
+        if (nextTheme.defaultMode) setThemeMode(nextTheme.defaultMode);
         ReactGA.event({
           category: 'switch',
           action: 'previous theme',
         });
       } else {
         setTheme(starter);
+        if (starter.defaultMode) setThemeMode(starter.defaultMode);
         ReactGA.event({
           category: 'switch',
           action: 'new theme',
         });
       }
-      setPreview(false);
+      setEditing(true);
     }
   }, []);
 
+  // load themes
   useEffect(() => {
     const stored = localStorage.getItem('themes');
     if (stored) setThemes(JSON.parse(stored));
   }, []);
 
+  // load editing mode
   useEffect(() => {
-    const stored = localStorage.getItem('preview');
-    if (stored) setPreview(JSON.parse(stored));
+    const stored = localStorage.getItem('editing');
+    if (stored) setEditing(JSON.parse(stored));
   }, []);
 
-  useEffect(() => localStorage.setItem('preview', JSON.stringify(preview)), [
-    preview,
+  // store editing mode
+  useEffect(() => localStorage.setItem('editing', JSON.stringify(editing)), [
+    editing,
   ]);
 
   // store theme
   useEffect(() => {
-    // do this stuff lazily, so we don't bog down the UI
-    const timer = setTimeout(() => {
-      document.title = theme.name;
+    if (theme) {
+      // do this stuff lazily, so we don't bog down the UI
+      const timer = setTimeout(() => {
+        document.title = theme.name;
 
-      localStorage.setItem(theme.name, JSON.stringify(theme));
-      localStorage.setItem('activeTheme', theme.name);
+        localStorage.setItem(theme.name, JSON.stringify(theme));
+        localStorage.setItem('activeTheme', theme.name);
 
-      if (!themes.includes(theme.name)) {
-        const nextThemes = [theme.name, ...themes];
-        localStorage.setItem('themes', JSON.stringify(nextThemes));
-        setThemes(nextThemes);
-      }
-    }, 1000);
-    return () => clearTimeout(timer);
+        if (!themes.includes(theme.name)) {
+          const nextThemes = [theme.name, ...themes];
+          localStorage.setItem('themes', JSON.stringify(nextThemes));
+          setThemes(nextThemes);
+        }
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
   }, [theme, themes]);
 
   const onKey = useCallback(
@@ -160,72 +138,48 @@ const App = () => {
       if (event.metaKey) {
         if (event.key === 'e' || event.key === 'E') {
           event.preventDefault();
-          setPreview(!preview);
+          setEditing(!editing);
         }
       }
     },
-    [preview],
+    [editing],
   );
 
+  let columns;
+  if (responsive === 'small') columns = 'flex';
+  else if (!editing) columns = ['small', 'flex'];
+  else columns = ['small', 'flex', ['small', 'medium']];
+
   return (
-    <Grommet full theme={grommet}>
+    <Grommet full theme={starter}>
       <Keyboard target="document" onKeyDown={onKey}>
         {!theme ? (
           <Box fill justify="center" align="center">
             <Box pad="xlarge" background="dark-2" round animation="pulse" />
           </Box>
         ) : (
-          <Grid
-            fill
-            columns={
-              responsive === 'small' || preview
-                ? 'flex'
-                : [['small', 'medium'], 'flex']
-            }
-            rows="full"
-          >
-            {responsive !== 'small' && !preview && (
-              <Box
-                fill="vertical"
-                overflow="auto"
-                background="dark-1"
-                border="right"
-              >
-                <Box flex={false}>
-                  <Box
-                    flex={false}
-                    direction="row"
-                    justify="between"
-                    gap="small"
-                    border="bottom"
-                  >
-                    <Actioner
-                      title="choose another theme"
-                      Icon={Apps}
-                      Modal={Themes}
-                      theme={theme}
-                      setTheme={setTheme}
-                    />
-                    <Actioner
-                      title="see JSON"
-                      Icon={Code}
-                      Modal={Raw}
-                      theme={theme}
-                      setTheme={setTheme}
-                    />
-                    <Actioner
-                      title="share"
-                      Icon={Share}
-                      Modal={Sharer}
-                      theme={theme}
-                      setTheme={setTheme}
-                    />
-                  </Box>
-                  <Primary theme={theme} setTheme={setTheme} />
-                </Box>
-              </Box>
+          <Grid fill columns={columns} rows="full">
+            {responsive !== 'small' && theme && (
+              <Designs
+                theme={theme}
+                design={Design}
+                setDesign={setDesign}
+                toggleEditing={() => setEditing(!editing)}
+                toggleThemeMode={() =>
+                  setThemeMode(themeMode === 'dark' ? 'light' : 'dark')
+                }
+              />
             )}
-            <Card theme={theme} onTogglePreview={() => setPreview(!preview)} />
+            {Design && theme ? (
+              <Grommet theme={theme} themeMode={themeMode}>
+                <Design theme={theme} />
+              </Grommet>
+            ) : (
+              <Box />
+            )}
+            {responsive !== 'small' && editing && (
+              <EditTheme theme={theme} setTheme={setTheme} />
+            )}
           </Grid>
         )}
       </Keyboard>

@@ -10,11 +10,11 @@ export const getColor = (theme, name, mode, dereference) => {
         color = theme.global.colors[name][mode];
       }
     }
-    if (!color) {
+    if (color === undefined) {
       color = theme.global.colors[name];
     }
   }
-  if (!color && base.global.colors[name] !== undefined) {
+  if (color === undefined && base.global.colors[name] !== undefined) {
     if (mode) {
       if (base.global.colors[name][mode] !== undefined) {
         color = base.global.colors[name][mode];
@@ -25,8 +25,12 @@ export const getColor = (theme, name, mode, dereference) => {
       color = base.global.colors[name];
     }
   }
-  if (dereference && color && typeof color === 'string'
-    && !valueExp.test(color)) {
+  if (
+    dereference &&
+    color &&
+    typeof color === 'string' &&
+    !valueExp.test(color)
+  ) {
     color = getColor(theme, color, mode);
   }
   return color;
