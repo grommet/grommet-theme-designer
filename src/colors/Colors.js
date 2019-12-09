@@ -165,13 +165,30 @@ const Color = ({ prefix, theme, setTheme }) => {
         background={open ? 'selected-background' : undefined}
       >
         <Text>{prefix}</Text>
-        <Grommet theme={theme} themeMode="dark">
-          <Box direction="row">
-            {colors.map(color => (
-              <Box key={color} pad="small" background={color} />
-            ))}
-          </Box>
-        </Grommet>
+        <Box>
+          <Grommet theme={theme}>
+            <Box direction="row">
+              {colors.map(color => (
+                <Box
+                  key={color}
+                  pad={{ horizontal: 'small', vertical: 'xsmall' }}
+                  background={color}
+                />
+              ))}
+            </Box>
+          </Grommet>
+          <Grommet theme={theme} themeMode="dark">
+            <Box direction="row">
+              {colors.map(color => (
+                <Box
+                  key={color}
+                  pad={{ horizontal: 'small', vertical: 'xsmall' }}
+                  background={color}
+                />
+              ))}
+            </Box>
+          </Grommet>
+        </Box>
       </Box>
     </DropButton>
   );
@@ -348,13 +365,30 @@ const Graph = ({ theme, setTheme }) => {
         pad={{ vertical: 'small', horizontal: 'medium' }}
       >
         <Text>graph</Text>
-        <Grommet theme={theme}>
-          <Box direction="row">
-            {colors.dark.map(color => (
-              <Box key={color} pad="small" background={color} />
-            ))}
-          </Box>
-        </Grommet>
+        <Box>
+          <Grommet theme={theme}>
+            <Box direction="row">
+              {colors.light.map(color => (
+                <Box
+                  key={color}
+                  pad={{ horizontal: 'small', vertical: 'xsmall' }}
+                  background={color}
+                />
+              ))}
+            </Box>
+          </Grommet>
+          <Grommet theme={theme} themeMode="dark">
+            <Box direction="row">
+              {colors.dark.map(color => (
+                <Box
+                  key={color}
+                  pad={{ horizontal: 'small', vertical: 'xsmall' }}
+                  background={color}
+                />
+              ))}
+            </Box>
+          </Grommet>
+        </Box>
       </Box>
     </DropButton>
   );
