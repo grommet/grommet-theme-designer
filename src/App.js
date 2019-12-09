@@ -158,9 +158,8 @@ const App = () => {
                 design={Design}
                 setDesign={setDesign}
                 toggleEditing={() => setEditing(!editing)}
-                toggleThemeMode={() =>
-                  setThemeMode(themeMode === 'dark' ? 'light' : 'dark')
-                }
+                themeMode={themeMode}
+                setThemeMode={setThemeMode}
               />
             )}
             {Design && theme ? (

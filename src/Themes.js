@@ -12,21 +12,23 @@ const Themes = ({ theme, onClose, setTheme }) => {
   React.useEffect(() => {
     let item = localStorage.getItem('themes'); // array of names
     if (item) {
-      setThemes(JSON.parse(item).map((name) => {
-        let theme = localStorage.getItem(name);
-        if (theme) {
-          try {
-            return JSON.parse(theme);
-          } catch (e) {
-            return { name };
+      setThemes(
+        JSON.parse(item).map(name => {
+          let theme = localStorage.getItem(name);
+          if (theme) {
+            try {
+              return JSON.parse(theme);
+            } catch (e) {
+              return { name };
+            }
           }
-        }
-        return { name };
-      }));
+          return { name };
+        }),
+      );
     }
   }, []);
 
-  const onSelect = (name) => {
+  const onSelect = name => {
     const item = localStorage.getItem(name);
     if (item) {
       const nextTheme = JSON.parse(item);
@@ -34,16 +36,16 @@ const Themes = ({ theme, onClose, setTheme }) => {
       setTheme(nextTheme);
       onClose();
     }
-  }
+  };
 
   const onReset = () => {
     localStorage.removeItem('selected');
     localStorage.removeItem('activeTheme');
     setTheme(starter);
     onClose();
-  }
+  };
 
-  const onDelete = (name) => {
+  const onDelete = name => {
     setConfirmDelete(undefined);
     const nextThemes = themes.map(t => t.name).filter(n => n !== name);
     localStorage.setItem('themes', JSON.stringify(nextThemes));
@@ -53,12 +55,12 @@ const Themes = ({ theme, onClose, setTheme }) => {
       localStorage.removeItem('activeTheme');
       setTheme(starter);
     }
-  }
+  };
 
   return (
-    <Action label="themes" onClose={onClose} full="horizontal">
+    <Action onClose={onClose} full="horizontal">
       <Grid fill="horizontal" columns="small" rows="small" gap="large">
-        <Box fill round="medium" >
+        <Box fill round="medium">
           <Button fill label="New" onClick={onReset} />
         </Box>
         {themes.map(theme => {
@@ -101,7 +103,7 @@ const Themes = ({ theme, onClose, setTheme }) => {
                 />
               </Box>
             </Stack>
-          )
+          );
         })}
       </Grid>
     </Action>

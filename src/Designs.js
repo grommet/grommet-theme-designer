@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { Box, Text } from 'grommet';
-import { Edit, Info } from 'grommet-icons';
+import { Box, RadioButtonGroup, Heading, Text } from 'grommet';
+import { Edit } from 'grommet-icons';
 import ActionButton from './components/ActionButton';
 import Accessibility from './examples/Accessibility';
 import Form from './examples/Form';
@@ -19,7 +19,8 @@ export default ({
   design: activeDesign,
   setDesign,
   toggleEditing,
-  toggleThemeMode,
+  themeMode,
+  setThemeMode,
 }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -70,13 +71,26 @@ export default ({
       >
         <Text weight="bold">{theme.name}</Text>
         <ActionButton
-          title="toggle dark/light mode"
-          icon={<Info />}
+          title="edit theme"
+          icon={<Edit />}
           hoverIndicator
-          onClick={toggleThemeMode}
+          onClick={toggleEditing}
+        />
+      </Box>
+      <Box pad="small">
+        <RadioButtonGroup
+          name="themeMode"
+          options={['light', 'dark']}
+          value={themeMode}
+          onChange={event => setThemeMode(event.target.value)}
         />
       </Box>
       <Box flex="grow">
+        <Box pad="small">
+          <Heading level={3} size="xsmall">
+            Examples
+          </Heading>
+        </Box>
         {examples.map(({ name, Design }) => (
           <Box
             key={name}
@@ -88,14 +102,6 @@ export default ({
             {name}
           </Box>
         ))}
-      </Box>
-      <Box flex={false} direction="row" justify="end">
-        <ActionButton
-          title="edit theme"
-          icon={<Edit />}
-          hoverIndicator
-          onClick={toggleEditing}
-        />
       </Box>
     </Box>
   );

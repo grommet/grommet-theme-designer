@@ -4,7 +4,7 @@ import Action from './components/Action';
 
 const Raw = ({ theme, onClose, setTheme }) => {
   return (
-    <Action label="raw" onClose={onClose} modal>
+    <Action closeTitle="cancel" onClose={onClose} modal>
       <Form
         value={{ json: JSON.stringify(theme, null, 2) }}
         onSubmit={({ value: { json } }) => {
@@ -19,16 +19,16 @@ const Raw = ({ theme, onClose, setTheme }) => {
             component={TextArea}
             cols={60}
             rows={20}
-            validate={(value) => {
+            validate={value => {
               try {
-                JSON.parse(value)
+                JSON.parse(value);
               } catch (e) {
-                return e.message
+                return e.message;
               }
             }}
           />
           <Box align="start">
-            <Button type="submit" label="Update" />
+            <Button type="submit" label="Done" />
           </Box>
         </Box>
       </Form>

@@ -20,16 +20,16 @@ exports[`App empty 1`] = `
         </span>
         <button
           class="StyledButton-sc-323bzc-0 gWpUxR"
-          title="toggle dark/light mode"
+          title="edit theme"
           type="button"
         >
           <svg
-            aria-label="Info"
+            aria-label="Edit"
             class="StyledIcon-ofa7kd-0 jAaLrm"
             viewBox="0 0 24 24"
           >
             <path
-              d="M15,17.0002864 C15,14.0000003 19,12.0005727 19,8.00028636 C19,4.00000002 16,1.00028636 12,1.00028636 C8,1.00028636 5,4.00000002 5,8.00028636 C5,12.0005727 9,14.0000003 9,17.0002864 C9,20.0005725 9,20 9,20 C9,22.0000003 10,22.9999997 12,23 C14,23.0000003 15,22.0000003 15,20 C15,20 15,20.0005725 15,17.0002864 Z M9,18 L15,18"
+              d="M14,4 L20,10 L14,4 Z M22.2942268,5.29422684 C22.6840146,5.68401459 22.6812861,6.3187139 22.2864907,6.71350932 L9,20 L2,22 L4,15 L17.2864907,1.71350932 C17.680551,1.319449 18.3127724,1.31277239 18.7057732,1.70577316 L22.2942268,5.29422684 Z M3,19 L5,21 M7,17 L15,9"
               fill="none"
               stroke="#000"
               stroke-width="2"
@@ -38,8 +38,85 @@ exports[`App empty 1`] = `
         </button>
       </div>
       <div
+        class="StyledBox-sc-13pk1d4-0 gmAZBs"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 koruWX"
+        >
+          <label
+            class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 TAEZC"
+            for="light"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 dswBHP StyledRadioButton-g1f6ld-4 gVogic"
+            >
+              <input
+                checked=""
+                class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hXzvWT"
+                id="light"
+                name="themeMode"
+                type="radio"
+                value="light"
+              />
+              <div
+                class="StyledBox-sc-13pk1d4-0 kPVwzH StyledRadioButton__StyledRadioButtonBox-g1f6ld-3 lnEyXE"
+              >
+                <svg
+                  class="StyledRadioButton__StyledRadioButtonIcon-g1f6ld-2 ikgbXi"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="6"
+                  />
+                </svg>
+              </div>
+            </div>
+            <span>
+              light
+            </span>
+          </label>
+          <div
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hPsznL"
+          />
+          <label
+            class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 TAEZC"
+            for="dark"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 dswBHP StyledRadioButton-g1f6ld-4 gVogic"
+            >
+              <input
+                class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hXzvWT"
+                id="dark"
+                name="themeMode"
+                type="radio"
+                value="dark"
+              />
+              <div
+                class="StyledBox-sc-13pk1d4-0 cvKyda StyledRadioButton__StyledRadioButtonBox-g1f6ld-3 lnEyXE"
+              />
+            </div>
+            <span>
+              dark
+            </span>
+          </label>
+        </div>
+      </div>
+      <div
         class="StyledBox-sc-13pk1d4-0 bmeXHp"
       >
+        <div
+          class="StyledBox-sc-13pk1d4-0 gmAZBs"
+        >
+          <h3
+            class="StyledHeading-sc-1rdh4aw-0 iUCcAQ"
+          >
+            Examples
+          </h3>
+        </div>
         <div
           class="StyledBox-sc-13pk1d4-0 iVrFIV"
           tabindex="0"
@@ -64,28 +141,6 @@ exports[`App empty 1`] = `
         >
           Accessibility
         </div>
-      </div>
-      <div
-        class="StyledBox-sc-13pk1d4-0 gWLQUL"
-      >
-        <button
-          class="StyledButton-sc-323bzc-0 gWpUxR"
-          title="edit theme"
-          type="button"
-        >
-          <svg
-            aria-label="Edit"
-            class="StyledIcon-ofa7kd-0 jAaLrm"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M14,4 L20,10 L14,4 Z M22.2942268,5.29422684 C22.6840146,5.68401459 22.6812861,6.3187139 22.2864907,6.71350932 L9,20 L2,22 L4,15 L17.2864907,1.71350932 C17.680551,1.319449 18.3127724,1.31277239 18.7057732,1.70577316 L22.2942268,5.29422684 Z M3,19 L5,21 M7,17 L15,9"
-              fill="none"
-              stroke="#000"
-              stroke-width="2"
-            />
-          </svg>
-        </button>
       </div>
     </div>
     <div
@@ -662,16 +717,16 @@ exports[`App empty 2`] = `
         </span>
         <button
           class="StyledButton-sc-323bzc-0 gWpUxR"
-          title="toggle dark/light mode"
+          title="edit theme"
           type="button"
         >
           <svg
-            aria-label="Info"
+            aria-label="Edit"
             class="StyledIcon-ofa7kd-0 jAaLrm"
             viewBox="0 0 24 24"
           >
             <path
-              d="M15,17.0002864 C15,14.0000003 19,12.0005727 19,8.00028636 C19,4.00000002 16,1.00028636 12,1.00028636 C8,1.00028636 5,4.00000002 5,8.00028636 C5,12.0005727 9,14.0000003 9,17.0002864 C9,20.0005725 9,20 9,20 C9,22.0000003 10,22.9999997 12,23 C14,23.0000003 15,22.0000003 15,20 C15,20 15,20.0005725 15,17.0002864 Z M9,18 L15,18"
+              d="M14,4 L20,10 L14,4 Z M22.2942268,5.29422684 C22.6840146,5.68401459 22.6812861,6.3187139 22.2864907,6.71350932 L9,20 L2,22 L4,15 L17.2864907,1.71350932 C17.680551,1.319449 18.3127724,1.31277239 18.7057732,1.70577316 L22.2942268,5.29422684 Z M3,19 L5,21 M7,17 L15,9"
               fill="none"
               stroke="#000"
               stroke-width="2"
@@ -680,8 +735,85 @@ exports[`App empty 2`] = `
         </button>
       </div>
       <div
+        class="StyledBox-sc-13pk1d4-0 gmAZBs"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 koruWX"
+        >
+          <label
+            class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 TAEZC"
+            for="light"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 dswBHP StyledRadioButton-g1f6ld-4 gVogic"
+            >
+              <input
+                checked=""
+                class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hXzvWT"
+                id="light"
+                name="themeMode"
+                type="radio"
+                value="light"
+              />
+              <div
+                class="StyledBox-sc-13pk1d4-0 kPVwzH StyledRadioButton__StyledRadioButtonBox-g1f6ld-3 lnEyXE"
+              >
+                <svg
+                  class="StyledRadioButton__StyledRadioButtonIcon-g1f6ld-2 ikgbXi"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="6"
+                  />
+                </svg>
+              </div>
+            </div>
+            <span>
+              light
+            </span>
+          </label>
+          <div
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hPsznL"
+          />
+          <label
+            class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 TAEZC"
+            for="dark"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 dswBHP StyledRadioButton-g1f6ld-4 gVogic"
+            >
+              <input
+                class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hXzvWT"
+                id="dark"
+                name="themeMode"
+                type="radio"
+                value="dark"
+              />
+              <div
+                class="StyledBox-sc-13pk1d4-0 cvKyda StyledRadioButton__StyledRadioButtonBox-g1f6ld-3 lnEyXE"
+              />
+            </div>
+            <span>
+              dark
+            </span>
+          </label>
+        </div>
+      </div>
+      <div
         class="StyledBox-sc-13pk1d4-0 bmeXHp"
       >
+        <div
+          class="StyledBox-sc-13pk1d4-0 gmAZBs"
+        >
+          <h3
+            class="StyledHeading-sc-1rdh4aw-0 iUCcAQ"
+          >
+            Examples
+          </h3>
+        </div>
         <div
           class="StyledBox-sc-13pk1d4-0 iVrFIV"
           tabindex="0"
@@ -706,28 +838,6 @@ exports[`App empty 2`] = `
         >
           Accessibility
         </div>
-      </div>
-      <div
-        class="StyledBox-sc-13pk1d4-0 gWLQUL"
-      >
-        <button
-          class="StyledButton-sc-323bzc-0 gWpUxR"
-          title="edit theme"
-          type="button"
-        >
-          <svg
-            aria-label="Edit"
-            class="StyledIcon-ofa7kd-0 jAaLrm"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M14,4 L20,10 L14,4 Z M22.2942268,5.29422684 C22.6840146,5.68401459 22.6812861,6.3187139 22.2864907,6.71350932 L9,20 L2,22 L4,15 L17.2864907,1.71350932 C17.680551,1.319449 18.3127724,1.31277239 18.7057732,1.70577316 L22.2942268,5.29422684 Z M3,19 L5,21 M7,17 L15,9"
-              fill="none"
-              stroke="#000"
-              stroke-width="2"
-            />
-          </svg>
-        </button>
       </div>
     </div>
     <div

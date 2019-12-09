@@ -1,8 +1,17 @@
 import React, { Fragment } from 'react';
 import ReactGA from 'react-ga';
 import {
-  Anchor, Box, Button, Form, FormField, Grid, Heading, MaskedInput, Paragraph,
-  Text, TextInput
+  Anchor,
+  Box,
+  Button,
+  Form,
+  FormField,
+  Grid,
+  Heading,
+  MaskedInput,
+  Paragraph,
+  Text,
+  TextInput,
 } from 'grommet';
 import { CloudUpload, Copy } from 'grommet-icons';
 import { apiUrl, normalizeTheme } from './theme';
@@ -11,10 +20,14 @@ import Action from './components/Action';
 const Summary = ({ Icon, label, guidance }) => (
   <Box align="center" gap="small">
     <Icon size="large" />
-    <Heading level={3} margin="none">{label}</Heading>
+    <Heading level={3} margin="none">
+      {label}
+    </Heading>
     {typeof guidance === 'string' ? (
       <Paragraph textAlign="center">{guidance}</Paragraph>
-    ) : guidance}
+    ) : (
+      guidance
+    )}
   </Box>
 );
 
@@ -58,11 +71,10 @@ const Publish = ({ theme, setTheme }) => {
       },
       body,
     })
-    .then((response) => {
-      if (response.ok) {
-        setError(undefined);
-        return response.text()
-          .then(id => {
+      .then(response => {
+        if (response.ok) {
+          setError(undefined);
+          return response.text().then(id => {
             const nextUploadUrl = [
               window.location.protocol,
               '//',
@@ -79,46 +91,47 @@ const Publish = ({ theme, setTheme }) => {
               action: 'publish theme',
             });
           });
-      }
-      setPublishing(false);
-      return response.text().then(setError);
-    })
-    .catch((e) => {
-      setError(e.message);
-      setPublishing(false);
-    });
+        }
+        setPublishing(false);
+        return response.text().then(setError);
+      })
+      .catch(e => {
+        setError(e.message);
+        setPublishing(false);
+      });
 
     setTheme(nextTheme);
-  }
+  };
 
   const onCopy = () => {
     inputRef.current.select();
     document.execCommand('copy');
     setMessage('copied to clipboard!');
-  }
+  };
 
   return (
     <Box>
       <Summary
         Icon={CloudUpload}
         label="Publish"
-        guidance={(
+        guidance={
           <Box>
             <Paragraph textAlign="center">
-              Publishing your theme will generate a URL
-              that you can send to others so they can see it.
-              We use your email and PIN # so nobody else can modify your copy.
-              They will be able to create their own theme based on it.
+              Publishing your theme will generate a URL that you can send to
+              others so they can see it. We use your email and PIN # so nobody
+              else can modify your copy. They will be able to create their own
+              theme based on it.
             </Paragraph>
             <Paragraph textAlign="center">
-              You can also supply the published URL
-              into <Anchor href="https://designer.grommet.io">
+              You can also supply the published URL into{' '}
+              <Anchor href="https://designer.grommet.io">
                 grommet designer
-              </Anchor> as a "published" theme. Any changes you re-publish
-              will automatically be picked up by designs referencing it.
+              </Anchor>{' '}
+              as a "published" theme. Any changes you re-publish will
+              automatically be picked up by designs referencing it.
             </Paragraph>
           </Box>
-        )}
+        }
       />
       <Form value={publication} onSubmit={onPublish}>
         <FormField
@@ -173,12 +186,8 @@ const Publish = ({ theme, setTheme }) => {
 };
 
 export default ({ theme, setTheme, onClose }) => (
-  <Action
-    label="share"
-    animation="fadeIn"
-    onClose={onClose}
-  >
-    <Grid columns={{ count: 'fit', size: "small" }} gap="large">
+  <Action animation="fadeIn" onClose={onClose}>
+    <Grid columns={{ count: 'fit', size: 'small' }} gap="large">
       <Publish theme={theme} setTheme={setTheme} />
     </Grid>
   </Action>

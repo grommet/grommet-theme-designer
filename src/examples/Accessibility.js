@@ -65,7 +65,10 @@ export default ({ theme }) => {
         <Heading level={1} size="small" margin="none">
           Accessibility
         </Heading>
-        <Anchor href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">
+        <Anchor
+          target="_blank"
+          href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html"
+        >
           WCAG score
         </Anchor>
       </Header>
