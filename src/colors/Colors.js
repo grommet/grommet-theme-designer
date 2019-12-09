@@ -253,9 +253,10 @@ const Palette = ({ color, theme, setTheme }) => {
 };
 
 const Graph = ({ theme, setTheme }) => {
-  const colors = theme.global.graph.colors || { light: [], dark: [] };
+  const colors = (theme.global.graph || {}).colors || { light: [], dark: [] };
   const [light, setLight] = useState(colors.light.join('\n'));
   const [dark, setDark] = useState(colors.dark.join('\n'));
+
   return (
     <DropButton
       plain
@@ -274,6 +275,9 @@ const Graph = ({ theme, setTheme }) => {
                 const value = event.target.value;
                 setLight(value);
                 const nextTheme = JSON.parse(JSON.stringify(theme));
+                if (!nextTheme.global.graph) nextTheme.global.graph = {};
+                if (!nextTheme.global.graph.colors)
+                  nextTheme.global.graph.colors = { light: [], dark: [] };
                 nextTheme.global.graph.colors.light = value.match(/\S+/g) || [];
                 setTheme(nextTheme);
               }}
@@ -287,6 +291,9 @@ const Graph = ({ theme, setTheme }) => {
                 const value = event.target.value;
                 setDark(value);
                 const nextTheme = JSON.parse(JSON.stringify(theme));
+                if (!nextTheme.global.graph) nextTheme.global.graph = {};
+                if (!nextTheme.global.graph.colors)
+                  nextTheme.global.graph.colors = { light: [], dark: [] };
                 nextTheme.global.graph.colors.dark = value.match(/\S+/g) || [];
                 setTheme(nextTheme);
               }}
