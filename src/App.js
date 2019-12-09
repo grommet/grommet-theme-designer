@@ -1,13 +1,6 @@
 import React, { useCallback, useContext, useEffect, useState } from 'react';
 import ReactGA from 'react-ga';
-import {
-  Box,
-  Grid,
-  Grommet,
-  ResponsiveContext,
-  Keyboard,
-  grommet,
-} from 'grommet';
+import { Box, Grid, Grommet, ResponsiveContext, Keyboard } from 'grommet';
 import { apiUrl, starter, upgradeTheme } from './theme';
 import EditTheme from './EditTheme';
 import Designs from './Designs';

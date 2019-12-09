@@ -21,7 +21,44 @@ export default ({
   toggleEditing,
   toggleThemeMode,
 }) => {
-  useEffect(() => setDesign(() => Dashboard), [setDesign]);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!activeDesign) setDesign(() => Dashboard);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, [activeDesign, setDesign]);
+
+  // load design based on browser location path
+  useEffect(() => {
+    const onPopState = () => {
+      const {
+        location: { pathname },
+      } = document;
+      const name = pathname.slice(1);
+      const example = examples.find(e => e.name === name);
+      if (example) {
+        setDesign(() => example.Design);
+      }
+    };
+
+    window.addEventListener('popstate', onPopState);
+    onPopState();
+    return () => window.removeEventListener('popstate', onPopState);
+  }, [setDesign]);
+
+  // update browser location to match design
+  useEffect(() => {
+    const {
+      location: { pathname },
+    } = document;
+    const example = examples.find(e => e.Design === activeDesign);
+    if (example) {
+      const path = `/${example.name}`;
+      if (path !== pathname)
+        window.history.pushState(undefined, undefined, path);
+    }
+  }, [activeDesign]);
+
   return (
     <Box fill="vertical" overflow="auto" background="dark-1" border="right">
       <Box
