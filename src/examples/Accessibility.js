@@ -1,5 +1,14 @@
 import React from 'react';
-import { Anchor, Box, Grommet, Header, Heading, Main, Text } from 'grommet';
+import {
+  Anchor,
+  Box,
+  Grommet,
+  Header,
+  Heading,
+  Main,
+  Paragraph,
+  Text,
+} from 'grommet';
 import Score from '../colors/Score';
 
 const Cell = ({ background, text, theme, themeMode }) => (
@@ -65,12 +74,18 @@ export default ({ theme }) => {
         <Heading level={1} size="small" margin="none">
           Accessibility
         </Heading>
-        <Anchor
-          target="_blank"
-          href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html"
-        >
-          WCAG score
-        </Anchor>
+        <Paragraph textAlign="center">
+          Anywhere a number is shown indicates that the contrast ratio between
+          the text color and the background color isn't large enough. It should
+          be at least 4.5, according to the{' '}
+          <Anchor
+            target="_blank"
+            href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html"
+          >
+            WCAG guidelines
+          </Anchor>
+          .
+        </Paragraph>
       </Header>
       <Box
         flex={false}

@@ -46,15 +46,11 @@ export const starter = {
       'status-ok': '#00C781',
       'status-unknown': '#CCCCCC',
       'status-disabled': '#CCCCCC',
+      'graph-0': 'brand',
+      'graph-1': 'status-warning',
     },
     font: {
       family: 'Helvetica',
-    },
-    graph: {
-      colors: {
-        dark: ['brand'],
-        light: ['brand'],
-      },
     },
     active: {
       background: 'active-background',

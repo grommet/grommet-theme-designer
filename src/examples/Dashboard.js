@@ -142,7 +142,7 @@ export default ({ theme }) => {
                     overflow={true}
                     thickness="xsmall"
                     round={false}
-                    color={{ color: 'brand', opacity: 'medium' }}
+                    color={{ color: 'graph-0', opacity: 'medium' }}
                     size="full"
                   />
                   <Chart
@@ -155,7 +155,7 @@ export default ({ theme }) => {
                     overflow={true}
                     thickness="xsmall"
                     round={true}
-                    color={{ color: 'brand' }}
+                    color={{ color: 'graph-0' }}
                     size="full"
                   />
                   <Chart
@@ -187,7 +187,7 @@ export default ({ theme }) => {
                       [0, 100],
                     ]}
                     style={{ transform: 'rotate(180deg)' }}
-                    color={{ color: 'status-ok', opacity: 'medium' }}
+                    color={{ color: 'graph-1', opacity: 'medium' }}
                     thickness="xsmall"
                     round={false}
                     size="full"
@@ -201,7 +201,7 @@ export default ({ theme }) => {
                       [0, 100],
                     ]}
                     style={{ transform: 'rotate(180deg)' }}
-                    color={{ color: 'status-ok' }}
+                    color={{ color: 'graph-1' }}
                     thickness="xsmall"
                     round={true}
                     size="full"
@@ -240,12 +240,12 @@ export default ({ theme }) => {
             <Key
               margin="small"
               labels={[
-                { color: 'brand', label: 'inbound' },
-                { color: 'status-ok', label: 'outbound' },
+                { color: 'graph-0', label: 'inbound' },
+                { color: 'graph-1', label: 'outbound' },
               ]}
             />
             <Box background="background-contrast" pad="small">
-              peak of 2000ms 15 hours ago
+              <Text color="text-xweak">peak of 2000ms 15 hours ago</Text>
             </Box>
           </Box>
         </Box>

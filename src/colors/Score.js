@@ -68,7 +68,7 @@ export default ({ theme, mode, background, color }) => {
     if (content >= 4.5) content = '';
   }
   return (
-    <Text color={color} size="small" truncate>
+    <Text color={color} size="small" weight="bold" truncate>
       {content}
     </Text>
   );

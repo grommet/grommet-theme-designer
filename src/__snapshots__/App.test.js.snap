@@ -139,6 +139,12 @@ exports[`App empty 1`] = `
           class="StyledBox-sc-13pk1d4-0 iVrFIV"
           tabindex="0"
         >
+          Document
+        </div>
+        <div
+          class="StyledBox-sc-13pk1d4-0 iVrFIV"
+          tabindex="0"
+        >
           Accessibility
         </div>
       </div>
@@ -460,6 +466,9 @@ exports[`App empty 1`] = `
                 </svg>
               </button>
             </div>
+            <div
+              class="StyledBox-sc-13pk1d4-0 eiLqXR"
+            />
             <button
               aria-label="Open Drop"
               class="StyledButton-sc-323bzc-0 fjkrqk"
@@ -868,6 +877,9 @@ exports[`App empty 1`] = `
                       <div
                         class="StyledBox-sc-13pk1d4-0 gGCuFL"
                       />
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 cOqArV"
+                      />
                     </div>
                   </div>
                   <div
@@ -878,6 +890,9 @@ exports[`App empty 1`] = `
                     >
                       <div
                         class="StyledBox-sc-13pk1d4-0 gGCuFL"
+                      />
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 cOqArV"
                       />
                     </div>
                   </div>
@@ -1031,6 +1046,12 @@ exports[`App empty 2`] = `
           class="StyledBox-sc-13pk1d4-0 iVrFIV"
           tabindex="0"
         >
+          Document
+        </div>
+        <div
+          class="StyledBox-sc-13pk1d4-0 iVrFIV"
+          tabindex="0"
+        >
           Accessibility
         </div>
       </div>
@@ -1352,6 +1373,9 @@ exports[`App empty 2`] = `
                 </svg>
               </button>
             </div>
+            <div
+              class="StyledBox-sc-13pk1d4-0 eiLqXR"
+            />
             <button
               aria-label="Open Drop"
               class="StyledButton-sc-323bzc-0 fjkrqk"
@@ -1760,6 +1784,9 @@ exports[`App empty 2`] = `
                       <div
                         class="StyledBox-sc-13pk1d4-0 gGCuFL"
                       />
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 cOqArV"
+                      />
                     </div>
                   </div>
                   <div
@@ -1770,6 +1797,9 @@ exports[`App empty 2`] = `
                     >
                       <div
                         class="StyledBox-sc-13pk1d4-0 gGCuFL"
+                      />
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 cOqArV"
                       />
                     </div>
                   </div>

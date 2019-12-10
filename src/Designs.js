@@ -5,12 +5,14 @@ import ActionButton from './components/ActionButton';
 import Accessibility from './examples/Accessibility';
 import Form from './examples/Form';
 import Dashboard from './examples/Dashboard';
+import Document from './examples/Document';
 import List from './examples/List';
 
 const examples = [
   { name: 'Dashboard', Design: Dashboard },
   { name: 'List', Design: List },
   { name: 'Form', Design: Form },
+  { name: 'Document', Design: Document },
   { name: 'Accessibility', Design: Accessibility },
 ];
 
