@@ -51,7 +51,7 @@ export default ({ theme, mode, background, color }) => {
   let backgroundValue = getColor(theme, background, mode, true);
   if (backgroundValue === undefined) return '?';
   const alpha = getRGBArray(backgroundValue)[3];
-  if (alpha !== undefined && alpha < 1) {
+  if (alpha !== undefined && alpha < 1 && mode) {
     // blend colors to determine actual background color
     const underBackground = theme.global.colors.background[mode];
     backgroundValue = blendColors(backgroundValue, underBackground);
