@@ -45,8 +45,29 @@ const Texts = ({ background, texts, theme, themeMode }) => (
   </Box>
 );
 
+const TextLabels = ({ texts }) => (
+  <Box
+    flex={false}
+    direction="row"
+    align="center"
+    justify="center"
+    gap="small"
+    margin={{ bottom: 'small' }}
+  >
+    <Box width="small" pad="small" />
+    {texts.map(text => (
+      <Box key={text} width="xxsmall">
+        <Text color={text} textAlign="center">
+          {text.split('-')[1] || 'text'}
+        </Text>
+      </Box>
+    ))}
+  </Box>
+);
+
 const Backgrounds = ({ backgrounds, texts, theme, themeMode }) => (
   <Box flex={false} margin={{ vertical: 'large' }} align="center">
+    <TextLabels texts={texts} />
     {backgrounds.map(name => (
       <Texts
         key={name}
@@ -68,6 +89,7 @@ export default ({ theme }) => {
     .filter(color => color.endsWith('!'))
     .map(color => color.split('!')[0]);
   const texts = Object.keys(colors).filter(color => color.startsWith('text'));
+
   return (
     <Main background="background">
       <Header pad="medium" direction="column" gap="none">
@@ -87,23 +109,6 @@ export default ({ theme }) => {
           .
         </Paragraph>
       </Header>
-      <Box
-        flex={false}
-        direction="row"
-        align="center"
-        justify="center"
-        gap="small"
-        margin={{ bottom: 'small' }}
-      >
-        <Box width="small" pad="small" />
-        {texts.map(text => (
-          <Box key={text} width="xxsmall">
-            <Text color={text} textAlign="center">
-              {text.split('-')[1] || 'text'}
-            </Text>
-          </Box>
-        ))}
-      </Box>
       {['light', 'dark'].map(themeMode => (
         <Grommet key={themeMode} theme={theme} themeMode={themeMode}>
           <Backgrounds
