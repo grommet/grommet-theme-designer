@@ -417,6 +417,7 @@ const Graph = ({ theme, setTheme }) => {
 };
 
 const prefixes = [
+  'brand',
   'background',
   'text',
   'border',

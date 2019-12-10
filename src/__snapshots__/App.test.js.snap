@@ -532,6 +532,50 @@ exports[`App empty 1`] = `
                 <span
                   class="StyledText-sc-1sadyjn-0 fWSbXS"
                 >
+                  brand
+                </span>
+                <div
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iChEkS"
+                />
+                <div
+                  class="StyledBox-sc-13pk1d4-0 koruWX"
+                >
+                  <div
+                    class="StyledGrommet-sc-19lkkz7-0 bWySKN"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 jmYunQ"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 gGCuFL"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="StyledGrommet-sc-19lkkz7-0 dEWEjp"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 jmYunQ"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 gGCuFL"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <button
+              aria-label="Open Drop"
+              class="StyledButton-sc-323bzc-0 fjkrqk"
+              type="button"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 bOjGXh"
+              >
+                <span
+                  class="StyledText-sc-1sadyjn-0 fWSbXS"
+                >
                   background
                 </span>
                 <div
@@ -1480,6 +1524,50 @@ exports[`App empty 2`] = `
             <div
               class="StyledBox-sc-13pk1d4-0 eiLqXR"
             />
+            <button
+              aria-label="Open Drop"
+              class="StyledButton-sc-323bzc-0 fjkrqk"
+              type="button"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 bOjGXh"
+              >
+                <span
+                  class="StyledText-sc-1sadyjn-0 fWSbXS"
+                >
+                  brand
+                </span>
+                <div
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iChEkS"
+                />
+                <div
+                  class="StyledBox-sc-13pk1d4-0 koruWX"
+                >
+                  <div
+                    class="StyledGrommet-sc-19lkkz7-0 bWySKN"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 jmYunQ"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 gGCuFL"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="StyledGrommet-sc-19lkkz7-0 dEWEjp"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 jmYunQ"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 gGCuFL"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </button>
             <button
               aria-label="Open Drop"
               class="StyledButton-sc-323bzc-0 fjkrqk"
