@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, MaskedInput, RangeInput, Text } from 'grommet';
 import Field from './components/Field';
 
-const setSpacing = (theme, spacing, scale = 6) => {
+const setSpacing = theme => {
+  const { spacing, scale } = theme;
   const baseFontSize = spacing * 0.75; // 18
-  const fontScale = spacing / scale; // 4
+  const fontScale = (spacing / 6) * scale; // 4
 
   const fontSizing = factor => ({
     size: `${baseFontSize + factor * fontScale}px`,
@@ -123,6 +124,7 @@ const setSpacing = (theme, spacing, scale = 6) => {
 
   if (!theme.checkBox) theme.checkBox = {};
   theme.checkBox.size = `${spacing}px`;
+  if (!theme.checkBox.toggle) theme.checkBox.toggle = {};
   theme.checkBox.toggle.radius = `${spacing}px`;
   theme.checkBox.toggle.size = `${spacing * 2}px`;
 
@@ -221,47 +223,87 @@ const setSpacing = (theme, spacing, scale = 6) => {
     xlarge: { ...fontSizing(2) },
     xxlarge: { ...fontSizing(4) },
   };
-}
+};
 
 export default ({ theme, setTheme }) => {
+  const [scale, setScale] = useState(theme.scale || 1.0);
 
-  const onChange = (event) => {
+  const onChangeSpacing = event => {
     const nextTheme = JSON.parse(JSON.stringify(theme));
     const spacing = parseInt(event.target.value, 10);
     nextTheme.spacing = spacing;
-    setSpacing(nextTheme, spacing);
+    setSpacing(nextTheme);
     setTheme(nextTheme);
-  }
+  };
+
+  const onChangeScale = event => {
+    const nextTheme = JSON.parse(JSON.stringify(theme));
+    const nextScale = event.target.value;
+    setScale(nextScale);
+    nextTheme.scale = parseFloat(nextScale, 10);
+    setSpacing(nextTheme);
+    setTheme(nextTheme);
+  };
 
   return (
-    <Field htmlFor="spacing" label="spacing">
-      <Box direction="row" align="center">
-        <RangeInput
-          id="spacing"
-          name="spacing"
-          max={36}
-          min={12}
-          step={4}
-          value={theme.spacing !== undefined ? theme.spacing : 24}
-          onChange={onChange}
-          style={{ textAlign: 'end' }}
-        />
-        <Box
-          flex={false}
-          margin={{ left: 'small' }}
-          direction="row"
-          align="center"
-        >
-          <MaskedInput
-            plain
-            mask={[{ length: [1,2], regexp: /^[0-9]+$/ }]}
-            style={{ textAlign: 'right', width: '48px' }}
-            value={theme.spacing}
-            onChange={onChange}
+    <>
+      <Field htmlFor="spacing" label="spacing">
+        <Box direction="row" align="center">
+          <RangeInput
+            id="spacing"
+            name="spacing"
+            max={36}
+            min={12}
+            step={4}
+            value={theme.spacing !== undefined ? theme.spacing : 24}
+            onChange={onChangeSpacing}
+            style={{ textAlign: 'end' }}
           />
-          <Text>px</Text>
+          <Box
+            flex={false}
+            margin={{ left: 'small' }}
+            direction="row"
+            align="center"
+          >
+            <MaskedInput
+              plain
+              mask={[{ length: [1, 2], regexp: /^[0-9]+$/ }]}
+              style={{ textAlign: 'right', width: '48px' }}
+              value={theme.spacing}
+              onChange={onChangeSpacing}
+            />
+            <Text>px</Text>
+          </Box>
         </Box>
-      </Box>
-    </Field>
-  )
-}
+      </Field>
+      <Field htmlFor="scale" label="font scale">
+        <Box direction="row" align="center">
+          <RangeInput
+            id="scale"
+            name="scale"
+            max={4}
+            min={0.2}
+            step={0.2}
+            value={scale}
+            onChange={onChangeScale}
+            style={{ textAlign: 'end' }}
+          />
+          <Box
+            flex={false}
+            margin={{ left: 'small' }}
+            direction="row"
+            align="center"
+          >
+            <MaskedInput
+              plain
+              mask={[{ length: [1, 3], regexp: /^[.0-9]+$/ }]}
+              style={{ textAlign: 'right', width: '48px' }}
+              value={scale}
+              onChange={onChangeScale}
+            />
+          </Box>
+        </Box>
+      </Field>
+    </>
+  );
+};

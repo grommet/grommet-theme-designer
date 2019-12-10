@@ -411,6 +411,58 @@ exports[`App empty 1`] = `
               </div>
             </div>
           </div>
+          <div
+            class="StyledBox-sc-13pk1d4-0 lftshs"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 hydBDu"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 hYTtSi"
+              >
+                <label
+                  class="StyledText-sc-1sadyjn-0 fWSbXS"
+                  for="scale"
+                >
+                  font scale
+                </label>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 bhtaEx"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 eQTSO"
+                >
+                  <input
+                    class="StyledRangeInput-sc-15st9ck-0 kkvlyt"
+                    id="scale"
+                    max="4"
+                    min="0.2"
+                    name="scale"
+                    step="0.2"
+                    style="text-align: end;"
+                    type="range"
+                    value="1"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 cuOBGV"
+                  >
+                    <div
+                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 kyyRCm"
+                    >
+                      <input
+                        autocomplete="off"
+                        class="StyledMaskedInput-sc-99vkfa-0 gDyGQY"
+                        placeholder=""
+                        style="text-align: right; width: 48px;"
+                        value="1"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <button
             aria-label="Open Drop"
             class="StyledButton-sc-323bzc-0 fjkrqk"
@@ -1313,6 +1365,58 @@ exports[`App empty 2`] = `
                     >
                       px
                     </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="StyledBox-sc-13pk1d4-0 lftshs"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 hydBDu"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 hYTtSi"
+              >
+                <label
+                  class="StyledText-sc-1sadyjn-0 fWSbXS"
+                  for="scale"
+                >
+                  font scale
+                </label>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 bhtaEx"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 eQTSO"
+                >
+                  <input
+                    class="StyledRangeInput-sc-15st9ck-0 kkvlyt"
+                    id="scale"
+                    max="4"
+                    min="0.2"
+                    name="scale"
+                    step="0.2"
+                    style="text-align: end;"
+                    type="range"
+                    value="1"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 cuOBGV"
+                  >
+                    <div
+                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 kyyRCm"
+                    >
+                      <input
+                        autocomplete="off"
+                        class="StyledMaskedInput-sc-99vkfa-0 gDyGQY"
+                        placeholder=""
+                        style="text-align: right; width: 48px;"
+                        value="1"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
