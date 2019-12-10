@@ -114,6 +114,21 @@ exports[`App empty 1`] = `
           <h3
             class="StyledHeading-sc-1rdh4aw-0 iUCcAQ"
           >
+            Guides
+          </h3>
+        </div>
+        <div
+          class="StyledBox-sc-13pk1d4-0 iVrFIV"
+          tabindex="0"
+        >
+          Accessibility
+        </div>
+        <div
+          class="StyledBox-sc-13pk1d4-0 gmAZBs"
+        >
+          <h3
+            class="StyledHeading-sc-1rdh4aw-0 iUCcAQ"
+          >
             Examples
           </h3>
         </div>
@@ -140,12 +155,6 @@ exports[`App empty 1`] = `
           tabindex="0"
         >
           Document
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 iVrFIV"
-          tabindex="0"
-        >
-          Accessibility
         </div>
       </div>
     </div>
@@ -1117,6 +1126,21 @@ exports[`App empty 2`] = `
           <h3
             class="StyledHeading-sc-1rdh4aw-0 iUCcAQ"
           >
+            Guides
+          </h3>
+        </div>
+        <div
+          class="StyledBox-sc-13pk1d4-0 iVrFIV"
+          tabindex="0"
+        >
+          Accessibility
+        </div>
+        <div
+          class="StyledBox-sc-13pk1d4-0 gmAZBs"
+        >
+          <h3
+            class="StyledHeading-sc-1rdh4aw-0 iUCcAQ"
+          >
             Examples
           </h3>
         </div>
@@ -1143,12 +1167,6 @@ exports[`App empty 2`] = `
           tabindex="0"
         >
           Document
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 iVrFIV"
-          tabindex="0"
-        >
-          Accessibility
         </div>
       </div>
     </div>

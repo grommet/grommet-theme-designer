@@ -13,7 +13,7 @@ const examples = [
   { name: 'List', Design: List },
   { name: 'Form', Design: Form },
   { name: 'Document', Design: Document },
-  { name: 'Accessibility', Design: Accessibility },
+  { name: 'Accessibility', Design: Accessibility, guide: true },
 ];
 
 export default ({
@@ -90,20 +90,40 @@ export default ({
       <Box flex="grow">
         <Box pad="small">
           <Heading level={3} size="xsmall">
+            Guides
+          </Heading>
+        </Box>
+        {examples
+          .filter(e => e.guide)
+          .map(({ name, Design }) => (
+            <Box
+              key={name}
+              pad="small"
+              background={Design === activeDesign ? 'selected' : undefined}
+              hoverIndicator
+              onClick={() => setDesign(() => Design)}
+            >
+              {name}
+            </Box>
+          ))}
+        <Box pad="small">
+          <Heading level={3} size="xsmall">
             Examples
           </Heading>
         </Box>
-        {examples.map(({ name, Design }) => (
-          <Box
-            key={name}
-            pad="small"
-            background={Design === activeDesign ? 'selected' : undefined}
-            hoverIndicator
-            onClick={() => setDesign(() => Design)}
-          >
-            {name}
-          </Box>
-        ))}
+        {examples
+          .filter(e => !e.guide)
+          .map(({ name, Design }) => (
+            <Box
+              key={name}
+              pad="small"
+              background={Design === activeDesign ? 'selected' : undefined}
+              hoverIndicator
+              onClick={() => setDesign(() => Design)}
+            >
+              {name}
+            </Box>
+          ))}
       </Box>
     </Box>
   );
