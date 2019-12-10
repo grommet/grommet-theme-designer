@@ -50,7 +50,17 @@ const ColorBox = ({
     background={{ color: 'background', dark }}
     {...rest}
   >
-    <Box direction="row" border={!!onChange} round="xsmall" overflow="hidden">
+    <Box
+      direction="row"
+      border={(placeholder === '!' && 'horizontal') || !!onChange}
+      round="xsmall"
+      overflow="hidden"
+    >
+      {placeholder === '!' && (
+        <Text alignSelf="center" size="large">
+          !
+        </Text>
+      )}
       {onChange && (
         <>
           <TextInput
@@ -230,7 +240,7 @@ const Palette = ({ color, theme, setTheme }) => {
             <NameHeading name={color} />
           </NameBox>
           <ColorBox
-            placeholder="primary"
+            placeholder="!"
             theme={theme}
             value={fierce}
             onChange={value => {
