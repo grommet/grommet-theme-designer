@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   DropButton,
+  Form,
   Grommet,
   Heading,
   Text,
@@ -467,32 +468,33 @@ export default ({ theme, setTheme }) => {
         {adding === undefined ? (
           <Button icon={<Add />} hoverIndicator onClick={() => setAdding('')} />
         ) : (
-          <Box direction="row" align="center">
-            <TextInput
-              ref={ref}
-              placeholder="new color name"
-              value={adding}
-              onChange={event => setAdding(event.target.value)}
-            />
-            <Button
-              icon={<Checkmark />}
-              hoverIndicator
-              onClick={() => {
-                if (!theme.global.colors[adding]) {
-                  const nextTheme = JSON.parse(JSON.stringify(theme));
-                  nextTheme.global.colors[adding] = { dark: '', light: '' };
-                  nextTheme.global.colors[`${adding}!`] = '';
-                  setTheme(nextTheme);
-                  setAdding(undefined);
-                }
-              }}
-            />
-            <Button
-              icon={<Close />}
-              hoverIndicator
-              onClick={() => setAdding(undefined)}
-            />
-          </Box>
+          <Form
+            onSubmit={event => {
+              event.preventDefault();
+              if (!theme.global.colors[adding]) {
+                const nextTheme = JSON.parse(JSON.stringify(theme));
+                nextTheme.global.colors[adding] = { dark: '', light: '' };
+                nextTheme.global.colors[`${adding}!`] = '';
+                setTheme(nextTheme);
+              }
+              setAdding(undefined);
+            }}
+          >
+            <Box direction="row" align="center">
+              <TextInput
+                ref={ref}
+                placeholder="new color name"
+                value={adding}
+                onChange={event => setAdding(event.target.value)}
+              />
+              <Button type="submit" icon={<Checkmark />} hoverIndicator />
+              <Button
+                icon={<Close />}
+                hoverIndicator
+                onClick={() => setAdding(undefined)}
+              />
+            </Box>
+          </Form>
         )}
       </Box>
       {palette.map(color => (
