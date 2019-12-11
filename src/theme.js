@@ -12,7 +12,7 @@ export const starter = {
         dark: '#7700cc',
         light: '#6600cc',
       },
-      background: { dark: '#111111', light: '#FFFFFFF' },
+      background: { dark: '#111111', light: '#FFFFFF' },
       'background-back': { dark: '#111111', light: '#EEEEEE' },
       'background-front': { dark: '#222222', light: '#FFFFFF' },
       'background-contrast': { dark: '#FFFFFF11', light: '#11111111' },
