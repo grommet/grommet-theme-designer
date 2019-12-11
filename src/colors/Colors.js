@@ -13,11 +13,12 @@ import { Add, Checkmark, Close, Trash } from 'grommet-icons';
 
 const help = {
   background: `The underlying background color for Grommet.`,
-  'background-back': `The background color "behind everything".`,
-  'background-front': `The background color for containers on top of
-    the background-back.`,
-  'background-contrast': `Intended to be a slight luminance shift over the current background.
-    As such, it should have a low opacity value.`,
+  'background-back': `A background color to use "behind everything",
+    for instance when showing depth with tiles.`,
+  'background-front': `A background color to use for containers on top of
+    background-back.`,
+  'background-contrast': `A slight luminance shift over the current background.
+    It should have a low opacity value.`,
   text: 'The default text color.',
   'text-strong': 'The text color for text that should stand out a bit more.',
   'text-weak': 'The text color for text that should stand out a bit less.',
