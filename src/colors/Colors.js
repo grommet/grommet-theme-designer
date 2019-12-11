@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { Fragment, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Box,
   Button,
@@ -10,6 +10,19 @@ import {
   TextInput,
 } from 'grommet';
 import { Add, Checkmark, Close, Trash } from 'grommet-icons';
+
+const help = {
+  background: `The underlying background color for Grommet.`,
+  'background-back': `The background color "behind everything".`,
+  'background-front': `The background color for containers on top of
+    the background-back.`,
+  'background-contrast': `Intended to be a slight luminance shift over the current background.
+    As such, it should have a low opacity value.`,
+  text: 'The default text color.',
+  'text-strong': 'The text color for text that should stand out a bit more.',
+  'text-weak': 'The text color for text that should stand out a bit less.',
+  'text-xweak': 'The text color for text that should stand out a lot less.',
+};
 
 const NameBox = props => (
   <Box
@@ -24,7 +37,7 @@ const NameBox = props => (
 );
 
 const NameHeading = ({ prefix, name }) => (
-  <Text color="text-xweak">
+  <Text color="text-xweak" margin={{ top: 'small' }}>
     {prefix}
     {prefix && '-'}
     <Text weight="bold" color="text-strong">
@@ -47,6 +60,7 @@ const ColorBox = ({
   return (
     <Box
       direction="row"
+      align="start"
       width="small"
       flex={false}
       pad={{ horizontal: 'medium', vertical: 'xsmall' }}
@@ -152,32 +166,43 @@ const Color = ({ prefix, theme, setTheme }) => {
             }
             const colorSuffix = color.split('-')[1];
             return (
-              <ColorRow key={color}>
-                <NameBox>
-                  {color !== prefix ? (
-                    <NameHeading prefix={prefix} name={colorSuffix} />
-                  ) : (
-                    <NameHeading name={color} />
-                  )}
-                </NameBox>
-                <ColorBox
-                  theme={theme}
-                  value={lightValue}
-                  suggestions={suggestions}
-                  onChange={value =>
-                    setValue(color, 'light', value, theme, setTheme)
-                  }
-                />
-                <ColorBox
-                  dark
-                  theme={theme}
-                  value={darkValue}
-                  suggestions={suggestions}
-                  onChange={value =>
-                    setValue(color, 'dark', value, theme, setTheme)
-                  }
-                />
-              </ColorRow>
+              <Fragment key={color}>
+                <ColorRow>
+                  <NameBox direction="column" align="end" justify="start">
+                    {color !== prefix ? (
+                      <NameHeading prefix={prefix} name={colorSuffix} />
+                    ) : (
+                      <NameHeading name={color} />
+                    )}
+                    {help[color] && (
+                      <Text
+                        size="small"
+                        textAlign="end"
+                        margin={{ top: 'xsmall' }}
+                      >
+                        {help[color]}
+                      </Text>
+                    )}
+                  </NameBox>
+                  <ColorBox
+                    theme={theme}
+                    value={lightValue}
+                    suggestions={suggestions}
+                    onChange={value =>
+                      setValue(color, 'light', value, theme, setTheme)
+                    }
+                  />
+                  <ColorBox
+                    dark
+                    theme={theme}
+                    value={darkValue}
+                    suggestions={suggestions}
+                    onChange={value =>
+                      setValue(color, 'dark', value, theme, setTheme)
+                    }
+                  />
+                </ColorRow>
+              </Fragment>
             );
           })}
 
