@@ -42,48 +42,63 @@ const ColorBox = ({
   sharedValue,
   onChange,
   ...rest
-}) => (
-  <Box
-    direction="row"
-    width="small"
-    flex={false}
-    pad={{ horizontal: 'medium', vertical: 'xsmall' }}
-    background={{ color: 'background', dark }}
-    {...rest}
-  >
+}) => {
+  const [searchExp, setSearchExp] = useState();
+  return (
     <Box
       direction="row"
-      border={(placeholder === '!' && 'horizontal') || !!onChange}
-      round="xsmall"
-      overflow="hidden"
+      width="small"
+      flex={false}
+      pad={{ horizontal: 'medium', vertical: 'xsmall' }}
+      background={{ color: 'background', dark }}
+      {...rest}
     >
-      {placeholder === '!' && (
-        <Text alignSelf="center" size="large">
-          !
-        </Text>
-      )}
-      {onChange && (
-        <>
-          <TextInput
-            plain
-            placeholder={placeholder}
-            value={value}
-            suggestions={suggestions}
-            onChange={event => onChange(event.target.value)}
-            onSelect={event => onChange(event.suggestion)}
-          />
-          <Grommet theme={theme} themeMode={dark ? 'dark' : 'light'}>
-            <Box
-              fill="vertical"
-              pad="small"
-              background={value || sharedValue}
+      <Box
+        direction="row"
+        border={(placeholder === '!' && 'horizontal') || !!onChange}
+        round="xsmall"
+        overflow="hidden"
+      >
+        {placeholder === '!' && (
+          <Text alignSelf="center" size="large">
+            !
+          </Text>
+        )}
+        {onChange && (
+          <>
+            <TextInput
+              plain
+              placeholder={placeholder}
+              value={value}
+              suggestions={
+                !searchExp
+                  ? suggestions
+                  : suggestions.filter(s => searchExp.test(s))
+              }
+              onChange={event => {
+                const nextValue = event.target.value;
+                setSearchExp(new RegExp(nextValue, 'i'));
+                onChange(nextValue);
+              }}
+              onSelect={event => {
+                const nextValue = event.suggestion;
+                setSearchExp(new RegExp(nextValue, 'i'));
+                onChange(event.suggestion);
+              }}
             />
-          </Grommet>
-        </>
-      )}
+            <Grommet theme={theme} themeMode={dark ? 'dark' : 'light'}>
+              <Box
+                fill="vertical"
+                pad="small"
+                background={value || sharedValue}
+              />
+            </Grommet>
+          </>
+        )}
+      </Box>
     </Box>
-  </Box>
-);
+  );
+};
 
 const ColorRow = props => <Box direction="row" justify="end" {...props} />;
 
