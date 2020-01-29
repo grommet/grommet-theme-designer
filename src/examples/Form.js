@@ -16,17 +16,6 @@ import {
 } from 'grommet';
 import { FormDown } from 'grommet-icons';
 
-const Size = ({ name, value, onChange }) => (
-  <Box pad="small">
-    <RadioButtonGroup
-      name={name}
-      value={value}
-      options={['small', 'medium', 'large']}
-      onChange={onChange}
-    />
-  </Box>
-);
-
 const DatePicker = ({ name, value, onChange }) => {
   const [open, setOpen] = React.useState();
   return (
@@ -69,18 +58,26 @@ export default ({ theme }) => {
         rows={['flex']}
         areas={[{ name: 'content', start: [1, 0], end: [1, 0] }]}
       >
-        <Box gridArea="content">
+        <Box gridArea="content" margin={{ bottom: 'large' }}>
           <Form value={{ name: '', local: true, size: 'medium' }}>
             <Heading level={2}>Form</Heading>
             <FormField name="name" label="Name" required />
-            <FormField name="local" pad component={CheckBox} label="Local" />
-            <FormField name="size" label="Size" component={Size} />
-            <FormField
-              name="month"
-              label="Month"
-              component={Select}
-              options={['January', 'February', 'March']}
-            />
+            <FormField name="local">
+              <Box pad="small">
+                <CheckBox name="local" label="Local" />
+              </Box>
+            </FormField>
+            <FormField name="size" label="Size" help="for your T-shirt">
+              <Box pad="small">
+                <RadioButtonGroup
+                  name="size"
+                  options={['small', 'medium', 'large']}
+                />
+              </Box>
+            </FormField>
+            <FormField name="month" label="Month">
+              <Select name="month" options={['January', 'February', 'March']} />
+            </FormField>
             <FormField name="date" label="Date" component={DatePicker} />
             <Box direction="row" gap="small" margin={{ top: 'medium' }}>
               <Button primary label="Submit" type="submit" />

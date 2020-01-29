@@ -65,7 +65,7 @@ const ColorBox = ({
       width="small"
       flex={false}
       pad={{ horizontal: 'medium', vertical: 'xsmall' }}
-      background={{ color: 'background', dark }}
+      // background={{ color: 'background', dark }}
       {...rest}
     >
       <Box
@@ -92,22 +92,28 @@ const ColorBox = ({
               }
               onChange={event => {
                 const nextValue = event.target.value;
-                setSearchExp(new RegExp(nextValue, 'i'));
+                if (suggestions) setSearchExp(new RegExp(nextValue, 'i'));
                 onChange(nextValue);
               }}
-              onSelect={event => {
-                const nextValue = event.suggestion;
-                setSearchExp(new RegExp(nextValue, 'i'));
-                onChange(event.suggestion);
-              }}
+              onSelect={
+                suggestions
+                  ? event => {
+                      const nextValue = event.suggestion;
+                      setSearchExp(new RegExp(nextValue, 'i'));
+                      onChange(event.suggestion);
+                    }
+                  : undefined
+              }
             />
-            <Grommet theme={theme} themeMode={dark ? 'dark' : 'light'}>
-              <Box
-                fill="vertical"
-                pad="small"
-                background={value || sharedValue}
-              />
-            </Grommet>
+            {(value || sharedValue) && (
+              <Grommet theme={theme} themeMode={dark ? 'dark' : 'light'}>
+                <Box
+                  fill="vertical"
+                  pad="small"
+                  background={value || sharedValue}
+                />
+              </Grommet>
+            )}
           </>
         )}
       </Box>
@@ -325,22 +331,24 @@ const Palette = ({ color, theme, setTheme }) => {
       >
         <Text>{color}</Text>
         <Box direction="row">
-          <Grommet theme={theme} themeMode="light">
-            <Box key={color} pad="small" background={`${color}!`} />
-          </Grommet>
+          {fierce && (
+            <Grommet theme={theme} themeMode="light">
+              <Box key={color} pad="small" background={`${color}!`} />
+            </Grommet>
+          )}
           <Box>
             <Grommet theme={theme} themeMode="light">
               <Box
                 key={color}
                 pad={{ horizontal: 'small', vertical: 'xsmall' }}
-                background={color}
+                background={light ? color : undefined}
               />
             </Grommet>
             <Grommet theme={theme} themeMode="dark">
               <Box
                 key={color}
                 pad={{ horizontal: 'small', vertical: 'xsmall' }}
-                background={color}
+                background={dark ? color : undefined}
               />
             </Grommet>
           </Box>
@@ -479,7 +487,7 @@ const prefixes = [
   'status',
 ];
 
-export default ({ theme, setTheme }) => {
+export default ({ theme, setTheme, setView }) => {
   const [adding, setAdding] = useState();
   const ref = useRef();
   const palette = useMemo(
@@ -495,7 +503,7 @@ export default ({ theme, setTheme }) => {
   }, [adding]);
 
   return (
-    <Box>
+    <Box flex={false}>
       <Box
         pad={{ left: 'medium' }}
         direction="row"
@@ -506,6 +514,17 @@ export default ({ theme, setTheme }) => {
         <Heading level={3} size="small" margin="none">
           Colors
         </Heading>
+        <Button
+          icon={<Close />}
+          hoverIndicator
+          onClick={() => setView('primary')}
+        />
+      </Box>
+
+      {palette.map(color => (
+        <Palette key={color} color={color} theme={theme} setTheme={setTheme} />
+      ))}
+      <Box align="end">
         {adding === undefined ? (
           <Button icon={<Add />} hoverIndicator onClick={() => setAdding('')} />
         ) : (
@@ -538,10 +557,8 @@ export default ({ theme, setTheme }) => {
           </Form>
         )}
       </Box>
-      {palette.map(color => (
-        <Palette key={color} color={color} theme={theme} setTheme={setTheme} />
-      ))}
       <Box border="horizontal" />
+
       {prefixes.map(prefix => (
         <Color key={prefix} prefix={prefix} theme={theme} setTheme={setTheme} />
       ))}

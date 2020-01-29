@@ -1,0 +1,152 @@
+import React, { Fragment, useState } from 'react';
+import { Box, Button, Text, TextInput } from 'grommet';
+import { Apps, Code, Redo, Share, Undo } from 'grommet-icons';
+import Field from './components/Field';
+import ActionButton from './components/ActionButton';
+import Font from './Font';
+import Rounding from './Rounding';
+import Spacing from './Spacing';
+import Themes from './Themes';
+import Raw from './Raw';
+import Sharer from './Share';
+
+const Actioner = ({ Icon, Modal, theme, title, setTheme }) => {
+  const [show, setShow] = useState();
+  return (
+    <Fragment>
+      <ActionButton
+        title={title}
+        icon={<Icon />}
+        hoverIndicator
+        onClick={() => setShow(true)}
+      />
+      {show && (
+        <Modal
+          theme={theme}
+          setTheme={setTheme}
+          onClose={() => setShow(false)}
+        />
+      )}
+    </Fragment>
+  );
+};
+
+const ViewButton = ({ label, onClick }) => (
+  <Button hoverIndicator onClick={onClick}>
+    <Box
+      direction="row"
+      align="center"
+      justify="between"
+      gap="small"
+      pad={{ vertical: 'small', horizontal: 'medium' }}
+      border="bottom"
+    >
+      <Text>{label}</Text>
+    </Box>
+  </Button>
+);
+
+export default ({ theme, setTheme, setView }) => {
+  const [changes, setChanges] = React.useState([]);
+  const [changeIndex, setChangeIndex] = React.useState();
+
+  // add to changes, if needed
+  React.useEffect(() => {
+    // do this stuff lazily to ride out typing sprees
+    const timer = setTimeout(() => {
+      // If we already have this design object, we must be doing an undo or
+      // redo, and therefore no need to add a change
+      if (!changes.some(c => c.theme === theme)) {
+        let nextChanges;
+        nextChanges = [...changes];
+        nextChanges = nextChanges.slice(changeIndex, 10);
+        nextChanges.unshift({ theme });
+        setChanges(nextChanges);
+        setChangeIndex(0);
+      }
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [changes, changeIndex, theme]);
+
+  const onUndo = React.useCallback(() => {
+    const nextChangeIndex = Math.min(changeIndex + 1, changes.length - 1);
+    const { theme: nextTheme } = changes[nextChangeIndex];
+    setTheme(nextTheme);
+    setChangeIndex(nextChangeIndex);
+  }, [changes, changeIndex, setTheme]);
+
+  const onRedo = React.useCallback(() => {
+    const nextChangeIndex = Math.max(changeIndex - 1, 0);
+    const { theme: nextTheme } = changes[nextChangeIndex];
+    setTheme(nextTheme);
+    setChangeIndex(nextChangeIndex);
+  }, [changes, changeIndex, setTheme]);
+
+  return (
+    <Box flex={false}>
+      <Box
+        flex={false}
+        direction="row"
+        justify="between"
+        gap="small"
+        border="bottom"
+      >
+        <Actioner
+          title="choose another theme"
+          Icon={Apps}
+          Modal={Themes}
+          theme={theme}
+          setTheme={setTheme}
+        />
+        <Box direction="row">
+          <ActionButton
+            title="undo last change"
+            icon={<Undo />}
+            disabled={!(changeIndex < changes.length - 1)}
+            onClick={onUndo}
+          />
+          <ActionButton
+            title="redo last change"
+            icon={<Redo />}
+            disabled={!(changeIndex > 0)}
+            onClick={onRedo}
+          />
+        </Box>
+        <Actioner
+          title="see JSON"
+          Icon={Code}
+          Modal={Raw}
+          theme={theme}
+          setTheme={setTheme}
+        />
+        <Actioner
+          title="share"
+          Icon={Share}
+          Modal={Sharer}
+          theme={theme}
+          setTheme={setTheme}
+        />
+      </Box>
+      <Box margin={{ bottom: 'xlarge' }}>
+        <Field htmlFor="name" label="name">
+          <TextInput
+            name="name"
+            plain
+            style={{ textAlign: 'right' }}
+            value={theme.name}
+            onChange={event => {
+              const nextTheme = JSON.parse(JSON.stringify(theme));
+              nextTheme.name = event.target.value;
+              setTheme(nextTheme);
+            }}
+          />
+        </Field>
+        <Rounding theme={theme} setTheme={setTheme} />
+        <Spacing theme={theme} setTheme={setTheme} />
+        <Font theme={theme} setTheme={setTheme} />
+        <ViewButton label="colors" onClick={() => setView('colors')} />
+        <ViewButton label="form field" onClick={() => setView('form field')} />
+      </Box>
+    </Box>
+  );
+};

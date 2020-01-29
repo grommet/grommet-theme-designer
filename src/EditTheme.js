@@ -1,40 +1,13 @@
-import React, { Fragment, useState } from 'react';
-import { Box, TextInput } from 'grommet';
-import { Apps, Code, Redo, Share, Undo } from 'grommet-icons';
-import Field from './components/Field';
-import ActionButton from './components/ActionButton';
+import React, { useState } from 'react';
+import { Box } from 'grommet';
+import Primary from './Primary';
 import Colors from './colors/Colors';
-import Font from './Font';
-import Rounding from './Rounding';
-import Spacing from './Spacing';
-import Themes from './Themes';
-import Raw from './Raw';
-import Sharer from './Share';
-
-const Actioner = ({ Icon, Modal, theme, title, setTheme }) => {
-  const [show, setShow] = useState();
-  return (
-    <Fragment>
-      <ActionButton
-        title={title}
-        icon={<Icon />}
-        hoverIndicator
-        onClick={() => setShow(true)}
-      />
-      {show && (
-        <Modal
-          theme={theme}
-          setTheme={setTheme}
-          onClose={() => setShow(false)}
-        />
-      )}
-    </Fragment>
-  );
-};
+import FormField from './FormField';
 
 export default ({ theme, setTheme }) => {
-  const [changes, setChanges] = React.useState([]);
-  const [changeIndex, setChangeIndex] = React.useState();
+  const [view, setView] = useState('primary');
+  const [changes, setChanges] = useState([]);
+  const [changeIndex, setChangeIndex] = useState();
 
   // add to changes, if needed
   React.useEffect(() => {
@@ -68,72 +41,26 @@ export default ({ theme, setTheme }) => {
     setChangeIndex(nextChangeIndex);
   }, [changes, changeIndex, setTheme]);
 
+  let content;
+  if (view === 'primary') {
+    content = (
+      <Primary
+        theme={theme}
+        setTheme={setTheme}
+        onRedo={onRedo}
+        onUndo={onUndo}
+        setView={setView}
+      />
+    );
+  } else if (view === 'colors') {
+    content = <Colors theme={theme} setTheme={setTheme} setView={setView} />;
+  } else if (view === 'form field') {
+    content = <FormField theme={theme} setTheme={setTheme} setView={setView} />;
+  }
+
   return (
     <Box fill="vertical" overflow="auto" background="dark-1" border="left">
-      <Box flex={false}>
-        <Box
-          flex={false}
-          direction="row"
-          justify="between"
-          gap="small"
-          border="bottom"
-        >
-          <Actioner
-            title="choose another theme"
-            Icon={Apps}
-            Modal={Themes}
-            theme={theme}
-            setTheme={setTheme}
-          />
-          <Box direction="row">
-            <ActionButton
-              title="undo last change"
-              icon={<Undo />}
-              disabled={!(changeIndex < changes.length - 1)}
-              onClick={onUndo}
-            />
-            <ActionButton
-              title="redo last change"
-              icon={<Redo />}
-              disabled={!(changeIndex > 0)}
-              onClick={onRedo}
-            />
-          </Box>
-          <Actioner
-            title="see JSON"
-            Icon={Code}
-            Modal={Raw}
-            theme={theme}
-            setTheme={setTheme}
-          />
-          <Actioner
-            title="share"
-            Icon={Share}
-            Modal={Sharer}
-            theme={theme}
-            setTheme={setTheme}
-          />
-        </Box>
-        <Box margin={{ bottom: 'xlarge' }}>
-          <Field htmlFor="name" label="name">
-            <TextInput
-              name="name"
-              plain
-              style={{ textAlign: 'right' }}
-              value={theme.name}
-              onChange={event => {
-                const nextTheme = JSON.parse(JSON.stringify(theme));
-                nextTheme.name = event.target.value;
-                setTheme(nextTheme);
-              }}
-            />
-          </Field>
-          <Rounding theme={theme} setTheme={setTheme} />
-          <Spacing theme={theme} setTheme={setTheme} />
-          <Font theme={theme} setTheme={setTheme} />
-          <Colors theme={theme} setTheme={setTheme} />
-        </Box>
-      </Box>
+      {content}
     </Box>
   );
 };

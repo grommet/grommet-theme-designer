@@ -9,19 +9,24 @@ export default React.forwardRef(
         align="center"
         justify="between"
         border={first ? 'horizontal' : 'bottom'}
-        pad={{ horizontal: 'medium' }}
+        pad={{ horizontal: 'small' }}
         {...rest}
       >
-        <Box margin={{ vertical: 'small', right: 'medium' }}>
-          <Text as="label" htmlFor={htmlFor}>{label}</Text>
+        <Box
+          as="label"
+          flex={false}
+          pad={{ vertical: 'small', horizontal: 'small' }}
+          htmlFor={htmlFor}
+        >
+          <Text>{label}</Text>
         </Box>
-        <Box flex={true}>
-          {children}
-        </Box>
+        <Box>{children}</Box>
       </Box>
       {help && (
         <Box margin={{ vertical: 'small' }}>
-          <Paragraph color="dark-4" margin="none">{help}</Paragraph>
+          <Paragraph color="dark-4" margin="none">
+            {help}
+          </Paragraph>
         </Box>
       )}
     </Box>
