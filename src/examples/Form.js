@@ -63,17 +63,13 @@ export default ({ theme }) => {
             <Heading level={2}>Form</Heading>
             <FormField name="name" label="Name" required />
             <FormField name="local">
-              <Box pad="small">
-                <CheckBox name="local" label="Local" />
-              </Box>
+              <CheckBox name="local" label="Local" />
             </FormField>
             <FormField name="size" label="Size" help="for your T-shirt">
-              <Box pad="small">
-                <RadioButtonGroup
-                  name="size"
-                  options={['small', 'medium', 'large']}
-                />
-              </Box>
+              <RadioButtonGroup
+                name="size"
+                options={['small', 'medium', 'large']}
+              />
             </FormField>
             <FormField name="month" label="Month">
               <Select name="month" options={['January', 'February', 'March']} />

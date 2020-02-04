@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import {
   Box,
   Button,
@@ -12,6 +12,7 @@ import { Close } from 'grommet-icons';
 import Field from './components/Field';
 
 const sizes = ['xsmall', 'small', 'medium', 'large'];
+const edgeSizes = [...sizes, 'none'];
 
 const Label = ({ value }) => (
   <Box pad="small">
@@ -54,14 +55,19 @@ export default ({ theme, setTheme, setView }) => {
     setTheme(nextTheme);
   };
 
-  const SelectField = ({ name, options }) => {
+  const SelectField = ({ label, name, options: allOptions }) => {
     const value = getValue(name);
+    const [options, setOptions] = useState(allOptions);
+
     return (
       <Field
-        label={name
-          .split('.')
-          .slice(1)
-          .join(' ')}
+        label={
+          label ||
+          name
+            .split('.')
+            .slice(1)
+            .join(' ')
+        }
         htmlFor={name}
       >
         <Select
@@ -72,6 +78,17 @@ export default ({ theme, setTheme, setView }) => {
           value={value}
           valueLabel={<Label value={value} />}
           onChange={event => setValue(name, event.option)}
+          onSearch={
+            allOptions.length > 6
+              ? text => {
+                  const exp = new RegExp(text, 'i');
+                  let nextOptions = allOptions.filter(o =>
+                    text ? exp.test(o) : true,
+                  );
+                  setOptions(nextOptions);
+                }
+              : undefined
+          }
         />
       </Field>
     );
@@ -89,12 +106,12 @@ export default ({ theme, setTheme, setView }) => {
   );
 
   const TextProps = ({ aspect }) => (
-    <Fields label={aspect}>
+    <Fields label={`${aspect} text`}>
       <SelectField name={`${aspect}.size`} options={sizes} />
       <SelectField name={`${aspect}.weight`} options={['normal', 'bold']} />
       <SelectField name={`${aspect}.color`} options={colors} />
-      <SelectField name={`${aspect}.margin.horizontal`} options={sizes} />
-      <SelectField name={`${aspect}.margin.vertical`} options={sizes} />
+      <SelectField name={`${aspect}.margin.horizontal`} options={edgeSizes} />
+      <SelectField name={`${aspect}.margin.vertical`} options={edgeSizes} />
     </Fields>
   );
 
@@ -155,15 +172,12 @@ export default ({ theme, setTheme, setView }) => {
         <SelectField name="border.size" options={sizes} />
       </Fields>
 
-      {formField.border.position === 'inner' && (
-        <Fields label="margin">
-          <SelectField name="margin.bottom" options={sizes} />
-        </Fields>
-      )}
+      <Fields label="margin">
+        <SelectField name="margin.bottom" options={edgeSizes} />
+      </Fields>
 
       <Fields label="content">
-        <SelectField name="content.error.background" options={colors} />
-        <SelectField name="content.disabled.background" options={colors} />
+        <SelectField name="content.pad" options={edgeSizes} />
       </Fields>
 
       <TextProps aspect="label" />
@@ -171,6 +185,31 @@ export default ({ theme, setTheme, setView }) => {
       <TextProps aspect="help" />
 
       <TextProps aspect="error" />
+
+      <Fields label="error state">
+        <SelectField
+          label="background.color"
+          name="error.background.color"
+          options={colors}
+        />
+        <SelectField
+          label="background.opacity"
+          name="error.background.opacity"
+          options={['weak', 'medium', 'strong']}
+        />
+      </Fields>
+      <Fields label="disabled state">
+        <SelectField
+          label="background.opacity"
+          name="disabled.background.color"
+          options={colors}
+        />
+        <SelectField
+          label="background.opacity"
+          name="disabled.background.opacity"
+          options={['weak', 'medium', 'strong']}
+        />
+      </Fields>
 
       <Button
         margin="large"
