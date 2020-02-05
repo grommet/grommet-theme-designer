@@ -3,16 +3,16 @@ import { Box, MaskedInput, RangeInput, Text } from 'grommet';
 import Field from './components/Field';
 
 const setSpacing = theme => {
-  const { spacing, scale } = theme;
+  const { spacing = 24, scale = 1 } = theme;
   const baseFontSize = spacing * 0.75; // 18
   const fontScale = (spacing / 6) * scale; // 4
 
   const fontSizing = factor => ({
-    size: `${baseFontSize + factor * fontScale}px`,
-    height: `${spacing + factor * fontScale}px`,
+    size: `${(baseFontSize + factor * fontScale).toFixed()}px`,
+    height: `${(spacing + factor * fontScale).toFixed()}px`,
     // maxWidth chosen to be ~50 characters wide
     // see: https://ux.stackexchange.com/a/34125
-    maxWidth: `${spacing * (baseFontSize + factor * fontScale)}px`,
+    maxWidth: `${(spacing * (baseFontSize + factor * fontScale)).toFixed()}px`,
   });
 
   const borderWidth = 2;
@@ -20,8 +20,8 @@ const setSpacing = theme => {
   theme.global.borderSize = {
     xsmall: '1px',
     small: '2px',
-    medium: `${spacing / 6}px`,
-    large: `${spacing / 2}px`,
+    medium: `${(spacing / 6).toFixed()}px`,
+    large: `${(spacing / 2).toFixed()}px`,
     xlarge: `${spacing}px`,
   };
 
@@ -31,17 +31,17 @@ const setSpacing = theme => {
       borderSize: {
         xsmall: '1px',
         small: '2px',
-        medium: `${spacing / 6}px`,
-        large: `${spacing / 4}px`,
-        xlarge: `${spacing / 2}px`,
+        medium: `${(spacing / 6).toFixed()}px`,
+        large: `${(spacing / 4).toFixed()}px`,
+        xlarge: `${(spacing / 2).toFixed()}px`,
       },
       edgeSize: {
         none: '0px',
         hair: '1px',
         xxsmall: '2px',
-        xsmall: `${spacing / 8}px`,
-        small: `${spacing / 4}px`,
-        medium: `${spacing / 2}px`,
+        xsmall: `${(spacing / 8).toFixed()}px`,
+        small: `${(spacing / 4).toFixed()}px`,
+        medium: `${(spacing / 2).toFixed()}px`,
         large: `${spacing}px`,
         xlarge: `${spacing * 2}px`,
       },
@@ -64,9 +64,9 @@ const setSpacing = theme => {
   theme.global.edgeSize = {
     none: '0px',
     hair: '1px',
-    xxsmall: `${spacing / 8}px`,
-    xsmall: `${spacing / 4}px`,
-    small: `${spacing / 2}px`,
+    xxsmall: `${(spacing / 8).toFixed()}px`,
+    xsmall: `${(spacing / 4).toFixed()}px`,
+    small: `${(spacing / 2).toFixed()}px`,
     medium: `${spacing}px`,
     large: `${spacing * 2}px`,
     xlarge: `${spacing * 4}px`,
@@ -76,7 +76,7 @@ const setSpacing = theme => {
   theme.global.font = { ...theme.global.font, ...fontSizing(0) };
 
   theme.global.input = {
-    padding: `${spacing / 2}px`,
+    padding: `${(spacing / 2).toFixed()}px`,
     weight: 600,
   };
 
@@ -99,7 +99,7 @@ const setSpacing = theme => {
     radius: `${spacing * 0.75}px`,
   };
   theme.button.padding = {
-    vertical: `${spacing / 4 - borderWidth}px`,
+    vertical: `${(spacing / 4 - borderWidth).toFixed()}px`,
     horizontal: `${spacing - borderWidth}px`,
   };
 
@@ -108,17 +108,17 @@ const setSpacing = theme => {
     small: {
       fontSize: `${baseFontSize - fontScale}px`,
       lineHeight: 1.375,
-      daySize: `${(spacing * 8) / 7}px`,
+      daySize: `${((spacing * 8) / 7).toFixed(2)}px`,
     },
     medium: {
       fontSize: `${baseFontSize}px`,
       lineHeight: 1.45,
-      daySize: `${(spacing * 16) / 7}px`,
+      daySize: `${((spacing * 16) / 7).toFixed(2)}px`,
     },
     large: {
       fontSize: `${baseFontSize + 3 * fontScale}px`,
       lineHeight: 1.11,
-      daySize: `${(spacing * 32) / 7}px`,
+      daySize: `${((spacing * 32) / 7).toFixed(2)}px`,
     },
   };
 
@@ -131,15 +131,15 @@ const setSpacing = theme => {
   theme.clock = {
     analog: {
       hour: {
-        width: `${spacing / 3}px`,
+        width: `${(spacing / 3).toFixed()}px`,
         size: `${spacing}px`,
       },
       minute: {
-        width: `${spacing / 6}px`,
+        width: `${(spacing / 6).toFixed()}px`,
         size: `${Math.round(spacing / 2)}px`,
       },
       second: {
-        width: `${spacing / 8}px`,
+        width: `${(spacing / 8).toFixed()}px`,
         size: `${Math.round(spacing / 2.666)}px`,
       },
       size: {
