@@ -6,6 +6,7 @@ import {
   CheckBox,
   DropButton,
   Form,
+  FormContext,
   FormField,
   Grid,
   Heading,
@@ -16,7 +17,9 @@ import {
 } from 'grommet';
 import { FormDown } from 'grommet-icons';
 
-const DatePicker = ({ name, value, onChange }) => {
+const DatePicker = ({ name, value: valueProp, onChange }) => {
+  const formContext = React.useContext(FormContext);
+  const [value, setValue] = formContext.useFormContext(name, valueProp);
   const [open, setOpen] = React.useState();
   return (
     <DropButton
@@ -28,7 +31,8 @@ const DatePicker = ({ name, value, onChange }) => {
         <Calendar
           date={value}
           onSelect={date => {
-            onChange({ value: date });
+            setValue(date);
+            if (onChange) onChange({ value: date });
             setOpen(false);
           }}
         />
@@ -74,7 +78,9 @@ export default ({ theme }) => {
             <FormField name="month" label="Month">
               <Select name="month" options={['January', 'February', 'March']} />
             </FormField>
-            <FormField name="date" label="Date" component={DatePicker} />
+            <FormField name="date" label="Date">
+              <DatePicker name="date" />
+            </FormField>
             <Box direction="row" gap="small" margin={{ top: 'medium' }}>
               <Button primary label="Submit" type="submit" />
               <Button label="Cancel" />

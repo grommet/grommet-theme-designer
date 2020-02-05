@@ -200,7 +200,7 @@ export default ({ theme, setTheme, setView }) => {
       </Fields>
       <Fields label="disabled state">
         <SelectField
-          label="background.opacity"
+          label="background.color"
           name="disabled.background.color"
           options={colors}
         />

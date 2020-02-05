@@ -4820,7 +4820,7 @@ grommet-theme-hpe@^0.4.2:
 
 "grommet@https://github.com/grommet/grommet/tarball/stable":
   version "2.10.0"
-  resolved "https://github.com/grommet/grommet/tarball/stable#4af68f641831f6b7a6a9c9f27992e7c93d1d39be"
+  resolved "https://github.com/grommet/grommet/tarball/stable#d63b7754947769b37fba94b21efac56660d97df2"
   dependencies:
     css "^2.2.3"
     grommet-icons "^4.2.0"
