@@ -7,6 +7,7 @@ import Form from './examples/Form';
 import Dashboard from './examples/Dashboard';
 import Document from './examples/Document';
 import List from './examples/List';
+import Typography from './examples/Typography';
 
 const examples = [
   { name: 'Dashboard', Design: Dashboard },
@@ -14,6 +15,7 @@ const examples = [
   { name: 'Form', Design: Form },
   { name: 'Document', Design: Document },
   { name: 'Accessibility', Design: Accessibility, guide: true },
+  { name: 'Typography', Design: Typography, guide: true },
 ];
 
 export default ({

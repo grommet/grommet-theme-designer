@@ -171,22 +171,22 @@ const setSpacing = theme => {
         xlarge: { ...fontSizing(24) },
       },
       2: {
-        small: { ...fontSizing(2) },
-        medium: { ...fontSizing(4) },
-        large: { ...fontSizing(8) },
+        small: { ...fontSizing(3) },
+        medium: { ...fontSizing(6) },
+        large: { ...fontSizing(9) },
         xlarge: { ...fontSizing(12) },
       },
       3: {
-        small: { ...fontSizing(1) },
-        medium: { ...fontSizing(2) },
-        large: { ...fontSizing(4) },
-        xlarge: { ...fontSizing(6) },
+        small: { ...fontSizing(2) },
+        medium: { ...fontSizing(4) },
+        large: { ...fontSizing(6) },
+        xlarge: { ...fontSizing(8) },
       },
       4: {
-        small: { ...fontSizing(0) },
-        medium: { ...fontSizing(0) },
-        large: { ...fontSizing(0) },
-        xlarge: { ...fontSizing(0) },
+        small: { ...fontSizing(1) },
+        medium: { ...fontSizing(2) },
+        large: { ...fontSizing(3) },
+        xlarge: { ...fontSizing(4) },
       },
       5: {
         small: { ...fontSizing(-0.5) },
@@ -204,7 +204,7 @@ const setSpacing = theme => {
   };
 
   theme.paragraph = {
-    small: { ...fontSizing(-1) },
+    small: { ...fontSizing(-0.5) },
     medium: { ...fontSizing(0) },
     large: { ...fontSizing(1) },
     xlarge: { ...fontSizing(2) },
@@ -216,8 +216,8 @@ const setSpacing = theme => {
   };
 
   theme.text = {
-    xsmall: { ...fontSizing(-1.5) },
-    small: { ...fontSizing(-1) },
+    xsmall: { ...fontSizing(-1) },
+    small: { ...fontSizing(-0.5) },
     medium: { ...fontSizing(0) },
     large: { ...fontSizing(1) },
     xlarge: { ...fontSizing(2) },
@@ -283,7 +283,7 @@ export default ({ theme, setTheme }) => {
             name="scale"
             max={4}
             min={0.2}
-            step={0.2}
+            step={0.1}
             value={scale}
             onChange={onChangeScale}
             style={{ textAlign: 'end' }}

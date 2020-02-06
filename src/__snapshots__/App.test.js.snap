@@ -124,6 +124,12 @@ exports[`App empty 1`] = `
           Accessibility
         </div>
         <div
+          class="StyledBox-sc-13pk1d4-0 hFGUuI"
+          tabindex="0"
+        >
+          Typography
+        </div>
+        <div
           class="StyledBox-sc-13pk1d4-0 eXTSqT"
         >
           <h3
@@ -448,7 +454,7 @@ exports[`App empty 1`] = `
                     max="4"
                     min="0.2"
                     name="scale"
-                    step="0.2"
+                    step="0.1"
                     style="text-align: end;"
                     type="range"
                     value="1"
@@ -654,6 +660,12 @@ exports[`App empty 2`] = `
           Accessibility
         </div>
         <div
+          class="StyledBox-sc-13pk1d4-0 hFGUuI"
+          tabindex="0"
+        >
+          Typography
+        </div>
+        <div
           class="StyledBox-sc-13pk1d4-0 eXTSqT"
         >
           <h3
@@ -978,7 +990,7 @@ exports[`App empty 2`] = `
                     max="4"
                     min="0.2"
                     name="scale"
-                    step="0.2"
+                    step="0.1"
                     style="text-align: end;"
                     type="range"
                     value="1"
