@@ -47,8 +47,8 @@ export default ({ theme, setTheme }) => {
       <Primary
         theme={theme}
         setTheme={setTheme}
-        onRedo={onRedo}
-        onUndo={onUndo}
+        onRedo={changeIndex > 0 ? onRedo : undefined}
+        onUndo={changeIndex < changes.length - 1 ? onUndo : undefined}
         setView={setView}
       />
     );
