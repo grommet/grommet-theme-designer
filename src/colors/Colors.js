@@ -158,7 +158,7 @@ const Color = ({ prefix, theme, setTheme }) => {
       hoverIndicator
       onOpen={() => setOpen(true)}
       onClose={() => setOpen(false)}
-      dropAlign={{ right: 'left' }}
+      dropAlign={{ right: 'left', top: 'top' }}
       dropContent={
         <Box>
           {colors.map(color => {
