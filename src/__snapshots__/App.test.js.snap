@@ -5,7 +5,7 @@ exports[`App empty 1`] = `
   class="StyledGrommet-sc-19lkkz7-0 jKcNfZ"
 >
   <div
-    class="StyledGrid-sc-1wofa1l-0 fvgWKQ"
+    class="StyledGrid-sc-1wofa1l-0 bIzLvh"
   >
     <div
       class="StyledBox-sc-13pk1d4-0 vbgwq"
@@ -19,7 +19,7 @@ exports[`App empty 1`] = `
           my theme
         </span>
         <button
-          class="StyledButton-sc-323bzc-0 daWJku"
+          class="StyledButton-sc-323bzc-0 kAlxhW"
           title="edit theme"
           type="button"
         >
@@ -177,7 +177,7 @@ exports[`App empty 1`] = `
           class="StyledBox-sc-13pk1d4-0 koJzMg"
         >
           <button
-            class="StyledButton-sc-323bzc-0 daWJku"
+            class="StyledButton-sc-323bzc-0 kAlxhW"
             title="choose another theme"
             type="button"
           >
@@ -201,7 +201,7 @@ exports[`App empty 1`] = `
             class="StyledBox-sc-13pk1d4-0 eitMOG"
           >
             <button
-              class="StyledButton-sc-323bzc-0 gmWuiT"
+              class="StyledButton-sc-323bzc-0 jeaTYv"
               disabled=""
               title="undo last change"
               type="button"
@@ -217,7 +217,7 @@ exports[`App empty 1`] = `
               </svg>
             </button>
             <button
-              class="StyledButton-sc-323bzc-0 gmWuiT"
+              class="StyledButton-sc-323bzc-0 jeaTYv"
               disabled=""
               title="redo last change"
               type="button"
@@ -237,7 +237,7 @@ exports[`App empty 1`] = `
             class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hUZSMI"
           />
           <button
-            class="StyledButton-sc-323bzc-0 daWJku"
+            class="StyledButton-sc-323bzc-0 kAlxhW"
             title="see JSON"
             type="button"
           >
@@ -258,7 +258,7 @@ exports[`App empty 1`] = `
             class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hUZSMI"
           />
           <button
-            class="StyledButton-sc-323bzc-0 daWJku"
+            class="StyledButton-sc-323bzc-0 kAlxhW"
             title="share"
             type="button"
           >
@@ -541,7 +541,7 @@ exports[`App empty 2`] = `
   class="StyledGrommet-sc-19lkkz7-0 jKcNfZ"
 >
   <div
-    class="StyledGrid-sc-1wofa1l-0 fvgWKQ"
+    class="StyledGrid-sc-1wofa1l-0 bIzLvh"
   >
     <div
       class="StyledBox-sc-13pk1d4-0 vbgwq"
@@ -555,7 +555,7 @@ exports[`App empty 2`] = `
           my theme
         </span>
         <button
-          class="StyledButton-sc-323bzc-0 daWJku"
+          class="StyledButton-sc-323bzc-0 kAlxhW"
           title="edit theme"
           type="button"
         >
@@ -713,7 +713,7 @@ exports[`App empty 2`] = `
           class="StyledBox-sc-13pk1d4-0 koJzMg"
         >
           <button
-            class="StyledButton-sc-323bzc-0 daWJku"
+            class="StyledButton-sc-323bzc-0 kAlxhW"
             title="choose another theme"
             type="button"
           >
@@ -737,7 +737,7 @@ exports[`App empty 2`] = `
             class="StyledBox-sc-13pk1d4-0 eitMOG"
           >
             <button
-              class="StyledButton-sc-323bzc-0 gmWuiT"
+              class="StyledButton-sc-323bzc-0 jeaTYv"
               disabled=""
               title="undo last change"
               type="button"
@@ -753,7 +753,7 @@ exports[`App empty 2`] = `
               </svg>
             </button>
             <button
-              class="StyledButton-sc-323bzc-0 gmWuiT"
+              class="StyledButton-sc-323bzc-0 jeaTYv"
               disabled=""
               title="redo last change"
               type="button"
@@ -773,7 +773,7 @@ exports[`App empty 2`] = `
             class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hUZSMI"
           />
           <button
-            class="StyledButton-sc-323bzc-0 daWJku"
+            class="StyledButton-sc-323bzc-0 kAlxhW"
             title="see JSON"
             type="button"
           >
@@ -794,7 +794,7 @@ exports[`App empty 2`] = `
             class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hUZSMI"
           />
           <button
-            class="StyledButton-sc-323bzc-0 daWJku"
+            class="StyledButton-sc-323bzc-0 kAlxhW"
             title="share"
             type="button"
           >
