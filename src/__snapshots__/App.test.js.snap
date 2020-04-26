@@ -11,7 +11,7 @@ exports[`App empty 1`] = `
       class="StyledBox-sc-13pk1d4-0 vbgwq"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 eYDYam"
+        class="StyledBox-sc-13pk1d4-0 eWmdbi"
       >
         <span
           class="StyledText-sc-1sadyjn-0 gmtNWw"
@@ -48,7 +48,7 @@ exports[`App empty 1`] = `
             for="light"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 iOJnkv StyledRadioButton-g1f6ld-4 eLBYmH"
+              class="StyledBox-sc-13pk1d4-0 ldcAQf StyledRadioButton-g1f6ld-4 eLBYmH"
             >
               <input
                 checked=""
@@ -86,7 +86,7 @@ exports[`App empty 1`] = `
             for="dark"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 iOJnkv StyledRadioButton-g1f6ld-4 eLBYmH"
+              class="StyledBox-sc-13pk1d4-0 ldcAQf StyledRadioButton-g1f6ld-4 eLBYmH"
             >
               <input
                 class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hBCEfd"
@@ -201,7 +201,7 @@ exports[`App empty 1`] = `
             class="StyledBox-sc-13pk1d4-0 eitMOG"
           >
             <button
-              class="StyledButton-sc-323bzc-0 jeaTYv"
+              class="StyledButton-sc-323bzc-0 jopwfj"
               disabled=""
               title="undo last change"
               type="button"
@@ -217,7 +217,7 @@ exports[`App empty 1`] = `
               </svg>
             </button>
             <button
-              class="StyledButton-sc-323bzc-0 jeaTYv"
+              class="StyledButton-sc-323bzc-0 jopwfj"
               disabled=""
               title="redo last change"
               type="button"
@@ -277,16 +277,16 @@ exports[`App empty 1`] = `
           </button>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 kzkwJ"
+          class="StyledBox-sc-13pk1d4-0 iWjIEd"
         >
           <div
             class="StyledBox-sc-13pk1d4-0 isBQTF"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 klZxSv"
+              class="StyledBox-sc-13pk1d4-0 czqfgT"
             >
               <label
-                class="StyledBox-sc-13pk1d4-0 cacHrb"
+                class="StyledBox-sc-13pk1d4-0 hPuWLq"
                 for="name"
               >
                 <span
@@ -303,7 +303,7 @@ exports[`App empty 1`] = `
                 >
                   <input
                     autocomplete="off"
-                    class="StyledTextInput-sc-1x30a0s-0 QAmSy"
+                    class="StyledTextInput-sc-1x30a0s-0 ixAWZx"
                     name="name"
                     style="text-align: right;"
                     value="my theme"
@@ -316,10 +316,10 @@ exports[`App empty 1`] = `
             class="StyledBox-sc-13pk1d4-0 isBQTF"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 klZxSv"
+              class="StyledBox-sc-13pk1d4-0 czqfgT"
             >
               <label
-                class="StyledBox-sc-13pk1d4-0 cacHrb"
+                class="StyledBox-sc-13pk1d4-0 hPuWLq"
                 for="rounding"
               >
                 <span
@@ -346,14 +346,14 @@ exports[`App empty 1`] = `
                     value="4"
                   />
                   <div
-                    class="StyledBox-sc-13pk1d4-0 jGYogm"
+                    class="StyledBox-sc-13pk1d4-0 fhBssC"
                   >
                     <div
                       class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 eZPDpF"
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 eQrEJx"
+                        class="StyledMaskedInput-sc-99vkfa-0 iQJSve"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="4"
@@ -373,10 +373,10 @@ exports[`App empty 1`] = `
             class="StyledBox-sc-13pk1d4-0 isBQTF"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 klZxSv"
+              class="StyledBox-sc-13pk1d4-0 czqfgT"
             >
               <label
-                class="StyledBox-sc-13pk1d4-0 cacHrb"
+                class="StyledBox-sc-13pk1d4-0 hPuWLq"
                 for="spacing"
               >
                 <span
@@ -403,14 +403,14 @@ exports[`App empty 1`] = `
                     value="24"
                   />
                   <div
-                    class="StyledBox-sc-13pk1d4-0 jGYogm"
+                    class="StyledBox-sc-13pk1d4-0 fhBssC"
                   >
                     <div
                       class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 eZPDpF"
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 eQrEJx"
+                        class="StyledMaskedInput-sc-99vkfa-0 iQJSve"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="24"
@@ -430,10 +430,10 @@ exports[`App empty 1`] = `
             class="StyledBox-sc-13pk1d4-0 isBQTF"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 klZxSv"
+              class="StyledBox-sc-13pk1d4-0 czqfgT"
             >
               <label
-                class="StyledBox-sc-13pk1d4-0 cacHrb"
+                class="StyledBox-sc-13pk1d4-0 hPuWLq"
                 for="scale"
               >
                 <span
@@ -460,14 +460,14 @@ exports[`App empty 1`] = `
                     value="1"
                   />
                   <div
-                    class="StyledBox-sc-13pk1d4-0 jGYogm"
+                    class="StyledBox-sc-13pk1d4-0 fhBssC"
                   >
                     <div
                       class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 eZPDpF"
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 eQrEJx"
+                        class="StyledMaskedInput-sc-99vkfa-0 iQJSve"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="1"
@@ -484,7 +484,7 @@ exports[`App empty 1`] = `
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 jLJwDx"
+              class="StyledBox-sc-13pk1d4-0 czLYCl"
             >
               <span
                 class="StyledText-sc-1sadyjn-0 hUokoe"
@@ -506,7 +506,7 @@ exports[`App empty 1`] = `
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 jLJwDx"
+              class="StyledBox-sc-13pk1d4-0 czLYCl"
             >
               <span
                 class="StyledText-sc-1sadyjn-0 hUokoe"
@@ -520,7 +520,7 @@ exports[`App empty 1`] = `
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 jLJwDx"
+              class="StyledBox-sc-13pk1d4-0 czLYCl"
             >
               <span
                 class="StyledText-sc-1sadyjn-0 hUokoe"
@@ -547,7 +547,7 @@ exports[`App empty 2`] = `
       class="StyledBox-sc-13pk1d4-0 vbgwq"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 eYDYam"
+        class="StyledBox-sc-13pk1d4-0 eWmdbi"
       >
         <span
           class="StyledText-sc-1sadyjn-0 gmtNWw"
@@ -584,7 +584,7 @@ exports[`App empty 2`] = `
             for="light"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 iOJnkv StyledRadioButton-g1f6ld-4 eLBYmH"
+              class="StyledBox-sc-13pk1d4-0 ldcAQf StyledRadioButton-g1f6ld-4 eLBYmH"
             >
               <input
                 checked=""
@@ -622,7 +622,7 @@ exports[`App empty 2`] = `
             for="dark"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 iOJnkv StyledRadioButton-g1f6ld-4 eLBYmH"
+              class="StyledBox-sc-13pk1d4-0 ldcAQf StyledRadioButton-g1f6ld-4 eLBYmH"
             >
               <input
                 class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hBCEfd"
@@ -737,7 +737,7 @@ exports[`App empty 2`] = `
             class="StyledBox-sc-13pk1d4-0 eitMOG"
           >
             <button
-              class="StyledButton-sc-323bzc-0 jeaTYv"
+              class="StyledButton-sc-323bzc-0 jopwfj"
               disabled=""
               title="undo last change"
               type="button"
@@ -753,7 +753,7 @@ exports[`App empty 2`] = `
               </svg>
             </button>
             <button
-              class="StyledButton-sc-323bzc-0 jeaTYv"
+              class="StyledButton-sc-323bzc-0 jopwfj"
               disabled=""
               title="redo last change"
               type="button"
@@ -813,16 +813,16 @@ exports[`App empty 2`] = `
           </button>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 kzkwJ"
+          class="StyledBox-sc-13pk1d4-0 iWjIEd"
         >
           <div
             class="StyledBox-sc-13pk1d4-0 isBQTF"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 klZxSv"
+              class="StyledBox-sc-13pk1d4-0 czqfgT"
             >
               <label
-                class="StyledBox-sc-13pk1d4-0 cacHrb"
+                class="StyledBox-sc-13pk1d4-0 hPuWLq"
                 for="name"
               >
                 <span
@@ -839,7 +839,7 @@ exports[`App empty 2`] = `
                 >
                   <input
                     autocomplete="off"
-                    class="StyledTextInput-sc-1x30a0s-0 QAmSy"
+                    class="StyledTextInput-sc-1x30a0s-0 ixAWZx"
                     name="name"
                     style="text-align: right;"
                     value="my theme"
@@ -852,10 +852,10 @@ exports[`App empty 2`] = `
             class="StyledBox-sc-13pk1d4-0 isBQTF"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 klZxSv"
+              class="StyledBox-sc-13pk1d4-0 czqfgT"
             >
               <label
-                class="StyledBox-sc-13pk1d4-0 cacHrb"
+                class="StyledBox-sc-13pk1d4-0 hPuWLq"
                 for="rounding"
               >
                 <span
@@ -882,14 +882,14 @@ exports[`App empty 2`] = `
                     value="4"
                   />
                   <div
-                    class="StyledBox-sc-13pk1d4-0 jGYogm"
+                    class="StyledBox-sc-13pk1d4-0 fhBssC"
                   >
                     <div
                       class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 eZPDpF"
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 eQrEJx"
+                        class="StyledMaskedInput-sc-99vkfa-0 iQJSve"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="4"
@@ -909,10 +909,10 @@ exports[`App empty 2`] = `
             class="StyledBox-sc-13pk1d4-0 isBQTF"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 klZxSv"
+              class="StyledBox-sc-13pk1d4-0 czqfgT"
             >
               <label
-                class="StyledBox-sc-13pk1d4-0 cacHrb"
+                class="StyledBox-sc-13pk1d4-0 hPuWLq"
                 for="spacing"
               >
                 <span
@@ -939,14 +939,14 @@ exports[`App empty 2`] = `
                     value="24"
                   />
                   <div
-                    class="StyledBox-sc-13pk1d4-0 jGYogm"
+                    class="StyledBox-sc-13pk1d4-0 fhBssC"
                   >
                     <div
                       class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 eZPDpF"
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 eQrEJx"
+                        class="StyledMaskedInput-sc-99vkfa-0 iQJSve"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="24"
@@ -966,10 +966,10 @@ exports[`App empty 2`] = `
             class="StyledBox-sc-13pk1d4-0 isBQTF"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 klZxSv"
+              class="StyledBox-sc-13pk1d4-0 czqfgT"
             >
               <label
-                class="StyledBox-sc-13pk1d4-0 cacHrb"
+                class="StyledBox-sc-13pk1d4-0 hPuWLq"
                 for="scale"
               >
                 <span
@@ -996,14 +996,14 @@ exports[`App empty 2`] = `
                     value="1"
                   />
                   <div
-                    class="StyledBox-sc-13pk1d4-0 jGYogm"
+                    class="StyledBox-sc-13pk1d4-0 fhBssC"
                   >
                     <div
                       class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 eZPDpF"
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 eQrEJx"
+                        class="StyledMaskedInput-sc-99vkfa-0 iQJSve"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="1"
@@ -1020,7 +1020,7 @@ exports[`App empty 2`] = `
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 jLJwDx"
+              class="StyledBox-sc-13pk1d4-0 czLYCl"
             >
               <span
                 class="StyledText-sc-1sadyjn-0 hUokoe"
@@ -1042,7 +1042,7 @@ exports[`App empty 2`] = `
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 jLJwDx"
+              class="StyledBox-sc-13pk1d4-0 czLYCl"
             >
               <span
                 class="StyledText-sc-1sadyjn-0 hUokoe"
@@ -1056,7 +1056,7 @@ exports[`App empty 2`] = `
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 jLJwDx"
+              class="StyledBox-sc-13pk1d4-0 czLYCl"
             >
               <span
                 class="StyledText-sc-1sadyjn-0 hUokoe"
