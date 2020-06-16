@@ -19,7 +19,7 @@ import { FormDown } from 'grommet-icons';
 
 const DatePicker = ({ name, value: valueProp, onChange }) => {
   const formContext = React.useContext(FormContext);
-  const [value, setValue] = formContext.useFormContext(name, valueProp);
+  const [value, setValue] = formContext.useFormInput(name, valueProp);
   const [open, setOpen] = React.useState();
   return (
     <DropButton
@@ -30,7 +30,7 @@ const DatePicker = ({ name, value: valueProp, onChange }) => {
       dropContent={
         <Calendar
           date={value}
-          onSelect={date => {
+          onSelect={(date) => {
             setValue(date);
             if (onChange) onChange({ value: date });
             setOpen(false);
