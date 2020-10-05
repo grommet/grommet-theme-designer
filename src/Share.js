@@ -32,7 +32,7 @@ const Summary = ({ Icon, label, guidance }) => (
 );
 
 const Publish = ({ theme, setTheme }) => {
-  const [publication, setPublication] = React.useState();
+  const [formValue, setFormValue] = React.useState({ email: '', pin: '' });
   const [publishing, setPublishing] = React.useState();
   const [uploadUrl, setUploadUrl] = React.useState();
   const [message, setMessage] = React.useState();
@@ -43,13 +43,17 @@ const Publish = ({ theme, setTheme }) => {
     const stored = localStorage.getItem('identity');
     if (stored) {
       const identity = JSON.parse(stored);
-      setPublication({ ...identity, name: theme.name });
-    } else {
-      setPublication({ name: theme.name });
+      setFormValue((oldValue) => ({ ...oldValue, ...identity }));
     }
   }, [theme]);
 
-  const onPublish = ({ value: { name, email, pin } }) => {
+  const onChange = (value) => {
+    console.log(value);
+    setFormValue(value);
+  };
+
+  const onPublish = () => {
+    const { email, pin } = formValue;
     setPublishing(true);
     // remember email and pin in local storage so we can use later
     localStorage.setItem('identity', JSON.stringify({ email, pin }));
@@ -71,10 +75,10 @@ const Publish = ({ theme, setTheme }) => {
       },
       body,
     })
-      .then(response => {
+      .then((response) => {
         if (response.ok) {
           setError(undefined);
-          return response.text().then(id => {
+          return response.text().then((id) => {
             const nextUploadUrl = [
               window.location.protocol,
               '//',
@@ -95,7 +99,7 @@ const Publish = ({ theme, setTheme }) => {
         setPublishing(false);
         return response.text().then(setError);
       })
-      .catch(e => {
+      .catch((e) => {
         setError(e.message);
         setPublishing(false);
       });
@@ -133,7 +137,7 @@ const Publish = ({ theme, setTheme }) => {
           </Box>
         }
       />
-      <Form value={publication} onSubmit={onPublish}>
+      <Form value={formValue} onSubmit={onPublish} onChange={onChange}>
         <FormField
           name="email"
           label="Email"
