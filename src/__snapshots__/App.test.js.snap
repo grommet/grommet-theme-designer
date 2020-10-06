@@ -8,13 +8,13 @@ exports[`App empty 1`] = `
     class="StyledGrid-sc-1wofa1l-0 kZpsPy"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 lcjuae"
+      class="StyledBox-sc-13pk1d4-0 iozVPG"
     >
       <div
         class="StyledBox-sc-13pk1d4-0 kHMmGq"
       >
         <span
-          class="StyledText-sc-1sadyjn-0 eHRdKX"
+          class="StyledText-sc-1sadyjn-0 fiywiB"
         >
           my theme
         </span>
@@ -25,7 +25,7 @@ exports[`App empty 1`] = `
         >
           <svg
             aria-label="Edit"
-            class="StyledIcon-ofa7kd-0 bPiTjs"
+            class="StyledIcon-ofa7kd-0 gAiAzc"
             viewBox="0 0 24 24"
           >
             <path
@@ -81,7 +81,7 @@ exports[`App empty 1`] = `
             </span>
           </label>
           <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iIznZT"
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
           />
           <label
             class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 fdhZPr"
@@ -172,13 +172,13 @@ exports[`App empty 1`] = `
       class="StyledBox-sc-13pk1d4-0 gAsOLC"
     />
     <div
-      class="StyledBox-sc-13pk1d4-0 jKrIbW"
+      class="StyledBox-sc-13pk1d4-0 hIXexy"
     >
       <div
         class="StyledBox-sc-13pk1d4-0 hrGwMH"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 dgkPRM"
+          class="StyledBox-sc-13pk1d4-0 hrDLqI"
         >
           <button
             class="StyledButton-sc-323bzc-0 dYdzYx"
@@ -187,7 +187,7 @@ exports[`App empty 1`] = `
           >
             <svg
               aria-label="Apps"
-              class="StyledIcon-ofa7kd-0 bPiTjs"
+              class="StyledIcon-ofa7kd-0 gAiAzc"
               viewBox="0 0 24 24"
             >
               <path
@@ -199,7 +199,7 @@ exports[`App empty 1`] = `
             </svg>
           </button>
           <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bZqeeV"
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
           />
           <div
             class="StyledBox-sc-13pk1d4-0 iSmarO"
@@ -212,7 +212,7 @@ exports[`App empty 1`] = `
             >
               <svg
                 aria-label="Undo"
-                class="StyledIcon-ofa7kd-0 bPiTjs"
+                class="StyledIcon-ofa7kd-0 gAiAzc"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -228,7 +228,7 @@ exports[`App empty 1`] = `
             >
               <svg
                 aria-label="Redo"
-                class="StyledIcon-ofa7kd-0 bPiTjs"
+                class="StyledIcon-ofa7kd-0 gAiAzc"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -238,7 +238,7 @@ exports[`App empty 1`] = `
             </button>
           </div>
           <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bZqeeV"
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
           />
           <button
             class="StyledButton-sc-323bzc-0 dYdzYx"
@@ -247,7 +247,7 @@ exports[`App empty 1`] = `
           >
             <svg
               aria-label="Code"
-              class="StyledIcon-ofa7kd-0 bPiTjs"
+              class="StyledIcon-ofa7kd-0 gAiAzc"
               viewBox="0 0 24 24"
             >
               <path
@@ -259,7 +259,7 @@ exports[`App empty 1`] = `
             </svg>
           </button>
           <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bZqeeV"
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
           />
           <button
             class="StyledButton-sc-323bzc-0 dYdzYx"
@@ -268,7 +268,7 @@ exports[`App empty 1`] = `
           >
             <svg
               aria-label="Share"
-              class="StyledIcon-ofa7kd-0 bPiTjs"
+              class="StyledIcon-ofa7kd-0 gAiAzc"
               viewBox="0 0 24 24"
             >
               <path
@@ -284,17 +284,17 @@ exports[`App empty 1`] = `
           class="StyledBox-sc-13pk1d4-0 ekLbCh"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 btdCtd"
+            class="StyledBox-sc-13pk1d4-0 juqukx"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 RdKln"
+              class="StyledBox-sc-13pk1d4-0 fFuuUX"
             >
               <label
                 class="StyledBox-sc-13pk1d4-0 gilRmi"
                 for="name"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 PRJF"
+                  class="StyledText-sc-1sadyjn-0 keEqcz"
                 >
                   name
                 </span>
@@ -317,17 +317,17 @@ exports[`App empty 1`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 btdCtd"
+            class="StyledBox-sc-13pk1d4-0 juqukx"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 RdKln"
+              class="StyledBox-sc-13pk1d4-0 fFuuUX"
             >
               <label
                 class="StyledBox-sc-13pk1d4-0 gilRmi"
                 for="rounding"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 PRJF"
+                  class="StyledText-sc-1sadyjn-0 keEqcz"
                 >
                   rounding
                 </span>
@@ -364,7 +364,7 @@ exports[`App empty 1`] = `
                       />
                     </div>
                     <span
-                      class="StyledText-sc-1sadyjn-0 PRJF"
+                      class="StyledText-sc-1sadyjn-0 keEqcz"
                     >
                       px
                     </span>
@@ -374,17 +374,17 @@ exports[`App empty 1`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 btdCtd"
+            class="StyledBox-sc-13pk1d4-0 juqukx"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 RdKln"
+              class="StyledBox-sc-13pk1d4-0 fFuuUX"
             >
               <label
                 class="StyledBox-sc-13pk1d4-0 gilRmi"
                 for="spacing"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 PRJF"
+                  class="StyledText-sc-1sadyjn-0 keEqcz"
                 >
                   spacing
                 </span>
@@ -421,7 +421,7 @@ exports[`App empty 1`] = `
                       />
                     </div>
                     <span
-                      class="StyledText-sc-1sadyjn-0 PRJF"
+                      class="StyledText-sc-1sadyjn-0 keEqcz"
                     >
                       px
                     </span>
@@ -431,17 +431,17 @@ exports[`App empty 1`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 btdCtd"
+            class="StyledBox-sc-13pk1d4-0 juqukx"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 RdKln"
+              class="StyledBox-sc-13pk1d4-0 fFuuUX"
             >
               <label
                 class="StyledBox-sc-13pk1d4-0 gilRmi"
                 for="scale"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 PRJF"
+                  class="StyledText-sc-1sadyjn-0 keEqcz"
                 >
                   font scale
                 </span>
@@ -488,18 +488,18 @@ exports[`App empty 1`] = `
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 junTmN"
+              class="StyledBox-sc-13pk1d4-0 fgNpvZ"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 PRJF"
+                class="StyledText-sc-1sadyjn-0 keEqcz"
               >
                 font
               </span>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bZqeeV"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
               />
               <span
-                class="StyledText-sc-1sadyjn-0 eHRdKX"
+                class="StyledText-sc-1sadyjn-0 fiywiB"
               >
                 Helvetica
               </span>
@@ -510,10 +510,10 @@ exports[`App empty 1`] = `
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 junTmN"
+              class="StyledBox-sc-13pk1d4-0 fgNpvZ"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 PRJF"
+                class="StyledText-sc-1sadyjn-0 keEqcz"
               >
                 colors
               </span>
@@ -524,10 +524,10 @@ exports[`App empty 1`] = `
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 junTmN"
+              class="StyledBox-sc-13pk1d4-0 fgNpvZ"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 PRJF"
+                class="StyledText-sc-1sadyjn-0 keEqcz"
               >
                 form field
               </span>
@@ -548,13 +548,13 @@ exports[`App empty 2`] = `
     class="StyledGrid-sc-1wofa1l-0 kZpsPy"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 lcjuae"
+      class="StyledBox-sc-13pk1d4-0 iozVPG"
     >
       <div
         class="StyledBox-sc-13pk1d4-0 kHMmGq"
       >
         <span
-          class="StyledText-sc-1sadyjn-0 eHRdKX"
+          class="StyledText-sc-1sadyjn-0 fiywiB"
         >
           my theme
         </span>
@@ -565,7 +565,7 @@ exports[`App empty 2`] = `
         >
           <svg
             aria-label="Edit"
-            class="StyledIcon-ofa7kd-0 bPiTjs"
+            class="StyledIcon-ofa7kd-0 gAiAzc"
             viewBox="0 0 24 24"
           >
             <path
@@ -621,7 +621,7 @@ exports[`App empty 2`] = `
             </span>
           </label>
           <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iIznZT"
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
           />
           <label
             class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 fdhZPr"
@@ -712,13 +712,13 @@ exports[`App empty 2`] = `
       class="StyledBox-sc-13pk1d4-0 gAsOLC"
     />
     <div
-      class="StyledBox-sc-13pk1d4-0 jKrIbW"
+      class="StyledBox-sc-13pk1d4-0 hIXexy"
     >
       <div
         class="StyledBox-sc-13pk1d4-0 hrGwMH"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 dgkPRM"
+          class="StyledBox-sc-13pk1d4-0 hrDLqI"
         >
           <button
             class="StyledButton-sc-323bzc-0 dYdzYx"
@@ -727,7 +727,7 @@ exports[`App empty 2`] = `
           >
             <svg
               aria-label="Apps"
-              class="StyledIcon-ofa7kd-0 bPiTjs"
+              class="StyledIcon-ofa7kd-0 gAiAzc"
               viewBox="0 0 24 24"
             >
               <path
@@ -739,7 +739,7 @@ exports[`App empty 2`] = `
             </svg>
           </button>
           <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bZqeeV"
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
           />
           <div
             class="StyledBox-sc-13pk1d4-0 iSmarO"
@@ -752,7 +752,7 @@ exports[`App empty 2`] = `
             >
               <svg
                 aria-label="Undo"
-                class="StyledIcon-ofa7kd-0 bPiTjs"
+                class="StyledIcon-ofa7kd-0 gAiAzc"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -768,7 +768,7 @@ exports[`App empty 2`] = `
             >
               <svg
                 aria-label="Redo"
-                class="StyledIcon-ofa7kd-0 bPiTjs"
+                class="StyledIcon-ofa7kd-0 gAiAzc"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -778,7 +778,7 @@ exports[`App empty 2`] = `
             </button>
           </div>
           <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bZqeeV"
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
           />
           <button
             class="StyledButton-sc-323bzc-0 dYdzYx"
@@ -787,7 +787,7 @@ exports[`App empty 2`] = `
           >
             <svg
               aria-label="Code"
-              class="StyledIcon-ofa7kd-0 bPiTjs"
+              class="StyledIcon-ofa7kd-0 gAiAzc"
               viewBox="0 0 24 24"
             >
               <path
@@ -799,7 +799,7 @@ exports[`App empty 2`] = `
             </svg>
           </button>
           <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bZqeeV"
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
           />
           <button
             class="StyledButton-sc-323bzc-0 dYdzYx"
@@ -808,7 +808,7 @@ exports[`App empty 2`] = `
           >
             <svg
               aria-label="Share"
-              class="StyledIcon-ofa7kd-0 bPiTjs"
+              class="StyledIcon-ofa7kd-0 gAiAzc"
               viewBox="0 0 24 24"
             >
               <path
@@ -824,17 +824,17 @@ exports[`App empty 2`] = `
           class="StyledBox-sc-13pk1d4-0 ekLbCh"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 btdCtd"
+            class="StyledBox-sc-13pk1d4-0 juqukx"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 RdKln"
+              class="StyledBox-sc-13pk1d4-0 fFuuUX"
             >
               <label
                 class="StyledBox-sc-13pk1d4-0 gilRmi"
                 for="name"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 PRJF"
+                  class="StyledText-sc-1sadyjn-0 keEqcz"
                 >
                   name
                 </span>
@@ -857,17 +857,17 @@ exports[`App empty 2`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 btdCtd"
+            class="StyledBox-sc-13pk1d4-0 juqukx"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 RdKln"
+              class="StyledBox-sc-13pk1d4-0 fFuuUX"
             >
               <label
                 class="StyledBox-sc-13pk1d4-0 gilRmi"
                 for="rounding"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 PRJF"
+                  class="StyledText-sc-1sadyjn-0 keEqcz"
                 >
                   rounding
                 </span>
@@ -904,7 +904,7 @@ exports[`App empty 2`] = `
                       />
                     </div>
                     <span
-                      class="StyledText-sc-1sadyjn-0 PRJF"
+                      class="StyledText-sc-1sadyjn-0 keEqcz"
                     >
                       px
                     </span>
@@ -914,17 +914,17 @@ exports[`App empty 2`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 btdCtd"
+            class="StyledBox-sc-13pk1d4-0 juqukx"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 RdKln"
+              class="StyledBox-sc-13pk1d4-0 fFuuUX"
             >
               <label
                 class="StyledBox-sc-13pk1d4-0 gilRmi"
                 for="spacing"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 PRJF"
+                  class="StyledText-sc-1sadyjn-0 keEqcz"
                 >
                   spacing
                 </span>
@@ -961,7 +961,7 @@ exports[`App empty 2`] = `
                       />
                     </div>
                     <span
-                      class="StyledText-sc-1sadyjn-0 PRJF"
+                      class="StyledText-sc-1sadyjn-0 keEqcz"
                     >
                       px
                     </span>
@@ -971,17 +971,17 @@ exports[`App empty 2`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 btdCtd"
+            class="StyledBox-sc-13pk1d4-0 juqukx"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 RdKln"
+              class="StyledBox-sc-13pk1d4-0 fFuuUX"
             >
               <label
                 class="StyledBox-sc-13pk1d4-0 gilRmi"
                 for="scale"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 PRJF"
+                  class="StyledText-sc-1sadyjn-0 keEqcz"
                 >
                   font scale
                 </span>
@@ -1028,18 +1028,18 @@ exports[`App empty 2`] = `
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 junTmN"
+              class="StyledBox-sc-13pk1d4-0 fgNpvZ"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 PRJF"
+                class="StyledText-sc-1sadyjn-0 keEqcz"
               >
                 font
               </span>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bZqeeV"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
               />
               <span
-                class="StyledText-sc-1sadyjn-0 eHRdKX"
+                class="StyledText-sc-1sadyjn-0 fiywiB"
               >
                 Helvetica
               </span>
@@ -1050,10 +1050,10 @@ exports[`App empty 2`] = `
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 junTmN"
+              class="StyledBox-sc-13pk1d4-0 fgNpvZ"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 PRJF"
+                class="StyledText-sc-1sadyjn-0 keEqcz"
               >
                 colors
               </span>
@@ -1064,10 +1064,10 @@ exports[`App empty 2`] = `
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 junTmN"
+              class="StyledBox-sc-13pk1d4-0 fgNpvZ"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 PRJF"
+                class="StyledText-sc-1sadyjn-0 keEqcz"
               >
                 form field
               </span>
