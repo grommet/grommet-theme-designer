@@ -71,10 +71,10 @@ const Publish = ({ theme, setTheme }) => {
       },
       body,
     })
-      .then(response => {
+      .then((response) => {
         if (response.ok) {
           setError(undefined);
-          return response.text().then(id => {
+          return response.text().then((id) => {
             const nextUploadUrl = [
               window.location.protocol,
               '//',
@@ -95,7 +95,7 @@ const Publish = ({ theme, setTheme }) => {
         setPublishing(false);
         return response.text().then(setError);
       })
-      .catch(e => {
+      .catch((e) => {
         setError(e.message);
         setPublishing(false);
       });
@@ -133,7 +133,7 @@ const Publish = ({ theme, setTheme }) => {
           </Box>
         }
       />
-      <Form value={publication} onSubmit={onPublish}>
+      <Form value={publication} onChange={setPublication} onSubmit={onPublish}>
         <FormField
           name="email"
           label="Email"
