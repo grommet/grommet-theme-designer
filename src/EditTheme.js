@@ -4,7 +4,7 @@ import Primary from './Primary';
 import Colors from './colors/Colors';
 import FormField from './FormField';
 
-export default ({ theme, setTheme }) => {
+const EditTheme = ({ theme, setTheme }) => {
   const [view, setView] = useState('primary');
   const [changes, setChanges] = useState([]);
   const [changeIndex, setChangeIndex] = useState();
@@ -15,7 +15,7 @@ export default ({ theme, setTheme }) => {
     const timer = setTimeout(() => {
       // If we already have this design object, we must be doing an undo or
       // redo, and therefore no need to add a change
-      if (!changes.some(c => c.theme === theme)) {
+      if (!changes.some((c) => c.theme === theme)) {
         let nextChanges;
         nextChanges = [...changes];
         nextChanges = nextChanges.slice(changeIndex, 10);
@@ -64,3 +64,5 @@ export default ({ theme, setTheme }) => {
     </Box>
   );
 };
+
+export default EditTheme;

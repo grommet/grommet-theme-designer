@@ -18,7 +18,7 @@ const examples = [
   { name: 'Typography', Design: Typography, guide: true },
 ];
 
-export default ({
+const Designs = ({
   theme,
   design: activeDesign,
   setDesign,
@@ -40,7 +40,7 @@ export default ({
         location: { pathname },
       } = document;
       const name = pathname.slice(1);
-      const example = examples.find(e => e.name === name);
+      const example = examples.find((e) => e.name === name);
       if (example) {
         setDesign(() => example.Design);
       }
@@ -56,7 +56,7 @@ export default ({
     const {
       location: { pathname },
     } = document;
-    const example = examples.find(e => e.Design === activeDesign);
+    const example = examples.find((e) => e.Design === activeDesign);
     if (example) {
       const path = `/${example.name}`;
       if (path !== pathname)
@@ -86,7 +86,7 @@ export default ({
           name="themeMode"
           options={['light', 'dark']}
           value={themeMode}
-          onChange={event => setThemeMode(event.target.value)}
+          onChange={(event) => setThemeMode(event.target.value)}
         />
       </Box>
       <Box flex="grow">
@@ -96,7 +96,7 @@ export default ({
           </Heading>
         </Box>
         {examples
-          .filter(e => e.guide)
+          .filter((e) => e.guide)
           .map(({ name, Design }) => (
             <Box
               key={name}
@@ -114,7 +114,7 @@ export default ({
           </Heading>
         </Box>
         {examples
-          .filter(e => !e.guide)
+          .filter((e) => !e.guide)
           .map(({ name, Design }) => (
             <Box
               key={name}
@@ -130,3 +130,5 @@ export default ({
     </Box>
   );
 };
+
+export default Designs;

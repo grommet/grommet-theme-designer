@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { Box, MaskedInput, RangeInput, Text } from 'grommet';
 import Field from './components/Field';
 
-const setSpacing = theme => {
+const setSpacing = (theme) => {
   const { spacing = 24, scale = 1 } = theme;
   const baseFontSize = spacing * 0.75; // 18
   const fontScale = (spacing / 6) * scale; // 4
 
-  const fontSizing = factor => ({
+  const fontSizing = (factor) => ({
     size: `${(baseFontSize + factor * fontScale).toFixed()}px`,
     height: `${(spacing + factor * fontScale).toFixed()}px`,
     // maxWidth chosen to be ~50 characters wide
@@ -225,10 +225,10 @@ const setSpacing = theme => {
   };
 };
 
-export default ({ theme, setTheme }) => {
+const Spacing = ({ theme, setTheme }) => {
   const [scale, setScale] = useState(theme.scale || 1.0);
 
-  const onChangeSpacing = event => {
+  const onChangeSpacing = (event) => {
     const nextTheme = JSON.parse(JSON.stringify(theme));
     const spacing = parseInt(event.target.value, 10);
     nextTheme.spacing = spacing;
@@ -236,7 +236,7 @@ export default ({ theme, setTheme }) => {
     setTheme(nextTheme);
   };
 
-  const onChangeScale = event => {
+  const onChangeScale = (event) => {
     const nextTheme = JSON.parse(JSON.stringify(theme));
     const nextScale = event.target.value;
     setScale(nextScale);
@@ -307,3 +307,5 @@ export default ({ theme, setTheme }) => {
     </>
   );
 };
+
+export default Spacing;

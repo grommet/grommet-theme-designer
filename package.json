@@ -20,6 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "lint": "eslint './src/**/*.js'",
     "test": "react-scripts test",
     "test:nowatch": "react-scripts test --watchAll=false",
     "prettier": "pretty-quick --staged"

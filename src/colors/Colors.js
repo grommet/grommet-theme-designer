@@ -497,7 +497,7 @@ const prefixes = [
   'status',
 ];
 
-export default ({ theme, setTheme, setView }) => {
+const Colors = ({ theme, setTheme, setView }) => {
   const [adding, setAdding] = useState();
   const ref = useRef();
   const palette = useMemo(
@@ -576,3 +576,5 @@ export default ({ theme, setTheme, setView }) => {
     </Box>
   );
 };
+
+export default Colors;

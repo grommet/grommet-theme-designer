@@ -46,7 +46,7 @@ const ViewButton = ({ label, onClick }) => (
   </Button>
 );
 
-export default ({ theme, setTheme, setView, onUndo, onRedo }) => (
+const Primary = ({ theme, setTheme, setView, onUndo, onRedo }) => (
   <Box flex={false}>
     <Box
       flex={false}
@@ -98,7 +98,7 @@ export default ({ theme, setTheme, setView, onUndo, onRedo }) => (
           plain
           style={{ textAlign: 'right' }}
           value={theme.name}
-          onChange={event => {
+          onChange={(event) => {
             const nextTheme = JSON.parse(JSON.stringify(theme));
             nextTheme.name = event.target.value;
             setTheme(nextTheme);
@@ -113,3 +113,5 @@ export default ({ theme, setTheme, setView, onUndo, onRedo }) => (
     </Box>
   </Box>
 );
+
+export default Primary;

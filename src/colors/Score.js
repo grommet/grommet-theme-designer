@@ -10,24 +10,24 @@ const hexExp = /^#[A-Za-z0-9]{3,4}$|^#[A-Za-z0-9]{6,8}$/;
 const rgbExp = /rgba?\(\s?([0-9]*)\s?,\s?([0-9]*)\s?,\s?([0-9]*)\s?\)/;
 const rgbaExp = /rgba?\(\s?([0-9]*)\s?,\s?([0-9]*)\s?,\s?([0-9]*)\s?,\s?([.0-9]*)\s?\)/;
 
-const parseHexToRGB = color =>
+const parseHexToRGB = (color) =>
   color.length < 7 // 7 is what's needed for '#RRGGBB'
-    ? color.match(/[A-Za-z0-9]{1}/g).map(v => parseInt(`${v}${v}`, 16))
+    ? color.match(/[A-Za-z0-9]{1}/g).map((v) => parseInt(`${v}${v}`, 16))
     : // https://stackoverflow.com/a/42429333
-      color.match(/[A-Za-z0-9]{2}/g).map(v => parseInt(v, 16));
+      color.match(/[A-Za-z0-9]{2}/g).map((v) => parseInt(v, 16));
 
-const getRGBArray = color => {
+const getRGBArray = (color) => {
   if (hexExp.test(color)) {
     const [red, green, blue, alpha] = parseHexToRGB(color);
     return [red, green, blue, alpha !== undefined ? alpha / 255.0 : undefined];
   }
   let match = color.match(rgbExp);
   if (match) {
-    return match.splice(1).map(v => parseInt(v, 10));
+    return match.splice(1).map((v) => parseInt(v, 10));
   }
   match = color.match(rgbaExp);
   if (match) {
-    return match.splice(1).map(v => parseFloat(v, 10));
+    return match.splice(1).map((v) => parseFloat(v, 10));
   }
   return color;
 };
@@ -47,7 +47,7 @@ const blendColors = (above, below) => {
   return `#${blend(r1, r2, a)}${blend(g1, g2, a)}${blend(b1, b2, a)}`;
 };
 
-export default ({ theme, mode, background, color }) => {
+const Score = ({ theme, mode, background, color }) => {
   let backgroundValue = getColor(theme, background, mode, true);
   if (backgroundValue === undefined) return '?';
   const alpha = getRGBArray(backgroundValue)[3];
@@ -73,3 +73,5 @@ export default ({ theme, mode, background, color }) => {
     </Text>
   );
 };
+
+export default Score;

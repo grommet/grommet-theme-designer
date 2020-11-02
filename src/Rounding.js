@@ -3,8 +3,8 @@ import { Box, MaskedInput, RangeInput, Text, base } from 'grommet';
 import Field from './components/Field';
 import { setPath } from './utils';
 
-export default ({ theme, setTheme }) => {
-  const onChange = event => {
+const Rounding = ({ theme, setTheme }) => {
+  const onChange = (event) => {
     const nextTheme = JSON.parse(JSON.stringify(theme));
     const rounding = parseInt(event.target.value, 10);
     nextTheme.rounding = rounding;
@@ -52,3 +52,5 @@ export default ({ theme, setTheme }) => {
     </Field>
   );
 };
+
+export default Rounding;

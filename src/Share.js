@@ -185,10 +185,12 @@ const Publish = ({ theme, setTheme }) => {
   );
 };
 
-export default ({ theme, setTheme, onClose }) => (
+const Share = ({ theme, setTheme, onClose }) => (
   <Action animation="fadeIn" onClose={onClose}>
     <Grid columns={{ count: 'fit', size: 'small' }} gap="large">
       <Publish theme={theme} setTheme={setTheme} />
     </Grid>
   </Action>
 );
+
+export default Share;

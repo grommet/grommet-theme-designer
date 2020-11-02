@@ -22,7 +22,7 @@ const Label = ({ value }) => (
   </Box>
 );
 
-export default ({ theme, setTheme, setView }) => {
+const FormField = ({ theme, setTheme, setView }) => {
   const formField = theme.formField || base.formField;
   const cloneTheme = useCallback(() => {
     const nextTheme = JSON.parse(JSON.stringify(theme));
@@ -60,16 +60,7 @@ export default ({ theme, setTheme, setView }) => {
     const [options, setOptions] = useState(allOptions);
 
     return (
-      <Field
-        label={
-          label ||
-          name
-            .split('.')
-            .slice(1)
-            .join(' ')
-        }
-        htmlFor={name}
-      >
+      <Field label={label || name.split('.').slice(1).join(' ')} htmlFor={name}>
         <Select
           id={name}
           name={name}
@@ -77,12 +68,12 @@ export default ({ theme, setTheme, setView }) => {
           options={value ? options.concat(['undefined']) : options}
           value={value}
           valueLabel={<Label value={value} />}
-          onChange={event => setValue(name, event.option)}
+          onChange={(event) => setValue(name, event.option)}
           onSearch={
             allOptions.length > 6
-              ? text => {
+              ? (text) => {
                   const exp = new RegExp(text, 'i');
-                  let nextOptions = allOptions.filter(o =>
+                  let nextOptions = allOptions.filter((o) =>
                     text ? exp.test(o) : true,
                   );
                   setOptions(nextOptions);
@@ -143,7 +134,7 @@ export default ({ theme, setTheme, setView }) => {
               name="border.position"
               options={['inner', 'outer']}
               value={formField.border.position}
-              onChange={event => {
+              onChange={(event) => {
                 const nextTheme = cloneTheme();
                 nextTheme.formField.border.position = event.target.value;
                 setTheme(nextTheme);
@@ -223,3 +214,5 @@ export default ({ theme, setTheme, setView }) => {
     </Box>
   );
 };
+
+export default FormField;

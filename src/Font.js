@@ -9,7 +9,7 @@ import {
   TextInput,
 } from 'grommet';
 
-export default ({ theme, setTheme }) => {
+const Font = ({ theme, setTheme }) => {
   const font = theme.global.font;
   return (
     <DropButton
@@ -31,14 +31,14 @@ export default ({ theme, setTheme }) => {
             name="family"
             placeholder="font family"
             value={font.family}
-            onChange={event => {
+            onChange={(event) => {
               const family = event.target.value;
               const nextTheme = JSON.parse(JSON.stringify(theme));
               nextTheme.global.font.family = family;
               setTheme(nextTheme);
               // see if we need a face for any of the fonts
-              const names = family.split(',').map(f => f.trim());
-              names.forEach(name => {
+              const names = family.split(',').map((f) => f.trim());
+              names.forEach((name) => {
                 const match = name.match(/^"(.+)"/);
                 if (match) {
                   fetch(
@@ -46,8 +46,8 @@ export default ({ theme, setTheme }) => {
                       match[1],
                     )}`,
                   )
-                    .then(response => response.text())
-                    .then(face => {
+                    .then((response) => response.text())
+                    .then((face) => {
                       const nextTheme2 = JSON.parse(JSON.stringify(nextTheme));
                       nextTheme2.global.font.face = face;
                       setTheme(nextTheme2);
@@ -65,7 +65,7 @@ export default ({ theme, setTheme }) => {
               rows={10}
               placeholder="font face"
               value={font.face || ''}
-              onChange={event => {
+              onChange={(event) => {
                 const face = event.target.value;
                 const nextTheme = JSON.parse(JSON.stringify(theme));
                 nextTheme.global.font.face = face;
@@ -85,7 +85,7 @@ export default ({ theme, setTheme }) => {
                 ? theme.heading.font.family
                 : ''
             }
-            onChange={event => {
+            onChange={(event) => {
               const family = event.target.value;
               const nextTheme = JSON.parse(JSON.stringify(theme));
               if (!nextTheme.heading) nextTheme.heading = {};
@@ -93,8 +93,8 @@ export default ({ theme, setTheme }) => {
               nextTheme.heading.font.family = family;
               setTheme(nextTheme);
               // see if we need a face for any of the fonts
-              const names = family.split(',').map(f => f.trim());
-              names.forEach(name => {
+              const names = family.split(',').map((f) => f.trim());
+              names.forEach((name) => {
                 const match = name.match(/^"(.+)"/);
                 if (match) {
                   fetch(
@@ -102,8 +102,8 @@ export default ({ theme, setTheme }) => {
                       match[1],
                     )}`,
                   )
-                    .then(response => response.text())
-                    .then(face => {
+                    .then((response) => response.text())
+                    .then((face) => {
                       const nextTheme2 = JSON.parse(JSON.stringify(nextTheme));
                       nextTheme2.global.font.face =
                         (nextTheme.global.font.face || '') + '\n' + face;
@@ -125,7 +125,7 @@ export default ({ theme, setTheme }) => {
                 rows={10}
                 placeholder="heading font face"
                 value={theme.heading.font.face || ''}
-                onChange={event => {
+                onChange={(event) => {
                   const face = event.target.value;
                   const nextTheme = JSON.parse(JSON.stringify(theme));
                   nextTheme.global.font.face = (font.face || '') + face;
@@ -150,3 +150,5 @@ export default ({ theme, setTheme }) => {
     </DropButton>
   );
 };
+
+export default Font;
