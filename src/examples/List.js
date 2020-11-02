@@ -20,7 +20,7 @@ const allPeople = [
   { name: 'Samantha', size: 'medium', status: 'unknown' },
 ];
 
-export default ({ theme }) => {
+const ExampleList = ({ theme }) => {
   const [search, setSearch] = useState('');
   const [people, setPeople] = useState(allPeople);
   const [person, setPerson] = useState();
@@ -49,13 +49,13 @@ export default ({ theme }) => {
               <TextInput
                 placeholder="search"
                 value={search}
-                onChange={event => {
+                onChange={(event) => {
                   const nextSearch = event.target.value;
                   setSearch(nextSearch);
                   const exp = new RegExp(nextSearch, 'i');
                   setPeople(
                     nextSearch
-                      ? people.filter(p => p.name.match(exp))
+                      ? people.filter((p) => p.name.match(exp))
                       : allPeople,
                   );
                 }}
@@ -94,3 +94,5 @@ export default ({ theme }) => {
     </Main>
   );
 };
+
+export default ExampleList;

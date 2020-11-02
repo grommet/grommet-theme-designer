@@ -31,7 +31,7 @@ const chartOutboundValues = [45, 20, 25, 40, 35, 50, 20, 15].map((v, i) => ({
 
 const Axis = ({ values, ...rest }) => (
   <Box justify="between" {...rest}>
-    {values.map(v => (
+    {values.map((v) => (
       <Text key={v} size="small" color="text-xweak">
         {v}
       </Text>
@@ -64,7 +64,7 @@ const Key = ({ labels, ...rest }) => (
   </Box>
 );
 
-export default ({ theme }) => {
+const Dashboard = ({ theme }) => {
   return (
     <Main background="background-back">
       <Grid
@@ -253,3 +253,5 @@ export default ({ theme }) => {
     </Main>
   );
 };
+
+export default Dashboard;

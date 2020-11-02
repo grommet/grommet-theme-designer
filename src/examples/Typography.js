@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemeContext } from 'styled-components';
 import { Box, Grid, Heading, Main, Paragraph, Text } from 'grommet';
 
-export default () => {
+const Typography = () => {
   const theme = React.useContext(ThemeContext);
   return (
     <Main background="background-back">
@@ -11,13 +11,8 @@ export default () => {
         rows={['flex']}
         areas={[{ name: 'content', start: [1, 0], end: [1, 0] }]}
       >
-        <Box
-          gridArea="content"
-          fill="vertical"
-          background="background-front"
-          pad="large"
-        >
-          {[1, 2, 3, 4].map(level => (
+        <Box gridArea="content" background="background-front" pad="large">
+          {[1, 2, 3, 4].map((level) => (
             <Box key={level} direction="row" align="baseline" gap="medium">
               <Text size="small" color="text-xweak">
                 {theme.heading.level[level].medium.size}
@@ -25,7 +20,7 @@ export default () => {
               <Heading level={level}>{`Heading ${level}`}</Heading>
             </Box>
           ))}
-          {['xxlarge', 'xlarge', 'large', 'medium', 'small'].map(size => (
+          {['xxlarge', 'xlarge', 'large', 'medium', 'small'].map((size) => (
             <Box key={size} direction="row" align="baseline" gap="medium">
               <Text size="small" color="text-xweak">
                 {theme.paragraph[size].size}
@@ -34,7 +29,7 @@ export default () => {
             </Box>
           ))}
           {['xxlarge', 'xlarge', 'large', 'medium', 'small', 'xsmall'].map(
-            size => (
+            (size) => (
               <Box key={size} direction="row" align="baseline" gap="medium">
                 <Text size="small" color="text-xweak">
                   {theme.text[size].size}
@@ -44,9 +39,9 @@ export default () => {
             ),
           )}
 
-          {['xlarge', 'large', 'small'].map(size => (
+          {['xlarge', 'large', 'small'].map((size) => (
             <Box key={size}>
-              {[1, 2, 3, 4].map(level => (
+              {[1, 2, 3, 4].map((level) => (
                 <Box key={level} direction="row" align="baseline" gap="medium">
                   <Text size="small" color="text-xweak">
                     {theme.heading.level[level][size].size}
@@ -64,3 +59,5 @@ export default () => {
     </Main>
   );
 };
+
+export default Typography;

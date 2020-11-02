@@ -13,7 +13,7 @@ import {
 } from 'grommet';
 import { Ad } from 'grommet-icons';
 
-export default ({ theme }) => {
+const Document = ({ theme }) => {
   return (
     <Main background="background-back">
       <Grid
@@ -21,7 +21,7 @@ export default ({ theme }) => {
         rows={['flex']}
         areas={[{ name: 'content', start: [1, 0], end: [1, 0] }]}
       >
-        <Box gridArea="content" fill="vertical" background="background-front">
+        <Box gridArea="content" background="background-front">
           <Header pad="small">
             <Button icon={<Ad />} hoverIndicator />
             <Box direction="row" align="center" gap="small" pad="small">
@@ -62,3 +62,5 @@ export default ({ theme }) => {
     </Main>
   );
 };
+
+export default Document;

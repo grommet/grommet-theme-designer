@@ -33,7 +33,7 @@ const Texts = ({ background, texts, theme, themeMode }) => (
     <Box width="small" pad="small">
       <Text>{background}</Text>
     </Box>
-    {texts.map(text => (
+    {texts.map((text) => (
       <Cell
         key={text}
         background={background}
@@ -55,7 +55,7 @@ const TextLabels = ({ texts }) => (
     margin={{ bottom: 'small' }}
   >
     <Box width="small" pad="small" />
-    {texts.map(text => (
+    {texts.map((text) => (
       <Box key={text} width="xxsmall">
         <Text color={text} textAlign="center">
           {text.split('-')[1] || 'text'}
@@ -68,7 +68,7 @@ const TextLabels = ({ texts }) => (
 const Backgrounds = ({ backgrounds, texts, theme, themeMode }) => (
   <Box flex={false} margin={{ vertical: 'large' }} align="center">
     <TextLabels texts={texts} />
-    {backgrounds.map(name => (
+    {backgrounds.map((name) => (
       <Texts
         key={name}
         background={name}
@@ -80,15 +80,15 @@ const Backgrounds = ({ backgrounds, texts, theme, themeMode }) => (
   </Box>
 );
 
-export default ({ theme }) => {
+const Accessibility = ({ theme }) => {
   const colors = theme.global.colors;
-  const backgrounds = Object.keys(colors).filter(color =>
+  const backgrounds = Object.keys(colors).filter((color) =>
     color.startsWith('background-'),
   );
   const palette = Object.keys(colors)
-    .filter(color => color.endsWith('!'))
-    .map(color => color.split('!')[0]);
-  const texts = Object.keys(colors).filter(color => color.startsWith('text'));
+    .filter((color) => color.endsWith('!'))
+    .map((color) => color.split('!')[0]);
+  const texts = Object.keys(colors).filter((color) => color.startsWith('text'));
 
   return (
     <Main background="background">
@@ -109,7 +109,7 @@ export default ({ theme }) => {
           .
         </Paragraph>
       </Header>
-      {['light', 'dark'].map(themeMode => (
+      {['light', 'dark'].map((themeMode) => (
         <Grommet key={themeMode} theme={theme} themeMode={themeMode}>
           <Backgrounds
             backgrounds={backgrounds}
@@ -126,10 +126,12 @@ export default ({ theme }) => {
         </Grommet>
       ))}
       <Backgrounds
-        backgrounds={palette.map(name => `${name}!`)}
+        backgrounds={palette.map((name) => `${name}!`)}
         texts={texts}
         theme={theme}
       />
     </Main>
   );
 };
+
+export default Accessibility;

@@ -54,7 +54,7 @@ const DatePicker = ({ name, value: valueProp, onChange }) => {
   );
 };
 
-export default ({ theme }) => {
+const ExampleForm = ({ theme }) => {
   return (
     <Main background="background">
       <Grid
@@ -91,3 +91,5 @@ export default ({ theme }) => {
     </Main>
   );
 };
+
+export default ExampleForm;
