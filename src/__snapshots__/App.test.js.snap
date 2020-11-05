@@ -307,7 +307,7 @@ exports[`App empty 1`] = `
                 >
                   <input
                     autocomplete="off"
-                    class="StyledTextInput-sc-1x30a0s-0 kgOLIf"
+                    class="StyledTextInput-sc-1x30a0s-0 khIUhX"
                     name="name"
                     style="text-align: right;"
                     value="my theme"
@@ -353,11 +353,11 @@ exports[`App empty 1`] = `
                     class="StyledBox-sc-13pk1d4-0 bDDuRD"
                   >
                     <div
-                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 isRvFr"
+                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 dOerlP"
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 laajSh"
+                        class="StyledMaskedInput-sc-99vkfa-0 eqDcRR"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="4"
@@ -410,11 +410,11 @@ exports[`App empty 1`] = `
                     class="StyledBox-sc-13pk1d4-0 bDDuRD"
                   >
                     <div
-                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 isRvFr"
+                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 dOerlP"
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 laajSh"
+                        class="StyledMaskedInput-sc-99vkfa-0 eqDcRR"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="24"
@@ -467,11 +467,11 @@ exports[`App empty 1`] = `
                     class="StyledBox-sc-13pk1d4-0 bDDuRD"
                   >
                     <div
-                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 isRvFr"
+                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 dOerlP"
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 laajSh"
+                        class="StyledMaskedInput-sc-99vkfa-0 eqDcRR"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="1"
@@ -847,7 +847,7 @@ exports[`App empty 2`] = `
                 >
                   <input
                     autocomplete="off"
-                    class="StyledTextInput-sc-1x30a0s-0 kgOLIf"
+                    class="StyledTextInput-sc-1x30a0s-0 khIUhX"
                     name="name"
                     style="text-align: right;"
                     value="my theme"
@@ -893,11 +893,11 @@ exports[`App empty 2`] = `
                     class="StyledBox-sc-13pk1d4-0 bDDuRD"
                   >
                     <div
-                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 isRvFr"
+                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 dOerlP"
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 laajSh"
+                        class="StyledMaskedInput-sc-99vkfa-0 eqDcRR"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="4"
@@ -950,11 +950,11 @@ exports[`App empty 2`] = `
                     class="StyledBox-sc-13pk1d4-0 bDDuRD"
                   >
                     <div
-                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 isRvFr"
+                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 dOerlP"
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 laajSh"
+                        class="StyledMaskedInput-sc-99vkfa-0 eqDcRR"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="24"
@@ -1007,11 +1007,11 @@ exports[`App empty 2`] = `
                     class="StyledBox-sc-13pk1d4-0 bDDuRD"
                   >
                     <div
-                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 isRvFr"
+                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 dOerlP"
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 laajSh"
+                        class="StyledMaskedInput-sc-99vkfa-0 eqDcRR"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="1"

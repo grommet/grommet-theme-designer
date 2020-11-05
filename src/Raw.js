@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Button, Form, FormField, TextArea } from 'grommet';
 import Action from './components/Action';
 
 const Raw = ({ theme, onClose, setTheme }) => {
+  const [value, setValue] = useState({ json: JSON.stringify(theme, null, 2) });
   return (
     <Action closeTitle="cancel" onClose={onClose} modal>
       <Form
-        value={{ json: JSON.stringify(theme, null, 2) }}
+        value={value}
+        onChange={setValue}
         onSubmit={({ value: { json } }) => {
           const nextTheme = JSON.parse(json);
           setTheme(nextTheme);
@@ -19,7 +21,7 @@ const Raw = ({ theme, onClose, setTheme }) => {
             component={TextArea}
             cols={60}
             rows={20}
-            validate={value => {
+            validate={(value) => {
               try {
                 JSON.parse(value);
               } catch (e) {
