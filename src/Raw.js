@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Button, Form, FormField, TextArea } from 'grommet';
+import { Box, Button, Form, FormField, Paragraph, TextArea } from 'grommet';
 import Action from './components/Action';
 
 const Raw = ({ theme, onClose, setTheme }) => {
@@ -29,6 +29,11 @@ const Raw = ({ theme, onClose, setTheme }) => {
               }
             }}
           />
+          <Paragraph>
+            If you use this theme in a typescript project, you will need to
+            remove a few theme-designer specific properties to avoid type
+            conflicts.
+          </Paragraph>
           <Box align="start">
             <Button type="submit" label="Done" />
           </Box>
