@@ -19,7 +19,7 @@ exports[`App empty 1`] = `
           my theme
         </span>
         <button
-          class="StyledButton-sc-323bzc-0 biFwkg"
+          class="StyledButton-sc-323bzc-0 jYfluo"
           title="edit theme"
           type="button"
         >
@@ -122,13 +122,13 @@ exports[`App empty 1`] = `
           </h3>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 MCTSW"
+          class="StyledBox-sc-13pk1d4-0 cgdSci"
           tabindex="0"
         >
           Accessibility
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 MCTSW"
+          class="StyledBox-sc-13pk1d4-0 cgdSci"
           tabindex="0"
         >
           Typography
@@ -143,25 +143,25 @@ exports[`App empty 1`] = `
           </h3>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 MCTSW"
+          class="StyledBox-sc-13pk1d4-0 cgdSci"
           tabindex="0"
         >
           Dashboard
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 MCTSW"
+          class="StyledBox-sc-13pk1d4-0 cgdSci"
           tabindex="0"
         >
           List
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 MCTSW"
+          class="StyledBox-sc-13pk1d4-0 cgdSci"
           tabindex="0"
         >
           Form
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 MCTSW"
+          class="StyledBox-sc-13pk1d4-0 cgdSci"
           tabindex="0"
         >
           Document
@@ -181,7 +181,7 @@ exports[`App empty 1`] = `
           class="StyledBox-sc-13pk1d4-0 bNXNmt"
         >
           <button
-            class="StyledButton-sc-323bzc-0 biFwkg"
+            class="StyledButton-sc-323bzc-0 jYfluo"
             title="choose another theme"
             type="button"
           >
@@ -241,7 +241,7 @@ exports[`App empty 1`] = `
             class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eBVJAG"
           />
           <button
-            class="StyledButton-sc-323bzc-0 biFwkg"
+            class="StyledButton-sc-323bzc-0 jYfluo"
             title="see JSON"
             type="button"
           >
@@ -262,7 +262,7 @@ exports[`App empty 1`] = `
             class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eBVJAG"
           />
           <button
-            class="StyledButton-sc-323bzc-0 biFwkg"
+            class="StyledButton-sc-323bzc-0 jYfluo"
             title="share"
             type="button"
           >
@@ -307,7 +307,7 @@ exports[`App empty 1`] = `
                 >
                   <input
                     autocomplete="off"
-                    class="StyledTextInput-sc-1x30a0s-0 cJRnLi"
+                    class="StyledTextInput-sc-1x30a0s-0 NhfcF"
                     name="name"
                     style="text-align: right;"
                     value="my theme"
@@ -357,7 +357,7 @@ exports[`App empty 1`] = `
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 eqDcRR"
+                        class="StyledMaskedInput-sc-99vkfa-0 jFKRku"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="4"
@@ -414,7 +414,7 @@ exports[`App empty 1`] = `
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 eqDcRR"
+                        class="StyledMaskedInput-sc-99vkfa-0 jFKRku"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="24"
@@ -471,7 +471,7 @@ exports[`App empty 1`] = `
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 eqDcRR"
+                        class="StyledMaskedInput-sc-99vkfa-0 jFKRku"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="1"
@@ -484,7 +484,7 @@ exports[`App empty 1`] = `
           </div>
           <button
             aria-label="Open Drop"
-            class="StyledButton-sc-323bzc-0 jgVvaO"
+            class="StyledButton-sc-323bzc-0 jhYSze"
             type="button"
           >
             <div
@@ -506,7 +506,7 @@ exports[`App empty 1`] = `
             </div>
           </button>
           <button
-            class="StyledButton-sc-323bzc-0 jgVvaO"
+            class="StyledButton-sc-323bzc-0 jhYSze"
             type="button"
           >
             <div
@@ -520,7 +520,7 @@ exports[`App empty 1`] = `
             </div>
           </button>
           <button
-            class="StyledButton-sc-323bzc-0 jgVvaO"
+            class="StyledButton-sc-323bzc-0 jhYSze"
             type="button"
           >
             <div
@@ -559,7 +559,7 @@ exports[`App empty 2`] = `
           my theme
         </span>
         <button
-          class="StyledButton-sc-323bzc-0 biFwkg"
+          class="StyledButton-sc-323bzc-0 jYfluo"
           title="edit theme"
           type="button"
         >
@@ -662,13 +662,13 @@ exports[`App empty 2`] = `
           </h3>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 MCTSW"
+          class="StyledBox-sc-13pk1d4-0 cgdSci"
           tabindex="0"
         >
           Accessibility
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 MCTSW"
+          class="StyledBox-sc-13pk1d4-0 cgdSci"
           tabindex="0"
         >
           Typography
@@ -683,25 +683,25 @@ exports[`App empty 2`] = `
           </h3>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 MCTSW"
+          class="StyledBox-sc-13pk1d4-0 cgdSci"
           tabindex="0"
         >
           Dashboard
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 MCTSW"
+          class="StyledBox-sc-13pk1d4-0 cgdSci"
           tabindex="0"
         >
           List
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 MCTSW"
+          class="StyledBox-sc-13pk1d4-0 cgdSci"
           tabindex="0"
         >
           Form
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 MCTSW"
+          class="StyledBox-sc-13pk1d4-0 cgdSci"
           tabindex="0"
         >
           Document
@@ -721,7 +721,7 @@ exports[`App empty 2`] = `
           class="StyledBox-sc-13pk1d4-0 bNXNmt"
         >
           <button
-            class="StyledButton-sc-323bzc-0 biFwkg"
+            class="StyledButton-sc-323bzc-0 jYfluo"
             title="choose another theme"
             type="button"
           >
@@ -781,7 +781,7 @@ exports[`App empty 2`] = `
             class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eBVJAG"
           />
           <button
-            class="StyledButton-sc-323bzc-0 biFwkg"
+            class="StyledButton-sc-323bzc-0 jYfluo"
             title="see JSON"
             type="button"
           >
@@ -802,7 +802,7 @@ exports[`App empty 2`] = `
             class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eBVJAG"
           />
           <button
-            class="StyledButton-sc-323bzc-0 biFwkg"
+            class="StyledButton-sc-323bzc-0 jYfluo"
             title="share"
             type="button"
           >
@@ -847,7 +847,7 @@ exports[`App empty 2`] = `
                 >
                   <input
                     autocomplete="off"
-                    class="StyledTextInput-sc-1x30a0s-0 cJRnLi"
+                    class="StyledTextInput-sc-1x30a0s-0 NhfcF"
                     name="name"
                     style="text-align: right;"
                     value="my theme"
@@ -897,7 +897,7 @@ exports[`App empty 2`] = `
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 eqDcRR"
+                        class="StyledMaskedInput-sc-99vkfa-0 jFKRku"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="4"
@@ -954,7 +954,7 @@ exports[`App empty 2`] = `
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 eqDcRR"
+                        class="StyledMaskedInput-sc-99vkfa-0 jFKRku"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="24"
@@ -1011,7 +1011,7 @@ exports[`App empty 2`] = `
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 eqDcRR"
+                        class="StyledMaskedInput-sc-99vkfa-0 jFKRku"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="1"
@@ -1024,7 +1024,7 @@ exports[`App empty 2`] = `
           </div>
           <button
             aria-label="Open Drop"
-            class="StyledButton-sc-323bzc-0 jgVvaO"
+            class="StyledButton-sc-323bzc-0 jhYSze"
             type="button"
           >
             <div
@@ -1046,7 +1046,7 @@ exports[`App empty 2`] = `
             </div>
           </button>
           <button
-            class="StyledButton-sc-323bzc-0 jgVvaO"
+            class="StyledButton-sc-323bzc-0 jhYSze"
             type="button"
           >
             <div
@@ -1060,7 +1060,7 @@ exports[`App empty 2`] = `
             </div>
           </button>
           <button
-            class="StyledButton-sc-323bzc-0 jgVvaO"
+            class="StyledButton-sc-323bzc-0 jhYSze"
             type="button"
           >
             <div
