@@ -12,8 +12,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-ga": "^3.2.0",
-    "react-is": "17.0.1",
-    "react-scripts": "4.0.0",
+    "react-is": "17.0.2",
+    "react-scripts": "4.0.3",
     "styled-components": "^5.0.0",
     "wcag-contrast": "^3.0.0"
   },
