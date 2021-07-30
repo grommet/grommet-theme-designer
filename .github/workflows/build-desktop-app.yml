@@ -68,8 +68,6 @@ jobs:
           node-version: 15.x
       - run: npm install
 
-      - run: npx lerna bootstrap --scope=@hive-flow/desktop --include-dependencies
-
       - name: install Rust stable
         uses: actions-rs/toolchain@v1
         with:
