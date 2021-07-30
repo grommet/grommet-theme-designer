@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "grommet": "https://github.com/grommet/grommet/tarball/stable",
+    "@tauri-apps/api": "^1.0.0-beta.5",
+    "grommet": "^2.17.4",
     "grommet-icons": "^4.2.0",
     "grommet-theme-aruba": "^0.1.2",
     "grommet-theme-dxc": "^0.1.2",
@@ -20,6 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "tauri": "tauri",
     "lint": "eslint './src/**/*.js'",
     "test": "react-scripts test",
     "test:nowatch": "react-scripts test --watchAll=false",
@@ -45,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@tauri-apps/cli": "^1.0.0-beta.6",
     "@testing-library/react": "^11.1.0",
     "pre-commit": "^1.2.2",
     "prettier": "^2.0.5",
