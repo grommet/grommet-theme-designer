@@ -45,15 +45,15 @@ exports[`App empty 1`] = `
           role="radiogroup"
         >
           <label
-            class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hOmplk"
+            class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 erduql"
             for="light"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 hIYvga StyledRadioButton-g1f6ld-5 MBaYF"
+              class="StyledBox-sc-13pk1d4-0 hIYvga StyledRadioButton-sc-g1f6ld-5 chIzBU"
             >
               <input
                 checked=""
-                class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 kTMaqq"
+                class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 cQcVYv"
                 id="light"
                 name="themeMode"
                 tabindex="0"
@@ -61,10 +61,10 @@ exports[`App empty 1`] = `
                 value="light"
               />
               <div
-                class="StyledBox-sc-13pk1d4-0 eRzKjY StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 bOYFlj"
+                class="StyledBox-sc-13pk1d4-0 eRzKjY StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 enovQq"
               >
                 <svg
-                  class="StyledRadioButton__StyledRadioButtonIcon-g1f6ld-3 bboJpI"
+                  class="StyledRadioButton__StyledRadioButtonIcon-sc-g1f6ld-3 exBLNN"
                   preserveAspectRatio="xMidYMid meet"
                   viewBox="0 0 24 24"
                 >
@@ -77,7 +77,7 @@ exports[`App empty 1`] = `
               </div>
             </div>
             <span
-              class="StyledRadioButton__StyledRadioButtonLabel-g1f6ld-2"
+              class="StyledRadioButton__StyledRadioButtonLabel-sc-g1f6ld-2"
             >
               light
             </span>
@@ -86,14 +86,14 @@ exports[`App empty 1`] = `
             class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cNVajf"
           />
           <label
-            class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hOmplk"
+            class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 erduql"
             for="dark"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 hIYvga StyledRadioButton-g1f6ld-5 MBaYF"
+              class="StyledBox-sc-13pk1d4-0 hIYvga StyledRadioButton-sc-g1f6ld-5 chIzBU"
             >
               <input
-                class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 kTMaqq"
+                class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 cQcVYv"
                 id="dark"
                 name="themeMode"
                 tabindex="-1"
@@ -101,11 +101,11 @@ exports[`App empty 1`] = `
                 value="dark"
               />
               <div
-                class="StyledBox-sc-13pk1d4-0 jIEhEE StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 bOYFlj"
+                class="StyledBox-sc-13pk1d4-0 jIEhEE StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 enovQq"
               />
             </div>
             <span
-              class="StyledRadioButton__StyledRadioButtonLabel-g1f6ld-2"
+              class="StyledRadioButton__StyledRadioButtonLabel-sc-g1f6ld-2"
             >
               dark
             </span>
@@ -588,15 +588,15 @@ exports[`App empty 2`] = `
           role="radiogroup"
         >
           <label
-            class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hOmplk"
+            class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 erduql"
             for="light"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 hIYvga StyledRadioButton-g1f6ld-5 MBaYF"
+              class="StyledBox-sc-13pk1d4-0 hIYvga StyledRadioButton-sc-g1f6ld-5 chIzBU"
             >
               <input
                 checked=""
-                class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 kTMaqq"
+                class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 cQcVYv"
                 id="light"
                 name="themeMode"
                 tabindex="0"
@@ -604,10 +604,10 @@ exports[`App empty 2`] = `
                 value="light"
               />
               <div
-                class="StyledBox-sc-13pk1d4-0 eRzKjY StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 bOYFlj"
+                class="StyledBox-sc-13pk1d4-0 eRzKjY StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 enovQq"
               >
                 <svg
-                  class="StyledRadioButton__StyledRadioButtonIcon-g1f6ld-3 bboJpI"
+                  class="StyledRadioButton__StyledRadioButtonIcon-sc-g1f6ld-3 exBLNN"
                   preserveAspectRatio="xMidYMid meet"
                   viewBox="0 0 24 24"
                 >
@@ -620,7 +620,7 @@ exports[`App empty 2`] = `
               </div>
             </div>
             <span
-              class="StyledRadioButton__StyledRadioButtonLabel-g1f6ld-2"
+              class="StyledRadioButton__StyledRadioButtonLabel-sc-g1f6ld-2"
             >
               light
             </span>
@@ -629,14 +629,14 @@ exports[`App empty 2`] = `
             class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cNVajf"
           />
           <label
-            class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hOmplk"
+            class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 erduql"
             for="dark"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 hIYvga StyledRadioButton-g1f6ld-5 MBaYF"
+              class="StyledBox-sc-13pk1d4-0 hIYvga StyledRadioButton-sc-g1f6ld-5 chIzBU"
             >
               <input
-                class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 kTMaqq"
+                class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 cQcVYv"
                 id="dark"
                 name="themeMode"
                 tabindex="-1"
@@ -644,11 +644,11 @@ exports[`App empty 2`] = `
                 value="dark"
               />
               <div
-                class="StyledBox-sc-13pk1d4-0 jIEhEE StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 bOYFlj"
+                class="StyledBox-sc-13pk1d4-0 jIEhEE StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 enovQq"
               />
             </div>
             <span
-              class="StyledRadioButton__StyledRadioButtonLabel-g1f6ld-2"
+              class="StyledRadioButton__StyledRadioButtonLabel-sc-g1f6ld-2"
             >
               dark
             </span>
