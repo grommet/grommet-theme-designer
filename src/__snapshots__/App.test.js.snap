@@ -2,30 +2,30 @@
 
 exports[`App empty 1`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 bXnHki"
+  class="StyledGrommet-sc-19lkkz7-0 iczAJM"
 >
   <div
-    class="StyledGrid-sc-1wofa1l-0 iMDKWT"
+    class="StyledGrid-sc-1wofa1l-0 gplslt"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 gIgGna"
+      class="StyledBox-sc-13pk1d4-0 dnlRsp"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 gKvcZu"
+        class="StyledBox-sc-13pk1d4-0 exZeXF"
       >
         <span
-          class="StyledText-sc-1sadyjn-0 fDswbh"
+          class="StyledText-sc-1sadyjn-0 fdlQMb"
         >
           my theme
         </span>
         <button
-          class="StyledButton-sc-323bzc-0 ciGrVc"
+          class="StyledButton-sc-323bzc-0 ksaUpW"
           title="edit theme"
           type="button"
         >
           <svg
             aria-label="Edit"
-            class="StyledIcon-sc-ofa7kd-0 biAetp"
+            class="StyledIcon-sc-ofa7kd-0 gPdjsX"
             viewBox="0 0 24 24"
           >
             <path
@@ -38,22 +38,22 @@ exports[`App empty 1`] = `
         </button>
       </div>
       <div
-        class="StyledBox-sc-13pk1d4-0 iYovZL"
+        class="StyledBox-sc-13pk1d4-0 gXhMXE"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 kSZjsO"
+          class="StyledBox-sc-13pk1d4-0 jLMOlN"
           role="radiogroup"
         >
           <label
-            class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 erduql"
+            class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 kvJkVD"
             for="light"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 hIYvga StyledRadioButton-sc-g1f6ld-5 chIzBU"
+              class="StyledBox-sc-13pk1d4-0 bbeUot StyledRadioButton-sc-g1f6ld-5 hNMTMW"
             >
               <input
                 checked=""
-                class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 cQcVYv"
+                class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 fhNmLR"
                 id="light"
                 name="themeMode"
                 tabindex="0"
@@ -61,10 +61,10 @@ exports[`App empty 1`] = `
                 value="light"
               />
               <div
-                class="StyledBox-sc-13pk1d4-0 eRzKjY StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 enovQq"
+                class="StyledBox-sc-13pk1d4-0 kDGMJj StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 ivjGdo"
               >
                 <svg
-                  class="StyledRadioButton__StyledRadioButtonIcon-sc-g1f6ld-3 exBLNN"
+                  class="StyledRadioButton__StyledRadioButtonIcon-sc-g1f6ld-3 NQZAP"
                   preserveAspectRatio="xMidYMid meet"
                   viewBox="0 0 24 24"
                 >
@@ -83,17 +83,17 @@ exports[`App empty 1`] = `
             </span>
           </label>
           <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cNVajf"
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cHicIt"
           />
           <label
-            class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 erduql"
+            class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 kvJkVD"
             for="dark"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 hIYvga StyledRadioButton-sc-g1f6ld-5 chIzBU"
+              class="StyledBox-sc-13pk1d4-0 bbeUot StyledRadioButton-sc-g1f6ld-5 hNMTMW"
             >
               <input
-                class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 cQcVYv"
+                class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 fhNmLR"
                 id="dark"
                 name="themeMode"
                 tabindex="-1"
@@ -101,7 +101,7 @@ exports[`App empty 1`] = `
                 value="dark"
               />
               <div
-                class="StyledBox-sc-13pk1d4-0 jIEhEE StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 enovQq"
+                class="StyledBox-sc-13pk1d4-0 lhsVIn StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 ivjGdo"
               />
             </div>
             <span
@@ -113,58 +113,58 @@ exports[`App empty 1`] = `
         </div>
       </div>
       <div
-        class="StyledBox-sc-13pk1d4-0 ieckpS"
+        class="StyledBox-sc-13pk1d4-0 dLvCRF"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 iYovZL"
+          class="StyledBox-sc-13pk1d4-0 gXhMXE"
         >
           <h3
-            class="StyledHeading-sc-1rdh4aw-0 iyWUOB"
+            class="StyledHeading-sc-1rdh4aw-0 gQCKzf"
           >
             Guides
           </h3>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 bggRdL"
+          class="StyledBox-sc-13pk1d4-0 uHmeI"
           tabindex="0"
         >
           Accessibility
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 bggRdL"
+          class="StyledBox-sc-13pk1d4-0 uHmeI"
           tabindex="0"
         >
           Typography
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 iYovZL"
+          class="StyledBox-sc-13pk1d4-0 gXhMXE"
         >
           <h3
-            class="StyledHeading-sc-1rdh4aw-0 iyWUOB"
+            class="StyledHeading-sc-1rdh4aw-0 gQCKzf"
           >
             Examples
           </h3>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 bggRdL"
+          class="StyledBox-sc-13pk1d4-0 uHmeI"
           tabindex="0"
         >
           Dashboard
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 bggRdL"
+          class="StyledBox-sc-13pk1d4-0 uHmeI"
           tabindex="0"
         >
           List
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 bggRdL"
+          class="StyledBox-sc-13pk1d4-0 uHmeI"
           tabindex="0"
         >
           Form
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 bggRdL"
+          class="StyledBox-sc-13pk1d4-0 uHmeI"
           tabindex="0"
         >
           Document
@@ -172,25 +172,25 @@ exports[`App empty 1`] = `
       </div>
     </div>
     <div
-      class="StyledBox-sc-13pk1d4-0 kSZjsO"
+      class="StyledBox-sc-13pk1d4-0 jLMOlN"
     />
     <div
-      class="StyledBox-sc-13pk1d4-0 icQTPG"
+      class="StyledBox-sc-13pk1d4-0 fWcuWh"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 kUDZbv"
+        class="StyledBox-sc-13pk1d4-0 hDxjsI"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 hkBRUQ"
+          class="StyledBox-sc-13pk1d4-0 llpXoj"
         >
           <button
-            class="StyledButton-sc-323bzc-0 ciGrVc"
+            class="StyledButton-sc-323bzc-0 ksaUpW"
             title="choose another theme"
             type="button"
           >
             <svg
               aria-label="Apps"
-              class="StyledIcon-sc-ofa7kd-0 biAetp"
+              class="StyledIcon-sc-ofa7kd-0 gPdjsX"
               viewBox="0 0 24 24"
             >
               <path
@@ -202,20 +202,20 @@ exports[`App empty 1`] = `
             </svg>
           </button>
           <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dvZAHf"
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
           />
           <div
-            class="StyledBox-sc-13pk1d4-0 hiGxse"
+            class="StyledBox-sc-13pk1d4-0 wrGSV"
           >
             <button
-              class="StyledButton-sc-323bzc-0 kBoFIO"
+              class="StyledButton-sc-323bzc-0 kQYEjo"
               disabled=""
               title="undo last change"
               type="button"
             >
               <svg
                 aria-label="Undo"
-                class="StyledIcon-sc-ofa7kd-0 biAetp"
+                class="StyledIcon-sc-ofa7kd-0 gPdjsX"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -224,14 +224,14 @@ exports[`App empty 1`] = `
               </svg>
             </button>
             <button
-              class="StyledButton-sc-323bzc-0 kBoFIO"
+              class="StyledButton-sc-323bzc-0 kQYEjo"
               disabled=""
               title="redo last change"
               type="button"
             >
               <svg
                 aria-label="Redo"
-                class="StyledIcon-sc-ofa7kd-0 biAetp"
+                class="StyledIcon-sc-ofa7kd-0 gPdjsX"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -241,16 +241,16 @@ exports[`App empty 1`] = `
             </button>
           </div>
           <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dvZAHf"
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
           />
           <button
-            class="StyledButton-sc-323bzc-0 ciGrVc"
+            class="StyledButton-sc-323bzc-0 ksaUpW"
             title="see JSON"
             type="button"
           >
             <svg
               aria-label="Code"
-              class="StyledIcon-sc-ofa7kd-0 biAetp"
+              class="StyledIcon-sc-ofa7kd-0 gPdjsX"
               viewBox="0 0 24 24"
             >
               <path
@@ -262,16 +262,16 @@ exports[`App empty 1`] = `
             </svg>
           </button>
           <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dvZAHf"
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
           />
           <button
-            class="StyledButton-sc-323bzc-0 ciGrVc"
+            class="StyledButton-sc-323bzc-0 ksaUpW"
             title="share"
             type="button"
           >
             <svg
               aria-label="Share"
-              class="StyledIcon-sc-ofa7kd-0 biAetp"
+              class="StyledIcon-sc-ofa7kd-0 gPdjsX"
               viewBox="0 0 24 24"
             >
               <path
@@ -284,33 +284,33 @@ exports[`App empty 1`] = `
           </button>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 ZKFSN"
+          class="StyledBox-sc-13pk1d4-0 epEpDq"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 jVtpaV"
+            class="StyledBox-sc-13pk1d4-0 elLIlG"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 bjyzVT"
+              class="StyledBox-sc-13pk1d4-0 huWkbw"
             >
               <label
-                class="StyledBox-sc-13pk1d4-0 kATuyi"
+                class="StyledBox-sc-13pk1d4-0 miOcd"
                 for="name"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 fkNrQP"
+                  class="StyledText-sc-1sadyjn-0 gKFELF"
                 >
                   name
                 </span>
               </label>
               <div
-                class="StyledBox-sc-13pk1d4-0 kSZjsO"
+                class="StyledBox-sc-13pk1d4-0 jLMOlN"
               >
                 <div
-                  class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 bDhrKg"
+                  class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 jqwtzG"
                 >
                   <input
                     autocomplete="off"
-                    class="StyledTextInput-sc-1x30a0s-0 iWvxqK"
+                    class="StyledTextInput-sc-1x30a0s-0 hDKkiw"
                     name="name"
                     style="text-align: right;"
                     value="my theme"
@@ -320,29 +320,32 @@ exports[`App empty 1`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 jVtpaV"
+            class="StyledBox-sc-13pk1d4-0 elLIlG"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 bjyzVT"
+              class="StyledBox-sc-13pk1d4-0 huWkbw"
             >
               <label
-                class="StyledBox-sc-13pk1d4-0 kATuyi"
+                class="StyledBox-sc-13pk1d4-0 miOcd"
                 for="rounding"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 fkNrQP"
+                  class="StyledText-sc-1sadyjn-0 gKFELF"
                 >
                   rounding
                 </span>
               </label>
               <div
-                class="StyledBox-sc-13pk1d4-0 kSZjsO"
+                class="StyledBox-sc-13pk1d4-0 jLMOlN"
               >
                 <div
-                  class="StyledBox-sc-13pk1d4-0 hznAXC"
+                  class="StyledBox-sc-13pk1d4-0 deExzV"
                 >
                   <input
-                    class="StyledRangeInput-sc-15st9ck-0 dUIrVo"
+                    aria-valuemax="24"
+                    aria-valuemin="0"
+                    aria-valuenow="4"
+                    class="StyledRangeInput-sc-15st9ck-0 eUHKaP"
                     id="rounding"
                     max="24"
                     min="0"
@@ -353,21 +356,21 @@ exports[`App empty 1`] = `
                     value="4"
                   />
                   <div
-                    class="StyledBox-sc-13pk1d4-0 hMtyHK"
+                    class="StyledBox-sc-13pk1d4-0 bxAOvx"
                   >
                     <div
-                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 cmOgly"
+                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 gNPSOw"
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 fXzMfQ"
+                        class="StyledMaskedInput-sc-99vkfa-0 eqjcce"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="4"
                       />
                     </div>
                     <span
-                      class="StyledText-sc-1sadyjn-0 fkNrQP"
+                      class="StyledText-sc-1sadyjn-0 gKFELF"
                     >
                       px
                     </span>
@@ -377,29 +380,32 @@ exports[`App empty 1`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 jVtpaV"
+            class="StyledBox-sc-13pk1d4-0 elLIlG"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 bjyzVT"
+              class="StyledBox-sc-13pk1d4-0 huWkbw"
             >
               <label
-                class="StyledBox-sc-13pk1d4-0 kATuyi"
+                class="StyledBox-sc-13pk1d4-0 miOcd"
                 for="spacing"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 fkNrQP"
+                  class="StyledText-sc-1sadyjn-0 gKFELF"
                 >
                   spacing
                 </span>
               </label>
               <div
-                class="StyledBox-sc-13pk1d4-0 kSZjsO"
+                class="StyledBox-sc-13pk1d4-0 jLMOlN"
               >
                 <div
-                  class="StyledBox-sc-13pk1d4-0 hznAXC"
+                  class="StyledBox-sc-13pk1d4-0 deExzV"
                 >
                   <input
-                    class="StyledRangeInput-sc-15st9ck-0 dUIrVo"
+                    aria-valuemax="36"
+                    aria-valuemin="12"
+                    aria-valuenow="24"
+                    class="StyledRangeInput-sc-15st9ck-0 eUHKaP"
                     id="spacing"
                     max="36"
                     min="12"
@@ -410,21 +416,21 @@ exports[`App empty 1`] = `
                     value="24"
                   />
                   <div
-                    class="StyledBox-sc-13pk1d4-0 hMtyHK"
+                    class="StyledBox-sc-13pk1d4-0 bxAOvx"
                   >
                     <div
-                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 cmOgly"
+                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 gNPSOw"
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 fXzMfQ"
+                        class="StyledMaskedInput-sc-99vkfa-0 eqjcce"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="24"
                       />
                     </div>
                     <span
-                      class="StyledText-sc-1sadyjn-0 fkNrQP"
+                      class="StyledText-sc-1sadyjn-0 gKFELF"
                     >
                       px
                     </span>
@@ -434,29 +440,32 @@ exports[`App empty 1`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 jVtpaV"
+            class="StyledBox-sc-13pk1d4-0 elLIlG"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 bjyzVT"
+              class="StyledBox-sc-13pk1d4-0 huWkbw"
             >
               <label
-                class="StyledBox-sc-13pk1d4-0 kATuyi"
+                class="StyledBox-sc-13pk1d4-0 miOcd"
                 for="scale"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 fkNrQP"
+                  class="StyledText-sc-1sadyjn-0 gKFELF"
                 >
                   font scale
                 </span>
               </label>
               <div
-                class="StyledBox-sc-13pk1d4-0 kSZjsO"
+                class="StyledBox-sc-13pk1d4-0 jLMOlN"
               >
                 <div
-                  class="StyledBox-sc-13pk1d4-0 hznAXC"
+                  class="StyledBox-sc-13pk1d4-0 deExzV"
                 >
                   <input
-                    class="StyledRangeInput-sc-15st9ck-0 dUIrVo"
+                    aria-valuemax="4"
+                    aria-valuemin="0.2"
+                    aria-valuenow="1"
+                    class="StyledRangeInput-sc-15st9ck-0 eUHKaP"
                     id="scale"
                     max="4"
                     min="0.2"
@@ -467,14 +476,14 @@ exports[`App empty 1`] = `
                     value="1"
                   />
                   <div
-                    class="StyledBox-sc-13pk1d4-0 hMtyHK"
+                    class="StyledBox-sc-13pk1d4-0 bxAOvx"
                   >
                     <div
-                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 cmOgly"
+                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 gNPSOw"
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 fXzMfQ"
+                        class="StyledMaskedInput-sc-99vkfa-0 eqjcce"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="1"
@@ -487,50 +496,50 @@ exports[`App empty 1`] = `
           </div>
           <button
             aria-label="Open Drop"
-            class="StyledButton-sc-323bzc-0 lQPXe"
+            class="StyledButton-sc-323bzc-0 ekkmSA"
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 iFJfkp"
+              class="StyledBox-sc-13pk1d4-0 qzhpi"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 fkNrQP"
+                class="StyledText-sc-1sadyjn-0 gKFELF"
               >
                 font
               </span>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dvZAHf"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
               />
               <span
-                class="StyledText-sc-1sadyjn-0 fDswbh"
+                class="StyledText-sc-1sadyjn-0 fdlQMb"
               >
                 Helvetica
               </span>
             </div>
           </button>
           <button
-            class="StyledButton-sc-323bzc-0 lQPXe"
+            class="StyledButton-sc-323bzc-0 ekkmSA"
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 iFJfkp"
+              class="StyledBox-sc-13pk1d4-0 qzhpi"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 fkNrQP"
+                class="StyledText-sc-1sadyjn-0 gKFELF"
               >
                 colors
               </span>
             </div>
           </button>
           <button
-            class="StyledButton-sc-323bzc-0 lQPXe"
+            class="StyledButton-sc-323bzc-0 ekkmSA"
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 iFJfkp"
+              class="StyledBox-sc-13pk1d4-0 qzhpi"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 fkNrQP"
+                class="StyledText-sc-1sadyjn-0 gKFELF"
               >
                 form field
               </span>
@@ -545,30 +554,30 @@ exports[`App empty 1`] = `
 
 exports[`App empty 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 bXnHki"
+  class="StyledGrommet-sc-19lkkz7-0 iczAJM"
 >
   <div
-    class="StyledGrid-sc-1wofa1l-0 iMDKWT"
+    class="StyledGrid-sc-1wofa1l-0 gplslt"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 gIgGna"
+      class="StyledBox-sc-13pk1d4-0 dnlRsp"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 gKvcZu"
+        class="StyledBox-sc-13pk1d4-0 exZeXF"
       >
         <span
-          class="StyledText-sc-1sadyjn-0 fDswbh"
+          class="StyledText-sc-1sadyjn-0 fdlQMb"
         >
           my theme
         </span>
         <button
-          class="StyledButton-sc-323bzc-0 ciGrVc"
+          class="StyledButton-sc-323bzc-0 ksaUpW"
           title="edit theme"
           type="button"
         >
           <svg
             aria-label="Edit"
-            class="StyledIcon-sc-ofa7kd-0 biAetp"
+            class="StyledIcon-sc-ofa7kd-0 gPdjsX"
             viewBox="0 0 24 24"
           >
             <path
@@ -581,22 +590,22 @@ exports[`App empty 2`] = `
         </button>
       </div>
       <div
-        class="StyledBox-sc-13pk1d4-0 iYovZL"
+        class="StyledBox-sc-13pk1d4-0 gXhMXE"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 kSZjsO"
+          class="StyledBox-sc-13pk1d4-0 jLMOlN"
           role="radiogroup"
         >
           <label
-            class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 erduql"
+            class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 kvJkVD"
             for="light"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 hIYvga StyledRadioButton-sc-g1f6ld-5 chIzBU"
+              class="StyledBox-sc-13pk1d4-0 bbeUot StyledRadioButton-sc-g1f6ld-5 hNMTMW"
             >
               <input
                 checked=""
-                class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 cQcVYv"
+                class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 fhNmLR"
                 id="light"
                 name="themeMode"
                 tabindex="0"
@@ -604,10 +613,10 @@ exports[`App empty 2`] = `
                 value="light"
               />
               <div
-                class="StyledBox-sc-13pk1d4-0 eRzKjY StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 enovQq"
+                class="StyledBox-sc-13pk1d4-0 kDGMJj StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 ivjGdo"
               >
                 <svg
-                  class="StyledRadioButton__StyledRadioButtonIcon-sc-g1f6ld-3 exBLNN"
+                  class="StyledRadioButton__StyledRadioButtonIcon-sc-g1f6ld-3 NQZAP"
                   preserveAspectRatio="xMidYMid meet"
                   viewBox="0 0 24 24"
                 >
@@ -626,17 +635,17 @@ exports[`App empty 2`] = `
             </span>
           </label>
           <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cNVajf"
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cHicIt"
           />
           <label
-            class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 erduql"
+            class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 kvJkVD"
             for="dark"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 hIYvga StyledRadioButton-sc-g1f6ld-5 chIzBU"
+              class="StyledBox-sc-13pk1d4-0 bbeUot StyledRadioButton-sc-g1f6ld-5 hNMTMW"
             >
               <input
-                class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 cQcVYv"
+                class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 fhNmLR"
                 id="dark"
                 name="themeMode"
                 tabindex="-1"
@@ -644,7 +653,7 @@ exports[`App empty 2`] = `
                 value="dark"
               />
               <div
-                class="StyledBox-sc-13pk1d4-0 jIEhEE StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 enovQq"
+                class="StyledBox-sc-13pk1d4-0 lhsVIn StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 ivjGdo"
               />
             </div>
             <span
@@ -656,58 +665,58 @@ exports[`App empty 2`] = `
         </div>
       </div>
       <div
-        class="StyledBox-sc-13pk1d4-0 ieckpS"
+        class="StyledBox-sc-13pk1d4-0 dLvCRF"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 iYovZL"
+          class="StyledBox-sc-13pk1d4-0 gXhMXE"
         >
           <h3
-            class="StyledHeading-sc-1rdh4aw-0 iyWUOB"
+            class="StyledHeading-sc-1rdh4aw-0 gQCKzf"
           >
             Guides
           </h3>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 bggRdL"
+          class="StyledBox-sc-13pk1d4-0 uHmeI"
           tabindex="0"
         >
           Accessibility
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 bggRdL"
+          class="StyledBox-sc-13pk1d4-0 uHmeI"
           tabindex="0"
         >
           Typography
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 iYovZL"
+          class="StyledBox-sc-13pk1d4-0 gXhMXE"
         >
           <h3
-            class="StyledHeading-sc-1rdh4aw-0 iyWUOB"
+            class="StyledHeading-sc-1rdh4aw-0 gQCKzf"
           >
             Examples
           </h3>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 bggRdL"
+          class="StyledBox-sc-13pk1d4-0 uHmeI"
           tabindex="0"
         >
           Dashboard
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 bggRdL"
+          class="StyledBox-sc-13pk1d4-0 uHmeI"
           tabindex="0"
         >
           List
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 bggRdL"
+          class="StyledBox-sc-13pk1d4-0 uHmeI"
           tabindex="0"
         >
           Form
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 bggRdL"
+          class="StyledBox-sc-13pk1d4-0 uHmeI"
           tabindex="0"
         >
           Document
@@ -715,25 +724,25 @@ exports[`App empty 2`] = `
       </div>
     </div>
     <div
-      class="StyledBox-sc-13pk1d4-0 kSZjsO"
+      class="StyledBox-sc-13pk1d4-0 jLMOlN"
     />
     <div
-      class="StyledBox-sc-13pk1d4-0 icQTPG"
+      class="StyledBox-sc-13pk1d4-0 fWcuWh"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 kUDZbv"
+        class="StyledBox-sc-13pk1d4-0 hDxjsI"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 hkBRUQ"
+          class="StyledBox-sc-13pk1d4-0 llpXoj"
         >
           <button
-            class="StyledButton-sc-323bzc-0 ciGrVc"
+            class="StyledButton-sc-323bzc-0 ksaUpW"
             title="choose another theme"
             type="button"
           >
             <svg
               aria-label="Apps"
-              class="StyledIcon-sc-ofa7kd-0 biAetp"
+              class="StyledIcon-sc-ofa7kd-0 gPdjsX"
               viewBox="0 0 24 24"
             >
               <path
@@ -745,20 +754,20 @@ exports[`App empty 2`] = `
             </svg>
           </button>
           <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dvZAHf"
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
           />
           <div
-            class="StyledBox-sc-13pk1d4-0 hiGxse"
+            class="StyledBox-sc-13pk1d4-0 wrGSV"
           >
             <button
-              class="StyledButton-sc-323bzc-0 kBoFIO"
+              class="StyledButton-sc-323bzc-0 kQYEjo"
               disabled=""
               title="undo last change"
               type="button"
             >
               <svg
                 aria-label="Undo"
-                class="StyledIcon-sc-ofa7kd-0 biAetp"
+                class="StyledIcon-sc-ofa7kd-0 gPdjsX"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -767,14 +776,14 @@ exports[`App empty 2`] = `
               </svg>
             </button>
             <button
-              class="StyledButton-sc-323bzc-0 kBoFIO"
+              class="StyledButton-sc-323bzc-0 kQYEjo"
               disabled=""
               title="redo last change"
               type="button"
             >
               <svg
                 aria-label="Redo"
-                class="StyledIcon-sc-ofa7kd-0 biAetp"
+                class="StyledIcon-sc-ofa7kd-0 gPdjsX"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -784,16 +793,16 @@ exports[`App empty 2`] = `
             </button>
           </div>
           <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dvZAHf"
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
           />
           <button
-            class="StyledButton-sc-323bzc-0 ciGrVc"
+            class="StyledButton-sc-323bzc-0 ksaUpW"
             title="see JSON"
             type="button"
           >
             <svg
               aria-label="Code"
-              class="StyledIcon-sc-ofa7kd-0 biAetp"
+              class="StyledIcon-sc-ofa7kd-0 gPdjsX"
               viewBox="0 0 24 24"
             >
               <path
@@ -805,16 +814,16 @@ exports[`App empty 2`] = `
             </svg>
           </button>
           <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dvZAHf"
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
           />
           <button
-            class="StyledButton-sc-323bzc-0 ciGrVc"
+            class="StyledButton-sc-323bzc-0 ksaUpW"
             title="share"
             type="button"
           >
             <svg
               aria-label="Share"
-              class="StyledIcon-sc-ofa7kd-0 biAetp"
+              class="StyledIcon-sc-ofa7kd-0 gPdjsX"
               viewBox="0 0 24 24"
             >
               <path
@@ -827,33 +836,33 @@ exports[`App empty 2`] = `
           </button>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 ZKFSN"
+          class="StyledBox-sc-13pk1d4-0 epEpDq"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 jVtpaV"
+            class="StyledBox-sc-13pk1d4-0 elLIlG"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 bjyzVT"
+              class="StyledBox-sc-13pk1d4-0 huWkbw"
             >
               <label
-                class="StyledBox-sc-13pk1d4-0 kATuyi"
+                class="StyledBox-sc-13pk1d4-0 miOcd"
                 for="name"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 fkNrQP"
+                  class="StyledText-sc-1sadyjn-0 gKFELF"
                 >
                   name
                 </span>
               </label>
               <div
-                class="StyledBox-sc-13pk1d4-0 kSZjsO"
+                class="StyledBox-sc-13pk1d4-0 jLMOlN"
               >
                 <div
-                  class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 bDhrKg"
+                  class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 jqwtzG"
                 >
                   <input
                     autocomplete="off"
-                    class="StyledTextInput-sc-1x30a0s-0 iWvxqK"
+                    class="StyledTextInput-sc-1x30a0s-0 hDKkiw"
                     name="name"
                     style="text-align: right;"
                     value="my theme"
@@ -863,29 +872,32 @@ exports[`App empty 2`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 jVtpaV"
+            class="StyledBox-sc-13pk1d4-0 elLIlG"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 bjyzVT"
+              class="StyledBox-sc-13pk1d4-0 huWkbw"
             >
               <label
-                class="StyledBox-sc-13pk1d4-0 kATuyi"
+                class="StyledBox-sc-13pk1d4-0 miOcd"
                 for="rounding"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 fkNrQP"
+                  class="StyledText-sc-1sadyjn-0 gKFELF"
                 >
                   rounding
                 </span>
               </label>
               <div
-                class="StyledBox-sc-13pk1d4-0 kSZjsO"
+                class="StyledBox-sc-13pk1d4-0 jLMOlN"
               >
                 <div
-                  class="StyledBox-sc-13pk1d4-0 hznAXC"
+                  class="StyledBox-sc-13pk1d4-0 deExzV"
                 >
                   <input
-                    class="StyledRangeInput-sc-15st9ck-0 dUIrVo"
+                    aria-valuemax="24"
+                    aria-valuemin="0"
+                    aria-valuenow="4"
+                    class="StyledRangeInput-sc-15st9ck-0 eUHKaP"
                     id="rounding"
                     max="24"
                     min="0"
@@ -896,21 +908,21 @@ exports[`App empty 2`] = `
                     value="4"
                   />
                   <div
-                    class="StyledBox-sc-13pk1d4-0 hMtyHK"
+                    class="StyledBox-sc-13pk1d4-0 bxAOvx"
                   >
                     <div
-                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 cmOgly"
+                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 gNPSOw"
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 fXzMfQ"
+                        class="StyledMaskedInput-sc-99vkfa-0 eqjcce"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="4"
                       />
                     </div>
                     <span
-                      class="StyledText-sc-1sadyjn-0 fkNrQP"
+                      class="StyledText-sc-1sadyjn-0 gKFELF"
                     >
                       px
                     </span>
@@ -920,29 +932,32 @@ exports[`App empty 2`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 jVtpaV"
+            class="StyledBox-sc-13pk1d4-0 elLIlG"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 bjyzVT"
+              class="StyledBox-sc-13pk1d4-0 huWkbw"
             >
               <label
-                class="StyledBox-sc-13pk1d4-0 kATuyi"
+                class="StyledBox-sc-13pk1d4-0 miOcd"
                 for="spacing"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 fkNrQP"
+                  class="StyledText-sc-1sadyjn-0 gKFELF"
                 >
                   spacing
                 </span>
               </label>
               <div
-                class="StyledBox-sc-13pk1d4-0 kSZjsO"
+                class="StyledBox-sc-13pk1d4-0 jLMOlN"
               >
                 <div
-                  class="StyledBox-sc-13pk1d4-0 hznAXC"
+                  class="StyledBox-sc-13pk1d4-0 deExzV"
                 >
                   <input
-                    class="StyledRangeInput-sc-15st9ck-0 dUIrVo"
+                    aria-valuemax="36"
+                    aria-valuemin="12"
+                    aria-valuenow="24"
+                    class="StyledRangeInput-sc-15st9ck-0 eUHKaP"
                     id="spacing"
                     max="36"
                     min="12"
@@ -953,21 +968,21 @@ exports[`App empty 2`] = `
                     value="24"
                   />
                   <div
-                    class="StyledBox-sc-13pk1d4-0 hMtyHK"
+                    class="StyledBox-sc-13pk1d4-0 bxAOvx"
                   >
                     <div
-                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 cmOgly"
+                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 gNPSOw"
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 fXzMfQ"
+                        class="StyledMaskedInput-sc-99vkfa-0 eqjcce"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="24"
                       />
                     </div>
                     <span
-                      class="StyledText-sc-1sadyjn-0 fkNrQP"
+                      class="StyledText-sc-1sadyjn-0 gKFELF"
                     >
                       px
                     </span>
@@ -977,29 +992,32 @@ exports[`App empty 2`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 jVtpaV"
+            class="StyledBox-sc-13pk1d4-0 elLIlG"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 bjyzVT"
+              class="StyledBox-sc-13pk1d4-0 huWkbw"
             >
               <label
-                class="StyledBox-sc-13pk1d4-0 kATuyi"
+                class="StyledBox-sc-13pk1d4-0 miOcd"
                 for="scale"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 fkNrQP"
+                  class="StyledText-sc-1sadyjn-0 gKFELF"
                 >
                   font scale
                 </span>
               </label>
               <div
-                class="StyledBox-sc-13pk1d4-0 kSZjsO"
+                class="StyledBox-sc-13pk1d4-0 jLMOlN"
               >
                 <div
-                  class="StyledBox-sc-13pk1d4-0 hznAXC"
+                  class="StyledBox-sc-13pk1d4-0 deExzV"
                 >
                   <input
-                    class="StyledRangeInput-sc-15st9ck-0 dUIrVo"
+                    aria-valuemax="4"
+                    aria-valuemin="0.2"
+                    aria-valuenow="1"
+                    class="StyledRangeInput-sc-15st9ck-0 eUHKaP"
                     id="scale"
                     max="4"
                     min="0.2"
@@ -1010,14 +1028,14 @@ exports[`App empty 2`] = `
                     value="1"
                   />
                   <div
-                    class="StyledBox-sc-13pk1d4-0 hMtyHK"
+                    class="StyledBox-sc-13pk1d4-0 bxAOvx"
                   >
                     <div
-                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 cmOgly"
+                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 gNPSOw"
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 fXzMfQ"
+                        class="StyledMaskedInput-sc-99vkfa-0 eqjcce"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="1"
@@ -1030,50 +1048,50 @@ exports[`App empty 2`] = `
           </div>
           <button
             aria-label="Open Drop"
-            class="StyledButton-sc-323bzc-0 lQPXe"
+            class="StyledButton-sc-323bzc-0 ekkmSA"
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 iFJfkp"
+              class="StyledBox-sc-13pk1d4-0 qzhpi"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 fkNrQP"
+                class="StyledText-sc-1sadyjn-0 gKFELF"
               >
                 font
               </span>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dvZAHf"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
               />
               <span
-                class="StyledText-sc-1sadyjn-0 fDswbh"
+                class="StyledText-sc-1sadyjn-0 fdlQMb"
               >
                 Helvetica
               </span>
             </div>
           </button>
           <button
-            class="StyledButton-sc-323bzc-0 lQPXe"
+            class="StyledButton-sc-323bzc-0 ekkmSA"
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 iFJfkp"
+              class="StyledBox-sc-13pk1d4-0 qzhpi"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 fkNrQP"
+                class="StyledText-sc-1sadyjn-0 gKFELF"
               >
                 colors
               </span>
             </div>
           </button>
           <button
-            class="StyledButton-sc-323bzc-0 lQPXe"
+            class="StyledButton-sc-323bzc-0 ekkmSA"
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 iFJfkp"
+              class="StyledBox-sc-13pk1d4-0 qzhpi"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 fkNrQP"
+                class="StyledText-sc-1sadyjn-0 gKFELF"
               >
                 form field
               </span>
