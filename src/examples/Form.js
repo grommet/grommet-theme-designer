@@ -12,6 +12,7 @@ import {
   RadioButtonGroup,
   Select,
 } from 'grommet';
+import NavButton from './NavButton';
 
 const ExampleForm = ({ theme }) => {
   const [value, setValue] = useState({ name: '', local: true, size: 'medium' });
@@ -43,7 +44,7 @@ const ExampleForm = ({ theme }) => {
             </FormField>
             <Box direction="row" gap="small" margin={{ top: 'medium' }}>
               <Button primary label="Submit" type="submit" />
-              <Button label="Cancel" />
+              <NavButton label="Cancel" path="/" />
             </Box>
           </Form>
         </Box>

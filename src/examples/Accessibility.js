@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 import {
   Anchor,
   Box,
   Grommet,
   Header,
   Heading,
-  Main,
   Paragraph,
   Text,
 } from 'grommet';
 import Score from '../colors/Score';
+import Page from './Page';
 
 const Cell = ({ background, text, theme, themeMode }) => (
   <Box
@@ -80,7 +81,8 @@ const Backgrounds = ({ backgrounds, texts, theme, themeMode }) => (
   </Box>
 );
 
-const Accessibility = ({ theme }) => {
+const Accessibility = () => {
+  const theme = useContext(ThemeContext);
   const colors = theme.global.colors;
   const backgrounds = Object.keys(colors).filter((color) =>
     color.startsWith('background-'),
@@ -91,7 +93,7 @@ const Accessibility = ({ theme }) => {
   const texts = Object.keys(colors).filter((color) => color.startsWith('text'));
 
   return (
-    <Main background="background">
+    <Page background="background">
       <Header pad="medium" direction="column" gap="none">
         <Heading level={1} size="small" margin="none">
           Accessibility
@@ -130,7 +132,7 @@ const Accessibility = ({ theme }) => {
         texts={texts}
         theme={theme}
       />
-    </Main>
+    </Page>
   );
 };
 

@@ -1,21 +1,47 @@
-import React, { useState } from 'react';
-import { Box, Button, Form, FormField, Paragraph, TextArea } from 'grommet';
-import Action from './components/Action';
+import React, { useContext, useState } from 'react';
+import {
+  Box,
+  Button,
+  Form,
+  FormField,
+  Header,
+  Layer,
+  Paragraph,
+  TextArea,
+} from 'grommet';
+import { Close } from 'grommet-icons';
+import AppContext from './AppContext';
 
-const Raw = ({ theme, onClose, setTheme }) => {
+const Raw = ({ onClose }) => {
+  const { theme, setTheme } = useContext(AppContext);
   const [value, setValue] = useState({ json: JSON.stringify(theme, null, 2) });
   return (
-    <Action closeTitle="cancel" onClose={onClose} modal>
-      <Form
-        value={value}
-        onChange={setValue}
-        onSubmit={({ value: { json } }) => {
-          const nextTheme = JSON.parse(json);
-          setTheme(nextTheme);
-          onClose();
-        }}
-      >
-        <Box fill>
+    <Layer
+      position="top"
+      margin="medium"
+      modal
+      onEsc={onClose}
+      onClickOutside={onClose}
+    >
+      <Box pad="medium" overflow="auto" background="dark-1">
+        <Form
+          value={value}
+          onChange={setValue}
+          onSubmit={({ value: { json } }) => {
+            const nextTheme = JSON.parse(json);
+            setTheme(nextTheme);
+            onClose();
+          }}
+        >
+          <Header>
+            <Button
+              tip="close"
+              icon={<Close />}
+              hoverIndicator
+              onClick={onClose}
+            />
+            <Button type="submit" primary label="Save" />
+          </Header>
           <FormField
             name="json"
             component={TextArea}
@@ -29,17 +55,14 @@ const Raw = ({ theme, onClose, setTheme }) => {
               }
             }}
           />
-          <Paragraph>
+          <Paragraph size="small">
             If you use this theme in a typescript project, you will need to
             remove a few theme-designer specific properties to avoid type
             conflicts.
           </Paragraph>
-          <Box align="start">
-            <Button type="submit" label="Done" />
-          </Box>
-        </Box>
-      </Form>
-    </Action>
+        </Form>
+      </Box>
+    </Layer>
   );
 };
 

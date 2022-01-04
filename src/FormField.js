@@ -1,15 +1,17 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useContext, useState } from 'react';
 import {
   Box,
   Button,
+  Header,
   Heading,
   RadioButtonGroup,
   Select,
   Text,
   base,
 } from 'grommet';
-import { Close } from 'grommet-icons';
+import { Previous } from 'grommet-icons';
 import Field from './components/Field';
+import AppContext from './AppContext';
 
 const sizes = ['xsmall', 'small', 'medium', 'large'];
 const edgeSizes = [...sizes, 'none'];
@@ -22,7 +24,8 @@ const Label = ({ value }) => (
   </Box>
 );
 
-const FormField = ({ theme, setTheme, setView }) => {
+const FormField = ({ setAspect }) => {
+  const { theme, setTheme } = useContext(AppContext);
   const formField = theme.formField || base.formField;
   const cloneTheme = useCallback(() => {
     const nextTheme = JSON.parse(JSON.stringify(theme));
@@ -108,22 +111,17 @@ const FormField = ({ theme, setTheme, setView }) => {
 
   return (
     <Box flex={false}>
-      <Box
-        pad={{ left: 'medium' }}
-        direction="row"
-        align="center"
-        justify="between"
-        gap="medium"
-      >
-        <Heading level={3} size="small" margin="none">
-          Form Field
-        </Heading>
+      <Header>
         <Button
-          icon={<Close />}
+          icon={<Previous />}
           hoverIndicator
-          onClick={() => setView('primary')}
+          onClick={() => setAspect('Primary')}
         />
-      </Box>
+        <Heading level={3} size="small" margin="none">
+          form field
+        </Heading>
+        <Box pad={{ horizontal: 'medium' }} />
+      </Header>
 
       <Fields label="border">
         <Field label="position">

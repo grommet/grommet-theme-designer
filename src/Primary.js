@@ -1,35 +1,10 @@
-import React, { Fragment, useState } from 'react';
-import { Box, Button, Text, TextInput } from 'grommet';
-import { Apps, Code, Redo, Share, Undo } from 'grommet-icons';
+import React, { useContext, useState } from 'react';
+import { Box, Button, Footer, Heading, Layer, Text, TextInput } from 'grommet';
+import { FormNext } from 'grommet-icons';
 import Field from './components/Field';
-import ActionButton from './components/ActionButton';
-import Font from './Font';
+import AppContext from './AppContext';
 import Rounding from './Rounding';
 import Spacing from './Spacing';
-import Themes from './Themes';
-import Raw from './Raw';
-import Sharer from './Share';
-
-const Actioner = ({ Icon, Modal, theme, title, setTheme }) => {
-  const [show, setShow] = useState();
-  return (
-    <Fragment>
-      <ActionButton
-        title={title}
-        icon={<Icon />}
-        hoverIndicator
-        onClick={() => setShow(true)}
-      />
-      {show && (
-        <Modal
-          theme={theme}
-          setTheme={setTheme}
-          onClose={() => setShow(false)}
-        />
-      )}
-    </Fragment>
-  );
-};
 
 const ViewButton = ({ label, onClick }) => (
   <Button hoverIndicator onClick={onClick}>
@@ -38,80 +13,64 @@ const ViewButton = ({ label, onClick }) => (
       align="center"
       justify="between"
       gap="small"
-      pad={{ vertical: 'small', horizontal: 'medium' }}
+      pad={{ vertical: 'small', start: 'medium', end: 'small' }}
       border="bottom"
     >
       <Text>{label}</Text>
+      <FormNext />
     </Box>
   </Button>
 );
 
-const Primary = ({ theme, setTheme, setView, onUndo, onRedo }) => (
-  <Box flex={false}>
-    <Box
-      flex={false}
-      direction="row"
-      justify="between"
-      gap="small"
-      border="bottom"
-    >
-      <Actioner
-        title="choose another theme"
-        Icon={Apps}
-        Modal={Themes}
-        theme={theme}
-        setTheme={setTheme}
-      />
-      <Box direction="row">
-        <ActionButton
-          title="undo last change"
-          icon={<Undo />}
-          disabled={!onUndo}
-          onClick={onUndo}
-        />
-        <ActionButton
-          title="redo last change"
-          icon={<Redo />}
-          disabled={!onRedo}
-          onClick={onRedo}
-        />
+const Primary = ({ setAspect }) => {
+  const { deleteActiveTheme, theme, setTheme } = useContext(AppContext);
+  const [confirmDelete, setConfirmDelete] = useState();
+
+  const onDelete = () => {
+    setConfirmDelete(undefined);
+    deleteActiveTheme();
+  };
+
+  const onCancelConfirm = () => setConfirmDelete(undefined);
+
+  return (
+    <Box flex="grow" gap="xlarge" justify="between">
+      <Box>
+        <Field htmlFor="name" label="name">
+          <TextInput
+            name="name"
+            plain
+            style={{ textAlign: 'right' }}
+            value={theme.name}
+            onChange={(event) => {
+              const nextTheme = JSON.parse(JSON.stringify(theme));
+              nextTheme.name = event.target.value;
+              setTheme(nextTheme);
+            }}
+          />
+        </Field>
+        <Rounding theme={theme} setTheme={setTheme} />
+        <Spacing theme={theme} setTheme={setTheme} />
+        <ViewButton label="fonts" onClick={() => setAspect('Fonts')} />
+        <ViewButton label="colors" onClick={() => setAspect('Colors')} />
+        <ViewButton label="form field" onClick={() => setAspect('FormField')} />
       </Box>
-      <Actioner
-        title="see JSON"
-        Icon={Code}
-        Modal={Raw}
-        theme={theme}
-        setTheme={setTheme}
-      />
-      <Actioner
-        title="share"
-        Icon={Share}
-        Modal={Sharer}
-        theme={theme}
-        setTheme={setTheme}
-      />
+      <Footer pad="medium" justify="center">
+        <Button label="delete theme" onClick={() => setConfirmDelete(true)} />
+        {confirmDelete && (
+          <Layer onEsc={onCancelConfirm} onClickOutside={onCancelConfirm}>
+            <Box pad="medium">
+              <Heading level="3">Delete {theme.name}?</Heading>
+              <Footer>
+                <Button primary label="Yes, delete" onClick={onDelete} />
+                <Button label="No, cancel delete" onClick={onCancelConfirm} />
+              </Footer>
+            </Box>
+          </Layer>
+        )}
+      </Footer>
     </Box>
-    <Box margin={{ bottom: 'xlarge' }}>
-      <Field htmlFor="name" label="name">
-        <TextInput
-          name="name"
-          plain
-          style={{ textAlign: 'right' }}
-          value={theme.name}
-          onChange={(event) => {
-            const nextTheme = JSON.parse(JSON.stringify(theme));
-            nextTheme.name = event.target.value;
-            setTheme(nextTheme);
-          }}
-        />
-      </Field>
-      <Rounding theme={theme} setTheme={setTheme} />
-      <Spacing theme={theme} setTheme={setTheme} />
-      <Font theme={theme} setTheme={setTheme} />
-      <ViewButton label="colors" onClick={() => setView('colors')} />
-      <ViewButton label="form field" onClick={() => setView('form field')} />
-    </Box>
-  </Box>
-);
+  );
+};
 
 export default Primary;

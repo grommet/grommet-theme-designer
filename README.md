@@ -8,7 +8,7 @@ Live at: [theme-designer.grommet.io](https://theme-designer.grommet.io)
 
 ### Command shortcuts
 
-* **command-e** or **windows-E**: toggles preview vs. edit modes
+- **command-.** or **windows-.**: toggles preview vs. edit modes
 
 ### Saving
 
@@ -17,8 +17,7 @@ you can refresh your window without fear of losing anything. But, if you
 clear your local storage, you'll lose whatever you've done.
 
 If you change the name of a theme, it will create a new theme with that name.
-The control in the top left let's you browse your themes, create a new one,
-or import a theme file you've exported.
+The control in the top left let's you browse your themes or create a new one.
 
 ### Sharing
 

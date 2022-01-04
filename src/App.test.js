@@ -6,10 +6,10 @@ describe('App', () => {
   afterEach(cleanup);
 
   test('empty', () => {
-    const { getByTitle, container } = render(<App />);
+    const { getByLabelText, container } = render(<App />);
     expect(container.firstChild).toMatchSnapshot();
 
-    fireEvent.click(getByTitle('choose another theme'));
+    fireEvent.click(getByLabelText('show my themes'));
     expect(container.firstChild).toMatchSnapshot();
   });
 });

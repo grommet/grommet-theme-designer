@@ -1,15 +1,24 @@
-import React, { Fragment, useEffect, useMemo, useRef, useState } from 'react';
+import React, {
+  Fragment,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import {
   Box,
   Button,
   DropButton,
   Form,
   Grommet,
+  Header,
   Heading,
   Text,
   TextInput,
 } from 'grommet';
-import { Add, Checkmark, Close, Trash } from 'grommet-icons';
+import { Add, Checkmark, Close, Previous, Trash } from 'grommet-icons';
+import AppContext from '../AppContext';
 
 const help = {
   background: `The underlying background color for Grommet.`,
@@ -160,7 +169,7 @@ const Color = ({ prefix, theme, setTheme }) => {
       hoverIndicator
       onOpen={() => setOpen(true)}
       onClose={() => setOpen(false)}
-      dropAlign={{ right: 'left', top: 'top' }}
+      dropAlign={{ left: 'right', top: 'top' }}
       dropContent={
         <Box>
           {colors.map((color) => {
@@ -280,7 +289,7 @@ const Palette = ({ color, theme, setTheme }) => {
       hoverIndicator
       onOpen={() => setOpen(true)}
       onClose={() => setOpen(false)}
-      dropAlign={{ right: 'left' }}
+      dropAlign={{ left: 'right' }}
       dropContent={
         <ColorRow>
           <NameBox justify="between" pad={undefined}>
@@ -377,7 +386,7 @@ const Graph = ({ theme, setTheme }) => {
     <DropButton
       plain
       hoverIndicator
-      dropAlign={{ right: 'left', bottom: 'bottom' }}
+      dropAlign={{ left: 'right', bottom: 'bottom' }}
       dropContent={
         <Box>
           {colors.map((color) => {
@@ -497,9 +506,11 @@ const prefixes = [
   'status',
 ];
 
-const Colors = ({ theme, setTheme, setView }) => {
+const Colors = ({ setAspect }) => {
+  const { theme, setTheme } = useContext(AppContext);
   const [adding, setAdding] = useState();
   const ref = useRef();
+
   const palette = useMemo(
     () =>
       Object.keys(theme.global.colors)
@@ -514,59 +525,50 @@ const Colors = ({ theme, setTheme, setView }) => {
 
   return (
     <Box flex={false}>
-      <Box
-        pad={{ left: 'medium' }}
-        direction="row"
-        align="center"
-        justify="between"
-        gap="medium"
-      >
-        <Heading level={3} size="small" margin="none">
-          Colors
-        </Heading>
+      <Header>
         <Button
-          icon={<Close />}
+          icon={<Previous />}
           hoverIndicator
-          onClick={() => setView('primary')}
+          onClick={() => setAspect('Primary')}
         />
-      </Box>
+        <Heading level={3} size="small" margin="none">
+          colors
+        </Heading>
+        <Button icon={<Add />} hoverIndicator onClick={() => setAdding('')} />
+      </Header>
 
       {palette.map((color) => (
         <Palette key={color} color={color} theme={theme} setTheme={setTheme} />
       ))}
-      <Box align="end">
-        {adding === undefined ? (
-          <Button icon={<Add />} hoverIndicator onClick={() => setAdding('')} />
-        ) : (
-          <Form
-            onSubmit={(event) => {
-              event.preventDefault();
-              if (!theme.global.colors[adding]) {
-                const nextTheme = JSON.parse(JSON.stringify(theme));
-                nextTheme.global.colors[adding] = { dark: '', light: '' };
-                nextTheme.global.colors[`${adding}!`] = '';
-                setTheme(nextTheme);
-              }
-              setAdding(undefined);
-            }}
-          >
-            <Box direction="row" align="center">
-              <TextInput
-                ref={ref}
-                placeholder="new color name"
-                value={adding}
-                onChange={(event) => setAdding(event.target.value)}
-              />
-              <Button type="submit" icon={<Checkmark />} hoverIndicator />
-              <Button
-                icon={<Close />}
-                hoverIndicator
-                onClick={() => setAdding(undefined)}
-              />
-            </Box>
-          </Form>
-        )}
-      </Box>
+      {adding !== undefined && (
+        <Form
+          onSubmit={(event) => {
+            event.preventDefault();
+            if (!theme.global.colors[adding]) {
+              const nextTheme = JSON.parse(JSON.stringify(theme));
+              nextTheme.global.colors[adding] = { dark: '', light: '' };
+              nextTheme.global.colors[`${adding}!`] = '';
+              setTheme(nextTheme);
+            }
+            setAdding(undefined);
+          }}
+        >
+          <Box direction="row" align="center" pad={{ start: 'small' }}>
+            <TextInput
+              ref={ref}
+              placeholder="new color name"
+              value={adding}
+              onChange={(event) => setAdding(event.target.value)}
+            />
+            <Button type="submit" icon={<Checkmark />} hoverIndicator />
+            <Button
+              icon={<Close />}
+              hoverIndicator
+              onClick={() => setAdding(undefined)}
+            />
+          </Box>
+        </Form>
+      )}
       <Box border="horizontal" />
 
       {prefixes.map((prefix) => (

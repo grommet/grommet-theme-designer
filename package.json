@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "grommet": "https://github.com/grommet/grommet/tarball/stable",
-    "grommet-icons": "^4.2.0",
+    "grommet-icons": "https://github.com/grommet/grommet-icons/tarball/stable",
     "grommet-theme-aruba": "^0.1.2",
     "grommet-theme-dxc": "^0.1.2",
     "grommet-theme-hp": "^0.1.2",

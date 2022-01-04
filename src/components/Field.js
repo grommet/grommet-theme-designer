@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { Box, Paragraph, Text } from 'grommet';
 
-export default React.forwardRef(
+export default forwardRef(
   ({ children, first, label, help, htmlFor, ...rest }, ref) => (
     <Box ref={ref} border="bottom">
       <Box

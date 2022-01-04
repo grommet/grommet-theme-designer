@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   Box,
-  Button,
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
   Chart,
   Grid,
-  Header,
   Heading,
-  Main,
-  Menu,
   Meter,
+  Nav,
   Stack,
   Text,
-  TextInput,
 } from 'grommet';
-import { Ad, User } from 'grommet-icons';
+import Page from './Page';
+import { RouterContext } from './Router';
+import NavAnchor from './NavAnchor';
 
 const data = [
   { name: 'Clients', value: 27, note: 'added 2 today' },
@@ -64,193 +66,177 @@ const Key = ({ labels, ...rest }) => (
   </Box>
 );
 
-const Dashboard = ({ theme }) => {
+const Dashboard = () => {
+  const { push } = useContext(RouterContext);
   return (
-    <Main background="background-back">
+    <Page>
       <Grid
-        columns={['flex', ['medium', 'xlarge'], 'flex']}
-        rows={['flex']}
-        areas={[{ name: 'content', start: [1, 0], end: [1, 0] }]}
+        columns={{ size: 'small', count: 'fit' }}
+        rows="small"
+        gap="medium"
+        margin={{ bottom: 'medium', top: 'small' }}
       >
-        <Box gridArea="content">
-          <Header pad="small">
-            <Button icon={<Ad />} hoverIndicator />
-            <Box>
-              <TextInput placeholder="search ..." />
-            </Box>
-            <Menu
-              icon={<User />}
-              hoverIndicator
-              dropAlign={{ right: 'right', top: 'bottom' }}
-              items={[{ label: 'Logout' }]}
-            />
-          </Header>
-          <Grid
-            columns={{ size: 'small', count: 'fit' }}
-            rows="small"
-            gap="medium"
-            margin="medium"
-          >
-            {data.map(({ name, value, note }) => (
-              <Box
-                key={name}
-                background="background-front"
-                round="small"
-                overflow="hidden"
-              >
-                <Box flex pad="small">
-                  <Heading level={3} size="small" margin="none">
-                    {name}
-                  </Heading>
-                  <Box flex align="start" justify="center" gap="xsmall">
-                    <Text size="xxlarge" weight="bold">
-                      {value}
-                    </Text>
-                    <Meter
-                      max={Math.pow(10, ('' + value).length)}
-                      values={[{ value }]}
-                      round
-                    />
-                  </Box>
-                </Box>
-                <Box pad="small" background="background-contrast">
-                  <Text color="text-xweak">{note}</Text>
-                </Box>
-              </Box>
-            ))}
-          </Grid>
-
-          <Box
+        {data.map(({ name, value, note }) => (
+          <Card
+            key={name}
             background="background-front"
-            margin="medium"
-            round="small"
-            overflow="hidden"
+            onClick={(event) => {
+              event.preventDefault();
+              push('/list');
+            }}
           >
-            <Box pad="small">
+            <CardHeader pad="small">
               <Heading level={3} size="small" margin="none">
-                Latency <Text color="text-xweak">ms</Text>
+                {name}
               </Heading>
-              <Box justify="start" direction="column" gap="xsmall">
-                <Stack guidingChild="last" fill={false}>
-                  <Chart
-                    type="area"
-                    values={chartInboundValues}
-                    bounds={[
-                      [0, 7],
-                      [0, 100],
-                    ]}
-                    overflow={true}
-                    thickness="xsmall"
-                    round={false}
-                    color={{ color: 'graph-0', opacity: 'medium' }}
-                    size="full"
-                  />
-                  <Chart
-                    type="line"
-                    values={chartInboundValues}
-                    bounds={[
-                      [0, 7],
-                      [0, 100],
-                    ]}
-                    overflow={true}
-                    thickness="xsmall"
-                    round={true}
-                    color={{ color: 'graph-0' }}
-                    size="full"
-                  />
-                  <Chart
-                    type="point"
-                    values={[{ value: [3, 90] }]}
-                    bounds={[
-                      [0, 7],
-                      [0, 100],
-                    ]}
-                    overflow={true}
-                    thickness="small"
-                    round={true}
-                    color={{ color: 'text', opacity: 'medium' }}
-                    size="full"
-                  />
-                  <Axis
-                    align="end"
-                    height="xsmall"
-                    pad={{ right: 'xsmall' }}
-                    values={[2000, 1000, 0]}
-                  />
-                </Stack>
-                <Stack guidingChild="last">
-                  <Chart
-                    type="area"
-                    values={chartOutboundValues}
-                    bounds={[
-                      [0, 7],
-                      [0, 100],
-                    ]}
-                    style={{ transform: 'rotate(180deg)' }}
-                    color={{ color: 'graph-1', opacity: 'medium' }}
-                    thickness="xsmall"
-                    round={false}
-                    size="full"
-                    overflow={true}
-                  />
-                  <Chart
-                    type="line"
-                    values={chartOutboundValues}
-                    bounds={[
-                      [0, 7],
-                      [0, 100],
-                    ]}
-                    style={{ transform: 'rotate(180deg)' }}
-                    color={{ color: 'graph-1' }}
-                    thickness="xsmall"
-                    round={true}
-                    size="full"
-                    overflow={true}
-                  />
-                  <Chart
-                    type="point"
-                    values={[{ value: [5, 50] }]}
-                    bounds={[
-                      [0, 7],
-                      [0, 100],
-                    ]}
-                    style={{ transform: 'rotate(180deg)' }}
-                    color={{ color: 'text', opacity: 'medium' }}
-                    thickness="small"
-                    round={true}
-                    size="full"
-                    overflow={true}
-                  />
-                  <Axis
-                    align="end"
-                    height="xxsmall"
-                    pad={{ right: 'xsmall' }}
-                    values={[0, 1000]}
-                  />
-                </Stack>
-                <Axis
-                  align="start"
-                  direction="row"
-                  border={{ side: 'top' }}
-                  pad={{ horizontal: 'xsmall' }}
-                  values={['-24h', '-12h', 'now']}
-                />
-              </Box>
-            </Box>
-            <Key
-              margin="small"
-              labels={[
-                { color: 'graph-0', label: 'inbound' },
-                { color: 'graph-1', label: 'outbound' },
-              ]}
-            />
-            <Box background="background-contrast" pad="small">
-              <Text color="text-xweak">peak of 2000ms 15 hours ago</Text>
-            </Box>
-          </Box>
-        </Box>
+            </CardHeader>
+            <CardBody align="start" justify="center" gap="xsmall" pad="small">
+              <Text size="xxlarge" weight="bold">
+                {value}
+              </Text>
+              <Meter
+                max={Math.pow(10, ('' + value).length)}
+                values={[{ value }]}
+                round
+              />
+            </CardBody>
+            <CardFooter pad="small" background="background-contrast">
+              <Text color="text-xweak">{note}</Text>
+            </CardFooter>
+          </Card>
+        ))}
       </Grid>
-    </Main>
+
+      <Card background="background-front">
+        <CardHeader pad="small">
+          <Heading level={3} size="small" margin="none">
+            Latency <Text color="text-xweak">ms</Text>
+          </Heading>
+        </CardHeader>
+        <CardBody gap="xsmall" pad="small">
+          <Box justify="start" direction="column" gap="xsmall">
+            <Stack guidingChild="last" fill={false}>
+              <Chart
+                type="area"
+                values={chartInboundValues}
+                bounds={[
+                  [0, 7],
+                  [0, 100],
+                ]}
+                overflow={true}
+                thickness="xsmall"
+                round={false}
+                color={{ color: 'graph-0', opacity: 'medium' }}
+                size="full"
+              />
+              <Chart
+                type="line"
+                values={chartInboundValues}
+                bounds={[
+                  [0, 7],
+                  [0, 100],
+                ]}
+                overflow={true}
+                thickness="xsmall"
+                round={true}
+                color={{ color: 'graph-0' }}
+                size="full"
+              />
+              <Chart
+                type="point"
+                values={[{ value: [3, 90] }]}
+                bounds={[
+                  [0, 7],
+                  [0, 100],
+                ]}
+                overflow={true}
+                thickness="small"
+                round={true}
+                color={{ color: 'text', opacity: 'medium' }}
+                size="full"
+              />
+              <Axis
+                align="end"
+                height="xsmall"
+                pad={{ right: 'xsmall' }}
+                values={[2000, 1000, 0]}
+              />
+            </Stack>
+            <Stack guidingChild="last">
+              <Chart
+                type="area"
+                values={chartOutboundValues}
+                bounds={[
+                  [0, 7],
+                  [0, 100],
+                ]}
+                style={{ transform: 'rotate(180deg)' }}
+                color={{ color: 'graph-1', opacity: 'medium' }}
+                thickness="xsmall"
+                round={false}
+                size="full"
+                overflow={true}
+              />
+              <Chart
+                type="line"
+                values={chartOutboundValues}
+                bounds={[
+                  [0, 7],
+                  [0, 100],
+                ]}
+                style={{ transform: 'rotate(180deg)' }}
+                color={{ color: 'graph-1' }}
+                thickness="xsmall"
+                round={true}
+                size="full"
+                overflow={true}
+              />
+              <Chart
+                type="point"
+                values={[{ value: [5, 50] }]}
+                bounds={[
+                  [0, 7],
+                  [0, 100],
+                ]}
+                style={{ transform: 'rotate(180deg)' }}
+                color={{ color: 'text', opacity: 'medium' }}
+                thickness="small"
+                round={true}
+                size="full"
+                overflow={true}
+              />
+              <Axis
+                align="end"
+                height="xxsmall"
+                pad={{ right: 'xsmall' }}
+                values={[0, 1000]}
+              />
+            </Stack>
+            <Axis
+              align="start"
+              direction="row"
+              border={{ side: 'top' }}
+              pad={{ horizontal: 'xsmall' }}
+              values={['-24h', '-12h', 'now']}
+            />
+          </Box>
+          <Key
+            margin="small"
+            labels={[
+              { color: 'graph-0', label: 'inbound' },
+              { color: 'graph-1', label: 'outbound' },
+            ]}
+          />
+        </CardBody>
+        <CardFooter background="background-contrast" pad="small">
+          <Text color="text-xweak">peak of 2000ms 15 hours ago</Text>
+        </CardFooter>
+      </Card>
+      <Nav direction="row" pad="small" margin={{ top: 'small' }}>
+        <NavAnchor label="accessibility" path="/accessibility" />
+        <NavAnchor label="typography" path="/typography" />
+      </Nav>
+    </Page>
   );
 };
 

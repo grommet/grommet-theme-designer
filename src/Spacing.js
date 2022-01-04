@@ -230,7 +230,7 @@ const Spacing = ({ theme, setTheme }) => {
 
   const onChangeSpacing = (event) => {
     const nextTheme = JSON.parse(JSON.stringify(theme));
-    const spacing = parseInt(event.target.value, 10);
+    const spacing = parseInt(event.target.value, 10) || 0;
     nextTheme.spacing = spacing;
     setSpacing(nextTheme);
     setTheme(nextTheme);
@@ -240,7 +240,7 @@ const Spacing = ({ theme, setTheme }) => {
     const nextTheme = JSON.parse(JSON.stringify(theme));
     const nextScale = event.target.value;
     setScale(nextScale);
-    nextTheme.scale = parseFloat(nextScale, 10);
+    nextTheme.scale = parseFloat(nextScale, 10) || 0;
     setSpacing(nextTheme);
     setTheme(nextTheme);
   };
@@ -255,7 +255,7 @@ const Spacing = ({ theme, setTheme }) => {
             max={36}
             min={12}
             step={4}
-            value={theme.spacing !== undefined ? theme.spacing : 24}
+            value={theme?.spacing ?? 24}
             onChange={onChangeSpacing}
             style={{ textAlign: 'end' }}
           />
@@ -269,7 +269,7 @@ const Spacing = ({ theme, setTheme }) => {
               plain
               mask={[{ length: [1, 2], regexp: /^[0-9]+$/ }]}
               style={{ textAlign: 'right', width: '48px' }}
-              value={theme.spacing}
+              value={theme?.spacing ?? 24}
               onChange={onChangeSpacing}
             />
             <Text>px</Text>
@@ -284,7 +284,7 @@ const Spacing = ({ theme, setTheme }) => {
             max={4}
             min={0.2}
             step={0.1}
-            value={scale}
+            value={scale ?? 0.2}
             onChange={onChangeScale}
             style={{ textAlign: 'end' }}
           />
@@ -298,7 +298,7 @@ const Spacing = ({ theme, setTheme }) => {
               plain
               mask={[{ length: [1, 3], regexp: /^[.0-9]+$/ }]}
               style={{ textAlign: 'right', width: '48px' }}
-              value={scale}
+              value={scale ?? 0.2}
               onChange={onChangeScale}
             />
           </Box>

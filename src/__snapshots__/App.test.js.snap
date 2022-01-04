@@ -2,34 +2,130 @@
 
 exports[`App empty 1`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 iczAJM"
+  class="StyledGrommet-sc-19lkkz7-0 kPGNFX"
 >
   <div
-    class="StyledGrid-sc-1wofa1l-0 gplslt"
+    class="StyledGrid-sc-1wofa1l-0 cGErQK"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 dnlRsp"
+      class="StyledBox-sc-13pk1d4-0 giPYwb"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 exZeXF"
+        class="StyledBox-sc-13pk1d4-0 gTYKKH"
       >
-        <span
-          class="StyledText-sc-1sadyjn-0 fdlQMb"
-        >
-          my theme
-        </span>
         <button
-          class="StyledButton-sc-323bzc-0 ksaUpW"
-          title="edit theme"
+          aria-label="show my themes"
+          class="StyledButton-sc-323bzc-0 bpsTzm"
           type="button"
         >
           <svg
-            aria-label="Edit"
+            aria-label="Menu"
             class="StyledIcon-sc-ofa7kd-0 gPdjsX"
             viewBox="0 0 24 24"
           >
             <path
-              d="m14 4 6 6-6-6zm8.294 1.294c.39.39.387 1.025-.008 1.42L9 20l-7 2 2-7L17.286 1.714a1 1 0 0 1 1.42-.008l3.588 3.588zM3 19l2 2m2-4 8-8"
+              d="M2 19h20M2 5h20M2 12h20"
+              fill="none"
+              stroke="#000"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+        <div
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
+        />
+        <div
+          class="StyledBox-sc-13pk1d4-0 wrGSV"
+        >
+          <button
+            aria-label="undo last change"
+            class="StyledButton-sc-323bzc-0 bpsTzm"
+            type="button"
+          >
+            <svg
+              aria-label="Undo"
+              class="StyledIcon-sc-ofa7kd-0 gPdjsX"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7.18 4 8.6 5.44 6.06 8h9.71a6 6 0 0 1 0 12h-2v-2h2a4 4 0 0 0 0-8H6.06l2.54 2.51-1.42 1.41L2.23 9z"
+              />
+            </svg>
+          </button>
+          <button
+            aria-label="redo last change"
+            class="StyledButton-sc-323bzc-0 bpsTzm"
+            type="button"
+          >
+            <svg
+              aria-label="Redo"
+              class="StyledIcon-sc-ofa7kd-0 gPdjsX"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16.82 4 15.4 5.44 17.94 8H8.23a6 6 0 0 0 0 12h2v-2h-2a4 4 0 0 1 0-8h9.71l-2.54 2.51 1.41 1.41L21.77 9z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
+        />
+        <button
+          aria-label="change theme mode to dark"
+          class="StyledButton-sc-323bzc-0 bpsTzm"
+          type="button"
+        >
+          <svg
+            aria-label="Sun"
+            class="StyledIcon-sc-ofa7kd-0 gPdjsX"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.657-5.657L19.07 4.93M4.93 19.07l1.414-1.414m0-11.314L4.93 4.93m14.14 14.14-1.414-1.414M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"
+              stroke="#000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+        <div
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
+        />
+        <button
+          aria-label="edit raw JSON"
+          class="StyledButton-sc-323bzc-0 lbPHCq"
+          type="button"
+        >
+          <svg
+            aria-label="Code"
+            class="StyledIcon-sc-ofa7kd-0 gPdjsX"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m9 22 6-20m2 15 5-5-5-5M7 17l-5-5 5-5"
+              fill="none"
+              stroke="#000"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+        <div
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
+        />
+        <button
+          aria-label="share"
+          class="StyledButton-sc-323bzc-0 lbPHCq"
+          type="button"
+        >
+          <svg
+            aria-label="Share"
+            class="StyledIcon-sc-ofa7kd-0 gPdjsX"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19 13v10H1V5h10m3-4h9v9m-13 4L23 1 10 14z"
               fill="none"
               stroke="#000"
               stroke-width="2"
@@ -38,259 +134,16 @@ exports[`App empty 1`] = `
         </button>
       </div>
       <div
-        class="StyledBox-sc-13pk1d4-0 gXhMXE"
+        class="StyledBox-sc-13pk1d4-0 kJnqpN"
       >
         <div
           class="StyledBox-sc-13pk1d4-0 jLMOlN"
-          role="radiogroup"
         >
-          <label
-            class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 kvJkVD"
-            for="light"
+          <div
+            class="StyledBox-sc-13pk1d4-0 iBJgBG"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 bbeUot StyledRadioButton-sc-g1f6ld-5 hNMTMW"
-            >
-              <input
-                checked=""
-                class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 fhNmLR"
-                id="light"
-                name="themeMode"
-                tabindex="0"
-                type="radio"
-                value="light"
-              />
-              <div
-                class="StyledBox-sc-13pk1d4-0 kDGMJj StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 ivjGdo"
-              >
-                <svg
-                  class="StyledRadioButton__StyledRadioButtonIcon-sc-g1f6ld-3 NQZAP"
-                  preserveAspectRatio="xMidYMid meet"
-                  viewBox="0 0 24 24"
-                >
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="6"
-                  />
-                </svg>
-              </div>
-            </div>
-            <span
-              class="StyledRadioButton__StyledRadioButtonLabel-sc-g1f6ld-2"
-            >
-              light
-            </span>
-          </label>
-          <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cHicIt"
-          />
-          <label
-            class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 kvJkVD"
-            for="dark"
-          >
-            <div
-              class="StyledBox-sc-13pk1d4-0 bbeUot StyledRadioButton-sc-g1f6ld-5 hNMTMW"
-            >
-              <input
-                class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 fhNmLR"
-                id="dark"
-                name="themeMode"
-                tabindex="-1"
-                type="radio"
-                value="dark"
-              />
-              <div
-                class="StyledBox-sc-13pk1d4-0 lhsVIn StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 ivjGdo"
-              />
-            </div>
-            <span
-              class="StyledRadioButton__StyledRadioButtonLabel-sc-g1f6ld-2"
-            >
-              dark
-            </span>
-          </label>
-        </div>
-      </div>
-      <div
-        class="StyledBox-sc-13pk1d4-0 dLvCRF"
-      >
-        <div
-          class="StyledBox-sc-13pk1d4-0 gXhMXE"
-        >
-          <h3
-            class="StyledHeading-sc-1rdh4aw-0 gQCKzf"
-          >
-            Guides
-          </h3>
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 uHmeI"
-          tabindex="0"
-        >
-          Accessibility
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 uHmeI"
-          tabindex="0"
-        >
-          Typography
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 gXhMXE"
-        >
-          <h3
-            class="StyledHeading-sc-1rdh4aw-0 gQCKzf"
-          >
-            Examples
-          </h3>
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 uHmeI"
-          tabindex="0"
-        >
-          Dashboard
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 uHmeI"
-          tabindex="0"
-        >
-          List
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 uHmeI"
-          tabindex="0"
-        >
-          Form
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 uHmeI"
-          tabindex="0"
-        >
-          Document
-        </div>
-      </div>
-    </div>
-    <div
-      class="StyledBox-sc-13pk1d4-0 jLMOlN"
-    />
-    <div
-      class="StyledBox-sc-13pk1d4-0 fWcuWh"
-    >
-      <div
-        class="StyledBox-sc-13pk1d4-0 hDxjsI"
-      >
-        <div
-          class="StyledBox-sc-13pk1d4-0 llpXoj"
-        >
-          <button
-            class="StyledButton-sc-323bzc-0 ksaUpW"
-            title="choose another theme"
-            type="button"
-          >
-            <svg
-              aria-label="Apps"
-              class="StyledIcon-sc-ofa7kd-0 gPdjsX"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19 5h2V3h-2v2zm-8 0h2V3h-2v2zM3 5h2V3H3v2zm16 8h2v-2h-2v2zm-8 0h2v-2h-2v2zm-8 0h2v-2H3v2zm16 8h2v-2h-2v2zm-8 0h2v-2h-2v2zm-8 0h2v-2H3v2z"
-                fill="none"
-                stroke="#000"
-                stroke-width="2"
-              />
-            </svg>
-          </button>
-          <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
-          />
-          <div
-            class="StyledBox-sc-13pk1d4-0 wrGSV"
-          >
-            <button
-              class="StyledButton-sc-323bzc-0 kQYEjo"
-              disabled=""
-              title="undo last change"
-              type="button"
-            >
-              <svg
-                aria-label="Undo"
-                class="StyledIcon-sc-ofa7kd-0 gPdjsX"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M7.18 4 8.6 5.44 6.06 8h9.71a6 6 0 0 1 0 12h-2v-2h2a4 4 0 0 0 0-8H6.06l2.54 2.51-1.42 1.41L2.23 9z"
-                />
-              </svg>
-            </button>
-            <button
-              class="StyledButton-sc-323bzc-0 kQYEjo"
-              disabled=""
-              title="redo last change"
-              type="button"
-            >
-              <svg
-                aria-label="Redo"
-                class="StyledIcon-sc-ofa7kd-0 gPdjsX"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.82 4 15.4 5.44 17.94 8H8.23a6 6 0 0 0 0 12h2v-2h-2a4 4 0 0 1 0-8h9.71l-2.54 2.51 1.41 1.41L21.77 9z"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
-          />
-          <button
-            class="StyledButton-sc-323bzc-0 ksaUpW"
-            title="see JSON"
-            type="button"
-          >
-            <svg
-              aria-label="Code"
-              class="StyledIcon-sc-ofa7kd-0 gPdjsX"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="m9 22 6-20m2 15 5-5-5-5M7 17l-5-5 5-5"
-                fill="none"
-                stroke="#000"
-                stroke-width="2"
-              />
-            </svg>
-          </button>
-          <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
-          />
-          <button
-            class="StyledButton-sc-323bzc-0 ksaUpW"
-            title="share"
-            type="button"
-          >
-            <svg
-              aria-label="Share"
-              class="StyledIcon-sc-ofa7kd-0 gPdjsX"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19 13v10H1V5h10m3-4h9v9m-13 4L23 1 10 14z"
-                fill="none"
-                stroke="#000"
-                stroke-width="2"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 epEpDq"
-        >
-          <div
-            class="StyledBox-sc-13pk1d4-0 elLIlG"
-          >
-            <div
-              class="StyledBox-sc-13pk1d4-0 huWkbw"
+              class="StyledBox-sc-13pk1d4-0 zsxyA"
             >
               <label
                 class="StyledBox-sc-13pk1d4-0 miOcd"
@@ -310,7 +163,7 @@ exports[`App empty 1`] = `
                 >
                   <input
                     autocomplete="off"
-                    class="StyledTextInput-sc-1x30a0s-0 hDKkiw"
+                    class="StyledTextInput-sc-1x30a0s-0 eQyjdw"
                     name="name"
                     style="text-align: right;"
                     value="my theme"
@@ -320,10 +173,10 @@ exports[`App empty 1`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 elLIlG"
+            class="StyledBox-sc-13pk1d4-0 iBJgBG"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 huWkbw"
+              class="StyledBox-sc-13pk1d4-0 zsxyA"
             >
               <label
                 class="StyledBox-sc-13pk1d4-0 miOcd"
@@ -345,7 +198,7 @@ exports[`App empty 1`] = `
                     aria-valuemax="24"
                     aria-valuemin="0"
                     aria-valuenow="4"
-                    class="StyledRangeInput-sc-15st9ck-0 eUHKaP"
+                    class="StyledRangeInput-sc-15st9ck-0 bTterH"
                     id="rounding"
                     max="24"
                     min="0"
@@ -363,7 +216,7 @@ exports[`App empty 1`] = `
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 eqjcce"
+                        class="StyledMaskedInput-sc-99vkfa-0 RnSKi"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="4"
@@ -380,10 +233,10 @@ exports[`App empty 1`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 elLIlG"
+            class="StyledBox-sc-13pk1d4-0 iBJgBG"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 huWkbw"
+              class="StyledBox-sc-13pk1d4-0 zsxyA"
             >
               <label
                 class="StyledBox-sc-13pk1d4-0 miOcd"
@@ -405,7 +258,7 @@ exports[`App empty 1`] = `
                     aria-valuemax="36"
                     aria-valuemin="12"
                     aria-valuenow="24"
-                    class="StyledRangeInput-sc-15st9ck-0 eUHKaP"
+                    class="StyledRangeInput-sc-15st9ck-0 bTterH"
                     id="spacing"
                     max="36"
                     min="12"
@@ -423,7 +276,7 @@ exports[`App empty 1`] = `
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 eqjcce"
+                        class="StyledMaskedInput-sc-99vkfa-0 RnSKi"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="24"
@@ -440,10 +293,10 @@ exports[`App empty 1`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 elLIlG"
+            class="StyledBox-sc-13pk1d4-0 iBJgBG"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 huWkbw"
+              class="StyledBox-sc-13pk1d4-0 zsxyA"
             >
               <label
                 class="StyledBox-sc-13pk1d4-0 miOcd"
@@ -465,7 +318,7 @@ exports[`App empty 1`] = `
                     aria-valuemax="4"
                     aria-valuemin="0.2"
                     aria-valuenow="1"
-                    class="StyledRangeInput-sc-15st9ck-0 eUHKaP"
+                    class="StyledRangeInput-sc-15st9ck-0 bTterH"
                     id="scale"
                     max="4"
                     min="0.2"
@@ -483,7 +336,7 @@ exports[`App empty 1`] = `
                     >
                       <input
                         autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 eqjcce"
+                        class="StyledMaskedInput-sc-99vkfa-0 RnSKi"
                         placeholder=""
                         style="text-align: right; width: 48px;"
                         value="1"
@@ -495,58 +348,715 @@ exports[`App empty 1`] = `
             </div>
           </div>
           <button
-            aria-label="Open Drop"
-            class="StyledButton-sc-323bzc-0 ekkmSA"
+            class="StyledButton-sc-323bzc-0 czRdME"
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 qzhpi"
+              class="StyledBox-sc-13pk1d4-0 dfbLxE"
             >
               <span
                 class="StyledText-sc-1sadyjn-0 gKFELF"
               >
-                font
+                fonts
               </span>
               <div
                 class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
               />
-              <span
-                class="StyledText-sc-1sadyjn-0 fdlQMb"
+              <svg
+                aria-label="FormNext"
+                class="StyledIcon-sc-ofa7kd-0 gPdjsX"
+                viewBox="0 0 24 24"
               >
-                Helvetica
-              </span>
+                <path
+                  d="m9 6 6 6-6 6"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="2"
+                />
+              </svg>
             </div>
           </button>
           <button
-            class="StyledButton-sc-323bzc-0 ekkmSA"
+            class="StyledButton-sc-323bzc-0 czRdME"
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 qzhpi"
+              class="StyledBox-sc-13pk1d4-0 dfbLxE"
             >
               <span
                 class="StyledText-sc-1sadyjn-0 gKFELF"
               >
                 colors
               </span>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
+              />
+              <svg
+                aria-label="FormNext"
+                class="StyledIcon-sc-ofa7kd-0 gPdjsX"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="m9 6 6 6-6 6"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="2"
+                />
+              </svg>
             </div>
           </button>
           <button
-            class="StyledButton-sc-323bzc-0 ekkmSA"
+            class="StyledButton-sc-323bzc-0 czRdME"
             type="button"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 qzhpi"
+              class="StyledBox-sc-13pk1d4-0 dfbLxE"
             >
               <span
                 class="StyledText-sc-1sadyjn-0 gKFELF"
               >
                 form field
               </span>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
+              />
+              <svg
+                aria-label="FormNext"
+                class="StyledIcon-sc-ofa7kd-0 gPdjsX"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="m9 6 6 6-6 6"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="2"
+                />
+              </svg>
             </div>
           </button>
         </div>
+        <div
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jerdtb"
+        />
+        <footer
+          class="StyledBox-sc-13pk1d4-0 eTYPgJ"
+        >
+          <button
+            class="StyledButton-sc-323bzc-0 ePvXOm"
+            type="button"
+          >
+            delete theme
+          </button>
+        </footer>
       </div>
+    </div>
+    <div
+      class="StyledGrommet-sc-19lkkz7-0 gcbprs"
+    >
+      <main
+        class="StyledBox-sc-13pk1d4-0 dtCpAi"
+      >
+        <div
+          class="StyledGrid-sc-1wofa1l-0 bfonou"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 jKkxhR"
+          >
+            <header
+              class="StyledBox-sc-13pk1d4-0 ia-DNDo"
+            >
+              <a
+                class="StyledButton-sc-323bzc-0 fSLJVa"
+                href="/"
+              >
+                <svg
+                  aria-label="HomeRounded"
+                  class="StyledIcon-sc-ofa7kd-0 gJLnaz"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M1 22V9.76a2 2 0 0 1 .851-1.636l9.575-6.72a1 1 0 0 1 1.149 0l9.574 6.72A2 2 0 0 1 23 9.76V22a1 1 0 0 1-1 1h-5.333a1 1 0 0 1-1-1v-5.674a1 1 0 0 0-1-1H9.333a1 1 0 0 0-1 1V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z"
+                    stroke="#000"
+                    stroke-width="2"
+                  />
+                </svg>
+              </a>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 itCgil"
+              />
+              <div
+                class="StyledBox-sc-13pk1d4-0 wrGSV"
+              >
+                <a
+                  class="StyledButton-sc-323bzc-0 fSLJVa"
+                  href="/form"
+                >
+                  <svg
+                    aria-label="Add"
+                    class="StyledIcon-sc-ofa7kd-0 gJLnaz"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 22V2M2 12h20"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </a>
+                <button
+                  aria-label="Open Menu"
+                  class="StyledButton-sc-323bzc-0 jZgVcs"
+                  type="button"
+                >
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 Gcwat"
+                  >
+                    <span
+                      class="StyledText-sc-1sadyjn-0 gKFELF"
+                    />
+                    <svg
+                      aria-label="User"
+                      class="StyledIcon-sc-ofa7kd-0 gJLnaz"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M8 24v-5m8 5v-5M3 24v-5c0-4.97 4.03-8 9-8s9 3.03 9 8v5m-9-13a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"
+                        fill="none"
+                        stroke="#000"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </header>
+            <div
+              class="StyledGrid-sc-1wofa1l-0 bePWpr"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 kSDzUF"
+                tabindex="0"
+              >
+                <header
+                  class="StyledBox-sc-13pk1d4-0 bYwyhN"
+                >
+                  <h3
+                    class="StyledHeading-sc-1rdh4aw-0 jmNzne"
+                  >
+                    Clients
+                  </h3>
+                </header>
+                <div
+                  class="StyledBox-sc-13pk1d4-0 cUzgEH"
+                >
+                  <span
+                    class="StyledText-sc-1sadyjn-0 gWSVDb"
+                  >
+                    27
+                  </span>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 brYEDN"
+                  />
+                  <svg
+                    class="StyledMeter-sc-nsxarx-0 kcVFtn"
+                    height="24"
+                    preserveAspectRatio="none"
+                    viewBox="0 0 384 24"
+                    width="384"
+                  >
+                    <path
+                      d="M 12,12 L 372,12"
+                      fill="none"
+                      stroke="#F2F2F2"
+                      stroke-linecap="round"
+                      stroke-opacity="0.4"
+                      stroke-width="24"
+                    />
+                    <path
+                      d="M 12,12 L 109.2,12"
+                      fill="none"
+                      stroke="#6600cc"
+                      stroke-linecap="round"
+                      stroke-width="24"
+                    />
+                  </svg>
+                </div>
+                <footer
+                  class="StyledBox-sc-13pk1d4-0 cxDimp"
+                >
+                  <span
+                    class="StyledText-sc-1sadyjn-0 evLTLO"
+                  >
+                    added 2 today
+                  </span>
+                </footer>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 kSDzUF"
+                tabindex="0"
+              >
+                <header
+                  class="StyledBox-sc-13pk1d4-0 bYwyhN"
+                >
+                  <h3
+                    class="StyledHeading-sc-1rdh4aw-0 jmNzne"
+                  >
+                    Sites
+                  </h3>
+                </header>
+                <div
+                  class="StyledBox-sc-13pk1d4-0 cUzgEH"
+                >
+                  <span
+                    class="StyledText-sc-1sadyjn-0 gWSVDb"
+                  >
+                    2
+                  </span>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 brYEDN"
+                  />
+                  <svg
+                    class="StyledMeter-sc-nsxarx-0 kcVFtn"
+                    height="24"
+                    preserveAspectRatio="none"
+                    viewBox="0 0 384 24"
+                    width="384"
+                  >
+                    <path
+                      d="M 12,12 L 372,12"
+                      fill="none"
+                      stroke="#F2F2F2"
+                      stroke-linecap="round"
+                      stroke-opacity="0.4"
+                      stroke-width="24"
+                    />
+                    <path
+                      d="M 12,12 L 84,12"
+                      fill="none"
+                      stroke="#6600cc"
+                      stroke-linecap="round"
+                      stroke-width="24"
+                    />
+                  </svg>
+                </div>
+                <footer
+                  class="StyledBox-sc-13pk1d4-0 cxDimp"
+                >
+                  <span
+                    class="StyledText-sc-1sadyjn-0 evLTLO"
+                  >
+                    all good
+                  </span>
+                </footer>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 kSDzUF"
+                tabindex="0"
+              >
+                <header
+                  class="StyledBox-sc-13pk1d4-0 bYwyhN"
+                >
+                  <h3
+                    class="StyledHeading-sc-1rdh4aw-0 jmNzne"
+                  >
+                    Events
+                  </h3>
+                </header>
+                <div
+                  class="StyledBox-sc-13pk1d4-0 cUzgEH"
+                >
+                  <span
+                    class="StyledText-sc-1sadyjn-0 gWSVDb"
+                  >
+                    270
+                  </span>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 brYEDN"
+                  />
+                  <svg
+                    class="StyledMeter-sc-nsxarx-0 kcVFtn"
+                    height="24"
+                    preserveAspectRatio="none"
+                    viewBox="0 0 384 24"
+                    width="384"
+                  >
+                    <path
+                      d="M 12,12 L 372,12"
+                      fill="none"
+                      stroke="#F2F2F2"
+                      stroke-linecap="round"
+                      stroke-opacity="0.4"
+                      stroke-width="24"
+                    />
+                    <path
+                      d="M 12,12 L 109.2,12"
+                      fill="none"
+                      stroke="#6600cc"
+                      stroke-linecap="round"
+                      stroke-width="24"
+                    />
+                  </svg>
+                </div>
+                <footer
+                  class="StyledBox-sc-13pk1d4-0 cxDimp"
+                >
+                  <span
+                    class="StyledText-sc-1sadyjn-0 evLTLO"
+                  >
+                    client A joined 5m ago
+                  </span>
+                </footer>
+              </div>
+            </div>
+            <div
+              class="StyledBox-sc-13pk1d4-0 FjLxp"
+            >
+              <header
+                class="StyledBox-sc-13pk1d4-0 bYwyhN"
+              >
+                <h3
+                  class="StyledHeading-sc-1rdh4aw-0 jmNzne"
+                >
+                  Latency 
+                  <span
+                    class="StyledText-sc-1sadyjn-0 evLTLO"
+                  >
+                    ms
+                  </span>
+                </h3>
+              </header>
+              <div
+                class="StyledBox-sc-13pk1d4-0 tvuiK"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 bRWWxM"
+                >
+                  <div
+                    class="StyledStack-sc-ajspsk-0 bcUWWD"
+                  >
+                    <div
+                      class="StyledStack__StyledStackLayer-sc-ajspsk-1 cGyVeV"
+                    >
+                      <svg
+                        class="StyledChart-sc-1nae0gf-0 btNacq"
+                        height="0"
+                        preserveAspectRatio="none"
+                        viewBox="0 0 0 0"
+                        width="0"
+                      >
+                        0
+                        <g
+                          fill="#6600cc"
+                          opacity="0.4"
+                          stroke="#6600cc"
+                          stroke-linecap="butt"
+                          stroke-linejoin="miter"
+                          stroke-width="6"
+                        >
+                          <g>
+                            <path
+                              d="M 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 Z"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="StyledStack__StyledStackLayer-sc-ajspsk-1 cGyVeV"
+                    >
+                      <svg
+                        class="StyledChart-sc-1nae0gf-0 btNacq"
+                        height="0"
+                        preserveAspectRatio="none"
+                        viewBox="0 0 0 0"
+                        width="0"
+                      >
+                        0
+                        <g
+                          fill="none"
+                          stroke="#6600cc"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="6"
+                        >
+                          <g
+                            fill="none"
+                          >
+                            <path
+                              d="M 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0"
+                            />
+                            
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="StyledStack__StyledStackLayer-sc-ajspsk-1 cGyVeV"
+                    >
+                      <svg
+                        class="StyledChart-sc-1nae0gf-0 btNacq"
+                        height="0"
+                        preserveAspectRatio="none"
+                        viewBox="0 0 0 0"
+                        width="0"
+                      >
+                        0
+                        <g
+                          fill="#333333"
+                          opacity="0.4"
+                          stroke="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <g
+                            stroke="none"
+                          >
+                            <title />
+                            <circle
+                              cx="0"
+                              cy="0"
+                              r="6"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="StyledStack__StyledStackLayer-sc-ajspsk-1 byyKmG"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 bRFCfD"
+                      >
+                        <span
+                          class="StyledText-sc-1sadyjn-0 dHDiyu"
+                        >
+                          2000
+                        </span>
+                        <span
+                          class="StyledText-sc-1sadyjn-0 dHDiyu"
+                        >
+                          1000
+                        </span>
+                        <span
+                          class="StyledText-sc-1sadyjn-0 dHDiyu"
+                        >
+                          0
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 brYEDN"
+                  />
+                  <div
+                    class="StyledStack-sc-ajspsk-0 bcUWWD"
+                  >
+                    <div
+                      class="StyledStack__StyledStackLayer-sc-ajspsk-1 cGyVeV"
+                    >
+                      <svg
+                        class="StyledChart-sc-1nae0gf-0 btNacq"
+                        height="0"
+                        preserveAspectRatio="none"
+                        style="transform: rotate(180deg);"
+                        viewBox="0 0 0 0"
+                        width="0"
+                      >
+                        0
+                        <g
+                          fill="#FFAA15"
+                          opacity="0.4"
+                          stroke="#FFAA15"
+                          stroke-linecap="butt"
+                          stroke-linejoin="miter"
+                          stroke-width="6"
+                        >
+                          <g>
+                            <path
+                              d="M 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 Z"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="StyledStack__StyledStackLayer-sc-ajspsk-1 cGyVeV"
+                    >
+                      <svg
+                        class="StyledChart-sc-1nae0gf-0 btNacq"
+                        height="0"
+                        preserveAspectRatio="none"
+                        style="transform: rotate(180deg);"
+                        viewBox="0 0 0 0"
+                        width="0"
+                      >
+                        0
+                        <g
+                          fill="none"
+                          stroke="#FFAA15"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="6"
+                        >
+                          <g
+                            fill="none"
+                          >
+                            <path
+                              d="M 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0"
+                            />
+                            
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="StyledStack__StyledStackLayer-sc-ajspsk-1 cGyVeV"
+                    >
+                      <svg
+                        class="StyledChart-sc-1nae0gf-0 btNacq"
+                        height="0"
+                        preserveAspectRatio="none"
+                        style="transform: rotate(180deg);"
+                        viewBox="0 0 0 0"
+                        width="0"
+                      >
+                        0
+                        <g
+                          fill="#333333"
+                          opacity="0.4"
+                          stroke="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <g
+                            stroke="none"
+                          >
+                            <title />
+                            <circle
+                              cx="0"
+                              cy="0"
+                              r="6"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="StyledStack__StyledStackLayer-sc-ajspsk-1 byyKmG"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 fnnxQQ"
+                      >
+                        <span
+                          class="StyledText-sc-1sadyjn-0 dHDiyu"
+                        >
+                          0
+                        </span>
+                        <span
+                          class="StyledText-sc-1sadyjn-0 dHDiyu"
+                        >
+                          1000
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 brYEDN"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 cTyWkZ"
+                  >
+                    <span
+                      class="StyledText-sc-1sadyjn-0 dHDiyu"
+                    >
+                      -24h
+                    </span>
+                    <span
+                      class="StyledText-sc-1sadyjn-0 dHDiyu"
+                    >
+                      -12h
+                    </span>
+                    <span
+                      class="StyledText-sc-1sadyjn-0 dHDiyu"
+                    >
+                      now
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 brYEDN"
+                />
+                <div
+                  class="StyledBox-sc-13pk1d4-0 iPFpCC"
+                >
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 hhpAHF"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 ldMXwv"
+                    />
+                    <div
+                      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dSHXel"
+                    />
+                    <span
+                      class="StyledText-sc-1sadyjn-0 dHDiyu"
+                    >
+                      inbound
+                    </span>
+                  </div>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 itCgil"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 hhpAHF"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 jkYXeV"
+                    />
+                    <div
+                      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dSHXel"
+                    />
+                    <span
+                      class="StyledText-sc-1sadyjn-0 dHDiyu"
+                    >
+                      outbound
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <footer
+                class="StyledBox-sc-13pk1d4-0 cxDimp"
+              >
+                <span
+                  class="StyledText-sc-1sadyjn-0 evLTLO"
+                >
+                  peak of 2000ms 15 hours ago
+                </span>
+              </footer>
+            </div>
+            <nav
+              class="StyledBox-sc-13pk1d4-0 dFoQRk"
+            >
+              <a
+                class="StyledAnchor-sc-1rp7lwl-0 kMUnVC"
+                href="/accessibility"
+              >
+                accessibility
+              </a>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 itCgil"
+              />
+              <a
+                class="StyledAnchor-sc-1rp7lwl-0 kMUnVC"
+                href="/typography"
+              >
+                typography
+              </a>
+            </nav>
+          </div>
+        </div>
+      </main>
     </div>
   </div>
 </div>
@@ -554,34 +1064,130 @@ exports[`App empty 1`] = `
 
 exports[`App empty 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 iczAJM"
+  class="StyledGrommet-sc-19lkkz7-0 kPGNFX"
 >
   <div
-    class="StyledGrid-sc-1wofa1l-0 gplslt"
+    class="StyledGrid-sc-1wofa1l-0 cGErQK"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 dnlRsp"
+      class="StyledBox-sc-13pk1d4-0 giPYwb"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 exZeXF"
+        class="StyledBox-sc-13pk1d4-0 gTYKKH"
       >
-        <span
-          class="StyledText-sc-1sadyjn-0 fdlQMb"
-        >
-          my theme
-        </span>
         <button
-          class="StyledButton-sc-323bzc-0 ksaUpW"
-          title="edit theme"
+          aria-label="return to my theme"
+          class="StyledButton-sc-323bzc-0 bpsTzm"
           type="button"
         >
           <svg
-            aria-label="Edit"
+            aria-label="Menu"
             class="StyledIcon-sc-ofa7kd-0 gPdjsX"
             viewBox="0 0 24 24"
           >
             <path
-              d="m14 4 6 6-6-6zm8.294 1.294c.39.39.387 1.025-.008 1.42L9 20l-7 2 2-7L17.286 1.714a1 1 0 0 1 1.42-.008l3.588 3.588zM3 19l2 2m2-4 8-8"
+              d="M2 19h20M2 5h20M2 12h20"
+              fill="none"
+              stroke="#000"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+        <div
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
+        />
+        <div
+          class="StyledBox-sc-13pk1d4-0 wrGSV"
+        >
+          <button
+            aria-label="undo last change"
+            class="StyledButton-sc-323bzc-0 bpsTzm"
+            type="button"
+          >
+            <svg
+              aria-label="Undo"
+              class="StyledIcon-sc-ofa7kd-0 gPdjsX"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7.18 4 8.6 5.44 6.06 8h9.71a6 6 0 0 1 0 12h-2v-2h2a4 4 0 0 0 0-8H6.06l2.54 2.51-1.42 1.41L2.23 9z"
+              />
+            </svg>
+          </button>
+          <button
+            aria-label="redo last change"
+            class="StyledButton-sc-323bzc-0 bpsTzm"
+            type="button"
+          >
+            <svg
+              aria-label="Redo"
+              class="StyledIcon-sc-ofa7kd-0 gPdjsX"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16.82 4 15.4 5.44 17.94 8H8.23a6 6 0 0 0 0 12h2v-2h-2a4 4 0 0 1 0-8h9.71l-2.54 2.51 1.41 1.41L21.77 9z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
+        />
+        <button
+          aria-label="change theme mode to dark"
+          class="StyledButton-sc-323bzc-0 bpsTzm"
+          type="button"
+        >
+          <svg
+            aria-label="Sun"
+            class="StyledIcon-sc-ofa7kd-0 gPdjsX"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.657-5.657L19.07 4.93M4.93 19.07l1.414-1.414m0-11.314L4.93 4.93m14.14 14.14-1.414-1.414M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"
+              stroke="#000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+        <div
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
+        />
+        <button
+          aria-label="edit raw JSON"
+          class="StyledButton-sc-323bzc-0 lbPHCq"
+          type="button"
+        >
+          <svg
+            aria-label="Code"
+            class="StyledIcon-sc-ofa7kd-0 gPdjsX"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m9 22 6-20m2 15 5-5-5-5M7 17l-5-5 5-5"
+              fill="none"
+              stroke="#000"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+        <div
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
+        />
+        <button
+          aria-label="share"
+          class="StyledButton-sc-323bzc-0 lbPHCq"
+          type="button"
+        >
+          <svg
+            aria-label="Share"
+            class="StyledIcon-sc-ofa7kd-0 gPdjsX"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19 13v10H1V5h10m3-4h9v9m-13 4L23 1 10 14z"
               fill="none"
               stroke="#000"
               stroke-width="2"
@@ -590,515 +1196,647 @@ exports[`App empty 2`] = `
         </button>
       </div>
       <div
-        class="StyledBox-sc-13pk1d4-0 gXhMXE"
+        class="StyledBox-sc-13pk1d4-0 jLMOlN"
       >
-        <div
-          class="StyledBox-sc-13pk1d4-0 jLMOlN"
-          role="radiogroup"
+        <header
+          class="StyledBox-sc-13pk1d4-0 gLKTMR"
         >
-          <label
-            class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 kvJkVD"
-            for="light"
+          <h2
+            class="StyledHeading-sc-1rdh4aw-0 FDCRB"
           >
-            <div
-              class="StyledBox-sc-13pk1d4-0 bbeUot StyledRadioButton-sc-g1f6ld-5 hNMTMW"
-            >
-              <input
-                checked=""
-                class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 fhNmLR"
-                id="light"
-                name="themeMode"
-                tabindex="0"
-                type="radio"
-                value="light"
-              />
-              <div
-                class="StyledBox-sc-13pk1d4-0 kDGMJj StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 ivjGdo"
-              >
-                <svg
-                  class="StyledRadioButton__StyledRadioButtonIcon-sc-g1f6ld-3 NQZAP"
-                  preserveAspectRatio="xMidYMid meet"
-                  viewBox="0 0 24 24"
-                >
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="6"
-                  />
-                </svg>
-              </div>
-            </div>
-            <span
-              class="StyledRadioButton__StyledRadioButtonLabel-sc-g1f6ld-2"
-            >
-              light
-            </span>
-          </label>
+            themes
+          </h2>
           <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cHicIt"
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 gyJEae"
           />
-          <label
-            class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 kvJkVD"
-            for="dark"
+          <button
+            aria-label="create a new theme"
+            class="StyledButton-sc-323bzc-0 lbPHCq"
+            type="button"
           >
-            <div
-              class="StyledBox-sc-13pk1d4-0 bbeUot StyledRadioButton-sc-g1f6ld-5 hNMTMW"
+            <svg
+              aria-label="Add"
+              class="StyledIcon-sc-ofa7kd-0 gPdjsX"
+              viewBox="0 0 24 24"
             >
-              <input
-                class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 fhNmLR"
-                id="dark"
-                name="themeMode"
-                tabindex="-1"
-                type="radio"
-                value="dark"
+              <path
+                d="M12 22V2M2 12h20"
+                fill="none"
+                stroke="#000"
+                stroke-width="2"
               />
-              <div
-                class="StyledBox-sc-13pk1d4-0 lhsVIn StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 ivjGdo"
-              />
-            </div>
-            <span
-              class="StyledRadioButton__StyledRadioButtonLabel-sc-g1f6ld-2"
-            >
-              dark
-            </span>
-          </label>
-        </div>
-      </div>
-      <div
-        class="StyledBox-sc-13pk1d4-0 dLvCRF"
-      >
-        <div
-          class="StyledBox-sc-13pk1d4-0 gXhMXE"
-        >
-          <h3
-            class="StyledHeading-sc-1rdh4aw-0 gQCKzf"
-          >
-            Guides
-          </h3>
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 uHmeI"
-          tabindex="0"
-        >
-          Accessibility
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 uHmeI"
-          tabindex="0"
-        >
-          Typography
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 gXhMXE"
-        >
-          <h3
-            class="StyledHeading-sc-1rdh4aw-0 gQCKzf"
-          >
-            Examples
-          </h3>
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 uHmeI"
-          tabindex="0"
-        >
-          Dashboard
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 uHmeI"
-          tabindex="0"
-        >
-          List
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 uHmeI"
-          tabindex="0"
-        >
-          Form
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 uHmeI"
-          tabindex="0"
-        >
-          Document
-        </div>
+            </svg>
+          </button>
+        </header>
       </div>
     </div>
     <div
-      class="StyledBox-sc-13pk1d4-0 jLMOlN"
-    />
-    <div
-      class="StyledBox-sc-13pk1d4-0 fWcuWh"
+      class="StyledGrommet-sc-19lkkz7-0 gcbprs"
     >
-      <div
-        class="StyledBox-sc-13pk1d4-0 hDxjsI"
+      <main
+        class="StyledBox-sc-13pk1d4-0 dtCpAi"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 llpXoj"
-        >
-          <button
-            class="StyledButton-sc-323bzc-0 ksaUpW"
-            title="choose another theme"
-            type="button"
-          >
-            <svg
-              aria-label="Apps"
-              class="StyledIcon-sc-ofa7kd-0 gPdjsX"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19 5h2V3h-2v2zm-8 0h2V3h-2v2zM3 5h2V3H3v2zm16 8h2v-2h-2v2zm-8 0h2v-2h-2v2zm-8 0h2v-2H3v2zm16 8h2v-2h-2v2zm-8 0h2v-2h-2v2zm-8 0h2v-2H3v2z"
-                fill="none"
-                stroke="#000"
-                stroke-width="2"
-              />
-            </svg>
-          </button>
-          <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
-          />
-          <div
-            class="StyledBox-sc-13pk1d4-0 wrGSV"
-          >
-            <button
-              class="StyledButton-sc-323bzc-0 kQYEjo"
-              disabled=""
-              title="undo last change"
-              type="button"
-            >
-              <svg
-                aria-label="Undo"
-                class="StyledIcon-sc-ofa7kd-0 gPdjsX"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M7.18 4 8.6 5.44 6.06 8h9.71a6 6 0 0 1 0 12h-2v-2h2a4 4 0 0 0 0-8H6.06l2.54 2.51-1.42 1.41L2.23 9z"
-                />
-              </svg>
-            </button>
-            <button
-              class="StyledButton-sc-323bzc-0 kQYEjo"
-              disabled=""
-              title="redo last change"
-              type="button"
-            >
-              <svg
-                aria-label="Redo"
-                class="StyledIcon-sc-ofa7kd-0 gPdjsX"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.82 4 15.4 5.44 17.94 8H8.23a6 6 0 0 0 0 12h2v-2h-2a4 4 0 0 1 0-8h9.71l-2.54 2.51 1.41 1.41L21.77 9z"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
-          />
-          <button
-            class="StyledButton-sc-323bzc-0 ksaUpW"
-            title="see JSON"
-            type="button"
-          >
-            <svg
-              aria-label="Code"
-              class="StyledIcon-sc-ofa7kd-0 gPdjsX"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="m9 22 6-20m2 15 5-5-5-5M7 17l-5-5 5-5"
-                fill="none"
-                stroke="#000"
-                stroke-width="2"
-              />
-            </svg>
-          </button>
-          <div
-            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
-          />
-          <button
-            class="StyledButton-sc-323bzc-0 ksaUpW"
-            title="share"
-            type="button"
-          >
-            <svg
-              aria-label="Share"
-              class="StyledIcon-sc-ofa7kd-0 gPdjsX"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19 13v10H1V5h10m3-4h9v9m-13 4L23 1 10 14z"
-                fill="none"
-                stroke="#000"
-                stroke-width="2"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          class="StyledBox-sc-13pk1d4-0 epEpDq"
+          class="StyledGrid-sc-1wofa1l-0 bfonou"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 elLIlG"
+            class="StyledBox-sc-13pk1d4-0 jKkxhR"
           >
-            <div
-              class="StyledBox-sc-13pk1d4-0 huWkbw"
+            <header
+              class="StyledBox-sc-13pk1d4-0 ia-DNDo"
             >
-              <label
-                class="StyledBox-sc-13pk1d4-0 miOcd"
-                for="name"
+              <a
+                class="StyledButton-sc-323bzc-0 fSLJVa"
+                href="/"
               >
-                <span
-                  class="StyledText-sc-1sadyjn-0 gKFELF"
+                <svg
+                  aria-label="HomeRounded"
+                  class="StyledIcon-sc-ofa7kd-0 gJLnaz"
+                  viewBox="0 0 24 24"
                 >
-                  name
-                </span>
-              </label>
-              <div
-                class="StyledBox-sc-13pk1d4-0 jLMOlN"
-              >
-                <div
-                  class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 jqwtzG"
-                >
-                  <input
-                    autocomplete="off"
-                    class="StyledTextInput-sc-1x30a0s-0 hDKkiw"
-                    name="name"
-                    style="text-align: right;"
-                    value="my theme"
+                  <path
+                    d="M1 22V9.76a2 2 0 0 1 .851-1.636l9.575-6.72a1 1 0 0 1 1.149 0l9.574 6.72A2 2 0 0 1 23 9.76V22a1 1 0 0 1-1 1h-5.333a1 1 0 0 1-1-1v-5.674a1 1 0 0 0-1-1H9.333a1 1 0 0 0-1 1V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z"
+                    stroke="#000"
+                    stroke-width="2"
                   />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="StyledBox-sc-13pk1d4-0 elLIlG"
-          >
-            <div
-              class="StyledBox-sc-13pk1d4-0 huWkbw"
-            >
-              <label
-                class="StyledBox-sc-13pk1d4-0 miOcd"
-                for="rounding"
-              >
-                <span
-                  class="StyledText-sc-1sadyjn-0 gKFELF"
-                >
-                  rounding
-                </span>
-              </label>
+                </svg>
+              </a>
               <div
-                class="StyledBox-sc-13pk1d4-0 jLMOlN"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 itCgil"
+              />
+              <div
+                class="StyledBox-sc-13pk1d4-0 wrGSV"
               >
-                <div
-                  class="StyledBox-sc-13pk1d4-0 deExzV"
+                <a
+                  class="StyledButton-sc-323bzc-0 fSLJVa"
+                  href="/form"
                 >
-                  <input
-                    aria-valuemax="24"
-                    aria-valuemin="0"
-                    aria-valuenow="4"
-                    class="StyledRangeInput-sc-15st9ck-0 eUHKaP"
-                    id="rounding"
-                    max="24"
-                    min="0"
-                    name="rounding"
-                    step="2"
-                    style="text-align: end;"
-                    type="range"
-                    value="4"
-                  />
-                  <div
-                    class="StyledBox-sc-13pk1d4-0 bxAOvx"
+                  <svg
+                    aria-label="Add"
+                    class="StyledIcon-sc-ofa7kd-0 gJLnaz"
+                    viewBox="0 0 24 24"
                   >
-                    <div
-                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 gNPSOw"
-                    >
-                      <input
-                        autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 eqjcce"
-                        placeholder=""
-                        style="text-align: right; width: 48px;"
-                        value="4"
-                      />
-                    </div>
+                    <path
+                      d="M12 22V2M2 12h20"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </a>
+                <button
+                  aria-label="Open Menu"
+                  class="StyledButton-sc-323bzc-0 jZgVcs"
+                  type="button"
+                >
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 Gcwat"
+                  >
                     <span
                       class="StyledText-sc-1sadyjn-0 gKFELF"
+                    />
+                    <svg
+                      aria-label="User"
+                      class="StyledIcon-sc-ofa7kd-0 gJLnaz"
+                      viewBox="0 0 24 24"
                     >
-                      px
+                      <path
+                        d="M8 24v-5m8 5v-5M3 24v-5c0-4.97 4.03-8 9-8s9 3.03 9 8v5m-9-13a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"
+                        fill="none"
+                        stroke="#000"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </header>
+            <div
+              class="StyledGrid-sc-1wofa1l-0 bePWpr"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 kSDzUF"
+                tabindex="0"
+              >
+                <header
+                  class="StyledBox-sc-13pk1d4-0 bYwyhN"
+                >
+                  <h3
+                    class="StyledHeading-sc-1rdh4aw-0 jmNzne"
+                  >
+                    Clients
+                  </h3>
+                </header>
+                <div
+                  class="StyledBox-sc-13pk1d4-0 cUzgEH"
+                >
+                  <span
+                    class="StyledText-sc-1sadyjn-0 gWSVDb"
+                  >
+                    27
+                  </span>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 brYEDN"
+                  />
+                  <svg
+                    class="StyledMeter-sc-nsxarx-0 kcVFtn"
+                    height="24"
+                    preserveAspectRatio="none"
+                    viewBox="0 0 384 24"
+                    width="384"
+                  >
+                    <path
+                      d="M 12,12 L 372,12"
+                      fill="none"
+                      stroke="#F2F2F2"
+                      stroke-linecap="round"
+                      stroke-opacity="0.4"
+                      stroke-width="24"
+                    />
+                    <path
+                      d="M 12,12 L 109.2,12"
+                      fill="none"
+                      stroke="#6600cc"
+                      stroke-linecap="round"
+                      stroke-width="24"
+                    />
+                  </svg>
+                </div>
+                <footer
+                  class="StyledBox-sc-13pk1d4-0 cxDimp"
+                >
+                  <span
+                    class="StyledText-sc-1sadyjn-0 evLTLO"
+                  >
+                    added 2 today
+                  </span>
+                </footer>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 kSDzUF"
+                tabindex="0"
+              >
+                <header
+                  class="StyledBox-sc-13pk1d4-0 bYwyhN"
+                >
+                  <h3
+                    class="StyledHeading-sc-1rdh4aw-0 jmNzne"
+                  >
+                    Sites
+                  </h3>
+                </header>
+                <div
+                  class="StyledBox-sc-13pk1d4-0 cUzgEH"
+                >
+                  <span
+                    class="StyledText-sc-1sadyjn-0 gWSVDb"
+                  >
+                    2
+                  </span>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 brYEDN"
+                  />
+                  <svg
+                    class="StyledMeter-sc-nsxarx-0 kcVFtn"
+                    height="24"
+                    preserveAspectRatio="none"
+                    viewBox="0 0 384 24"
+                    width="384"
+                  >
+                    <path
+                      d="M 12,12 L 372,12"
+                      fill="none"
+                      stroke="#F2F2F2"
+                      stroke-linecap="round"
+                      stroke-opacity="0.4"
+                      stroke-width="24"
+                    />
+                    <path
+                      d="M 12,12 L 84,12"
+                      fill="none"
+                      stroke="#6600cc"
+                      stroke-linecap="round"
+                      stroke-width="24"
+                    />
+                  </svg>
+                </div>
+                <footer
+                  class="StyledBox-sc-13pk1d4-0 cxDimp"
+                >
+                  <span
+                    class="StyledText-sc-1sadyjn-0 evLTLO"
+                  >
+                    all good
+                  </span>
+                </footer>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 kSDzUF"
+                tabindex="0"
+              >
+                <header
+                  class="StyledBox-sc-13pk1d4-0 bYwyhN"
+                >
+                  <h3
+                    class="StyledHeading-sc-1rdh4aw-0 jmNzne"
+                  >
+                    Events
+                  </h3>
+                </header>
+                <div
+                  class="StyledBox-sc-13pk1d4-0 cUzgEH"
+                >
+                  <span
+                    class="StyledText-sc-1sadyjn-0 gWSVDb"
+                  >
+                    270
+                  </span>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 brYEDN"
+                  />
+                  <svg
+                    class="StyledMeter-sc-nsxarx-0 kcVFtn"
+                    height="24"
+                    preserveAspectRatio="none"
+                    viewBox="0 0 384 24"
+                    width="384"
+                  >
+                    <path
+                      d="M 12,12 L 372,12"
+                      fill="none"
+                      stroke="#F2F2F2"
+                      stroke-linecap="round"
+                      stroke-opacity="0.4"
+                      stroke-width="24"
+                    />
+                    <path
+                      d="M 12,12 L 109.2,12"
+                      fill="none"
+                      stroke="#6600cc"
+                      stroke-linecap="round"
+                      stroke-width="24"
+                    />
+                  </svg>
+                </div>
+                <footer
+                  class="StyledBox-sc-13pk1d4-0 cxDimp"
+                >
+                  <span
+                    class="StyledText-sc-1sadyjn-0 evLTLO"
+                  >
+                    client A joined 5m ago
+                  </span>
+                </footer>
+              </div>
+            </div>
+            <div
+              class="StyledBox-sc-13pk1d4-0 FjLxp"
+            >
+              <header
+                class="StyledBox-sc-13pk1d4-0 bYwyhN"
+              >
+                <h3
+                  class="StyledHeading-sc-1rdh4aw-0 jmNzne"
+                >
+                  Latency 
+                  <span
+                    class="StyledText-sc-1sadyjn-0 evLTLO"
+                  >
+                    ms
+                  </span>
+                </h3>
+              </header>
+              <div
+                class="StyledBox-sc-13pk1d4-0 tvuiK"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 bRWWxM"
+                >
+                  <div
+                    class="StyledStack-sc-ajspsk-0 bcUWWD"
+                  >
+                    <div
+                      class="StyledStack__StyledStackLayer-sc-ajspsk-1 cGyVeV"
+                    >
+                      <svg
+                        class="StyledChart-sc-1nae0gf-0 btNacq"
+                        height="0"
+                        preserveAspectRatio="none"
+                        viewBox="0 0 0 0"
+                        width="0"
+                      >
+                        0
+                        <g
+                          fill="#6600cc"
+                          opacity="0.4"
+                          stroke="#6600cc"
+                          stroke-linecap="butt"
+                          stroke-linejoin="miter"
+                          stroke-width="6"
+                        >
+                          <g>
+                            <path
+                              d="M 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 Z"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="StyledStack__StyledStackLayer-sc-ajspsk-1 cGyVeV"
+                    >
+                      <svg
+                        class="StyledChart-sc-1nae0gf-0 btNacq"
+                        height="0"
+                        preserveAspectRatio="none"
+                        viewBox="0 0 0 0"
+                        width="0"
+                      >
+                        0
+                        <g
+                          fill="none"
+                          stroke="#6600cc"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="6"
+                        >
+                          <g
+                            fill="none"
+                          >
+                            <path
+                              d="M 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0"
+                            />
+                            
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="StyledStack__StyledStackLayer-sc-ajspsk-1 cGyVeV"
+                    >
+                      <svg
+                        class="StyledChart-sc-1nae0gf-0 btNacq"
+                        height="0"
+                        preserveAspectRatio="none"
+                        viewBox="0 0 0 0"
+                        width="0"
+                      >
+                        0
+                        <g
+                          fill="#333333"
+                          opacity="0.4"
+                          stroke="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <g
+                            stroke="none"
+                          >
+                            <title />
+                            <circle
+                              cx="0"
+                              cy="0"
+                              r="6"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="StyledStack__StyledStackLayer-sc-ajspsk-1 byyKmG"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 bRFCfD"
+                      >
+                        <span
+                          class="StyledText-sc-1sadyjn-0 dHDiyu"
+                        >
+                          2000
+                        </span>
+                        <span
+                          class="StyledText-sc-1sadyjn-0 dHDiyu"
+                        >
+                          1000
+                        </span>
+                        <span
+                          class="StyledText-sc-1sadyjn-0 dHDiyu"
+                        >
+                          0
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 brYEDN"
+                  />
+                  <div
+                    class="StyledStack-sc-ajspsk-0 bcUWWD"
+                  >
+                    <div
+                      class="StyledStack__StyledStackLayer-sc-ajspsk-1 cGyVeV"
+                    >
+                      <svg
+                        class="StyledChart-sc-1nae0gf-0 btNacq"
+                        height="0"
+                        preserveAspectRatio="none"
+                        style="transform: rotate(180deg);"
+                        viewBox="0 0 0 0"
+                        width="0"
+                      >
+                        0
+                        <g
+                          fill="#FFAA15"
+                          opacity="0.4"
+                          stroke="#FFAA15"
+                          stroke-linecap="butt"
+                          stroke-linejoin="miter"
+                          stroke-width="6"
+                        >
+                          <g>
+                            <path
+                              d="M 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 Z"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="StyledStack__StyledStackLayer-sc-ajspsk-1 cGyVeV"
+                    >
+                      <svg
+                        class="StyledChart-sc-1nae0gf-0 btNacq"
+                        height="0"
+                        preserveAspectRatio="none"
+                        style="transform: rotate(180deg);"
+                        viewBox="0 0 0 0"
+                        width="0"
+                      >
+                        0
+                        <g
+                          fill="none"
+                          stroke="#FFAA15"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="6"
+                        >
+                          <g
+                            fill="none"
+                          >
+                            <path
+                              d="M 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0"
+                            />
+                            
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="StyledStack__StyledStackLayer-sc-ajspsk-1 cGyVeV"
+                    >
+                      <svg
+                        class="StyledChart-sc-1nae0gf-0 btNacq"
+                        height="0"
+                        preserveAspectRatio="none"
+                        style="transform: rotate(180deg);"
+                        viewBox="0 0 0 0"
+                        width="0"
+                      >
+                        0
+                        <g
+                          fill="#333333"
+                          opacity="0.4"
+                          stroke="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <g
+                            stroke="none"
+                          >
+                            <title />
+                            <circle
+                              cx="0"
+                              cy="0"
+                              r="6"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="StyledStack__StyledStackLayer-sc-ajspsk-1 byyKmG"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 fnnxQQ"
+                      >
+                        <span
+                          class="StyledText-sc-1sadyjn-0 dHDiyu"
+                        >
+                          0
+                        </span>
+                        <span
+                          class="StyledText-sc-1sadyjn-0 dHDiyu"
+                        >
+                          1000
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 brYEDN"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 cTyWkZ"
+                  >
+                    <span
+                      class="StyledText-sc-1sadyjn-0 dHDiyu"
+                    >
+                      -24h
+                    </span>
+                    <span
+                      class="StyledText-sc-1sadyjn-0 dHDiyu"
+                    >
+                      -12h
+                    </span>
+                    <span
+                      class="StyledText-sc-1sadyjn-0 dHDiyu"
+                    >
+                      now
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 brYEDN"
+                />
+                <div
+                  class="StyledBox-sc-13pk1d4-0 iPFpCC"
+                >
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 hhpAHF"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 ldMXwv"
+                    />
+                    <div
+                      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dSHXel"
+                    />
+                    <span
+                      class="StyledText-sc-1sadyjn-0 dHDiyu"
+                    >
+                      inbound
+                    </span>
+                  </div>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 itCgil"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 hhpAHF"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 jkYXeV"
+                    />
+                    <div
+                      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dSHXel"
+                    />
+                    <span
+                      class="StyledText-sc-1sadyjn-0 dHDiyu"
+                    >
+                      outbound
                     </span>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div
-            class="StyledBox-sc-13pk1d4-0 elLIlG"
-          >
-            <div
-              class="StyledBox-sc-13pk1d4-0 huWkbw"
-            >
-              <label
-                class="StyledBox-sc-13pk1d4-0 miOcd"
-                for="spacing"
+              <footer
+                class="StyledBox-sc-13pk1d4-0 cxDimp"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 gKFELF"
+                  class="StyledText-sc-1sadyjn-0 evLTLO"
                 >
-                  spacing
+                  peak of 2000ms 15 hours ago
                 </span>
-              </label>
-              <div
-                class="StyledBox-sc-13pk1d4-0 jLMOlN"
-              >
-                <div
-                  class="StyledBox-sc-13pk1d4-0 deExzV"
-                >
-                  <input
-                    aria-valuemax="36"
-                    aria-valuemin="12"
-                    aria-valuenow="24"
-                    class="StyledRangeInput-sc-15st9ck-0 eUHKaP"
-                    id="spacing"
-                    max="36"
-                    min="12"
-                    name="spacing"
-                    step="4"
-                    style="text-align: end;"
-                    type="range"
-                    value="24"
-                  />
-                  <div
-                    class="StyledBox-sc-13pk1d4-0 bxAOvx"
-                  >
-                    <div
-                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 gNPSOw"
-                    >
-                      <input
-                        autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 eqjcce"
-                        placeholder=""
-                        style="text-align: right; width: 48px;"
-                        value="24"
-                      />
-                    </div>
-                    <span
-                      class="StyledText-sc-1sadyjn-0 gKFELF"
-                    >
-                      px
-                    </span>
-                  </div>
-                </div>
-              </div>
+              </footer>
             </div>
-          </div>
-          <div
-            class="StyledBox-sc-13pk1d4-0 elLIlG"
-          >
-            <div
-              class="StyledBox-sc-13pk1d4-0 huWkbw"
+            <nav
+              class="StyledBox-sc-13pk1d4-0 dFoQRk"
             >
-              <label
-                class="StyledBox-sc-13pk1d4-0 miOcd"
-                for="scale"
+              <a
+                class="StyledAnchor-sc-1rp7lwl-0 kMUnVC"
+                href="/accessibility"
               >
-                <span
-                  class="StyledText-sc-1sadyjn-0 gKFELF"
-                >
-                  font scale
-                </span>
-              </label>
+                accessibility
+              </a>
               <div
-                class="StyledBox-sc-13pk1d4-0 jLMOlN"
-              >
-                <div
-                  class="StyledBox-sc-13pk1d4-0 deExzV"
-                >
-                  <input
-                    aria-valuemax="4"
-                    aria-valuemin="0.2"
-                    aria-valuenow="1"
-                    class="StyledRangeInput-sc-15st9ck-0 eUHKaP"
-                    id="scale"
-                    max="4"
-                    min="0.2"
-                    name="scale"
-                    step="0.1"
-                    style="text-align: end;"
-                    type="range"
-                    value="1"
-                  />
-                  <div
-                    class="StyledBox-sc-13pk1d4-0 bxAOvx"
-                  >
-                    <div
-                      class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 gNPSOw"
-                    >
-                      <input
-                        autocomplete="off"
-                        class="StyledMaskedInput-sc-99vkfa-0 eqjcce"
-                        placeholder=""
-                        style="text-align: right; width: 48px;"
-                        value="1"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button
-            aria-label="Open Drop"
-            class="StyledButton-sc-323bzc-0 ekkmSA"
-            type="button"
-          >
-            <div
-              class="StyledBox-sc-13pk1d4-0 qzhpi"
-            >
-              <span
-                class="StyledText-sc-1sadyjn-0 gKFELF"
-              >
-                font
-              </span>
-              <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 knmKel"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 itCgil"
               />
-              <span
-                class="StyledText-sc-1sadyjn-0 fdlQMb"
+              <a
+                class="StyledAnchor-sc-1rp7lwl-0 kMUnVC"
+                href="/typography"
               >
-                Helvetica
-              </span>
-            </div>
-          </button>
-          <button
-            class="StyledButton-sc-323bzc-0 ekkmSA"
-            type="button"
-          >
-            <div
-              class="StyledBox-sc-13pk1d4-0 qzhpi"
-            >
-              <span
-                class="StyledText-sc-1sadyjn-0 gKFELF"
-              >
-                colors
-              </span>
-            </div>
-          </button>
-          <button
-            class="StyledButton-sc-323bzc-0 ekkmSA"
-            type="button"
-          >
-            <div
-              class="StyledBox-sc-13pk1d4-0 qzhpi"
-            >
-              <span
-                class="StyledText-sc-1sadyjn-0 gKFELF"
-              >
-                form field
-              </span>
-            </div>
-          </button>
+                typography
+              </a>
+            </nav>
+          </div>
         </div>
-      </div>
+      </main>
     </div>
   </div>
 </div>

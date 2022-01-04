@@ -65,13 +65,21 @@ export const starter = {
       color: 'selected-text',
     },
   },
+  // button: { default: {} },
   chart: { color: undefined },
   diagram: { line: { color: undefined } },
   meter: { color: undefined },
+  tip: {
+    content: {
+      background: { color: 'background' },
+      elevation: 'none',
+      round: false,
+    },
+  },
 };
 
 // prepares theme for publishing
-export const normalizeTheme = theme => {
+export const normalizeTheme = (theme) => {
   if (!theme.global.active)
     theme.global.active = {
       background: 'active-background',
@@ -96,6 +104,6 @@ export const normalizeTheme = theme => {
   theme.diagram = { line: { color: undefined } };
 };
 
-export const upgradeTheme = theme => {
+export const upgradeTheme = (theme) => {
   return normalizeTheme(theme); // nothing to upgrade yet.
 };

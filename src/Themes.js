@@ -1,112 +1,86 @@
-import React from 'react';
-import { Box, Button, Grid, Grommet, Stack, Text } from 'grommet';
-import { Trash } from 'grommet-icons';
+import React, { useContext, useEffect, useState } from 'react';
+import { Box, Button, Grommet, Header, Heading, Text } from 'grommet';
+import { Add } from 'grommet-icons';
 import { starter, upgradeTheme } from './theme';
-import Action from './components/Action';
-import ActionButton from './components/ActionButton';
+import AppContext from './AppContext';
 
-const Themes = ({ theme, onClose, setTheme }) => {
-  const [themes, setThemes] = React.useState([]);
-  const [confirmDelete, setConfirmDelete] = React.useState();
+const Themes = ({ setAspect }) => {
+  const { theme, themes: themeNames, setTheme } = useContext(AppContext);
+  // Unlike the 'themes' in the AppContext, which are just names,
+  // these are the themes themselves, so we can use them to style the list
+  // items.
+  const [themes, setThemes] = useState([]);
 
-  React.useEffect(() => {
-    let item = localStorage.getItem('themes'); // array of names
-    if (item) {
-      setThemes(
-        JSON.parse(item).map(name => {
-          let theme = localStorage.getItem(name);
-          if (theme) {
-            try {
-              return JSON.parse(theme);
-            } catch (e) {
-              return { name };
-            }
-          }
-          return { name };
-        }),
-      );
-    }
-  }, []);
+  useEffect(() => {
+    setThemes(
+      themeNames
+        .map((name) => JSON.parse(localStorage.getItem(name)))
+        .filter((t) => t),
+    );
+  }, [themeNames]);
 
-  const onSelect = name => {
+  const onSelect = (name) => {
     const item = localStorage.getItem(name);
     if (item) {
       const nextTheme = JSON.parse(item);
       upgradeTheme(nextTheme);
       setTheme(nextTheme);
-      onClose();
+      setAspect('Primary');
     }
   };
 
-  const onReset = () => {
-    localStorage.removeItem('selected');
+  const onNew = () => {
     localStorage.removeItem('activeTheme');
     setTheme(starter);
-    onClose();
-  };
-
-  const onDelete = name => {
-    setConfirmDelete(undefined);
-    const nextThemes = themes.map(t => t.name).filter(n => n !== name);
-    localStorage.setItem('themes', JSON.stringify(nextThemes));
-    localStorage.removeItem(name);
-    setThemes(nextThemes);
-    if (theme.name === name) {
-      localStorage.removeItem('activeTheme');
-      setTheme(starter);
-    }
+    setAspect('Primary');
   };
 
   return (
-    <Action onClose={onClose} full="horizontal">
-      <Grid fill="horizontal" columns="small" rows="small" gap="large">
-        <Box fill round="medium">
-          <Button fill label="New" onClick={onReset} />
-        </Box>
-        {themes.map(theme => {
-          const name = theme.name;
-          return (
-            <Stack key={name} fill anchor="bottom-right">
-              <Grommet theme={theme} style={{ height: '100%' }}>
-                <Box fill round="medium" overflow="hidden">
-                  <Button fill plain onClick={() => onSelect(name)}>
-                    {({ hover }) => (
-                      <Box
-                        fill
-                        pad="medium"
-                        background={hover ? 'light-1' : 'brand'}
-                        align="center"
-                        justify="center"
-                      >
-                        <Text textAlign="center" size="xlarge" weight="bold">
-                          {name}
-                        </Text>
-                      </Box>
-                    )}
-                  </Button>
-                </Box>
-              </Grommet>
-              <Box direction="row" gap="small">
-                {confirmDelete === name && (
-                  <ActionButton
-                    title="confirm delete"
-                    icon={<Trash color="status-critical" />}
-                    hoverIndicator
-                    onClick={() => onDelete(name)}
+    <Box>
+      <Header pad={{ start: 'small' }} gap="large">
+        <Heading level={2} size="small" margin="none">
+          themes
+        </Heading>
+        <Button
+          tip="create a new theme"
+          icon={<Add />}
+          hoverIndicator
+          onClick={onNew}
+        />
+      </Header>
+      {themes.map((aTheme) => {
+        const { name } = aTheme;
+        const current = theme?.name === aTheme.name;
+        return (
+          <Grommet key={name} theme={aTheme} style={{ height: '100%' }}>
+            <Button fill plain onClick={() => onSelect(name)}>
+              {({ hover }) => (
+                <Box
+                  fill
+                  direction="row"
+                  pad="small"
+                  gap="small"
+                  background={{
+                    color:
+                      (hover && 'background-contrast') ||
+                      (current && 'active') ||
+                      'background',
+                    dark: !hover && !current,
+                  }}
+                >
+                  <Box
+                    pad="small"
+                    background="brand"
+                    round={`${aTheme.rounding}px`}
                   />
-                )}
-                <ActionButton
-                  title="delete theme"
-                  icon={<Trash color="dark-3" />}
-                  hoverIndicator
-                  onClick={() => setConfirmDelete(name)}
-                />
-              </Box>
-            </Stack>
-          );
-        })}
-      </Grid>
-    </Action>
+                  <Text>{name}</Text>
+                </Box>
+              )}
+            </Button>
+          </Grommet>
+        );
+      })}
+    </Box>
   );
 };
 

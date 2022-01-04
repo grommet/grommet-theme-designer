@@ -1,4 +1,10 @@
-import React, { Fragment } from 'react';
+import React, {
+  Fragment,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import ReactGA from 'react-ga';
 import {
   Anchor,
@@ -16,6 +22,7 @@ import {
 import { CloudUpload, Copy } from 'grommet-icons';
 import { apiUrl, normalizeTheme } from './theme';
 import Action from './components/Action';
+import AppContext from './AppContext';
 
 const Summary = ({ Icon, label, guidance }) => (
   <Box align="center" gap="small">
@@ -31,15 +38,16 @@ const Summary = ({ Icon, label, guidance }) => (
   </Box>
 );
 
-const Publish = ({ theme, setTheme }) => {
-  const [publication, setPublication] = React.useState();
-  const [publishing, setPublishing] = React.useState();
-  const [uploadUrl, setUploadUrl] = React.useState();
-  const [message, setMessage] = React.useState();
-  const [error, setError] = React.useState();
-  const inputRef = React.useRef();
+const Publish = () => {
+  const { theme, setTheme } = useContext(AppContext);
+  const [publication, setPublication] = useState();
+  const [publishing, setPublishing] = useState();
+  const [uploadUrl, setUploadUrl] = useState();
+  const [message, setMessage] = useState();
+  const [error, setError] = useState();
+  const inputRef = useRef();
 
-  React.useEffect(() => {
+  useEffect(() => {
     const stored = localStorage.getItem('identity');
     if (stored) {
       const identity = JSON.parse(stored);
@@ -185,10 +193,10 @@ const Publish = ({ theme, setTheme }) => {
   );
 };
 
-const Share = ({ theme, setTheme, onClose }) => (
+const Share = ({ onClose }) => (
   <Action animation="fadeIn" onClose={onClose}>
     <Grid columns={{ count: 'fit', size: 'small' }} gap="large">
-      <Publish theme={theme} setTheme={setTheme} />
+      <Publish />
     </Grid>
   </Action>
 );

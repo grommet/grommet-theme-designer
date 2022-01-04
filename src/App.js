@@ -1,9 +1,23 @@
-import React, { useCallback, useContext, useEffect, useState } from 'react';
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 import ReactGA from 'react-ga';
-import { Box, Grid, Grommet, ResponsiveContext, Keyboard } from 'grommet';
+import {
+  Box,
+  Grid,
+  Grommet,
+  grommet,
+  ResponsiveContext,
+  Keyboard,
+} from 'grommet';
 import { apiUrl, starter, upgradeTheme } from './theme';
-import EditTheme from './EditTheme';
-import Designs from './Designs';
+import AppContext from './AppContext';
+import Editor from './Editor';
+import ExampleApp from './examples/App';
 
 const getParams = () => {
   const { location } = window;
@@ -11,7 +25,7 @@ const getParams = () => {
   location.search
     .slice(1)
     .split('&')
-    .forEach(p => {
+    .forEach((p) => {
       const [k, v] = p.split('=');
       params[k] = decodeURIComponent(v);
     });
@@ -19,10 +33,10 @@ const getParams = () => {
 };
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
   const [theme, setTheme] = useState();
   const [themes, setThemes] = useState([]);
-  const [themeMode, setThemeMode] = React.useState('light');
-  const [Design, setDesign] = useState();
+  const [themeMode, setThemeMode] = useState();
   const [editing, setEditing] = useState(true);
   const responsive = useContext(ResponsiveContext);
 
@@ -44,8 +58,8 @@ const App = () => {
     const params = getParams();
     if (params.id) {
       fetch(`${apiUrl}/${params.id}`)
-        .then(response => response.json())
-        .then(nextTheme => {
+        .then((response) => response.json())
+        .then((nextTheme) => {
           upgradeTheme(nextTheme);
           document.title = nextTheme.name;
           setTheme(nextTheme);
@@ -87,12 +101,35 @@ const App = () => {
       }
       setEditing(true);
     }
+    setLoading(false);
   }, []);
 
-  // load themes
+  // load theme names
   useEffect(() => {
     const stored = localStorage.getItem('themes');
-    if (stored) setThemes(JSON.parse(stored));
+    if (stored) {
+      const nextThemes = JSON.parse(stored)
+        .filter((name) => {
+          // check if we still have this theme
+          let aTheme = localStorage.getItem(name);
+          if (aTheme) {
+            try {
+              JSON.parse(aTheme);
+              return true;
+            } catch (e) {
+              return false;
+            }
+          }
+          return false;
+        })
+        // prune out any that we don't have anymore
+        .filter((t) => t);
+
+      // store back, in case we removed any
+      localStorage.setItem('themes', JSON.stringify(nextThemes));
+
+      setThemes(nextThemes);
+    }
   }, []);
 
   // load editing mode
@@ -102,9 +139,10 @@ const App = () => {
   }, []);
 
   // store editing mode
-  useEffect(() => localStorage.setItem('editing', JSON.stringify(editing)), [
-    editing,
-  ]);
+  useEffect(
+    () => localStorage.setItem('editing', JSON.stringify(editing)),
+    [editing],
+  );
 
   // store theme
   useEffect(() => {
@@ -126,10 +164,44 @@ const App = () => {
     }
   }, [theme, themes]);
 
+  // load theme mode
+  useEffect(() => {
+    const stored = localStorage.getItem('themeMode');
+    if (stored) setThemeMode(JSON.parse(stored));
+  }, []);
+
+  // store theme mode
+  useEffect(() => {
+    if (themeMode) localStorage.setItem('themeMode', JSON.stringify(themeMode));
+    else localStorage.removeItem('themeMode');
+  }, [themeMode]);
+
+  const deleteActiveTheme = useCallback(() => {
+    localStorage.removeItem(theme.name);
+    localStorage.removeItem('activeTheme');
+    // remove from themes list
+    const nextThemes = themes.filter((name) => name !== theme.name);
+    setThemes(nextThemes);
+    localStorage.setItem('themes', JSON.stringify(nextThemes));
+    setTheme(undefined);
+  }, [theme?.name, themes]);
+
+  const appContextValue = useMemo(
+    () => ({
+      deleteActiveTheme,
+      setTheme,
+      setThemeMode,
+      theme,
+      themeMode,
+      themes,
+    }),
+    [deleteActiveTheme, theme, themeMode, themes],
+  );
+
   const onKey = useCallback(
-    event => {
+    (event) => {
       if (event.metaKey) {
-        if (event.key === 'e' || event.key === 'E') {
+        if (event.key === '.') {
           event.preventDefault();
           setEditing(!editing);
         }
@@ -139,43 +211,26 @@ const App = () => {
   );
 
   let columns;
-  if (responsive === 'small') columns = 'flex';
-  else if (!editing) columns = ['small', 'flex'];
-  else columns = ['small', 'flex', ['small', 'medium']];
+  if (responsive === 'small' || !editing) columns = 'flex';
+  else columns = ['medium', 'flex'];
 
   return (
-    <Grommet full theme={starter}>
-      <Keyboard target="document" onKeyDown={onKey}>
-        {!theme ? (
-          <Box fill justify="center" align="center">
-            <Box pad="xlarge" background="dark-2" round animation="pulse" />
-          </Box>
-        ) : (
-          <Grid fill columns={columns} rows="full">
-            {responsive !== 'small' && theme && (
-              <Designs
-                theme={theme}
-                design={Design}
-                setDesign={setDesign}
-                toggleEditing={() => setEditing(!editing)}
-                themeMode={themeMode}
-                setThemeMode={setThemeMode}
-              />
-            )}
-            {Design && theme ? (
-              <Grommet theme={theme} themeMode={themeMode}>
-                <Design theme={theme} />
-              </Grommet>
-            ) : (
-              <Box />
-            )}
-            {responsive !== 'small' && editing && (
-              <EditTheme theme={theme} setTheme={setTheme} />
-            )}
-          </Grid>
-        )}
-      </Keyboard>
-    </Grommet>
+    <AppContext.Provider value={appContextValue}>
+      <Grommet full theme={grommet}>
+        <Keyboard target="document" onKeyDown={onKey}>
+          {loading ? (
+            <Box fill justify="center" align="center">
+              <Box pad="xlarge" background="dark-2" round animation="pulse" />
+            </Box>
+          ) : (
+            <Grid fill columns={columns} rows="full">
+              {responsive !== 'small' && editing && <Editor />}
+              {theme && <ExampleApp />}
+            </Grid>
+          )}
+        </Keyboard>
+      </Grommet>
+    </AppContext.Provider>
   );
 };
 
