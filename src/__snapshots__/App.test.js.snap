@@ -788,7 +788,6 @@ exports[`App empty 1`] = `
                             <path
                               d="M 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0"
                             />
-                            
                           </g>
                         </g>
                       </svg>
@@ -907,7 +906,6 @@ exports[`App empty 1`] = `
                             <path
                               d="M 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0"
                             />
-                            
                           </g>
                         </g>
                       </svg>
@@ -1570,7 +1568,6 @@ exports[`App empty 2`] = `
                             <path
                               d="M 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0"
                             />
-                            
                           </g>
                         </g>
                       </svg>
@@ -1689,7 +1686,6 @@ exports[`App empty 2`] = `
                             <path
                               d="M 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0 L 0,0"
                             />
-                            
                           </g>
                         </g>
                       </svg>
